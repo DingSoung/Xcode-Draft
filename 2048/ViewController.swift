@@ -29,6 +29,14 @@ class ViewController: UIViewController {
         alertView.message = "游戏开始,准备好吗?"
         alertView.addButtonWithTitle("Ready Go!")
         alertView.show()
+        alertView.delegate = self
+        
+    }
+    //对话框关闭后，进入主选项视图控制器界面
+    func alertView(alertView:UIAlertView,clickedButtonAtIndex
+        buttonIndex:Int){
+            self.presentViewController(MainTabViewController(),animated:
+                true, completion:nil)
     }
 
 

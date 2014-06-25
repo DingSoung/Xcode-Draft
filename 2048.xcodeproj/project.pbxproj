@@ -12,6 +12,9 @@
 		653F53C51959CE4200263172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653F53C31959CE4200263172 /* Main.storyboard */; };
 		653F53C71959CE4200263172 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653F53C61959CE4200263172 /* Images.xcassets */; };
 		653F53D31959CE4200263172 /* _048Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653F53D21959CE4200263172 /* _048Tests.swift */; };
+		65D318DD194DA51F00D73B36 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D318DC194DA51F00D73B36 /* MainTabViewController.swift */; };
+		65D318DF194DA54300D73B36 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D318DE194DA54300D73B36 /* SettingViewController.swift */; };
+		65D318E2194DA59400D73B36 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D318E1194DA59400D73B36 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		653F53D11959CE4200263172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		653F53D21959CE4200263172 /* _048Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _048Tests.swift; sourceTree = "<group>"; };
 		653F53DC1959D27600263172 /* 2048.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 2048.playground; sourceTree = "<group>"; };
+		65D318DC194DA51F00D73B36 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabViewController.swift; path = 2048/MainTabViewController.swift; sourceTree = "<group>"; };
+		65D318DE194DA54300D73B36 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = 2048/SettingViewController.swift; sourceTree = "<group>"; };
+		65D318E1194DA59400D73B36 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		653F53B11959CE4100263172 = {
 			isa = PBXGroup;
 			children = (
+				65D318E0194DA54E00D73B36 /* controller */,
 				653F53BC1959CE4100263172 /* 2048 */,
 				653F53CF1959CE4200263172 /* 2048Tests */,
 				653F53BB1959CE4100263172 /* Products */,
@@ -109,6 +116,16 @@
 				653F53D11959CE4200263172 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65D318E0194DA54E00D73B36 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				65D318DC194DA51F00D73B36 /* MainTabViewController.swift */,
+				65D318DE194DA54300D73B36 /* SettingViewController.swift */,
+				65D318E1194DA59400D73B36 /* MainViewController.swift */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D318E2194DA59400D73B36 /* MainViewController.swift in Sources */,
+				65D318DD194DA51F00D73B36 /* MainTabViewController.swift in Sources */,
 				653F53C21959CE4200263172 /* ViewController.swift in Sources */,
 				653F53C01959CE4200263172 /* AppDelegate.swift in Sources */,
+				65D318DF194DA54300D73B36 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +421,7 @@
 				653F53D81959CE4200263172 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		653F53D91959CE4200263172 /* Build configuration list for PBXNativeTarget "2048Tests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +430,7 @@
 				653F53DB1959CE4200263172 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
