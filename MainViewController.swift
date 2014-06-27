@@ -20,9 +20,12 @@ class MainViewController:UIViewController
     var padding:CGFloat = 6
     //背景
     var backgrounds:Array<UIView>
+    //Game Mode
+    var gmodel:GameModel
     
     init(){
         self.backgrounds = Array<UIView>()
+        self.gmodel = GameModel(dimension: self.dimension)
         super.init(nibName:nil, bundle:nil)
        
     }
@@ -31,7 +34,10 @@ class MainViewController:UIViewController
         super.viewDidLoad()
         //绘制背景和方格
         setupBackground()
-        genNumber()
+        for i in 0..16 {
+            genNumber()
+        }
+
     }
     
     func setupBackground(){
@@ -62,6 +68,17 @@ class MainViewController:UIViewController
         //随机生成数字出现的位置
         let col = Int(arc4random_uniform(UInt32(dimension)))
         let row = Int(arc4random_uniform(UInt32(dimension)))
+        
+        
+        if(gmodel.isFull()) {
+            println("position is full")
+            return
+        }
+        if(gmodel.setPosition(row, col: col, value: seed) == false) {
+            genNumber()
+            return
+        }
+        
         //显示数字
         insertTile((row,col), value:seed)
     }
