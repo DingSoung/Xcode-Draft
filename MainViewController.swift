@@ -22,9 +22,13 @@ class MainViewController:UIViewController
     var backgrounds:Array<UIView>
     //Game Mode
     var gmodel:GameModel
+    //Store number of labelstr_t
+    var tiles:Dictionary<NSIndexPath,TileView> //can not add "!"
+    //var tilesVals:
     
     init(){
         self.backgrounds = Array<UIView>()
+        self.tiles = Dictionary()
         self.gmodel = GameModel(dimension: self.dimension)
         super.init(nibName:nil, bundle:nil)
        
@@ -34,11 +38,27 @@ class MainViewController:UIViewController
         super.viewDidLoad()
         //绘制背景和方格
         setupBackground()
+        setupButtons()
         for i in 0..16 {
             genNumber()
         }
 
     }
+    
+    func setupButtons(){
+        var cv = ControlView()
+        var btnreset = cv.createButton("Reset", action:Selector("resetTapped"), sender:self)
+        btnreset.frame.origin.x = 50
+        btnreset.frame.origin.y = 400
+        self.view.addSubview(btnreset)
+        
+        var btngen   = cv.createButton("New NO.", action:Selector("genTapped"), sender:self)
+        btngen.frame.origin.x = 170
+        btngen.frame.origin.y = 400
+        self.view.addSubview(btngen)
+    
+    }
+
     
     func setupBackground(){
         var x:CGFloat = 30
@@ -55,6 +75,18 @@ class MainViewController:UIViewController
             }
             x += padding + width
         }
+    }
+    
+    func resetTapped(){
+        println("reset")
+        for(key, tile) in tiles {
+            tile.removeFromSuperview()
+        }
+        gmodel.initTiles()
+    }
+    func genTapped(){
+        println("gen number")
+        genNumber()
     }
     
     func genNumber(){
@@ -92,6 +124,10 @@ class MainViewController:UIViewController
         let tile = TileView(pos:CGPointMake(x,y), width:width, value:value)
         self.view.addSubview(tile)
         self.view.bringSubviewToFront(tile)
+        
+        var index = NSIndexPath(forRow:row, inSection:col)
+        tiles[index] = tile
+        
         
         //数字出现的动态效果 0.3秒内由小变大
         tile.layer.setAffineTransform(CGAffineTransformMakeScale(0.1, 0.1))

@@ -11,10 +11,14 @@ import Foundation
 class GameModel{
     var dimension:Int = 0
     //4*4 = 16
-    var tiles:Array<Int>
+    var tiles:Array<Int>!   //must need "!"
     
     init(dimension:Int){
         self.dimension = dimension
+        initTiles()
+    }
+    
+    func initTiles(){
         self.tiles = Array<Int>(count:self.dimension * self.dimension, repeatedValue:0)
     }
     
