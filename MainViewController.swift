@@ -24,11 +24,13 @@ class MainViewController:UIViewController
     var gmodel:GameModel
     //Store number of labelstr_t
     var tiles:Dictionary<NSIndexPath,TileView> //can not add "!"
-    //var tilesVals:
+    
+    var tileVals: Dictionary<NSIndexPath, Int>
     
     init(){
         self.backgrounds = Array<UIView>()
         self.tiles = Dictionary()
+        self.tileVals = Dictionary()
         self.gmodel = GameModel(dimension: self.dimension)
         super.init(nibName:nil, bundle:nil)
        
@@ -38,6 +40,7 @@ class MainViewController:UIViewController
         super.viewDidLoad()
         //绘制背景和方格
         setupBackground()
+        setupSwipeGuestures()
         setupButtons()
         for i in 0..16 {
             genNumber()
@@ -75,6 +78,67 @@ class MainViewController:UIViewController
             }
             x += padding + width
         }
+    }
+    
+    func setupSwipeGuestures(){
+        let upSwipe = UISwipeGestureRecognizer(target:self, action:Selector("swipeUp")) //响应函数名为swipeUp
+        upSwipe.numberOfTouchesRequired = 1
+        upSwipe.direction = UISwipeGestureRecognizerDirection.Up
+        self.view.addGestureRecognizer(upSwipe)
+        
+        let downSwipe = UISwipeGestureRecognizer(target:self, action:Selector("swipeDown"))
+        downSwipe.numberOfTouchesRequired = 1
+        downSwipe.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(downSwipe)
+        
+        let leftSwipe = UISwipeGestureRecognizer(target:self, action:Selector("swipeLeft"))
+        leftSwipe.numberOfTouchesRequired = 1
+        leftSwipe.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(leftSwipe)
+        
+        let rightSwipe = UISwipeGestureRecognizer(target:self, action:Selector("swipeRight"))
+        rightSwipe.numberOfTouchesRequired = 1
+        rightSwipe.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(rightSwipe)
+    }
+    func swipeUp(){
+        println("Swipe Up")
+        for i in 0..dimension {
+            for j in 0..dimension {
+                var row:Int = i
+                var col:Int = j
+                var key = NSIndexPath(forRow:row, inSection:col)
+                if(tileVals.indexForKey(key) != nil) {
+                    // if > 3, move up 1 row
+                    if (row > 1) {
+                        var value = tileVals[key]
+                        removeKeyTile(key)
+                        var index = row * dimension + col - dimension
+                        row = Int(index/dimension)
+                        col = index - row * dimension
+                        insertTile((row, col), value:value!)
+                    }
+
+                }
+            }
+        }
+    }
+    func swipeDown(){
+        println("Swipe Down")
+    }
+    func swipeLeft(){
+        println("Swipe Left")
+    }
+    func swipeRight(){
+        println("Swipe Right")
+    }
+    func removeKeyTile(key:NSIndexPath){
+        var tile = tiles[key]!  //must init for tile.removeFormDuperview()
+        var tileVal = tiles[key]
+        
+        tile.removeFromSuperview()
+        tiles.removeValueForKey(key)
+        tileVals.removeValueForKey(key)
     }
     
     func resetTapped(){
@@ -127,6 +191,7 @@ class MainViewController:UIViewController
         
         var index = NSIndexPath(forRow:row, inSection:col)
         tiles[index] = tile
+        tileVals[index] = value
         
         
         //数字出现的动态效果 0.3秒内由小变大
