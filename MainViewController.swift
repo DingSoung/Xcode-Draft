@@ -101,9 +101,38 @@ class MainViewController:UIViewController
         rightSwipe.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(rightSwipe)
     }
+    
+    func printTiles(tiles:Array<Int>){
+        var count = tiles.count
+        for var i = 0; i < count; i++ {
+            if (i+1) % Int(dimension) == 0 {
+                println(tiles[i])
+            }else{
+                print("\(tiles[i])\t")
+            }
+        }
+        println("")
+    }
     func swipeUp(){
         println("Swipe Up")
+        
+        gmodel.reflowUp()
+        printTiles(gmodel.tiles)
+        printTiles(gmodel.mtiles)
+        resetUI()
+        initUI()
+        /*
         for i in 0..dimension {
+            for j in 0..dimension {
+                var index = i * self.dimension + j
+                insertTile((i, j), value:gmodel.mtiles[index])
+            }
+        }
+        gmodel.copyFromMtiles()
+        */
+        
+        
+        /*for i in 0..dimension {
             for j in 0..dimension {
                 var row:Int = i
                 var col:Int = j
@@ -121,16 +150,31 @@ class MainViewController:UIViewController
 
                 }
             }
-        }
+        }*/
     }
     func swipeDown(){
         println("Swipe Down")
+        gmodel.reflowDown()
+        printTiles(gmodel.tiles)
+        printTiles(gmodel.mtiles)
+        resetUI()
+        initUI()
     }
     func swipeLeft(){
         println("Swipe Left")
+        gmodel.reflowLeft()
+        printTiles(gmodel.tiles)
+        printTiles(gmodel.mtiles)
+        resetUI()
+        initUI()
     }
     func swipeRight(){
         println("Swipe Right")
+        gmodel.reflowRight()
+        printTiles(gmodel.tiles)
+        printTiles(gmodel.mtiles)
+        resetUI()
+        initUI()
     }
     func removeKeyTile(key:NSIndexPath){
         var tile = tiles[key]!  //must init for tile.removeFormDuperview()
@@ -143,10 +187,23 @@ class MainViewController:UIViewController
     
     func resetTapped(){
         println("reset")
+        resetUI()
+        gmodel.initTiles()
+    }
+    func initUI(){
+        for i in 0..dimension{
+            for j in 0..dimension{
+                var index = i * self.dimension + j
+                if(gmodel.tiles[index] != 0){
+                    insertTile((i, j), value:gmodel.tiles[index])
+                }
+            }
+        }
+    }
+    func resetUI(){
         for(key, tile) in tiles {
             tile.removeFromSuperview()
         }
-        gmodel.initTiles()
     }
     func genTapped(){
         println("gen number")
