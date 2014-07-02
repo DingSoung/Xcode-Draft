@@ -115,7 +115,8 @@ class MainViewController:UIViewController
     }
     func swipeUp(){
         println("Swipe Up")
-        
+        gmodel.reflowUp()
+        gmodel.mergeUp()
         gmodel.reflowUp()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
@@ -155,6 +156,8 @@ class MainViewController:UIViewController
     func swipeDown(){
         println("Swipe Down")
         gmodel.reflowDown()
+        gmodel.mergeDown()
+        gmodel.reflowDown()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
         resetUI()
@@ -163,6 +166,8 @@ class MainViewController:UIViewController
     func swipeLeft(){
         println("Swipe Left")
         gmodel.reflowLeft()
+        gmodel.mergeLeft()
+        gmodel.reflowLeft()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
         resetUI()
@@ -170,6 +175,8 @@ class MainViewController:UIViewController
     }
     func swipeRight(){
         println("Swipe Right")
+        gmodel.reflowRight()
+        gmodel.mergeRight()
         gmodel.reflowRight()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
