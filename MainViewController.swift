@@ -33,7 +33,7 @@ class MainViewController:UIViewController
         self.tileVals = Dictionary()
         self.gmodel = GameModel(dimension: self.dimension)
         super.init(nibName:nil, bundle:nil)
-       
+        
     }
     
     override func viewDidLoad() {
@@ -42,10 +42,10 @@ class MainViewController:UIViewController
         setupBackground()
         setupSwipeGuestures()
         setupButtons()
-        for i in 0..16 {
+        for i in 0..2 {
             genNumber()
         }
-
+        
     }
     
     func setupButtons(){
@@ -59,9 +59,9 @@ class MainViewController:UIViewController
         btngen.frame.origin.x = 170
         btngen.frame.origin.y = 400
         self.view.addSubview(btngen)
-    
+        
     }
-
+    
     
     func setupBackground(){
         var x:CGFloat = 30
@@ -72,7 +72,7 @@ class MainViewController:UIViewController
             for j in 0..dimension{
                 var background = UIView(frame:CGRectMake(x,y,width,width))
                 background.backgroundColor = UIColor.darkGrayColor()
-                    self.view.addSubview(background)
+                self.view.addSubview(background)
                 backgrounds += background
                 y += padding + width
             }
@@ -120,37 +120,39 @@ class MainViewController:UIViewController
         gmodel.reflowUp()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
-        resetUI()
+        //resetUI()
         initUI()
+        
+        genNumber()
         /*
         for i in 0..dimension {
-            for j in 0..dimension {
-                var index = i * self.dimension + j
-                insertTile((i, j), value:gmodel.mtiles[index])
-            }
+        for j in 0..dimension {
+        var index = i * self.dimension + j
+        insertTile((i, j), value:gmodel.mtiles[index])
+        }
         }
         gmodel.copyFromMtiles()
         */
         
         
         /*for i in 0..dimension {
-            for j in 0..dimension {
-                var row:Int = i
-                var col:Int = j
-                var key = NSIndexPath(forRow:row, inSection:col)
-                if(tileVals.indexForKey(key) != nil) {
-                    // if > 3, move up 1 row
-                    if (row > 1) {
-                        var value = tileVals[key]
-                        removeKeyTile(key)
-                        var index = row * dimension + col - dimension
-                        row = Int(index/dimension)
-                        col = index - row * dimension
-                        insertTile((row, col), value:value!)
-                    }
-
-                }
-            }
+        for j in 0..dimension {
+        var row:Int = i
+        var col:Int = j
+        var key = NSIndexPath(forRow:row, inSection:col)
+        if(tileVals.indexForKey(key) != nil) {
+        // if > 3, move up 1 row
+        if (row > 1) {
+        var value = tileVals[key]
+        removeKeyTile(key)
+        var index = row * dimension + col - dimension
+        row = Int(index/dimension)
+        col = index - row * dimension
+        insertTile((row, col), value:value!)
+        }
+        
+        }
+        }
         }*/
     }
     func swipeDown(){
@@ -160,8 +162,9 @@ class MainViewController:UIViewController
         gmodel.reflowDown()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
-        resetUI()
+        //resetUI()
         initUI()
+        genNumber()
     }
     func swipeLeft(){
         println("Swipe Left")
@@ -170,8 +173,9 @@ class MainViewController:UIViewController
         gmodel.reflowLeft()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
-        resetUI()
+        //resetUI()
         initUI()
+        genNumber()
     }
     func swipeRight(){
         println("Swipe Right")
@@ -180,8 +184,9 @@ class MainViewController:UIViewController
         gmodel.reflowRight()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
-        resetUI()
+        //resetUI()
         initUI()
+        genNumber()
     }
     func removeKeyTile(key:NSIndexPath){
         var tile = tiles[key]!  //must init for tile.removeFormDuperview()
@@ -198,12 +203,45 @@ class MainViewController:UIViewController
         gmodel.initTiles()
     }
     func initUI(){
+        var index:Int
+        var key:NSIndexPath
+        var tile:TileView
+        var tileVal:Int
         for i in 0..dimension{
             for j in 0..dimension{
                 var index = i * self.dimension + j
-                if(gmodel.tiles[index] != 0){
+                key = NSIndexPath(forRow:i, inSection:j)
+
+                if((gmodel.tiles[index] == 0) && (tileVals.indexForKey(key) == nil)) {
+                }
+                if((gmodel.tiles[index] == 0) && (tileVals.indexForKey(key) != nil)) {
+                    tile = tiles[key]!
+                    tile.removeFromSuperview()
+                    
+                    tiles.removeValueForKey(key)
+                    tileVals.removeValueForKey(key)
+                    //insertTile((i, j), value: gmodel.tiles[index])
+                }
+                if((gmodel.tiles[index] > 0) && (tileVals.indexForKey(key) == nil)) {
                     insertTile((i, j), value:gmodel.tiles[index])
                 }
+                if((gmodel.tiles[index] > 0) && (tileVals.indexForKey(key) != nil)) {
+                    tileVal = tileVals[key]!
+                    if (tileVal == gmodel.tiles[index]) {
+                        tile = tiles[key]!
+                        tile.removeFromSuperview()
+                        
+                        tiles.removeValueForKey(key)
+                        tileVals.removeValueForKey(key)
+                        
+                        insertTile((i, j), value: gmodel.tiles[index])
+                    }
+                }
+                //tile = tiles[key]!
+                //tile.removeFromSuperview()
+                /*if(gmodel.tiles[index] != 0){
+                    insertTile((i, j), value:gmodel.tiles[index])
+                }*/
             }
         }
     }
@@ -211,6 +249,7 @@ class MainViewController:UIViewController
         for(key, tile) in tiles {
             tile.removeFromSuperview()
         }
+        tiles.removeAll(keepCapacity:true)
     }
     func genTapped(){
         println("gen number")
@@ -271,6 +310,6 @@ class MainViewController:UIViewController
                     ()-> Void in
                     tile.layer.setAffineTransform(CGAffineTransformIdentity)
                     })
-        })
+            })
     }
 }
