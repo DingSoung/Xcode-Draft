@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     //按键的功能，弹出对话框，在storyboard中右键关联到这个函数
     @IBAction func StartGame(sender:UIButton){
         let alertView = UIAlertView()
@@ -30,15 +31,10 @@ class ViewController: UIViewController {
         alertView.addButtonWithTitle("Ready Go!")
         alertView.show()
         alertView.delegate = self
-        
     }
     //对话框关闭后，进入主选项视图控制器界面
-    func alertView(alertView:UIAlertView,clickedButtonAtIndex
-        buttonIndex:Int){
-            self.presentViewController(MainTabViewController(),animated:
-                true, completion:nil)
+    func alertView(alertView:UIAlertView,clickedButtonAtIndex buttonIndex:Int){
+            self.presentViewController(MainTabViewController(),animated:true, completion:nil)
     }
-
-
 }
 

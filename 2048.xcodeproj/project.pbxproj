@@ -13,6 +13,7 @@
 		653F53C71959CE4200263172 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653F53C61959CE4200263172 /* Images.xcassets */; };
 		653F53D31959CE4200263172 /* _048Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653F53D21959CE4200263172 /* _048Tests.swift */; };
 		6573EE48195C6A1500F32FF7 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573EE47195C6A1500F32FF7 /* TileView.swift */; };
+		657AF3D21968039400BA4C99 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AF3D11968039400BA4C99 /* ScoreView.swift */; };
 		658A5CF6195F25D00068A17A /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A5CF5195F25D00068A17A /* ControlView.swift */; };
 		65C9FDB4195DD14F00ADDD3B /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9FDB3195DD14F00ADDD3B /* GameModel.swift */; };
 		65D318DD194DA51F00D73B36 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D318DC194DA51F00D73B36 /* MainTabViewController.swift */; };
@@ -42,6 +43,7 @@
 		653F53D21959CE4200263172 /* _048Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _048Tests.swift; sourceTree = "<group>"; };
 		653F53DC1959D27600263172 /* 2048.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 2048.playground; sourceTree = "<group>"; };
 		6573EE47195C6A1500F32FF7 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		657AF3D11968039400BA4C99 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		658A5CF5195F25D00068A17A /* ControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		65C9FDB3195DD14F00ADDD3B /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		65D318DC194DA51F00D73B36 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabViewController.swift; path = 2048/MainTabViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				6573EE47195C6A1500F32FF7 /* TileView.swift */,
 				658A5CF5195F25D00068A17A /* ControlView.swift */,
+				657AF3D11968039400BA4C99 /* ScoreView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			files = (
 				658A5CF6195F25D00068A17A /* ControlView.swift in Sources */,
 				65D318E2194DA59400D73B36 /* MainViewController.swift in Sources */,
+				657AF3D21968039400BA4C99 /* ScoreView.swift in Sources */,
 				65D318DD194DA51F00D73B36 /* MainTabViewController.swift in Sources */,
 				653F53C21959CE4200263172 /* ViewController.swift in Sources */,
 				653F53C01959CE4200263172 /* AppDelegate.swift in Sources */,

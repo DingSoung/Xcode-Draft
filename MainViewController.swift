@@ -8,24 +8,44 @@
 
 import UIKit
 
+enum Animation2048Type
+{
+    case None   //无动画
+    case New    //新出现动画
+    case Merge  //合并动画
+}
+
 class MainViewController:UIViewController
 {
-    //维度
-    var dimension:Int = 4
-    //过关值
-    var maxnumber:Int = 2048
+    //游戏方格维度
+    var dimension:Int = 4 {
+    didSet{
+        gmodel.dimension = dimension
+    }
+    }
+    
+    //游戏过关最大值
+    var maxnumber:Int = 16 {
+    didSet{
+        gmodel.maxnumber = maxnumber
+    }
+    }
+    
     //宽度
     var width:CGFloat = 60
-    // 间距
+    //间距
     var padding:CGFloat = 6
     //背景
     var backgrounds:Array<UIView>
     //Game Mode
     var gmodel:GameModel
-    //Store number of labelstr_t
+    //保存界面上的数字Label数据
     var tiles:Dictionary<NSIndexPath,TileView> //can not add "!"
-    
+    //当前界面的数
     var tileVals: Dictionary<NSIndexPath, Int>
+    
+    var score:ScoreView!
+    var bestscore:BestScoreView!
     
     init(){
         self.backgrounds = Array<UIView>()
@@ -33,15 +53,17 @@ class MainViewController:UIViewController
         self.tileVals = Dictionary()
         self.gmodel = GameModel(dimension: self.dimension)
         super.init(nibName:nil, bundle:nil)
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //绘制背景和方格
         setupBackground()
+        setupScoreLabels()
         setupSwipeGuestures()
         setupButtons()
+        setupScoreLabels()
+        self.gmodel = GameModel(dimension: self.dimension,maxnumber:maxnumber, score:score, bestscore:bestscore)
         for i in 0..2 {
             genNumber()
         }
@@ -62,6 +84,22 @@ class MainViewController:UIViewController
             }
             x += padding + width
         }
+    }
+    
+    func setupScoreLabels()
+    {
+        score = ScoreView()
+        score.frame.origin.x = 50
+        score.frame.origin.y = 80
+        score.changeScore(value: 0)
+        self.view.addSubview(score)
+        
+        bestscore = BestScoreView()
+        bestscore.frame.origin.x = 170
+        bestscore.frame.origin.y = 80
+        bestscore.changeScore(value: 0)
+        self.view.addSubview(bestscore)
+        
     }
     
     func setupSwipeGuestures(){
@@ -87,7 +125,7 @@ class MainViewController:UIViewController
     }
     func swipeUp(){
         println("Swipe Up")
-        gmodel.reflowUp()
+        //gmodel.reflowUp()
         gmodel.mergeUp()
         gmodel.reflowUp()
         printTiles(gmodel.tiles)
@@ -127,38 +165,96 @@ class MainViewController:UIViewController
     }
     func swipeDown(){
         println("Swipe Down")
-        gmodel.reflowDown()
+        //gmodel.reflowDown()
         gmodel.mergeDown()
         gmodel.reflowDown()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
-        resetUI()
+        //resetUI()
         initUI()
         genNumber()
     }
     func swipeLeft(){
         println("Swipe Left")
-        gmodel.reflowLeft()
+        //gmodel.reflowLeft()
         gmodel.mergeLeft()
         gmodel.reflowLeft()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
-        resetUI()
+        //resetUI()
         initUI()
         genNumber()
     }
     func swipeRight(){
         println("Swipe Right")
-        gmodel.reflowRight()
+        //gmodel.reflowRight()
         gmodel.mergeRight()
         gmodel.reflowRight()
         printTiles(gmodel.tiles)
         printTiles(gmodel.mtiles)
-        resetUI()
+        //resetUI()
         initUI()
         genNumber()
     }
     
+    func printTiles(tiles:Array<Int>){
+        var count = tiles.count
+        for var i = 0; i < count; i++ {
+            if (i+1) % Int(dimension) == 0 {
+                println(tiles[i])
+            }else{
+                print("\(tiles[i])\t")
+            }
+        }
+        println("")
+    }
+    func resetUI(){
+        for(key, tile) in tiles {
+            tile.removeFromSuperview()
+        }
+    }
+    func initUI(){
+        var index:Int
+        var key:NSIndexPath
+        var tile:TileView
+        var tileVal:Int
+        for i in 0..dimension{
+            for j in 0..dimension{
+                var index = i * self.dimension + j
+                /*if(gmodel.tiles[index] != 0){
+                insertTile((i, j), value:gmodel.tiles[index])
+                }*/
+                key = NSIndexPath(forRow:i, inSection:j)
+                if((gmodel.tiles[index] == 0) && (tileVals.indexForKey(key) == nil)) {
+                }
+                //原来界面没有值，模型数据中有值
+                if((gmodel.tiles[index]>0) && tileVals.indexForKey(key)==nil) {
+                    insertTile((i,j),value:gmodel.tiles[index], atype:Animation2048Type.Merge)
+                }
+                //原来界面中有值，现在模型中没有值 了
+                if((gmodel.tiles[index] == 0) && (tileVals.indexForKey(key) != nil)){
+                    tile = tiles[key]!
+                    tile.removeFromSuperview()
+                    
+                    tiles.removeValueForKey(key)
+                    tileVals.removeValueForKey(key)
+                }
+                //原来值，但是现在还有值
+                if((gmodel.tiles[index] > 0) && (tileVals.indexForKey(key) != nil)){
+                    tileVal = tileVals[key]!
+                    if(tileVal != gmodel.tiles[index])
+                    {
+                        tile = tiles[key]!
+                        tile.removeFromSuperview()
+                        
+                        tiles.removeValueForKey(key)
+                        tileVals.removeValueForKey(key)
+                        insertTile((i,j),value:gmodel.tiles[index],atype:Animation2048Type.Merge)
+                    }
+                }
+            }
+        }
+    }
     func removeKeyTile(key:NSIndexPath){
         var tile = tiles[key]!  //must init for tile.removeFormDuperview()
         var tileVal = tiles[key]
@@ -190,67 +286,6 @@ class MainViewController:UIViewController
         genNumber()
     }
     
-    func printTiles(tiles:Array<Int>){
-        var count = tiles.count
-        for var i = 0; i < count; i++ {
-            if (i+1) % Int(dimension) == 0 {
-                println(tiles[i])
-            }else{
-                print("\(tiles[i])\t")
-            }
-        }
-        println("")
-    }
-    
-    func resetUI(){
-        for(key, tile) in tiles {
-            tile.removeFromSuperview()
-        }
-    }
-    func initUI(){
-        /*
-        var index:Int
-        var key:NSIndexPath
-        var tile:TileView
-        var tileVal:Int
-        */
-        for i in 0..dimension{
-            for j in 0..dimension{
-                var index = i * self.dimension + j
-                if(gmodel.tiles[index] != 0){
-                    insertTile((i, j), value:gmodel.tiles[index])
-                }
-                /*
-                key = NSIndexPath(forRow:i, inSection:j)
-                if((gmodel.tiles[index] == 0) && (tileVals.indexForKey(key) == nil)) {
-                }
-                if((gmodel.tiles[index] == 0) && (tileVals.indexForKey(key) != nil)) {
-                tile = tiles[key]!
-                tile.removeFromSuperview()
-                
-                tiles.removeValueForKey(key)
-                tileVals.removeValueForKey(key)
-                //insertTile((i, j), value: gmodel.tiles[index])
-                }
-                if((gmodel.tiles[index] > 0) && (tileVals.indexForKey(key) == nil)) {
-                insertTile((i, j), value:gmodel.tiles[index])
-                }
-                if((gmodel.tiles[index] > 0) && (tileVals.indexForKey(key) != nil)) {
-                tileVal = tileVals[key]!
-                if (tileVal == gmodel.tiles[index]) {
-                tile = tiles[key]!
-                tile.removeFromSuperview()
-                
-                tiles.removeValueForKey(key)
-                tileVals.removeValueForKey(key)
-                
-                insertTile((i, j), value: gmodel.tiles[index])
-                }
-                }
-                */
-            }
-        }
-    }
     func genNumber(){
         //10以内的随机数，为“1”时 结果时4，有十分之一概率为4
         let randv = Int(arc4random_uniform(10))
@@ -274,10 +309,10 @@ class MainViewController:UIViewController
         }
         
         //显示数字
-        insertTile((row,col), value:seed)
+        insertTile((row,col), value:seed, atype:Animation2048Type.New)
     }
     
-    func insertTile(pos:(Int, Int), value:Int){
+    func insertTile(pos:(Int, Int), value:Int, atype:Animation2048Type){
         let (row, col) = pos
         
         let x = 30 + CGFloat(col) * (width + padding)
@@ -290,20 +325,19 @@ class MainViewController:UIViewController
         var index = NSIndexPath(forRow:row, inSection:col)
         tiles[index] = tile
         tileVals[index] = value
-        
-        //数字出现的动态效果 0.3秒内由小变大
-        tile.layer.setAffineTransform(CGAffineTransformMakeScale(0.1, 0.1))
-        UIView.animateWithDuration(0.3, delay:0.1, options:
-            UIViewAnimationOptions.TransitionNone, animations:{
-                ()->Void in
-                tile.layer.setAffineTransform(CGAffineTransformMakeScale(1, 1))
-            },
+        if(atype == Animation2048Type.None){
+            return
+        }else if(atype == Animation2048Type.New) {
+            tile.layer.setAffineTransform(CGAffineTransformMakeScale(0.1,0.1))
+        } else if(atype == Animation2048Type.Merge) {
+            tile.layer.setAffineTransform(CGAffineTransformMakeScale(0.8,0.8))
+        }
+        UIView.animateWithDuration(0.3, delay:0.1, options:UIViewAnimationOptions.TransitionNone,
+            animations:{() -> Void in tile.layer.setAffineTransform(CGAffineTransformMakeScale(1, 1))},
             completion:{
-                (finished:Bool) ->Void in
-                UIView.animateWithDuration(0.08, animations:{
-                    ()-> Void in
-                    tile.layer.setAffineTransform(CGAffineTransformIdentity)
-                    })
-            })
+                (finished:Bool) -> Void in UIView.animateWithDuration(0.08,
+                    animations:{() -> Void in tile.layer.setAffineTransform(CGAffineTransformIdentity)})
+            }
+        )
     }
 }

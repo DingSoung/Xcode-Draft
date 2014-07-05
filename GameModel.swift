@@ -10,9 +10,9 @@ import Foundation
 
 class GameModel{
     var dimension:Int = 0
-    //4*4 = 16
+    //用于存放结果和显示
     var tiles:Array<Int>!   //must need "!"
-    
+    //用于中间处理处理运算的
     var mtiles:Array<Int>!
     
     init(dimension:Int){
@@ -20,9 +20,32 @@ class GameModel{
         initTiles()
     }
     
+    var scoredelegate:ScoreViewProtocol!
+    var bestscoredelegage:ScoreViewProtocol!
+    var score:Int = 0
+    var bestscore:Int  = 0
+    var maxnumber:Int = 0
+    
+    init(dimension:Int, maxnumber:Int, score:ScoreViewProtocol, bestscore:ScoreViewProtocol){
+        self.maxnumber = maxnumber
+        self.dimension = dimension
+        self.scoredelegate = score
+        self.bestscoredelegage = bestscore
+        initTiles()
+    }
+    func isSuccess() -> Bool {
+        for i in 0..(dimension*dimension) {
+            if(tiles[i] >= maxnumber) {
+                return true
+            }
+        }
+        return false
+    }
+    
     func initTiles(){
         self.tiles = Array<Int>(count:self.dimension * self.dimension, repeatedValue:0)
         self.mtiles = Array<Int>(count:self.dimension * self.dimension, repeatedValue:0)
+        self.score = 0
     }
     
     func setPosition(row:Int, col:Int, value:Int) -> Bool {
@@ -37,7 +60,6 @@ class GameModel{
         tiles[index] = value
         return true
     }
-    
     func emptyPosition() -> Int[] {
         var emptytiles = Array<Int>()
         var index:Int
@@ -48,7 +70,6 @@ class GameModel{
         }
         return emptytiles
     }
-    
     func isFull() -> Bool {
         if (emptyPosition().count == 0) {
             return true
@@ -66,6 +87,7 @@ class GameModel{
             tiles[i] = mtiles[i]
         }
     }
+    
     func reflowUp(){
         copyToMtiles()
         var index:Int
@@ -156,6 +178,17 @@ class GameModel{
         copyFromMtiles()
     }
     
+    func changeScore(s:Int)
+    {
+        score+=s
+        if(bestscore<score)
+        {
+            bestscore = score
+        }
+        scoredelegate.changeScore(value: score)
+        bestscoredelegage.changeScore(value: score)
+    }
+    
     func mergeUp(){
         copyToMtiles()
         var index:Int
@@ -164,10 +197,10 @@ class GameModel{
                 index = self.dimension * i + j
                 if(mtiles[index] > 0 && mtiles[index - self.dimension] == mtiles[index]) {
                     mtiles[index - self.dimension] = mtiles[index] * 2
+                    changeScore(mtiles[index] * 2)
                     mtiles[index] = 0
                 }
             }
-                
         }
         copyFromMtiles()
     }
@@ -179,10 +212,10 @@ class GameModel{
                 index = self.dimension * i + j
                 if(mtiles[index] > 0 && mtiles[index + self.dimension] == mtiles[index]) {
                     mtiles[index + self.dimension] = mtiles[index] * 2
+                    changeScore(mtiles[index] * 2)
                     mtiles[index] = 0
                 }
             }
-            
         }
         copyFromMtiles() 
     }
@@ -194,6 +227,7 @@ class GameModel{
                 index = self.dimension * i + j
                 if(mtiles[index] > 0 && mtiles[index - 1] == mtiles[index]) {
                     mtiles[index - 1] = mtiles[index] * 2
+                    changeScore(mtiles[index] * 2)
                     mtiles[index] = 0
                 }
             }
@@ -208,10 +242,10 @@ class GameModel{
                 index = self.dimension * i + j
                 if(mtiles[index] > 0 && mtiles[index + 1] == mtiles[index]) {
                     mtiles[index + 1] = mtiles[index] * 2
+                    changeScore(mtiles[index] * 2)
                     mtiles[index] = 0
                 }
             }
-            
         }
         copyFromMtiles()
     }
