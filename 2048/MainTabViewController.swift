@@ -18,8 +18,7 @@ class MainTabViewController:UITabBarController
         viewMain.title = "2048"
         var viewSetting = SettingViewController()
         viewSetting.title = "设置"
-        
-        var mian = UINavigationController(rootViewController:viewMain)
+                var mian = UINavigationController(rootViewController:viewMain)
         var setting = UINavigationController(rootViewController:viewSetting)
         
         self.viewControllers = [mian, setting]
