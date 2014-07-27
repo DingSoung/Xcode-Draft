@@ -12,7 +12,6 @@
 		65C9A49C1984D186000DFC46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C9A49A1984D186000DFC46 /* Main.storyboard */; };
 		65C9A49E1984D186000DFC46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C9A49D1984D186000DFC46 /* Images.xcassets */; };
 		65C9A4AA1984D186000DFC46 /* PushKillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9A4A91984D186000DFC46 /* PushKillerTests.swift */; };
-		65C9A4B41984E397000DFC46 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 65C9A4B31984E397000DFC46 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		658F366A19855834004C8CE8 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		65C9A4911984D186000DFC46 /* PushKiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushKiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C9A4951984D186000DFC46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65C9A4961984D186000DFC46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +35,6 @@
 		65C9A4A31984D186000DFC46 /* PushKillerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushKillerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C9A4A81984D186000DFC46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65C9A4A91984D186000DFC46 /* PushKillerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushKillerTests.swift; sourceTree = "<group>"; };
-		65C9A4B31984E397000DFC46 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +58,10 @@
 		65C9A4881984D186000DFC46 = {
 			isa = PBXGroup;
 			children = (
+				658F366A19855834004C8CE8 /* MyPlayground.playground */,
 				65C9A4931984D186000DFC46 /* PushKiller */,
 				65C9A4A61984D186000DFC46 /* PushKillerTests */,
 				65C9A4921984D186000DFC46 /* Products */,
-				65C9A4B31984E397000DFC46 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,7 +210,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65C9A4B41984E397000DFC46 /* README.md in Sources */,
 				65C9A4991984D186000DFC46 /* ViewController.swift in Sources */,
 				65C9A4971984D186000DFC46 /* AppDelegate.swift in Sources */,
 			);
@@ -399,6 +397,7 @@
 				65C9A4AF1984D186000DFC46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65C9A4B01984D186000DFC46 /* Build configuration list for PBXNativeTarget "PushKillerTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +406,7 @@
 				65C9A4B21984D186000DFC46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
