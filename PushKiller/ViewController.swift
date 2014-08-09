@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var msgtime:Int8 = 0
     var msgfilter:Int8 = 50
     var msgstack:NSString = "later"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,10 +25,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func quiet(sender: UISlider) {
-        //以小时为单位  0 ~ 2^8 小时
+        //     以小时为单位  0 ~ 2^8 小时
         msgfilter = (Int8)(sender.value * 100)
         msgfilter = (msgfilter/10) * 10
     }
+    
+    @IBOutlet weak var timePicker: UIPickerView!
+    //    将控添加到storyboard，拉操作，拖到这里，就会有UIPickerView, 进去后会看到一些函数是用来配置的
+    @IBOutlet weak var picker: UIPickerView!
+    //    列数
+    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int {
+        return 2
+    }
+    //    行数
+    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int {
+        return 10
+    }
+    //    显示的类容
+    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String {
+        return "第\(row)行"
+    }
+    
     
     func configtime() {
         
