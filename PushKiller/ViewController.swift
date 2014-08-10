@@ -42,15 +42,15 @@ class ViewController: UIViewController {
     func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String {
         return timeZone[row];
     }
-//    控制宽度高度
+    //    控制宽度高度
     func pickerView(pickerView: UIPickerView!, widthForComponent component: Int) -> CGFloat {
-        return 100
+        return 260
     }
     func pickerView(pickerView: UIPickerView!, rowHeightForComponent component: Int) -> CGFloat {
         return 21
     }
     func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int) {
-//        选择后执行
+        //  选择后执行
         var i = 0
     }
     
@@ -70,24 +70,11 @@ class ViewController: UIViewController {
         "屏蔽所有推送消息，短信，语音信箱，除了电话"]
     @IBAction func messageFilter(sender: AnyObject) {
         messageLable.text = messageFilter[(Int)(messageSlider.value * (Float)(messageFilter.count - 1))]
-    var str = NSString(format:"%2.1f",(messageSlider.value * 100))
+        //  浮点数输出格式化
+        var str = NSString(format:"%2.1f",(messageSlider.value * 100))
         filterPersent.text = "\(str)%"
     }
     
-    
-    
-    var msgstack:NSString = "later"
-    func configmsgstack() {
-        switch msgstack {
-        case "remind":
-            let msgstackdetail = "提醒我看"
-        case "freetime":
-            let msgstackdetail = "稍后看想看就看"
-        case "ingor":
-            let msgstackdetail = "忽略掉，不看"
-        default:
-            msgstack = "remind"
-        }
-    }
+    @IBOutlet weak var messageStack: UISegmentedControl!
 }
 

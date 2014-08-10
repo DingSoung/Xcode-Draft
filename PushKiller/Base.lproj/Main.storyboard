@@ -21,7 +21,7 @@
                                 <segments>
                                     <segment title="提醒我看"/>
                                     <segment title="想看就看"/>
-                                    <segment title="不想浪费时间"/>
+                                    <segment title="直接扔掉"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="处理过滤的消息？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKs-Ed-2ny">
@@ -49,7 +49,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwA-LM-3Sx">
-                                <rect key="frame" x="41" y="485" width="46" height="30"/>
+                                <rect key="frame" x="40" y="484" width="46" height="30"/>
                                 <state key="normal" title="返回">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,13 +60,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isH-Va-tH2" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="79" y="46" width="221" height="162"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Ka0-4H-adr"/>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="7Ex-f3-Gi0"/>
-                                </connections>
-                            </pickerView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我是" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k0-gE-Zq2">
                                 <rect key="frame" x="20" y="116" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -79,6 +72,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isH-Va-tH2" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="79" y="46" width="221" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Ka0-4H-adr"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="7Ex-f3-Gi0"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -91,6 +91,7 @@
                         <outlet property="filterPersent" destination="5JJ-nJ-gGv" id="aaP-Xq-0Gu"/>
                         <outlet property="messageLable" destination="FWO-bt-VFC" id="VKZ-R6-xZy"/>
                         <outlet property="messageSlider" destination="dym-Gg-5pa" id="8Qw-o3-eHn"/>
+                        <outlet property="messageStack" destination="xVh-w1-CfJ" id="Epb-Th-uhT"/>
                         <outlet property="timePicker" destination="isH-Va-tH2" id="ZcV-J2-1iB"/>
                     </connections>
                 </viewController>
