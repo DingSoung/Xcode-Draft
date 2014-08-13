@@ -5,7 +5,7 @@
 //  Created by 丁松 on 14-7-27.
 //  Copyright (c) 2014年 丁松. All rights reserved.
 //
-
+//这个文件控制整个程序的生命周期，启动前干什么 结束后干什么，激活时干什么，后台时干什么等等
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        // Override point for customization after application launch.
+        self.window!.backgroundColor = UIColor.whiteColor()
+        self.window!.makeKeyAndVisible()
+        var root = tabViewController()
+        var navCtrl=UINavigationController(rootViewController:root)
+        self.window!.rootViewController=navCtrl
+        
         return true
     }
 
