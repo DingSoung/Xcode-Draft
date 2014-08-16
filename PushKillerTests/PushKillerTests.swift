@@ -2,7 +2,7 @@
 //  PushKillerTests.swift
 //  PushKillerTests
 //
-//  Created by 丁松 on 14-7-27.
+//  Created by 丁松 on 14-8-16.
 //  Copyright (c) 2014年 丁松. All rights reserved.
 //
 

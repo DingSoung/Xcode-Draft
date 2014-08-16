@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65C9A4901984D186000DFC46"
+               BlueprintIdentifier = "637ABAE9199F765A00AFBF55"
                BuildableName = "PushKiller.app"
                BlueprintName = "PushKiller"
                ReferencedContainer = "container:PushKiller.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65C9A4A21984D186000DFC46"
+               BlueprintIdentifier = "637ABAFB199F765A00AFBF55"
                BuildableName = "PushKillerTests.xctest"
                BlueprintName = "PushKillerTests"
                ReferencedContainer = "container:PushKiller.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65C9A4A21984D186000DFC46"
+               BlueprintIdentifier = "637ABAFB199F765A00AFBF55"
                BuildableName = "PushKillerTests.xctest"
                BlueprintName = "PushKillerTests"
                ReferencedContainer = "container:PushKiller.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65C9A4901984D186000DFC46"
+            BlueprintIdentifier = "637ABAE9199F765A00AFBF55"
             BuildableName = "PushKiller.app"
             BlueprintName = "PushKiller"
             ReferencedContainer = "container:PushKiller.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65C9A4901984D186000DFC46"
+            BlueprintIdentifier = "637ABAE9199F765A00AFBF55"
             BuildableName = "PushKiller.app"
             BlueprintName = "PushKiller"
             ReferencedContainer = "container:PushKiller.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65C9A4901984D186000DFC46"
+            BlueprintIdentifier = "637ABAE9199F765A00AFBF55"
             BuildableName = "PushKiller.app"
             BlueprintName = "PushKiller"
             ReferencedContainer = "container:PushKiller.xcodeproj">

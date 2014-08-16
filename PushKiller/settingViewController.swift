@@ -6,16 +6,9 @@
 //  Copyright (c) 2014年 丁松. All rights reserved.
 //
 
-import Foundation
 import UIKit
 class settingViewController:UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        在这里配置场景
-    }
     
-    /*
     let timeZone = ["码农，半夜别吵我",
         "上班族，早九晚五",
         "小学生作息",
@@ -36,20 +29,25 @@ class settingViewController:UIViewController {
     @IBOutlet weak var filterPersent: UILabel!
     @IBOutlet weak var messageSlider: UISlider!
     @IBOutlet weak var messageStack: UISegmentedControl!
-
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    required init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder);
+    }
+    override init() {
+        super.init();
+        messageSlider.value = 0.2
         messageSlider.value = 0.2
         var str = NSString(format:"%2.1f",(messageSlider.value * 100))
         filterPersent.text = "\(str)%"
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    //    将控添加到storyboard，拉操作，拖到这里，就会有UIPickerView, 进去后会看到一些函数是用来配置的
-    @IBOutlet weak var timePicker: UIPickerView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //        在这里配置场景
+        
+        var str = NSString(format:"%2.1f",(messageSlider.value * 100))
+        filterPersent.text = "\(str)%"
+    }
 
     //    列数
     func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int {
@@ -75,12 +73,16 @@ class settingViewController:UIViewController {
         //  选择后执行
         var i = 0
     }
+
     
+    //    将控添加到storyboard，拉操作，拖到这里，就会有UIPickerView, 进去后会看到一些函数是用来配置的
+    @IBOutlet weak var timePicker: UIPickerView!
+
     @IBAction func messageFilter(sender: AnyObject) {
         messageLable.text = messageFilter[(Int)(messageSlider.value * (Float)(messageFilter.count - 1))]
         //  浮点数输出格式化
         var str = NSString(format:"%2.1f",(messageSlider.value * 100))
         filterPersent.text = "\(str)%"
     }
-    */
+    
 }
