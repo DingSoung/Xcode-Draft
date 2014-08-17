@@ -9,16 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
+    
+    //var label:UILabel
+    
+    var goButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    @IBAction func goSetting(sender: AnyObject) {
+        println("Hi ViewController")
+        enterSence(true)
+    }
+    
+    
+    func enterSence(SenseChiose:Bool){
+        if(SenseChiose) {
+            println("Enter setting Dilog")
+            self.presentViewController(settingViewController(), animated: true, completion: {println("Setting Done")})
+        } else {
+            let Sense = messageViewController()
+            self.presentViewController(Sense, animated: true, completion: nil)
+        }
+        //    let message = settingViewController()
+        //    self.presentViewController(message, animated: true, completion: nil)
+    }
+    
 }
 
 

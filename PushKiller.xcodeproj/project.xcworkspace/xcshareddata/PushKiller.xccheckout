@@ -10,14 +10,14 @@
 	<string>PushKiller</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4876E4AFF8E7BA230E8B71267894006A981E9C8F</key>
+		<key>76727C662423D6C7D2806D407336D11BAE78BBDF</key>
 		<string>https://github.com/DingSoung/PushKiller.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PushKiller.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4876E4AFF8E7BA230E8B71267894006A981E9C8F</key>
+		<key>76727C662423D6C7D2806D407336D11BAE78BBDF</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4876E4AFF8E7BA230E8B71267894006A981E9C8F</string>
+	<string>76727C662423D6C7D2806D407336D11BAE78BBDF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4876E4AFF8E7BA230E8B71267894006A981E9C8F</string>
+			<string>76727C662423D6C7D2806D407336D11BAE78BBDF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>PushKiller</string>
 		</dict>
