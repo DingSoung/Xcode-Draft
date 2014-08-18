@@ -15,7 +15,7 @@
 		637ABB0D199F773500AFBF55 /* messageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637ABB0C199F773500AFBF55 /* messageViewController.swift */; };
 		637ABB11199F774100AFBF55 /* server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637ABB0E199F774100AFBF55 /* server.swift */; };
 		637ABB12199F774100AFBF55 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637ABB0F199F774100AFBF55 /* settingViewController.swift */; };
-		637ABB13199F774100AFBF55 /* tabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637ABB10199F774100AFBF55 /* tabViewController.swift */; };
+		637ABB13199F774100AFBF55 /* tabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637ABB10199F774100AFBF55 /* tabbarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		637ABB0C199F773500AFBF55 /* messageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageViewController.swift; sourceTree = "<group>"; };
 		637ABB0E199F774100AFBF55 /* server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = server.swift; sourceTree = "<group>"; };
 		637ABB0F199F774100AFBF55 /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
-		637ABB10199F774100AFBF55 /* tabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabViewController.swift; sourceTree = "<group>"; };
+		637ABB10199F774100AFBF55 /* tabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabbarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 			children = (
 				637ABB0E199F774100AFBF55 /* server.swift */,
 				637ABB0F199F774100AFBF55 /* settingViewController.swift */,
-				637ABB10199F774100AFBF55 /* tabViewController.swift */,
+				637ABB10199F774100AFBF55 /* tabbarViewController.swift */,
 				637ABB0C199F773500AFBF55 /* messageViewController.swift */,
 				637ABAEF199F765A00AFBF55 /* AppDelegate.swift */,
 				637ABAF1199F765A00AFBF55 /* ViewController.swift */,
@@ -224,7 +224,7 @@
 				637ABB0D199F773500AFBF55 /* messageViewController.swift in Sources */,
 				637ABB12199F774100AFBF55 /* settingViewController.swift in Sources */,
 				637ABB11199F774100AFBF55 /* server.swift in Sources */,
-				637ABB13199F774100AFBF55 /* tabViewController.swift in Sources */,
+				637ABB13199F774100AFBF55 /* tabbarViewController.swift in Sources */,
 				637ABAF0199F765A00AFBF55 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

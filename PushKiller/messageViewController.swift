@@ -7,8 +7,7 @@
 //
 
 import UIKit
-class messageViewController:UIViewController
-{
+class messageViewController:UITableView {
     
     
     func clearMessageStack() {

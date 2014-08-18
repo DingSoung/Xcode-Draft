@@ -23,13 +23,13 @@ class tabViewController:UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var viewSetting = settingViewController()
-        viewSetting.title = "设置"
-        var viewMessage = messageViewController()
-        viewMessage.title = "消息回"
-        var Setting = UINavigationController(rootViewController:viewSetting)
-        var Message = UINavigationController(rootViewController:viewMessage)
-        self.viewControllers = [Setting, Message]
-        self.selectedIndex = 0
+//        var viewSetting = settingViewController()
+//        viewSetting.title = "设置"
+//        var viewMessage = messageViewController()
+//        viewMessage.title = "消息回"
+//        var Setting = UINavigationController(rootViewController:viewSetting)
+//        var Message = UINavigationController(rootViewController:viewMessage)
+//        self.viewControllers = [Setting, Message]
+//        self.selectedIndex = 0
     }
 }

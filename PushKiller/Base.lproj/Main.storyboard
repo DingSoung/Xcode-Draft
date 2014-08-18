@@ -4,33 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="4fv-5P-pQF">
-            <objects>
-                <viewController id="u3N-MX-scc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gHM-qB-tkY"/>
-                        <viewControllerLayoutGuide type="bottom" id="ios-Kq-Oq0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kL5-Hw-yjq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="yqf-vC-uPJ"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
-                        <size key="portraitSize" width="320" height="568"/>
-                        <size key="landscapeSize" width="568" height="320"/>
-                    </simulatedScreenMetrics>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pQD-rx-9gL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="270" y="-346"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar View Controller-->
         <scene sceneID="xbP-B4-edL">
             <objects>
-                <tabBarController id="8v3-ms-DiB" sceneMemberID="viewController">
+                <tabBarController id="8v3-ms-DiB" customClass="tabbarViewController" customModule="PushKiller" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
@@ -43,19 +20,19 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="u3N-MX-scc" kind="relationship" relationship="viewControllers" id="D7p-mc-Qw2"/>
                         <segue destination="Byh-5k-pMH" kind="relationship" relationship="viewControllers" id="rXq-h7-yWW"/>
+                        <segue destination="ZAS-g8-VDW" kind="relationship" relationship="viewControllers" id="diH-CO-iff"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVX-B8-Fvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="-143"/>
+            <point key="canvasLocation" x="-673" y="-88"/>
         </scene>
-        <!--Item-->
+        <!--Message-->
         <scene sceneID="dAs-4K-fW7">
             <objects>
-                <tableViewController id="Byh-5k-pMH" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wgn-aV-FLk">
+                <tableViewController title="Message" id="Byh-5k-pMH" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wgn-aV-FLk" customClass="messageViewController" customModule="PushKiller" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,7 +49,7 @@
                             <outlet property="delegate" destination="Byh-5k-pMH" id="ZxO-fz-fE0"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Y4e-4J-TqD"/>
+                    <tabBarItem key="tabBarItem" title="Message" id="Y4e-4J-TqD"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
                         <size key="portraitSize" width="320" height="568"/>
@@ -81,7 +58,55 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANy-5X-BYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275" y="307"/>
+            <point key="canvasLocation" x="-193" y="-351"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="Cw9-o8-BtC">
+            <objects>
+                <viewController id="ZAS-g8-VDW" customClass="settingViewController" customModule="PushKiller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lML-S1-gVz"/>
+                        <viewControllerLayoutGuide type="bottom" id="9kT-mY-k9O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kgs-tX-chJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZL5-XM-zRi">
+                                <rect key="frame" x="14" y="295" width="211" height="31"/>
+                                <connections>
+                                    <action selector="filterConfig:" destination="ZAS-g8-VDW" eventType="valueChanged" id="rg4-Tv-En9"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpa-67-Yna">
+                                <rect key="frame" x="16" y="249" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6I-kq-fBI">
+                                <rect key="frame" x="226" y="299" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Es8-Jr-Cif">
+                                <rect key="frame" x="0.0" y="43" width="320" height="162"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" id="L5t-pR-7dY"/>
+                    <connections>
+                        <outlet property="filterDetail" destination="hpa-67-Yna" id="6qn-al-AlU"/>
+                        <outlet property="filterPersent" destination="c6I-kq-fBI" id="JNy-hL-bgE"/>
+                        <outlet property="filterSlider" destination="ZL5-XM-zRi" id="zCQ-I0-7Dm"/>
+                        <outlet property="timePicker" destination="Es8-Jr-Cif" id="z2Y-vz-IFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61D-BL-urA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193" y="302"/>
         </scene>
     </scenes>
 </document>
