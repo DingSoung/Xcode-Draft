@@ -7,8 +7,9 @@
 //
 
 import UIKit
-
+//UIApplicationMain 被mian调用
 @UIApplicationMain
+//开启一个消息循环，每监听到对应的系统事件，就会通知给AppDelegate
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?

@@ -413,6 +413,7 @@
 				637ABB08199F765A00AFBF55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		637ABB09199F765A00AFBF55 /* Build configuration list for PBXNativeTarget "PushKillerTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				637ABB0B199F765A00AFBF55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

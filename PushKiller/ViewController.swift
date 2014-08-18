@@ -10,15 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //var label:UILabel
-    
-    var goButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
+        // Do any additional setup after loading the view, typically from a nib
+        println("Hi ViewController")
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,13 +22,11 @@ class ViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var Start: UIButton!
     
-    
-    @IBAction func goSetting(sender: AnyObject) {
-        println("Hi ViewController")
+    @IBAction func Start(sender: AnyObject) {
         enterSence(true)
     }
-    
     
     func enterSence(SenseChiose:Bool){
         if(SenseChiose) {
