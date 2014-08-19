@@ -30,6 +30,9 @@ class settingViewController: UIViewController {
     @IBOutlet weak var filterDetail: UILabel!
     @IBOutlet weak var filterPersent: UILabel!
     
+    
+    
+    
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder);
     }
@@ -44,24 +47,32 @@ class settingViewController: UIViewController {
         super.viewDidLoad()
         //        在这里配置场景
         
+        timePicker.delegate = self
+        timePicker.dataSource = self
+        //timePicker.selectRow(currencyPosition, inComponent: 0,animated: true)
         
         filterDetail.text = filterDetailTable[(Int)(filterSlider.value * (Float)(filterDetailTable.count - 1))]
         var str = NSString(format:"%2.1f",(filterSlider.value * 100))
         filterPersent.text = "\(str)%"
     }
     
+    
+    
+    @IBAction func filterConfig(sender: AnyObject) {
+        filterDetail.text = filterDetailTable[(Int)(filterSlider.value * (Float)(filterDetailTable.count - 1))]
+        var str = NSString(format:"%2.1f",(filterSlider.value * 100))
+        filterPersent.text = "\(str)%"
+    }
+}
+
+extension settingViewController: UIPickerViewDataSource {
     //    列数
     func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int {
         return 1
     }
-    //    行数
+    //    行数    不能用sizeof()
     func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int {
-        //        不能用sizeof()
         return timeDetailTable.count
-    }
-    //    每一行显示的类容
-    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String {
-        return timeDetailTable[row];
     }
     //    控制宽度高度
     func pickerView(pickerView: UIPickerView!, widthForComponent component: Int) -> CGFloat {
@@ -70,21 +81,12 @@ class settingViewController: UIViewController {
     func pickerView(pickerView: UIPickerView!, rowHeightForComponent component: Int) -> CGFloat {
         return 21
     }
-    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int) {
-        //  选择后执行
-        var i = 0
+}
+
+extension settingViewController: UIPickerViewDelegate {
+    //    每一行显示的类容
+    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
+        return timeDetailTable[row];
     }
-    
-    @IBAction func filterConfig(sender: AnyObject) {
-        filterDetail.text = filterDetailTable[(Int)(filterSlider.value * (Float)(filterDetailTable.count - 1))]
-        var str = NSString(format:"%2.1f",(filterSlider.value * 100))
-        filterPersent.text = "\(str)%"
-    }
-    
-    
-    
-    
-    
-    
     
 }
