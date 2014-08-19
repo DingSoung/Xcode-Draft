@@ -49,7 +49,7 @@
                             <outlet property="delegate" destination="Byh-5k-pMH" id="ZxO-fz-fE0"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Message" id="Y4e-4J-TqD"/>
+                    <tabBarItem key="tabBarItem" title="Message" image="mail_24.png" id="Y4e-4J-TqD"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
                         <size key="portraitSize" width="320" height="568"/>
@@ -96,7 +96,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Setting" id="L5t-pR-7dY"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="gear_24.png" id="L5t-pR-7dY"/>
                     <connections>
                         <outlet property="filterDetail" destination="hpa-67-Yna" id="6qn-al-AlU"/>
                         <outlet property="filterPersent" destination="c6I-kq-fBI" id="JNy-hL-bgE"/>
@@ -109,4 +109,8 @@
             <point key="canvasLocation" x="-193" y="302"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear_24.png" width="24" height="24"/>
+        <image name="mail_24.png" width="24" height="24"/>
+    </resources>
 </document>
