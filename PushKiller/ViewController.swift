@@ -21,23 +21,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet var Start: [UIButton]!
-    @IBAction func Start(sender: AnyObject) {
-        enterSence(true)
-    }
+//    @IBOutlet var Start: [UIButton]!
+//    @IBAction func Start(sender: AnyObject) {
+//        enterSence(true)
+//    }
     
-    func enterSence(SenseChiose:Bool){
-        if(SenseChiose) {
-            println("Enter setting Dilog")
-            self.presentViewController(settingViewController(), animated: true, completion: {println("Setting Done")})
-        } else {
-            let Sense = messageViewController()
-//            present View 只能是在当前类型下的class 现实相同的view，比如setting 和这个viewcontroller是相同的，可以present，而message就不行
-//            self.presentViewController(Sense, animated: true, completion: nil)
-        }
-        //    let message = settingViewController()
-        //    self.presentViewController(message, animated: true, completion: nil)
-    }
+//    func enterSence(SenseChiose:Bool){
+//        if(SenseChiose) {
+//            println("Enter setting Dilog")
+//            self.presentViewController(settingViewController(), animated: true, completion: {println("Setting Done")})
+//        } else {
+//            let Sense = messageViewController()
+////            present View 只能是在当前类型下的class 现实相同的view，比如setting 和这个viewcontroller是相同的，可以present，而message就不行
+////            self.presentViewController(Sense, animated: true, completion: nil)
+//        }
+//        //    let message = settingViewController()
+//        //    self.presentViewController(message, animated: true, completion: nil)
+//    }
     
 }
 
