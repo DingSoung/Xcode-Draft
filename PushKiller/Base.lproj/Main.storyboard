@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wellcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SN0-li-tJc">
-                                <rect key="frame" x="123" y="136" width="75" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8V7-fC-Pco">
                                 <rect key="frame" x="241" y="477" width="33" height="30"/>
                                 <state key="normal" title="Start">
@@ -31,6 +25,18 @@
                                     <segue destination="8v3-ms-DiB" kind="modal" id="scJ-mr-st2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wellcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SN0-li-tJc">
+                                <rect key="frame" x="123" y="136" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="在这里显示预览状态比如时间，重要信息，缓存个数等等，或者欢迎等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZw-EI-DU6">
+                                <rect key="frame" x="22" y="242" width="527" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -42,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sia-Mf-Drs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1259" y="-88"/>
+            <point key="canvasLocation" x="-1144" y="-88"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xbP-B4-edL">
@@ -61,8 +67,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ZAS-g8-VDW" kind="relationship" relationship="viewControllers" id="diH-CO-iff"/>
                         <segue destination="V6h-bn-duy" kind="relationship" relationship="viewControllers" id="xH7-ar-k4m"/>
+                        <segue destination="ZAS-g8-VDW" kind="relationship" relationship="viewControllers" id="diH-CO-iff"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVX-B8-Fvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,12 +142,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61D-BL-urA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-261" y="623"/>
+            <point key="canvasLocation" x="-130" y="380"/>
         </scene>
-        <!--Message-->
+        <!--Message Navigation-->
         <scene sceneID="m7i-mA-NWy">
             <objects>
-                <navigationController id="V6h-bn-duy" sceneMemberID="viewController">
+                <navigationController title="Message Navigation" id="V6h-bn-duy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Message" image="mail_24.png" id="ace-NV-DRC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KTh-tR-Z4E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -155,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="-130" y="-323"/>
         </scene>
-        <!--View Controller-->
+        <!--Message List-->
         <scene sceneID="cjC-6k-GFi">
             <objects>
-                <viewController id="goY-D0-rnH" sceneMemberID="viewController">
+                <viewController title="Message List" id="goY-D0-rnH" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XEH-LR-WYe"/>
                         <viewControllerLayoutGuide type="bottom" id="pSv-Fg-L4G"/>
@@ -190,10 +196,10 @@
             </objects>
             <point key="canvasLocation" x="322" y="-318"/>
         </scene>
-        <!--View Controller-->
+        <!--Message detail-->
         <scene sceneID="Obj-zA-nhh">
             <objects>
-                <viewController id="Rcr-1D-wRX" sceneMemberID="viewController">
+                <viewController title="Message detail" id="Rcr-1D-wRX" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mx6-of-dta"/>
                         <viewControllerLayoutGuide type="bottom" id="XGM-qp-iJN"/>
@@ -202,8 +208,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sub View Controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bh-d8-mJX">
-                                <rect key="frame" x="118" y="273" width="152" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="这里显示详细信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bh-d8-mJX">
+                                <rect key="frame" x="92" y="216" width="136" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -215,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igI-KK-5eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="-337"/>
+            <point key="canvasLocation" x="730" y="-318"/>
         </scene>
     </scenes>
     <resources>
