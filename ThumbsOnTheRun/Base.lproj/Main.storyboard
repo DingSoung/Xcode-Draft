@@ -60,7 +60,7 @@
         <!--MainMenu-->
         <scene sceneID="5do-hi-eht">
             <objects>
-                <viewController title="MainMenu" id="pBu-IE-9Vl" sceneMemberID="viewController">
+                <viewController title="MainMenu" id="pBu-IE-9Vl" customClass="MainMenu" customModule="ThumbsOnTheRun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NGp-In-5wf"/>
                         <viewControllerLayoutGuide type="bottom" id="nYQ-IY-YwW"/>
