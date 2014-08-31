@@ -1,9 +1,9 @@
 //
-//  File.swift
-//  ThumbsOnTheRun
+//  SideMenu.swift
+//  SwiftSideMenu
 //
-//  Created by 丁松 on 14-8-30.
-//  Copyright (c) 2014年 丁松. All rights reserved.
+//  Created by Evgeny on 24.07.14.
+//  Copyright (c) 2014 Evgeny Nazarov. All rights reserved.
 //
 
 import UIKit

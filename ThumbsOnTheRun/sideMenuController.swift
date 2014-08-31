@@ -1,10 +1,11 @@
 //
-//  MenuTableViewController.swift
-//  ThumbsOnTheRun
+//  MenuController.swift
+//  SwiftSideMenu
 //
-//  Created by 丁松 on 14-8-30.
-//  Copyright (c) 2014年 丁松. All rights reserved.
+//  Created by Evgeny on 23.07.14.
+//  Copyright (c) 2014 Evgeny Nazarov. All rights reserved.
 //
+
 import UIKit
 
 protocol MenuTableViewControllerDelegate {

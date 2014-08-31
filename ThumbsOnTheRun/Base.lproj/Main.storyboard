@@ -60,7 +60,7 @@
         <!--MainMenu-->
         <scene sceneID="5do-hi-eht">
             <objects>
-                <viewController title="MainMenu" id="pBu-IE-9Vl" customClass="MainMenu" customModule="ThumbsOnTheRun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainMenu" id="pBu-IE-9Vl" customClass="menuController" customModule="ThumbsOnTheRun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NGp-In-5wf"/>
                         <viewControllerLayoutGuide type="bottom" id="nYQ-IY-YwW"/>
@@ -76,7 +76,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main Menu" id="zyc-Vm-xj8">
-                        <barButtonItem key="leftBarButtonItem" title="MenuToggle" id="rRQ-9K-xoS"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="rRQ-9K-xoS">
+                            <connections>
+                                <action selector="menuToggle:" destination="pBu-IE-9Vl" id="BbF-01-mzE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ah-nd-Sck" userLabel="First Responder" sceneMemberID="firstResponder"/>
