@@ -13,6 +13,7 @@
 		653993821A8263D7006EDDD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653993811A8263D7006EDDD2 /* Images.xcassets */; };
 		653993851A8263D7006EDDD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653993831A8263D7006EDDD2 /* LaunchScreen.xib */; };
 		653993911A8263D7006EDDD2 /* webAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653993901A8263D7006EDDD2 /* webAppTests.swift */; };
+		6539939B1A8264CB006EDDD2 /* webBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6539939A1A8264CB006EDDD2 /* webBrowser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		6539938A1A8263D7006EDDD2 /* webAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6539938F1A8263D7006EDDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		653993901A8263D7006EDDD2 /* webAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webAppTests.swift; sourceTree = "<group>"; };
+		6539939A1A8264CB006EDDD2 /* webBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webBrowser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				6539937A1A8263D7006EDDD2 /* AppDelegate.swift */,
 				6539937C1A8263D7006EDDD2 /* ViewController.swift */,
+				6539939A1A8264CB006EDDD2 /* webBrowser.swift */,
 				6539937E1A8263D7006EDDD2 /* Main.storyboard */,
 				653993811A8263D7006EDDD2 /* Images.xcassets */,
 				653993831A8263D7006EDDD2 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6539939B1A8264CB006EDDD2 /* webBrowser.swift in Sources */,
 				6539937D1A8263D7006EDDD2 /* ViewController.swift in Sources */,
 				6539937B1A8263D7006EDDD2 /* AppDelegate.swift in Sources */,
 			);
