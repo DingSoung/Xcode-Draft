@@ -14,15 +14,14 @@
 //  Copyright (c) 2014年 com.gener-tech. All rights reserved.
 //
 
+
+
 import UIKit
 import Alamofire
 import SwiftyJSON
 
-
 protocol doubanFMProtocol{
-    
     func doubanPlayList(playList: JSON)
-    
 }
 class doubanFM: UITableViewController {
     var channelJSON:JSON = JSON.nullJSON
@@ -94,3 +93,4 @@ class doubanFM: UITableViewController {
         self.getPlayList(self.channelJSON["channels"][indexPath.row]["channel_id"].string!)
     }
 }
+
