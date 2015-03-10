@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6502AA781AADE17600ABD01E /* simplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502AA771AADE17600ABD01E /* simplePlayer.swift */; };
+		6502AADC1AAF31E300ABD01E /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502AADB1AAF31E300ABD01E /* player.swift */; };
 		653993371A8255F9006EDDD2 /* doubanFM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653993361A8255F9006EDDD2 /* doubanFM.swift */; };
 		656F9EE61A82530C00940307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9EE51A82530C00940307 /* AppDelegate.swift */; };
 		656F9EE81A82530C00940307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9EE71A82530C00940307 /* ViewController.swift */; };
@@ -88,6 +89,7 @@
 		6502AA771AADE17600ABD01E /* simplePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = simplePlayer.swift; sourceTree = "<group>"; };
 		6502AABD1AAF2F1F00ABD01E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		6502AACC1AAF2F2700ABD01E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
+		6502AADB1AAF31E300ABD01E /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		653993361A8255F9006EDDD2 /* doubanFM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doubanFM.swift; sourceTree = "<group>"; };
 		656F9EE01A82530C00940307 /* music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656F9EE41A82530C00940307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				656F9EE51A82530C00940307 /* AppDelegate.swift */,
 				656F9EE71A82530C00940307 /* ViewController.swift */,
 				6502AA771AADE17600ABD01E /* simplePlayer.swift */,
+				6502AADB1AAF31E300ABD01E /* player.swift */,
 				656F9F051A82535E00940307 /* musicPlayer.swift */,
 				653993361A8255F9006EDDD2 /* doubanFM.swift */,
 				656F9EE91A82530C00940307 /* Main.storyboard */,
@@ -374,6 +377,7 @@
 			files = (
 				656F9F061A82535E00940307 /* musicPlayer.swift in Sources */,
 				653993371A8255F9006EDDD2 /* doubanFM.swift in Sources */,
+				6502AADC1AAF31E300ABD01E /* player.swift in Sources */,
 				656F9EE81A82530C00940307 /* ViewController.swift in Sources */,
 				6502AA781AADE17600ABD01E /* simplePlayer.swift in Sources */,
 				656F9EE61A82530C00940307 /* AppDelegate.swift in Sources */,
