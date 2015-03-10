@@ -20,7 +20,9 @@ class player: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var url = "https://mtc.cdn.vine.co/r/videos/55E9B17281990629401697910784_1d8613ad683.3.1_jqxCCdF_bYEX05o4k7Pi24VMJbVJmPLJAZZR1LAtk9Xz_Qwf3G5m8c1ggKDdJAaW.mp4?versionId=6pLpbrMHhP2yPXDq.nboJfDbZjXQR3zA"
+        var url = //"/Users/Soung/Desktop/" + "test.mp3"
+        "http://www.itinge.com/music/3/9158.mp3"
+        //"https://mtc.cdn.vine.co/r/videos/55E9B17281990629401697910784_1d8613ad683.3.1_jqxCCdF_bYEX05o4k7Pi24VMJbVJmPLJAZZR1LAtk9Xz_Qwf3G5m8c1ggKDdJAaW.mp4?versionId=6pLpbrMHhP2yPXDq.nboJfDbZjXQR3zA"
         livePlay(url)
     }
     override func didReceiveMemoryWarning() {
@@ -37,24 +39,13 @@ class player: UIViewController {
         self.livePlayer.controlStyle = MPMovieControlStyle./*Embedded*/None
         self.livePlayer.scalingMode = MPMovieScalingMode.AspectFill
         self.livePlayer.view.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: self.view.frame.size.width, height: 240))
-        self.view.addSubview(livePlayer.view)
+        //self.view.addSubview(livePlayer.view)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerDidChangeState:", name: MPMoviePlayerPlaybackStateDidChangeNotification, object: livePlayer)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "livePlayerDidChangeState:", name: MPMoviePlayerPlaybackStateDidChangeNotification, object: livePlayer)
         
         self.livePlayer.play()
     }
-    func localPlay(url:String) {
-        localplayer = AVAudioPlayer()
-        var errMsg = NSErrorPointer()
-        self.localplayer = AVAudioPlayer(contentsOfURL: NSURL(string: url), error: errMsg)
-        self.localplayer.volume = 0.2
-        self.localplayer.prepareToPlay()
-        self.localplayer.play()
-    }
-    
-    
-    
-    func moviePlayerDidChangeState(note: NSNotification) {
+    func livePlayerDidChangeState(note: NSNotification) {
         let playbackState = self.livePlayer.playbackState
         println("[moviePlayerDidChangeState]playbackState = \(playbackState.rawValue)")
         
@@ -68,6 +59,20 @@ class player: UIViewController {
             }
         }
     }
+    
+    
+    func localPlay(url:String) {
+        localplayer = AVAudioPlayer()
+        var errMsg = NSErrorPointer()
+        self.localplayer = AVAudioPlayer(contentsOfURL: NSURL(string: url), error: errMsg)
+        self.localplayer.volume = 0.2
+        self.localplayer.prepareToPlay()
+        self.localplayer.play()
+    }
+    
+    
+    
+    
     
     
     
