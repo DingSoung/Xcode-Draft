@@ -16,7 +16,7 @@
 		656F9EED1A82530C00940307 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656F9EEC1A82530C00940307 /* Images.xcassets */; };
 		656F9EF01A82530C00940307 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656F9EEE1A82530C00940307 /* LaunchScreen.xib */; };
 		656F9EFC1A82530C00940307 /* musicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9EFB1A82530C00940307 /* musicTests.swift */; };
-		656F9F061A82535E00940307 /* livePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9F051A82535E00940307 /* livePlayer.swift */; };
+		656F9F061A82535E00940307 /* musicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9F051A82535E00940307 /* musicPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +101,7 @@
 		656F9EF51A82530C00940307 /* musicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		656F9EFA1A82530C00940307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656F9EFB1A82530C00940307 /* musicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicTests.swift; sourceTree = "<group>"; };
-		656F9F051A82535E00940307 /* livePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = livePlayer.swift; sourceTree = "<group>"; };
+		656F9F051A82535E00940307 /* musicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = musicPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +171,7 @@
 				656F9EE71A82530C00940307 /* ViewController.swift */,
 				6502AA771AADE17600ABD01E /* simplePlayer.swift */,
 				6502AADB1AAF31E300ABD01E /* player.swift */,
-				656F9F051A82535E00940307 /* livePlayer.swift */,
+				656F9F051A82535E00940307 /* musicPlayer.swift */,
 				653993361A8255F9006EDDD2 /* doubanFM.swift */,
 				656F9EE91A82530C00940307 /* Main.storyboard */,
 				656F9EEC1A82530C00940307 /* Images.xcassets */,
@@ -375,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656F9F061A82535E00940307 /* livePlayer.swift in Sources */,
+				656F9F061A82535E00940307 /* musicPlayer.swift in Sources */,
 				653993371A8255F9006EDDD2 /* doubanFM.swift in Sources */,
 				6502AADC1AAF31E300ABD01E /* player.swift in Sources */,
 				656F9EE81A82530C00940307 /* ViewController.swift in Sources */,
