@@ -46,36 +46,30 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pfF-HU-Sck" userLabel="视图">
-                                <rect key="frame" x="0.0" y="101" width="600" height="317"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="317"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHH-or-vs2">
-                                        <rect key="frame" x="102" y="-92" width="397" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fm9-Ru-APo">
-                                        <rect key="frame" x="8" y="24" width="584" height="270"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fm9-Ru-APo">
+                                        <rect key="frame" x="8" y="8" width="584" height="198"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="8Ic-aP-AaQ">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="8Ic-aP-AaQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ic-aP-AaQ" id="Cg1-ey-M1o">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Md8-Rh-NeY">
-                                                            <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                            <rect key="frame" x="8" y="8" width="35" height="35"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq3-AQ-xsj">
-                                                            <rect key="frame" x="66" y="8" width="139" height="24"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq3-AQ-xsj">
+                                                            <rect key="frame" x="51" y="8" width="139" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxJ-6b-mOZ">
-                                                            <rect key="frame" x="66" y="37" width="139" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="discript" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxJ-6b-mOZ">
+                                                            <rect key="frame" x="51" y="25" width="139" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -97,10 +91,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Fm9-Ru-APo" secondAttribute="bottom" id="ML4-rI-kWj"/>
-                                    <constraint firstItem="Fm9-Ru-APo" firstAttribute="top" secondItem="yHH-or-vs2" secondAttribute="bottom" id="d0B-iM-wsC"/>
-                                    <constraint firstAttribute="centerX" secondItem="yHH-or-vs2" secondAttribute="centerX" id="gN4-0x-1wL"/>
+                                    <constraint firstItem="Fm9-Ru-APo" firstAttribute="top" secondItem="pfF-HU-Sck" secondAttribute="top" id="n1i-U5-Sel"/>
                                     <constraint firstItem="Fm9-Ru-APo" firstAttribute="leading" secondItem="pfF-HU-Sck" secondAttribute="leading" id="nLX-t9-fJZ"/>
-                                    <constraint firstItem="yHH-or-vs2" firstAttribute="top" secondItem="pfF-HU-Sck" secondAttribute="top" id="rAa-QY-D3R"/>
                                     <constraint firstAttribute="trailing" secondItem="Fm9-Ru-APo" secondAttribute="trailing" id="zp5-Ig-9yd"/>
                                 </constraints>
                             </view>
@@ -118,7 +110,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="6Yf-oe-a16"/>
                     <connections>
-                        <outlet property="nowPlaying" destination="yHH-or-vs2" id="jer-B6-jYl"/>
                         <outlet property="playButton" destination="EyT-qp-NQa" id="zey-6A-IGr"/>
                         <outlet property="playList" destination="Fm9-Ru-APo" id="IXM-Tj-Ji0"/>
                         <outlet property="progressLabel" destination="0H4-R0-HKR" id="xUu-Lm-C4c"/>

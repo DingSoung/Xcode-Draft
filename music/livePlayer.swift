@@ -13,15 +13,13 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
     var livePlayer = MPMoviePlayerController()
     
     //private var fileName = "xiaopingguo.mp3"
-    let filePath = "/Users/Soung/Desktop/"
+    let filePath = NSHomeDirectory() as String + "/tmp/"
     var musicUrl:NSURL!
     var timer:NSTimer!
     var timeEscape:Int32!
     var doubanChannel = doubanFM()
-    
     var resourceData:JSON = nil
     
-    @IBOutlet weak var nowPlaying: UILabel!
     @IBOutlet weak var modeButtom: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var progressSlider: UISlider!
@@ -35,7 +33,8 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         //getPlayList("1")
         self.getChannelList()
-        nowPlaying.text = "musicPlayer"
+        
+        println("\(filePath)")
     }
     override func viewWillAppear(animated: Bool) {
         playList.reloadData()
@@ -48,13 +47,6 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         resourceData = playList
         self.playList.reloadData()
     }
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -77,7 +69,7 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     func livePlayerDidChangeState(note: NSNotification) {
         let playbackState = self.livePlayer.playbackState
-        println("[moviePlayerDidChangeState]playbackState = \(playbackState.rawValue)")
+        //println("[moviePlayerDidChangeState]playbackState = \(playbackState.rawValue)")
         
         let isReplayAvailable = playbackState == .Stopped || playbackState == .Paused || playbackState == .Interrupted
         if isReplayAvailable {
@@ -197,7 +189,7 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
             }
             self.resourceData = JSON(data!)
             self.playList.reloadData()
-            println("\(self.resourceData)")
+            //println("\(self.resourceData)")
         }
     }
     
