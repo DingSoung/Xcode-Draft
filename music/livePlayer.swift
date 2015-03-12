@@ -12,15 +12,14 @@ import SwiftyJSON
 class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var livePlayer = MPMoviePlayerController()
     
-    
     //private var fileName = "xiaopingguo.mp3"
-    var filePath = "/Users/Soung/Desktop/"
+    let filePath = "/Users/Soung/Desktop/"
     var musicUrl:NSURL!
     var timer:NSTimer!
     var timeEscape:Int32!
     var doubanChannel = doubanFM()
     
-    var playListJSON:JSON = nil
+    var resourceData:JSON = nil
     
     @IBOutlet weak var nowPlaying: UILabel!
     @IBOutlet weak var modeButtom: UIButton!
@@ -34,8 +33,6 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //doubanChannel.delegate = self
         //getPlayList("1")
         self.getChannelList()
         nowPlaying.text = "musicPlayer"
@@ -48,9 +45,15 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func doubanPlayList(playList: JSON) {
-        playListJSON = playList
+        resourceData = playList
         self.playList.reloadData()
     }
+    
+    
+    
+    
+    
+    
     
     
     
@@ -94,21 +97,11 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         self.livePlay(url)
         togglePlayer()
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateStatus:"), userInfo: nil,repeats: true)
-        timeEscape = 0
+        self.timeEscape = 0
     }
     
     
     func togglePlayer() {
-        if(livePlayer.playbackState == MPMoviePlaybackState.Playing){
-            self.livePlayer.pause()
-            playButton.setTitle("Play", forState: UIControlState.Normal)
-        } else {
-            self.livePlayer.play()
-            playButton.setTitle("pause", forState: UIControlState.Normal)
-        }
-    }
-    
-    func stopPlayer(){
 
     }
     func updateStatus(timer: NSTimer){
@@ -135,7 +128,6 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         playButton.setTitle("Play", forState: UIControlState.Normal)
         timer.invalidate()
     }
-    
     @IBAction func reset2ChannelList(sender: AnyObject) {
         self.getChannelList()
     }
@@ -145,49 +137,24 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     
-    //on line resource
-    func getChannelList(){
-        if(self.playListJSON["channels"].count == 0){
-            var doubanChannelUrl = "http://www.douban.com/j/app/radio/channels"
-            Alamofire.request(.GET, doubanChannelUrl).responseJSON {
-                (request, response, data, error) -> Void in
-                if(data == nil){
-                    println(error)
-                    return
-                }
-                self.playListJSON = JSON(data!)
-                //刷新
-                self.playList.reloadData()
-            }
-        }
-    }
-    func getPlayList(channel_id:String){
-        var listUrl = "http://douban.fm/j/mine/playlist?channel=" + channel_id
-        Alamofire.request(.GET, listUrl).responseJSON {
-            (request, response, data, error) -> Void in
-            if(data == nil){
-                println(error)
-                return
-            }
-            self.playListJSON = JSON(data!)
-            self.playList.reloadData()
-        }
-    }
     func playOnlineMusic(url:String){
         if (url.hasPrefix("http") == true) {
+            
             downloadData(url, dataHandler: {
                 (data:NSData) -> Void in
                 var musicUrl = self.filePath + "test" + ".mp3"
                 data.writeToFile(musicUrl, atomically: true)
                 self.startPlayer(musicUrl)
             })
+            
         }
         
     }
     
+    
+    
     func downloadData(url: String, dataHandler:(NSData) -> Void){
-        var request = NSURLRequest(URL: NSURL(string: url)!)  //請求的內容
-        //異步請求,//操作隊列
+        var request = NSURLRequest(URL: NSURL(string: url)!)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
             (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             var httpResponse = response as NSHTTPURLResponse
@@ -202,15 +169,48 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     
+    
+    
+    
+    //on line resource
+    func getChannelList(){
+        if(self.resourceData["channels"].count == 0){
+            var doubanChannelUrl = "http://www.douban.com/j/app/radio/channels"
+            Alamofire.request(.GET, doubanChannelUrl).responseJSON {
+                (request, response, data, error) -> Void in
+                if(data == nil){
+                    println(error)
+                    return
+                }
+                self.resourceData = JSON(data!)
+                self.playList.reloadData()
+            }
+        }
+    }
+    func getPlayList(channel_id:String){
+        var listUrl = "http://douban.fm/j/mine/playlist?channel=" + channel_id
+        Alamofire.request(.GET, listUrl).responseJSON {
+            (request, response, data, error) -> Void in
+            if(data == nil){
+                println(error)
+                return
+            }
+            self.resourceData = JSON(data!)
+            self.playList.reloadData()
+            println("\(self.resourceData)")
+        }
+    }
+    
+    
     //display playlist
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (self.playListJSON["channels"].count > 0){
-            return self.playListJSON["channels"].count
+        if (self.resourceData["channels"].count > 0){
+            return self.resourceData["channels"].count
         }else{
-            return self.playListJSON["song"].count
+            return self.resourceData["song"].count
         }
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -220,12 +220,26 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifer)
             cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         }
-        if (self.playListJSON["channels"].count > 0){
-            cell?.textLabel?.text = self.playListJSON["channels"][indexPath.row]["name"].string
-            cell?.detailTextLabel?.text = self.playListJSON["channels"][indexPath.row]["name_en"].string
+        if (self.resourceData["channels"].count > 0){
+            cell?.textLabel?.text = self.resourceData["channels"][indexPath.row]["name"].string
+            cell?.detailTextLabel?.text = self.resourceData["channels"][indexPath.row]["name_en"].string
         }else{
-            cell?.textLabel?.text = self.playListJSON["song"][indexPath.row]["title"].string
-            cell?.detailTextLabel?.text = self.playListJSON["song"][indexPath.row]["albumtitle"].string
+            
+            
+            cell?.textLabel?.text = self.resourceData["song"][indexPath.row]["title"].string
+            cell?.detailTextLabel?.text = self.resourceData["song"][indexPath.row]["albumtitle"].string
+            
+            downloadData(self.resourceData["song"][indexPath.row]["picture"].string!, dataHandler: {
+                (data:NSData) -> Void in
+                
+                var picUrl = self.filePath + "picture\(indexPath.row).jpg"
+                data.writeToFile(picUrl, atomically: true)
+                cell?.imageView?.image = UIImage(named :picUrl)
+                
+            })
+            
+            
+            
             
         }
         return cell!
@@ -237,11 +251,11 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         })
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if (self.playListJSON["channels"].count > 0){
-            self.getPlayList(self.playListJSON["channels"][indexPath.row]["channel_id"].string!)
+        if (self.resourceData["channels"].count > 0){
+            self.getPlayList(self.resourceData["channels"][indexPath.row]["channel_id"].string!)
         }else{
             //self.playOnlineMusic(playListJSON["song"][indexPath.row]["url"].string!)
-            self.startPlayer(playListJSON["song"][indexPath.row]["url"].string!)
+            self.startPlayer(resourceData["song"][indexPath.row]["url"].string!)
         }
     }
 }
