@@ -12,6 +12,8 @@
 	<dict>
 		<key>B40A6E6DF4A9187185D8B5D8BB3DF76270D8F877</key>
 		<string>github.com:DingSoung/music.git</string>
+		<key>F0E1217241772F115917891969FAB6B91BC56069</key>
+		<string>github.com:DingSoung/ThumbsOnTheRun.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>music.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>B40A6E6DF4A9187185D8B5D8BB3DF76270D8F877</key>
 		<string>../..</string>
+		<key>F0E1217241772F115917891969FAB6B91BC56069</key>
+		<string>../../../ThumbsOnTheRun</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:DingSoung/music.git</string>
@@ -35,6 +39,14 @@
 			<string>B40A6E6DF4A9187185D8B5D8BB3DF76270D8F877</string>
 			<key>IDESourceControlWCCName</key>
 			<string>music</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F0E1217241772F115917891969FAB6B91BC56069</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ThumbsOnTheRun</string>
 		</dict>
 	</array>
 </dict>
