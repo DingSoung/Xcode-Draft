@@ -20,14 +20,18 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
     var doubanChannel = doubanFM()
     var resourceData:JSON = nil
     
-    @IBOutlet weak var modeButtom: UIButton!
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var progressSlider: UISlider!
-    @IBOutlet weak var progressLabel: UILabel!
     
     @IBOutlet weak var playList: UITableView!
     @IBOutlet weak var coverImage: UIImageView!
     
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var playPauseButton: UIButton!
+    @IBAction func playPauseButton(sender: AnyObject) {
+        togglePlayer()
+    }
+
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +51,16 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         resourceData = playList
         self.playList.reloadData()
     }
+    
+    
+    @IBAction func reset2ChannelList(sender: AnyObject) {
+        self.getChannelList()
+    }
+    
+    
+    
+    
+    
     
     
     
@@ -70,7 +84,6 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
     func livePlayerDidChangeState(note: NSNotification) {
         let playbackState = self.livePlayer.playbackState
         //println("[moviePlayerDidChangeState]playbackState = \(playbackState.rawValue)")
-        
         let isReplayAvailable = playbackState == .Stopped || playbackState == .Paused || playbackState == .Interrupted
         if isReplayAvailable {
             if note.object as MPMoviePlayerController == self.livePlayer {
@@ -88,45 +101,35 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
     func startPlayer(url:String) {
         self.livePlay(url)
         togglePlayer()
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateStatus:"), userInfo: nil,repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timerHandel:"), userInfo: nil,repeats: true)
         self.timeEscape = 0
     }
-    
-    
     func togglePlayer() {
-
+        if(self.livePlayer.playbackState == MPMoviePlaybackState.Playing) {
+            self.livePlayer.pause()
+            self.playPauseButton.setImage(UIImage(named:"play-50.png"), forState : UIControlState.Normal)
+        } else {
+            self.livePlayer.play()
+             self.playPauseButton.setImage(UIImage(named:"pause-50.png"), forState : UIControlState.Normal)
+        }
     }
-    func updateStatus(timer: NSTimer){
+    func stopPlayer() {
+        self.livePlayer.stop()
+        timer.invalidate()
+    }
+    func timerHandel(timer: NSTimer){
         if(livePlayer.playbackState != MPMoviePlaybackState.Playing){
             return
         }
         self.timeEscape = self.timeEscape + 1
-        var hour_   = abs(Int(self.timeEscape)/3600)
         var minute_ = abs(Int((self.timeEscape/60) % 60))
         var second_ = abs(Int(self.timeEscape % 60))
-        var hour = hour_ > 9 ? "\(hour_)" : "0\(hour_)"
         var minute = minute_ > 9 ? "\(minute_)" : "0\(minute_)"
         var second = second_ > 9 ? "\(second_)" : "0\(second_)"
-        progressLabel.text  = "\(hour):\(minute):\(second)"
+        progressLabel.text  = "\(minute):\(second)"
     }
     
-    
-    
-    @IBAction func playButton(sender: UIButton) {
-        togglePlayer()
-    }
-    @IBAction func stopPlayer(sender: AnyObject) {
-        self.livePlayer.stop()
-        playButton.setTitle("Play", forState: UIControlState.Normal)
-        timer.invalidate()
-    }
-    @IBAction func reset2ChannelList(sender: AnyObject) {
-        self.getChannelList()
-    }
-    
-    
-    
-    
+
     
     
     func playOnlineMusic(url:String){
@@ -143,8 +146,6 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    
-    
     func downloadData(url: String, dataHandler:(NSData) -> Void){
         var request = NSURLRequest(URL: NSURL(string: url)!)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
@@ -158,10 +159,6 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         })
     }
-    
-    
-    
-    
     
     
     //on line resource
