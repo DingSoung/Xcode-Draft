@@ -1,36 +1,75 @@
 //
-//  doubanFM.swift
+//  multiMedia.swift
 //  ThumbsOnTheRun
 //
-//  Created by 丁松 on 15/1/14.
-//  Copyright (c) 2015年 丁松. All rights reserved.
-//
-
-//
-//  DouBanChannelsViewController.swift
-//  DouBan
-//
-//  Created by Mave on 14/10/23.
-//  Copyright (c) 2014年 com.gener-tech. All rights reserved.
-//
-
-
+//  Created by 丁松 on 14-9-9.
+//  Copyright (c) 2014年 丁松. All rights reserved.
 
 import UIKit
 import Alamofire
 import SwiftyJSON
 
-protocol doubanFMProtocol{
-    func doubanPlayList(playList: JSON)
+
+
+protocol ChannelProtocol{
+    func onChnnel(channels_ur:String)
 }
-class doubanFM: UITableViewController {
-    var channelJSON:JSON = JSON.nullJSON
-    var delegate: doubanFMProtocol?
+
+class doubanFM: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var delegate: ChannelProtocol?
+    
+    var resourceData:JSON = nil
+    let chchePath = NSHomeDirectory() as String + "/tmp/"
+    @IBOutlet weak var sourceTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if(self.channelJSON["channels"].count == 0){
+        //self.sourceTable.dataSource = self
+        //self.sourceTable.delegate = self
+        //self.getChannelList()
+        //self.getPlayList("1")
+    }
+    
+    
+//    override func viewWillAppear(animated: Bool) {
+//        sourceTable.reloadData()
+//    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//    }
+
+    @IBAction func radioStationButton(sender: AnyObject) {
+        self.getChannelList()
+    }
+    
+    
+    
+    func testDelegateeee() {
+        let channel_id:String="22"
+        self.delegate?.onChnnel(channel_id)
+    }
+    
+    
+    
+    
+    
+    //on line resource
+    func downloadData(url: String, dataHandler:(NSData) -> Void){
+        var request = NSURLRequest(URL: NSURL(string: url)!)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
+            (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var httpResponse = response as NSHTTPURLResponse
+            if(httpResponse.statusCode == 200){
+                dataHandler(data)
+            }
+            else {
+                println(httpResponse)
+            }
+        })
+    }
+    func getChannelList(){
+        if(self.resourceData["channels"].count == 0){
             var doubanChannelUrl = "http://www.douban.com/j/app/radio/channels"
             Alamofire.request(.GET, doubanChannelUrl).responseJSON {
                 (request, response, data, error) -> Void in
@@ -38,20 +77,11 @@ class doubanFM: UITableViewController {
                     println(error)
                     return
                 }
-                self.channelJSON = JSON(data!)
-                //刷新
-                self.tableView.reloadData()
+                self.resourceData = JSON(data!)
+                self.sourceTable.reloadData()
             }
         }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    override func viewWillAppear(animated: Bool) {
-        //每次视图控制器的视图出现前调用函数
-        self.tableView.reloadData()
-    }
-    
     func getPlayList(channel_id:String){
         var listUrl = "http://douban.fm/j/mine/playlist?channel=" + channel_id
         Alamofire.request(.GET, listUrl).responseJSON {
@@ -60,37 +90,74 @@ class doubanFM: UITableViewController {
                 println(error)
                 return
             }
-            self.delegate?.doubanPlayList(JSON(data!))
+            self.resourceData = JSON(data!)
+            self.sourceTable.reloadData()
         }
     }
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    
+    
+    
+    //display playlist
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //数据还没有时，结果为0
-        return self.channelJSON["channels"].count
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (self.resourceData["channels"].count > 0){
+            return self.resourceData["channels"].count
+        }else{
+            return self.resourceData["song"].count
+        }
     }
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->   UITableViewCell {
-        //let cell = tableView.dequeueReusableCellWithIdentifier("channel", forIndexPath: indexPath) as UITableViewCell
-        let cellIdentifer = "channlesCell"
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cellIdentifer = "playListCell"
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifer) as? UITableViewCell
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifer)
             cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         }
-        cell?.textLabel?.text = self.channelJSON["channels"][indexPath.row]["name"].string
-        cell?.detailTextLabel?.text = self.channelJSON["channels"][indexPath.row]["name_en"].string
-        return cell!
         
+        
+        if (self.resourceData["channels"].count > 0){
+            cell?.textLabel?.text = self.resourceData["channels"][indexPath.row]["name"].string
+            cell?.detailTextLabel?.text = self.resourceData["channels"][indexPath.row]["name_en"].string
+        }else{
+            cell?.textLabel?.text = self.resourceData["song"][indexPath.row]["title"].string
+            cell?.detailTextLabel?.text = self.resourceData["song"][indexPath.row]["albumtitle"].string
+            downloadData(self.resourceData["song"][indexPath.row]["picture"].string!, dataHandler: {
+                (data:NSData) -> Void in
+                var picUrl = self.chchePath + "picture\(indexPath.row).jpg"
+                data.writeToFile(picUrl, atomically: true)
+                cell?.imageView?.image = UIImage(named :picUrl)
+            })
+        }
+        
+        
+        return cell!
     }
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
         UIView.animateWithDuration(0.25, animations: {
             cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
         })
     }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.getPlayList(self.channelJSON["channels"][indexPath.row]["channel_id"].string!)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (self.resourceData["channels"].count > 0){
+            self.getPlayList(self.resourceData["channels"][indexPath.row]["channel_id"].string!)
+        }else{
+            //self.delegate?.updatePlayer("test")  //self.resourceData["channels"][indexPath.row]["channel_id"].string!
+            
+            let channel_id:String="22"
+            self.delegate?.onChnnel(channel_id)
+            
+            //self.delegate.changeLabel()
+            
+            self.dismissMoviePlayerViewControllerAnimated()
+        }
     }
 }
+
+
+
+
 

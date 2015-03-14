@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		6502AA781AADE17600ABD01E /* simplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502AA771AADE17600ABD01E /* simplePlayer.swift */; };
 		6502AADC1AAF31E300ABD01E /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502AADB1AAF31E300ABD01E /* player.swift */; };
-		653993371A8255F9006EDDD2 /* doubanFM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653993361A8255F9006EDDD2 /* doubanFM.swift */; };
 		656F9EE61A82530C00940307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9EE51A82530C00940307 /* AppDelegate.swift */; };
 		656F9EE81A82530C00940307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9EE71A82530C00940307 /* ViewController.swift */; };
 		656F9EED1A82530C00940307 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656F9EEC1A82530C00940307 /* Images.xcassets */; };
 		656F9EF01A82530C00940307 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656F9EEE1A82530C00940307 /* LaunchScreen.xib */; };
 		656F9EFC1A82530C00940307 /* musicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9EFB1A82530C00940307 /* musicTests.swift */; };
-		656F9F061A82535E00940307 /* livePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9F051A82535E00940307 /* livePlayer.swift */; };
+		656F9F061A82535E00940307 /* MPMoviePlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9F051A82535E00940307 /* MPMoviePlayerVC.swift */; };
 		65710C681AB3F3DB007AED49 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65710C581AB3F3DB007AED49 /* Info.plist */; };
 		65710C691AB3F3DB007AED49 /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C591AB3F3DB007AED49 /* LTEasing.swift */; };
 		65710C6A1AB3F3DB007AED49 /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C5A1AB3F3DB007AED49 /* LTMorphingLabel+Anvil.swift */; };
@@ -30,6 +29,7 @@
 		65710C731AB3F3DB007AED49 /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 65710C651AB3F3DB007AED49 /* Fragment.png */; };
 		65710C741AB3F3DB007AED49 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 65710C661AB3F3DB007AED49 /* Smoke.png */; };
 		65710C751AB3F3DB007AED49 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 65710C671AB3F3DB007AED49 /* Sparkle.png */; };
+		65710C791AB433BD007AED49 /* doubanFM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C781AB433BD007AED49 /* doubanFM.swift */; };
 		659D38261AB32EA5005D5DEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D38241AB32EA5005D5DEB /* Main.storyboard */; };
 		659D38281AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D38271AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift */; };
 /* End PBXBuildFile section */
@@ -118,7 +118,6 @@
 		6502AA771AADE17600ABD01E /* simplePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = simplePlayer.swift; sourceTree = "<group>"; };
 		6502AABD1AAF2F1F00ABD01E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		6502AADB1AAF31E300ABD01E /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
-		653993361A8255F9006EDDD2 /* doubanFM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doubanFM.swift; sourceTree = "<group>"; };
 		656F9EE01A82530C00940307 /* music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656F9EE41A82530C00940307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656F9EE51A82530C00940307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +127,7 @@
 		656F9EF51A82530C00940307 /* musicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		656F9EFA1A82530C00940307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656F9EFB1A82530C00940307 /* musicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicTests.swift; sourceTree = "<group>"; };
-		656F9F051A82535E00940307 /* livePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = livePlayer.swift; sourceTree = "<group>"; };
+		656F9F051A82535E00940307 /* MPMoviePlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMoviePlayerVC.swift; sourceTree = "<group>"; };
 		65710C581AB3F3DB007AED49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65710C591AB3F3DB007AED49 /* LTEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEasing.swift; sourceTree = "<group>"; };
 		65710C5A1AB3F3DB007AED49 /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
@@ -144,8 +143,9 @@
 		65710C651AB3F3DB007AED49 /* Fragment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fragment.png; sourceTree = "<group>"; };
 		65710C661AB3F3DB007AED49 /* Smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smoke.png; sourceTree = "<group>"; };
 		65710C671AB3F3DB007AED49 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
+		65710C781AB433BD007AED49 /* doubanFM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doubanFM.swift; sourceTree = "<group>"; };
 		659D38251AB32EA5005D5DEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		659D38271AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+LTBouncyPlaceholder.swift"; path = "../../ThumbsOnTheRun/UITextField+LTBouncyPlaceholder.swift"; sourceTree = "<group>"; };
+		659D38271AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+LTBouncyPlaceholder.swift"; path = "../ThumbsOnTheRun/UITextField+LTBouncyPlaceholder.swift"; sourceTree = "<group>"; };
 		65FE24F01AB17CF00021F89B /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +181,7 @@
 		656F9ED71A82530C00940307 = {
 			isa = PBXGroup;
 			children = (
+				659D38271AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift */,
 				65710C571AB3F3DB007AED49 /* LTMorphingLabel */,
 				65FE24F01AB17CF00021F89B /* SwiftyJSON.xcodeproj */,
 				6502AABD1AAF2F1F00ABD01E /* Alamofire.xcodeproj */,
@@ -207,9 +208,8 @@
 				6502AA771AADE17600ABD01E /* simplePlayer.swift */,
 				6502AADB1AAF31E300ABD01E /* player.swift */,
 				659D38241AB32EA5005D5DEB /* Main.storyboard */,
-				659D38271AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift */,
-				656F9F051A82535E00940307 /* livePlayer.swift */,
-				653993361A8255F9006EDDD2 /* doubanFM.swift */,
+				65710C781AB433BD007AED49 /* doubanFM.swift */,
+				656F9F051A82535E00940307 /* MPMoviePlayerVC.swift */,
 				656F9EEC1A82530C00940307 /* Images.xcassets */,
 				656F9EEE1A82530C00940307 /* LaunchScreen.xib */,
 				656F9EE31A82530C00940307 /* Supporting Files */,
@@ -460,10 +460,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65710C791AB433BD007AED49 /* doubanFM.swift in Sources */,
 				65710C711AB3F3DB007AED49 /* NSString+LTMorphingLabel.swift in Sources */,
 				65710C691AB3F3DB007AED49 /* LTEasing.swift in Sources */,
-				656F9F061A82535E00940307 /* livePlayer.swift in Sources */,
-				653993371A8255F9006EDDD2 /* doubanFM.swift in Sources */,
+				656F9F061A82535E00940307 /* MPMoviePlayerVC.swift in Sources */,
 				65710C6E1AB3F3DB007AED49 /* LTMorphingLabel+Pixelate.swift in Sources */,
 				6502AADC1AAF31E300ABD01E /* player.swift in Sources */,
 				656F9EE81A82530C00940307 /* ViewController.swift in Sources */,
