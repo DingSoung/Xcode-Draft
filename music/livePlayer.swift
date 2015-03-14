@@ -10,35 +10,28 @@ import MediaPlayer
 import Alamofire
 import SwiftyJSON
 class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var livePlayer = MPMoviePlayerController()
+    var MPMoviePlayer: MPMoviePlayerController!
     
     //private var fileName = "xiaopingguo.mp3"
     let filePath = NSHomeDirectory() as String + "/tmp/"
     var musicUrl:NSURL!
     var timer:NSTimer!
-    var timeEscape:Int32!
     var doubanChannel = doubanFM()
     var resourceData:JSON = nil
     
     
     @IBOutlet weak var playList: UITableView!
     @IBOutlet weak var coverImage: UIImageView!
-    
-    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var progressLabel: LTMorphingLabel!
     @IBOutlet weak var playPauseButton: UIButton!
-    @IBAction func playPauseButton(sender: AnyObject) {
-        togglePlayer()
-    }
-
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.progressLabel.morphingEffect = .Evaporate
         //getPlayList("1")
         self.getChannelList()
-        
-        println("\(filePath)")
     }
     override func viewWillAppear(animated: Bool) {
         playList.reloadData()
@@ -52,84 +45,82 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         self.playList.reloadData()
     }
     
-    
+    @IBAction func playPauseButton(sender: AnyObject) {
+        togglePlayer()
+    }
     @IBAction func reset2ChannelList(sender: AnyObject) {
         self.getChannelList()
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    func livePlay(url:String) {
-        if(!url.hasPrefix("http")) {
-            return
-        }
-        livePlayer = MPMoviePlayerController()
-        
-        self.livePlayer.prepareToPlay()
-        self.livePlayer.movieSourceType = MPMovieSourceType.Streaming
-        self.livePlayer.contentURL = NSURL(string: url)
-        self.livePlayer.controlStyle = MPMovieControlStyle./*Embedded*/None
-        self.livePlayer.scalingMode = MPMovieScalingMode.AspectFill
-        self.livePlayer.view.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: self.view.frame.size.width, height: 240))
-        //self.view.addSubview(livePlayer.view)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "livePlayerDidChangeState:", name: MPMoviePlayerPlaybackStateDidChangeNotification, object: livePlayer)
-    }
-    func livePlayerDidChangeState(note: NSNotification) {
-        let playbackState = self.livePlayer.playbackState
-        //println("[moviePlayerDidChangeState]playbackState = \(playbackState.rawValue)")
-        let isReplayAvailable = playbackState == .Stopped || playbackState == .Paused || playbackState == .Interrupted
-        if isReplayAvailable {
-            if note.object as MPMoviePlayerController == self.livePlayer {
-                //                let reason = note.userInfo(objectForKey: MPMoviePlayerPlaybackDidFinishReasonUserInfoKey).integerValue
-                //                if reason == MPMovieFinishReasonPlaybackEnded {
-                //                    self.moviePlayer.play()
-                //                }
-            }
-        }
-    }
-    
-    
-    
-    //player func
     func startPlayer(url:String) {
-        self.livePlay(url)
-        togglePlayer()
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timerHandel:"), userInfo: nil,repeats: true)
-        self.timeEscape = 0
-    }
-    func togglePlayer() {
-        if(self.livePlayer.playbackState == MPMoviePlaybackState.Playing) {
-            self.livePlayer.pause()
-            self.playPauseButton.setImage(UIImage(named:"play-50.png"), forState : UIControlState.Normal)
-        } else {
-            self.livePlayer.play()
-             self.playPauseButton.setImage(UIImage(named:"pause-50.png"), forState : UIControlState.Normal)
+        //for delInit & config source
+        self.MPMoviePlayer = MPMoviePlayerController()
+        self.MPMoviePlayer.contentURL = NSURL(string: url)
+        self.MPMoviePlayer.prepareToPlay()
+        //self.MPMoviePlayer.movieSourceType = MPMovieSourceType.Streaming
+        
+        //for display
+        if (self.MPMoviePlayer.movieMediaTypes == MPMovieMediaTypeMask.Video) {
+            self.MPMoviePlayer.view.frame = CGRect(origin: CGPoint(x: 0, y: self.view.frame.size.height - 180), size: CGSize(width: self.view.frame.size.width, height: 180))
+            self.view.addSubview(self.MPMoviePlayer.view)
+            self.MPMoviePlayer.backgroundView.backgroundColor = UIColor.redColor()
+            self.MPMoviePlayer.controlStyle = MPMovieControlStyle.Embedded
+            self.MPMoviePlayer.scalingMode = .AspectFit // defaul
         }
+        
+        //for playback control
+        self.MPMoviePlayer.initialPlaybackTime = 0
+        // self.MPMoviePlayer.endPlaybackTime = 20
+        // self.MPMoviePlayer.currentPlaybackRate
+        // self.MPMoviePlayer.currentPlaybackTime
+        // self.MPMoviePlayer.shouldAutoplay = true    // default true
+        
+        //for Notification
+//        MPMoviePlayerReadyForDisplayDidChangeNotification
+//        MPMoviePlayerPlaybackStateDidChangeNotification
+//        MPMovieNaturalSizeAvailableNotification
+//        MPMoviePlayerLoadStateDidChangeNotification
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "livePlayerChangeStateHandel:", name: MPMoviePlayerPlaybackStateDidChangeNotification, object: self.MPMoviePlayer)
+        
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timerHandel:"), userInfo: nil,repeats: true)
+        
+        self.MPMoviePlayer.play()
     }
-    func stopPlayer() {
-        self.livePlayer.stop()
-        timer.invalidate()
+    func livePlayerChangeStateHandel(note: NSNotification) {
+        println("playbackState \(self.MPMoviePlayer.playbackState)")
+        switch self.MPMoviePlayer.playbackState {
+        case MPMoviePlaybackState.Playing:
+            self.playPauseButton.setImage(UIImage(named:"pause-50.png"), forState : UIControlState.Normal)
+        case MPMoviePlaybackState.Paused:
+            self.playPauseButton.setImage(UIImage(named:"play-50.png"), forState : UIControlState.Normal)
+        case MPMoviePlaybackState.Stopped:
+            self.playPauseButton.setImage(UIImage(named:"stop-50.png"), forState : UIControlState.Normal)
+        default:
+            self.playPauseButton.setImage(UIImage(named:"stop-50.png"), forState : UIControlState.Normal)
+        }
     }
     func timerHandel(timer: NSTimer){
-        if(livePlayer.playbackState != MPMoviePlaybackState.Playing){
+        if(MPMoviePlayer.playbackState != MPMoviePlaybackState.Playing){
             return
         }
-        self.timeEscape = self.timeEscape + 1
-        var minute_ = abs(Int((self.timeEscape/60) % 60))
-        var second_ = abs(Int(self.timeEscape % 60))
+        var minute_ = abs(Int((self.MPMoviePlayer.currentPlaybackTime/60) % 60))
+        var second_ = abs(Int(self.MPMoviePlayer.currentPlaybackTime % 60))
         var minute = minute_ > 9 ? "\(minute_)" : "0\(minute_)"
         var second = second_ > 9 ? "\(second_)" : "0\(second_)"
-        progressLabel.text  = "\(minute):\(second)"
+        self.progressLabel.text  = "\(minute):\(second)"
     }
     
-
+    func stopPlayer() {
+        self.MPMoviePlayer.stop()
+        timer.invalidate()
+    }
+    func togglePlayer() {
+        if(self.MPMoviePlayer.playbackState == MPMoviePlaybackState.Playing) {
+            self.MPMoviePlayer.pause()
+        } else {
+            self.MPMoviePlayer.play()
+        }
+    }
     
     
     func playOnlineMusic(url:String){
@@ -160,7 +151,6 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         })
     }
     
-    
     //on line resource
     func getChannelList(){
         if(self.resourceData["channels"].count == 0){
@@ -190,7 +180,6 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    
     //display playlist
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -213,23 +202,14 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
             cell?.textLabel?.text = self.resourceData["channels"][indexPath.row]["name"].string
             cell?.detailTextLabel?.text = self.resourceData["channels"][indexPath.row]["name_en"].string
         }else{
-            
-            
             cell?.textLabel?.text = self.resourceData["song"][indexPath.row]["title"].string
             cell?.detailTextLabel?.text = self.resourceData["song"][indexPath.row]["albumtitle"].string
-            
             downloadData(self.resourceData["song"][indexPath.row]["picture"].string!, dataHandler: {
                 (data:NSData) -> Void in
-                
                 var picUrl = self.filePath + "picture\(indexPath.row).jpg"
                 data.writeToFile(picUrl, atomically: true)
                 cell?.imageView?.image = UIImage(named :picUrl)
-                
             })
-            
-            
-            
-            
         }
         return cell!
     }
@@ -243,7 +223,6 @@ class livePlayerController: UIViewController, UITableViewDelegate, UITableViewDa
         if (self.resourceData["channels"].count > 0){
             self.getPlayList(self.resourceData["channels"][indexPath.row]["channel_id"].string!)
         }else{
-            //self.playOnlineMusic(playListJSON["song"][indexPath.row]["url"].string!)
             self.startPlayer(resourceData["song"][indexPath.row]["url"].string!)
         }
     }

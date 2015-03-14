@@ -16,6 +16,20 @@
 		656F9EF01A82530C00940307 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656F9EEE1A82530C00940307 /* LaunchScreen.xib */; };
 		656F9EFC1A82530C00940307 /* musicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9EFB1A82530C00940307 /* musicTests.swift */; };
 		656F9F061A82535E00940307 /* livePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F9F051A82535E00940307 /* livePlayer.swift */; };
+		65710C681AB3F3DB007AED49 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65710C581AB3F3DB007AED49 /* Info.plist */; };
+		65710C691AB3F3DB007AED49 /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C591AB3F3DB007AED49 /* LTEasing.swift */; };
+		65710C6A1AB3F3DB007AED49 /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C5A1AB3F3DB007AED49 /* LTMorphingLabel+Anvil.swift */; };
+		65710C6B1AB3F3DB007AED49 /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C5B1AB3F3DB007AED49 /* LTMorphingLabel+Burn.swift */; };
+		65710C6C1AB3F3DB007AED49 /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C5C1AB3F3DB007AED49 /* LTMorphingLabel+Evaporate.swift */; };
+		65710C6D1AB3F3DB007AED49 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C5D1AB3F3DB007AED49 /* LTMorphingLabel+Fall.swift */; };
+		65710C6E1AB3F3DB007AED49 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C5E1AB3F3DB007AED49 /* LTMorphingLabel+Pixelate.swift */; };
+		65710C6F1AB3F3DB007AED49 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C5F1AB3F3DB007AED49 /* LTMorphingLabel+Sparkle.swift */; };
+		65710C701AB3F3DB007AED49 /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C611AB3F3DB007AED49 /* LTMorphingLabel.swift */; };
+		65710C711AB3F3DB007AED49 /* NSString+LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C621AB3F3DB007AED49 /* NSString+LTMorphingLabel.swift */; };
+		65710C721AB3F3DB007AED49 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 65710C641AB3F3DB007AED49 /* Fire.png */; };
+		65710C731AB3F3DB007AED49 /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 65710C651AB3F3DB007AED49 /* Fragment.png */; };
+		65710C741AB3F3DB007AED49 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 65710C661AB3F3DB007AED49 /* Smoke.png */; };
+		65710C751AB3F3DB007AED49 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 65710C671AB3F3DB007AED49 /* Sparkle.png */; };
 		659D38261AB32EA5005D5DEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D38241AB32EA5005D5DEB /* Main.storyboard */; };
 		659D38281AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D38271AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift */; };
 /* End PBXBuildFile section */
@@ -115,6 +129,21 @@
 		656F9EFA1A82530C00940307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656F9EFB1A82530C00940307 /* musicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicTests.swift; sourceTree = "<group>"; };
 		656F9F051A82535E00940307 /* livePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = livePlayer.swift; sourceTree = "<group>"; };
+		65710C581AB3F3DB007AED49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65710C591AB3F3DB007AED49 /* LTEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEasing.swift; sourceTree = "<group>"; };
+		65710C5A1AB3F3DB007AED49 /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
+		65710C5B1AB3F3DB007AED49 /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
+		65710C5C1AB3F3DB007AED49 /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		65710C5D1AB3F3DB007AED49 /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
+		65710C5E1AB3F3DB007AED49 /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
+		65710C5F1AB3F3DB007AED49 /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
+		65710C601AB3F3DB007AED49 /* LTMorphingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMorphingLabel.h; sourceTree = "<group>"; };
+		65710C611AB3F3DB007AED49 /* LTMorphingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingLabel.swift; sourceTree = "<group>"; };
+		65710C621AB3F3DB007AED49 /* NSString+LTMorphingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+LTMorphingLabel.swift"; sourceTree = "<group>"; };
+		65710C641AB3F3DB007AED49 /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
+		65710C651AB3F3DB007AED49 /* Fragment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fragment.png; sourceTree = "<group>"; };
+		65710C661AB3F3DB007AED49 /* Smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smoke.png; sourceTree = "<group>"; };
+		65710C671AB3F3DB007AED49 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
 		659D38251AB32EA5005D5DEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		659D38271AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+LTBouncyPlaceholder.swift"; path = "../../ThumbsOnTheRun/UITextField+LTBouncyPlaceholder.swift"; sourceTree = "<group>"; };
 		65FE24F01AB17CF00021F89B /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
@@ -152,6 +181,7 @@
 		656F9ED71A82530C00940307 = {
 			isa = PBXGroup;
 			children = (
+				65710C571AB3F3DB007AED49 /* LTMorphingLabel */,
 				65FE24F01AB17CF00021F89B /* SwiftyJSON.xcodeproj */,
 				6502AABD1AAF2F1F00ABD01E /* Alamofire.xcodeproj */,
 				656F9EE21A82530C00940307 /* music */,
@@ -210,6 +240,37 @@
 				656F9EFA1A82530C00940307 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65710C571AB3F3DB007AED49 /* LTMorphingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				65710C581AB3F3DB007AED49 /* Info.plist */,
+				65710C591AB3F3DB007AED49 /* LTEasing.swift */,
+				65710C5A1AB3F3DB007AED49 /* LTMorphingLabel+Anvil.swift */,
+				65710C5B1AB3F3DB007AED49 /* LTMorphingLabel+Burn.swift */,
+				65710C5C1AB3F3DB007AED49 /* LTMorphingLabel+Evaporate.swift */,
+				65710C5D1AB3F3DB007AED49 /* LTMorphingLabel+Fall.swift */,
+				65710C5E1AB3F3DB007AED49 /* LTMorphingLabel+Pixelate.swift */,
+				65710C5F1AB3F3DB007AED49 /* LTMorphingLabel+Sparkle.swift */,
+				65710C601AB3F3DB007AED49 /* LTMorphingLabel.h */,
+				65710C611AB3F3DB007AED49 /* LTMorphingLabel.swift */,
+				65710C621AB3F3DB007AED49 /* NSString+LTMorphingLabel.swift */,
+				65710C631AB3F3DB007AED49 /* Particles */,
+			);
+			name = LTMorphingLabel;
+			path = "../../Downloads/LTMorphingLabel-master/LTMorphingLabel";
+			sourceTree = "<group>";
+		};
+		65710C631AB3F3DB007AED49 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				65710C641AB3F3DB007AED49 /* Fire.png */,
+				65710C651AB3F3DB007AED49 /* Fragment.png */,
+				65710C661AB3F3DB007AED49 /* Smoke.png */,
+				65710C671AB3F3DB007AED49 /* Sparkle.png */,
+			);
+			path = Particles;
 			sourceTree = "<group>";
 		};
 		65FE24F11AB17CF00021F89B /* Products */ = {
@@ -374,8 +435,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65710C751AB3F3DB007AED49 /* Sparkle.png in Resources */,
+				65710C681AB3F3DB007AED49 /* Info.plist in Resources */,
+				65710C731AB3F3DB007AED49 /* Fragment.png in Resources */,
 				659D38261AB32EA5005D5DEB /* Main.storyboard in Resources */,
+				65710C721AB3F3DB007AED49 /* Fire.png in Resources */,
 				656F9EF01A82530C00940307 /* LaunchScreen.xib in Resources */,
+				65710C741AB3F3DB007AED49 /* Smoke.png in Resources */,
 				656F9EED1A82530C00940307 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,13 +460,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65710C711AB3F3DB007AED49 /* NSString+LTMorphingLabel.swift in Sources */,
+				65710C691AB3F3DB007AED49 /* LTEasing.swift in Sources */,
 				656F9F061A82535E00940307 /* livePlayer.swift in Sources */,
 				653993371A8255F9006EDDD2 /* doubanFM.swift in Sources */,
+				65710C6E1AB3F3DB007AED49 /* LTMorphingLabel+Pixelate.swift in Sources */,
 				6502AADC1AAF31E300ABD01E /* player.swift in Sources */,
 				656F9EE81A82530C00940307 /* ViewController.swift in Sources */,
+				65710C6B1AB3F3DB007AED49 /* LTMorphingLabel+Burn.swift in Sources */,
 				6502AA781AADE17600ABD01E /* simplePlayer.swift in Sources */,
+				65710C6D1AB3F3DB007AED49 /* LTMorphingLabel+Fall.swift in Sources */,
 				659D38281AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift in Sources */,
 				656F9EE61A82530C00940307 /* AppDelegate.swift in Sources */,
+				65710C6A1AB3F3DB007AED49 /* LTMorphingLabel+Anvil.swift in Sources */,
+				65710C6C1AB3F3DB007AED49 /* LTMorphingLabel+Evaporate.swift in Sources */,
+				65710C701AB3F3DB007AED49 /* LTMorphingLabel.swift in Sources */,
+				65710C6F1AB3F3DB007AED49 /* LTMorphingLabel+Sparkle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
