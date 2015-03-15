@@ -30,6 +30,8 @@
 		65710C741AB3F3DB007AED49 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 65710C661AB3F3DB007AED49 /* Smoke.png */; };
 		65710C751AB3F3DB007AED49 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 65710C671AB3F3DB007AED49 /* Sparkle.png */; };
 		65710C791AB433BD007AED49 /* doubanFM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65710C781AB433BD007AED49 /* doubanFM.swift */; };
+		658BE4F21AB57A2B000CF61A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6502AAC51AAF2F1F00ABD01E /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		658BE4F61AB57A30000CF61A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FE24F81AB17CF00021F89B /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		659D38261AB32EA5005D5DEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D38241AB32EA5005D5DEB /* Main.storyboard */; };
 		659D38281AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D38271AB3437D005D5DEB /* UITextField+LTBouncyPlaceholder.swift */; };
 /* End PBXBuildFile section */
@@ -154,6 +156,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658BE4F61AB57A30000CF61A /* SwiftyJSON.framework in Frameworks */,
+				658BE4F21AB57A2B000CF61A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,13 +14,7 @@ protocol MPMoviePlayerDelegate {    //1
 }
 class MPMoviePlayerViewController: UIViewController {
     
-    var delegate: MPMoviePlayerDelegate?    //2
-    
-    func playList(){
-        
-        //do some thing
-        self.delegate?.didGetPlayCommand()  //3
-    }
+    var delegate: MPMoviePlayerDelegate!    //2
     
     
     
@@ -28,9 +22,13 @@ class MPMoviePlayerViewController: UIViewController {
     let filePath = NSHomeDirectory() as String + "/tmp/"
     var timer:NSTimer!
     
-    @IBOutlet weak var coverImage: UIImageView!
-    @IBOutlet weak var progressLabel: LTMorphingLabel!
-    @IBOutlet weak var playPauseButton: UIButton!
+    var coverImage: UIImageView!
+    var progressLabel: LTMorphingLabel!
+    var playPauseButton: UIButton!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +58,9 @@ class MPMoviePlayerViewController: UIViewController {
         togglePlayer()
     }
     
+    
+    
+    
     func startPlayer(url:String) {
         //for delInit & config source
         self.MPMoviePlayer = MPMoviePlayerController()
@@ -88,11 +89,13 @@ class MPMoviePlayerViewController: UIViewController {
         //        MPMoviePlayerPlaybackStateDidChangeNotification
         //        MPMovieNaturalSizeAvailableNotification
         //        MPMoviePlayerLoadStateDidChangeNotification
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "livePlayerChangeStateHandel:", name: MPMoviePlayerPlaybackStateDidChangeNotification, object: self.MPMoviePlayer)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "livePlayerChangeStateHandel:", name: MPMoviePlayerPlaybackStateDidChangeNotification, object: self.MPMoviePlayer)
         
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timerHandel:"), userInfo: nil,repeats: true)
-        
         self.MPMoviePlayer.play()
+        
+        
+        self.delegate!.didGetPlayCommand()  //3
     }
     func livePlayerChangeStateHandel(note: NSNotification) {
         println("playbackState \(self.MPMoviePlayer.playbackState)")
@@ -115,7 +118,7 @@ class MPMoviePlayerViewController: UIViewController {
         var second_ = abs(Int(self.MPMoviePlayer.currentPlaybackTime % 60))
         var minute = minute_ > 9 ? "\(minute_)" : "0\(minute_)"
         var second = second_ > 9 ? "\(second_)" : "0\(second_)"
-        self.progressLabel.text  = "\(minute):\(second)"
+        //self.progressLabel.text  = "\(minute):\(second)"
     }
     
     func stopPlayer() {
