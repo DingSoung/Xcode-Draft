@@ -10,14 +10,17 @@ import Alamofire
 import SwiftyJSON
 
 
-
-protocol ChannelProtocol{
-    func onChnnel(channels_ur:String)
-}
-
-class doubanFM: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class doubanFM: UIViewController, UITableViewDelegate, UITableViewDataSource,MPMoviePlayerDelegate {    //4
     
-    var delegate: ChannelProtocol?
+    func didGetPlayCommand(){   //5
+        //do some thing
+    }
+    
+    var doubanPlayer = MPMoviePlayerViewController()
+    
+    
+    
+    
     
     var resourceData:JSON = nil
     let chchePath = NSHomeDirectory() as String + "/tmp/"
@@ -25,6 +28,10 @@ class doubanFM: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        doubanPlayer.delegate = self    //6
+        
+        
+        
         //self.sourceTable.dataSource = self
         //self.sourceTable.delegate = self
         //self.getChannelList()
@@ -32,27 +39,18 @@ class doubanFM: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     
-//    override func viewWillAppear(animated: Bool) {
-//        sourceTable.reloadData()
-//    }
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//    }
 
     @IBAction func radioStationButton(sender: AnyObject) {
+        
+        
+        
         self.getChannelList()
+        
+        doubanPlayer.playList() //7
     }
     
     
-    
-    func testDelegateeee() {
-        let channel_id:String="22"
-        self.delegate?.onChnnel(channel_id)
-    }
-    
-    
-    
-    
+
     
     //on line resource
     func downloadData(url: String, dataHandler:(NSData) -> Void){
@@ -121,6 +119,13 @@ class doubanFM: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if (self.resourceData["channels"].count > 0){
             cell?.textLabel?.text = self.resourceData["channels"][indexPath.row]["name"].string
             cell?.detailTextLabel?.text = self.resourceData["channels"][indexPath.row]["name_en"].string
+            
+            
+        
+            
+            
+            
+            
         }else{
             cell?.textLabel?.text = self.resourceData["song"][indexPath.row]["title"].string
             cell?.detailTextLabel?.text = self.resourceData["song"][indexPath.row]["albumtitle"].string
@@ -147,8 +152,8 @@ class doubanFM: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }else{
             //self.delegate?.updatePlayer("test")  //self.resourceData["channels"][indexPath.row]["channel_id"].string!
             
-            let channel_id:String="22"
-            self.delegate?.onChnnel(channel_id)
+            //let channel_id:String="22"
+            //self.delegate?.onChnnel(channel_id)
             
             //self.delegate.changeLabel()
             

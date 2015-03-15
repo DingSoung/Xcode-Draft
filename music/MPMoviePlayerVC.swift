@@ -9,9 +9,20 @@ import UIKit
 import MediaPlayer
 import Alamofire
 
-class MPMoviePlayerViewController: UIViewController, ChannelProtocol{
+protocol MPMoviePlayerDelegate {    //1
+    func didGetPlayCommand()
+}
+class MPMoviePlayerViewController: UIViewController {
     
-    var testChannel = doubanFM()
+    var delegate: MPMoviePlayerDelegate?    //2
+    
+    func playList(){
+        
+        //do some thing
+        self.delegate?.didGetPlayCommand()  //3
+    }
+    
+    
     
     var MPMoviePlayer: MPMoviePlayerController!
     let filePath = NSHomeDirectory() as String + "/tmp/"
@@ -23,25 +34,12 @@ class MPMoviePlayerViewController: UIViewController, ChannelProtocol{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        testChannel.delegate = self
-        
-        
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
-    @IBAction func testDelegatedClassfnc(sender: AnyObject) {
-        
-        testChannel.testDelegateeee()
-        
-    }
-    
-    
+
     
     
     //for protocol
