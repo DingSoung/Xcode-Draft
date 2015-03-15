@@ -7,5 +7,6 @@ This is a music application of Alamofire and SwiftJSON
 - play music,display picture, slider,timming
 - auto download & play nex
 
-![demo](https://raw.githubusercontent.com/DingSoung/music/master/demo1.png)
-![demo](https://raw.githubusercontent.com/DingSoung/music/master/demo2.png)
+![demo](https://raw.githubusercontent.com/DingSoung/music/master/demo/demo1.png)
+![demo](https://raw.githubusercontent.com/DingSoung/music/master/demo/demo2.png)
+![demo](https://raw.githubusercontent.com/DingSoung/music/master/demo/demo3.png)
