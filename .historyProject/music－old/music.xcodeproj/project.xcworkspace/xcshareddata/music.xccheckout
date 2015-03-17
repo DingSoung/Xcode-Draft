@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1A9B57B2-A8EF-439B-AC80-15EBB47F7BCD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>music</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B40A6E6DF4A9187185D8B5D8BB3DF76270D8F877</key>
+		<string>github.com:DingSoung/music.git</string>
+		<key>F0E1217241772F115917891969FAB6B91BC56069</key>
+		<string>github.com:DingSoung/ThumbsOnTheRun.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>music.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B40A6E6DF4A9187185D8B5D8BB3DF76270D8F877</key>
+		<string>../..</string>
+		<key>F0E1217241772F115917891969FAB6B91BC56069</key>
+		<string>../../../ThumbsOnTheRun</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:DingSoung/music.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B40A6E6DF4A9187185D8B5D8BB3DF76270D8F877</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B40A6E6DF4A9187185D8B5D8BB3DF76270D8F877</string>
+			<key>IDESourceControlWCCName</key>
+			<string>music</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F0E1217241772F115917891969FAB6B91BC56069</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ThumbsOnTheRun</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -21,7 +21,7 @@
 		65FC088D1AB861300018F021 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC088C1AB861300018F021 /* libsqlite3.0.dylib */; };
 		65FC088F1AB8616F0018F021 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC088E1AB8616F0018F021 /* libc++.dylib */; };
 		65FC08921AB8625E0018F021 /* musu.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC08911AB8625E0018F021 /* musu.m */; };
-		65FC08961AB865300018F021 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC08951AB865300018F021 /* PlayerViewController.swift */; };
+		65FC089A1AB892090018F021 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC08991AB892090018F021 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		65FC088E1AB8616F0018F021 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		65FC08901AB8625D0018F021 /* musu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musu-Bridging-Header.h"; sourceTree = "<group>"; };
 		65FC08911AB8625E0018F021 /* musu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = musu.m; path = musu/musu.m; sourceTree = "<group>"; };
-		65FC08951AB865300018F021 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = musu/PlayerViewController.swift; sourceTree = "<group>"; };
+		65FC08991AB892090018F021 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = musu/PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 		658BE5BC1AB5C0FA000CF61A = {
 			isa = PBXGroup;
 			children = (
-				65FC08951AB865300018F021 /* PlayerViewController.swift */,
+				65FC08991AB892090018F021 /* PlayerViewController.swift */,
 				658BE5C71AB5C0FA000CF61A /* musu */,
 				658BE5DF1AB5C0FA000CF61A /* musuTests */,
 				658BE5C61AB5C0FA000CF61A /* Products */,
@@ -271,7 +271,7 @@
 				658BE6511AB5CA5B000CF61A /* PlayListViewController.swift in Sources */,
 				658BE5CB1AB5C0FA000CF61A /* AppDelegate.swift in Sources */,
 				65FC08921AB8625E0018F021 /* musu.m in Sources */,
-				65FC08961AB865300018F021 /* PlayerViewController.swift in Sources */,
+				65FC089A1AB892090018F021 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

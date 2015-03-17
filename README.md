@@ -1,11 +1,13 @@
-This is a music application of Alamofire and SwiftJSON
+This is a application of swift
 
-- Get Douban Channel list 
-- prase the JSON & data update channel table
-- Get playlist
-- download music data and picture
-- play music,display picture, slider,timming
-- auto download & play nex
+- [x] Http get online resource data 
+- [x] phrase JSON
+- [x] display table list
+- [x] play online resource,downloud resource
+- [x] WeChat
+  - [x] send message
+  - [ ] share friends circle
+  - [ ] pay system
 
 ![demo](https://raw.githubusercontent.com/DingSoung/music/master/demo/demo1.png)
 ![demo](https://raw.githubusercontent.com/DingSoung/music/master/demo/demo2.png)
