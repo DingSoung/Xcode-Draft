@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		658BE5CB1AB5C0FA000CF61A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE5CA1AB5C0FA000CF61A /* AppDelegate.swift */; };
+		658BE5CF1AB5C0FA000CF61A /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE5CE1AB5C0FA000CF61A /* ChannelViewController.swift */; };
+		658BE5D21AB5C0FA000CF61A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658BE5D01AB5C0FA000CF61A /* Main.storyboard */; };
+		658BE5D41AB5C0FA000CF61A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658BE5D31AB5C0FA000CF61A /* Images.xcassets */; };
+		658BE5D71AB5C0FA000CF61A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 658BE5D51AB5C0FA000CF61A /* LaunchScreen.xib */; };
+		658BE5E31AB5C0FA000CF61A /* musuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE5E21AB5C0FA000CF61A /* musuTests.swift */; };
+		658BE5ED1AB5C1E2000CF61A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE5EC1AB5C1E2000CF61A /* LoginViewController.swift */; };
+		658BE6511AB5CA5B000CF61A /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE6501AB5CA5B000CF61A /* PlayListViewController.swift */; };
+		65FC08851AB85F350018F021 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC08811AB85F350018F021 /* libWeChatSDK.a */; };
+		65FC08891AB8610D0018F021 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC08881AB8610D0018F021 /* SystemConfiguration.framework */; };
+		65FC088B1AB8611E0018F021 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC088A1AB8611E0018F021 /* libz.dylib */; };
+		65FC088D1AB861300018F021 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC088C1AB861300018F021 /* libsqlite3.0.dylib */; };
+		65FC088F1AB8616F0018F021 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC088E1AB8616F0018F021 /* libc++.dylib */; };
+		65FC08921AB8625E0018F021 /* musu.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC08911AB8625E0018F021 /* musu.m */; };
+		65FC08961AB865300018F021 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC08951AB865300018F021 /* PlayerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		658BE5DD1AB5C0FA000CF61A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 658BE5BD1AB5C0FA000CF61A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 658BE5C41AB5C0FA000CF61A;
+			remoteInfo = musu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		658BE5C51AB5C0FA000CF61A /* musu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		658BE5C91AB5C0FA000CF61A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		658BE5CA1AB5C0FA000CF61A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		658BE5CE1AB5C0FA000CF61A /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		658BE5D11AB5C0FA000CF61A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		658BE5D31AB5C0FA000CF61A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		658BE5D61AB5C0FA000CF61A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		658BE5DC1AB5C0FA000CF61A /* musuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		658BE5E11AB5C0FA000CF61A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		658BE5E21AB5C0FA000CF61A /* musuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musuTests.swift; sourceTree = "<group>"; };
+		658BE5EC1AB5C1E2000CF61A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		658BE6501AB5CA5B000CF61A /* PlayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayListViewController.swift; sourceTree = "<group>"; };
+		65FC08811AB85F350018F021 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		65FC08831AB85F350018F021 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		65FC08841AB85F350018F021 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		65FC08881AB8610D0018F021 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		65FC088A1AB8611E0018F021 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		65FC088C1AB861300018F021 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		65FC088E1AB8616F0018F021 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		65FC08901AB8625D0018F021 /* musu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musu-Bridging-Header.h"; sourceTree = "<group>"; };
+		65FC08911AB8625E0018F021 /* musu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = musu.m; path = musu/musu.m; sourceTree = "<group>"; };
+		65FC08951AB865300018F021 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = musu/PlayerViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		658BE5C21AB5C0FA000CF61A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65FC088F1AB8616F0018F021 /* libc++.dylib in Frameworks */,
+				65FC088D1AB861300018F021 /* libsqlite3.0.dylib in Frameworks */,
+				65FC088B1AB8611E0018F021 /* libz.dylib in Frameworks */,
+				65FC08891AB8610D0018F021 /* SystemConfiguration.framework in Frameworks */,
+				65FC08851AB85F350018F021 /* libWeChatSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658BE5D91AB5C0FA000CF61A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		658BE5BC1AB5C0FA000CF61A = {
+			isa = PBXGroup;
+			children = (
+				65FC08951AB865300018F021 /* PlayerViewController.swift */,
+				658BE5C71AB5C0FA000CF61A /* musu */,
+				658BE5DF1AB5C0FA000CF61A /* musuTests */,
+				658BE5C61AB5C0FA000CF61A /* Products */,
+				65FC08801AB85F350018F021 /* WeChatSDK_1.5 */,
+				65FC08871AB85FD40018F021 /* need */,
+			);
+			sourceTree = "<group>";
+		};
+		658BE5C61AB5C0FA000CF61A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				658BE5C51AB5C0FA000CF61A /* musu.app */,
+				658BE5DC1AB5C0FA000CF61A /* musuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		658BE5C71AB5C0FA000CF61A /* musu */ = {
+			isa = PBXGroup;
+			children = (
+				658BE5CA1AB5C0FA000CF61A /* AppDelegate.swift */,
+				658BE5EC1AB5C1E2000CF61A /* LoginViewController.swift */,
+				658BE5CE1AB5C0FA000CF61A /* ChannelViewController.swift */,
+				658BE6501AB5CA5B000CF61A /* PlayListViewController.swift */,
+				658BE5D01AB5C0FA000CF61A /* Main.storyboard */,
+				658BE5D31AB5C0FA000CF61A /* Images.xcassets */,
+				658BE5D51AB5C0FA000CF61A /* LaunchScreen.xib */,
+				658BE5C81AB5C0FA000CF61A /* Supporting Files */,
+			);
+			path = musu;
+			sourceTree = "<group>";
+		};
+		658BE5C81AB5C0FA000CF61A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				658BE5C91AB5C0FA000CF61A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		658BE5DF1AB5C0FA000CF61A /* musuTests */ = {
+			isa = PBXGroup;
+			children = (
+				658BE5E21AB5C0FA000CF61A /* musuTests.swift */,
+				658BE5E01AB5C0FA000CF61A /* Supporting Files */,
+			);
+			path = musuTests;
+			sourceTree = "<group>";
+		};
+		658BE5E01AB5C0FA000CF61A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				658BE5E11AB5C0FA000CF61A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65FC08801AB85F350018F021 /* WeChatSDK_1.5 */ = {
+			isa = PBXGroup;
+			children = (
+				65FC08811AB85F350018F021 /* libWeChatSDK.a */,
+				65FC08831AB85F350018F021 /* WXApi.h */,
+				65FC08841AB85F350018F021 /* WXApiObject.h */,
+			);
+			path = WeChatSDK_1.5;
+			sourceTree = "<group>";
+		};
+		65FC08871AB85FD40018F021 /* need */ = {
+			isa = PBXGroup;
+			children = (
+				65FC08881AB8610D0018F021 /* SystemConfiguration.framework */,
+				65FC088A1AB8611E0018F021 /* libz.dylib */,
+				65FC088C1AB861300018F021 /* libsqlite3.0.dylib */,
+				65FC088E1AB8616F0018F021 /* libc++.dylib */,
+				65FC08911AB8625E0018F021 /* musu.m */,
+				65FC08901AB8625D0018F021 /* musu-Bridging-Header.h */,
+			);
+			name = need;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		658BE5C41AB5C0FA000CF61A /* musu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658BE5E61AB5C0FA000CF61A /* Build configuration list for PBXNativeTarget "musu" */;
+			buildPhases = (
+				658BE5C11AB5C0FA000CF61A /* Sources */,
+				658BE5C21AB5C0FA000CF61A /* Frameworks */,
+				658BE5C31AB5C0FA000CF61A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = musu;
+			productName = musu;
+			productReference = 658BE5C51AB5C0FA000CF61A /* musu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		658BE5DB1AB5C0FA000CF61A /* musuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658BE5E91AB5C0FA000CF61A /* Build configuration list for PBXNativeTarget "musuTests" */;
+			buildPhases = (
+				658BE5D81AB5C0FA000CF61A /* Sources */,
+				658BE5D91AB5C0FA000CF61A /* Frameworks */,
+				658BE5DA1AB5C0FA000CF61A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				658BE5DE1AB5C0FA000CF61A /* PBXTargetDependency */,
+			);
+			name = musuTests;
+			productName = musuTests;
+			productReference = 658BE5DC1AB5C0FA000CF61A /* musuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		658BE5BD1AB5C0FA000CF61A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "丁松";
+				TargetAttributes = {
+					658BE5C41AB5C0FA000CF61A = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					658BE5DB1AB5C0FA000CF61A = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 658BE5C41AB5C0FA000CF61A;
+					};
+				};
+			};
+			buildConfigurationList = 658BE5C01AB5C0FA000CF61A /* Build configuration list for PBXProject "musu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 658BE5BC1AB5C0FA000CF61A;
+			productRefGroup = 658BE5C61AB5C0FA000CF61A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				658BE5C41AB5C0FA000CF61A /* musu */,
+				658BE5DB1AB5C0FA000CF61A /* musuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		658BE5C31AB5C0FA000CF61A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658BE5D21AB5C0FA000CF61A /* Main.storyboard in Resources */,
+				658BE5D71AB5C0FA000CF61A /* LaunchScreen.xib in Resources */,
+				658BE5D41AB5C0FA000CF61A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658BE5DA1AB5C0FA000CF61A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		658BE5C11AB5C0FA000CF61A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658BE5ED1AB5C1E2000CF61A /* LoginViewController.swift in Sources */,
+				658BE5CF1AB5C0FA000CF61A /* ChannelViewController.swift in Sources */,
+				658BE6511AB5CA5B000CF61A /* PlayListViewController.swift in Sources */,
+				658BE5CB1AB5C0FA000CF61A /* AppDelegate.swift in Sources */,
+				65FC08921AB8625E0018F021 /* musu.m in Sources */,
+				65FC08961AB865300018F021 /* PlayerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658BE5D81AB5C0FA000CF61A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658BE5E31AB5C0FA000CF61A /* musuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		658BE5DE1AB5C0FA000CF61A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 658BE5C41AB5C0FA000CF61A /* musu */;
+			targetProxy = 658BE5DD1AB5C0FA000CF61A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		658BE5D01AB5C0FA000CF61A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				658BE5D11AB5C0FA000CF61A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		658BE5D51AB5C0FA000CF61A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				658BE5D61AB5C0FA000CF61A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		658BE5E41AB5C0FA000CF61A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		658BE5E51AB5C0FA000CF61A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		658BE5E71AB5C0FA000CF61A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = musu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WeChatSDK_1.5",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "musu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		658BE5E81AB5C0FA000CF61A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = musu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WeChatSDK_1.5",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "musu-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		658BE5EA1AB5C0FA000CF61A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = musuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/musu.app/musu";
+			};
+			name = Debug;
+		};
+		658BE5EB1AB5C0FA000CF61A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = musuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/musu.app/musu";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		658BE5C01AB5C0FA000CF61A /* Build configuration list for PBXProject "musu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658BE5E41AB5C0FA000CF61A /* Debug */,
+				658BE5E51AB5C0FA000CF61A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		658BE5E61AB5C0FA000CF61A /* Build configuration list for PBXNativeTarget "musu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658BE5E71AB5C0FA000CF61A /* Debug */,
+				658BE5E81AB5C0FA000CF61A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		658BE5E91AB5C0FA000CF61A /* Build configuration list for PBXNativeTarget "musuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658BE5EA1AB5C0FA000CF61A /* Debug */,
+				658BE5EB1AB5C0FA000CF61A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 658BE5BD1AB5C0FA000CF61A /* Project object */;
+}
