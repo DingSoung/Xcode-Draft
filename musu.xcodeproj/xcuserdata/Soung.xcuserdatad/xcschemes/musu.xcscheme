@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "658BE5C41AB5C0FA000CF61A"
+               BlueprintIdentifier = "65AA666A1ABBD05F005B898B"
                BuildableName = "musu.app"
                BlueprintName = "musu"
                ReferencedContainer = "container:musu.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "658BE5DB1AB5C0FA000CF61A"
+               BlueprintIdentifier = "65AA66821ABBD05F005B898B"
                BuildableName = "musuTests.xctest"
                BlueprintName = "musuTests"
                ReferencedContainer = "container:musu.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "658BE5DB1AB5C0FA000CF61A"
+               BlueprintIdentifier = "65AA66821ABBD05F005B898B"
                BuildableName = "musuTests.xctest"
                BlueprintName = "musuTests"
                ReferencedContainer = "container:musu.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "658BE5C41AB5C0FA000CF61A"
+            BlueprintIdentifier = "65AA666A1ABBD05F005B898B"
             BuildableName = "musu.app"
             BlueprintName = "musu"
             ReferencedContainer = "container:musu.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "658BE5C41AB5C0FA000CF61A"
+            BlueprintIdentifier = "65AA666A1ABBD05F005B898B"
             BuildableName = "musu.app"
             BlueprintName = "musu"
             ReferencedContainer = "container:musu.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "658BE5C41AB5C0FA000CF61A"
+            BlueprintIdentifier = "65AA666A1ABBD05F005B898B"
             BuildableName = "musu.app"
             BlueprintName = "musu"
             ReferencedContainer = "container:musu.xcodeproj">

@@ -7,72 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		658BE5CB1AB5C0FA000CF61A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE5CA1AB5C0FA000CF61A /* AppDelegate.swift */; };
-		658BE5CF1AB5C0FA000CF61A /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE5CE1AB5C0FA000CF61A /* ChannelViewController.swift */; };
-		658BE5D21AB5C0FA000CF61A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658BE5D01AB5C0FA000CF61A /* Main.storyboard */; };
-		658BE5D41AB5C0FA000CF61A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658BE5D31AB5C0FA000CF61A /* Images.xcassets */; };
-		658BE5D71AB5C0FA000CF61A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 658BE5D51AB5C0FA000CF61A /* LaunchScreen.xib */; };
-		658BE5E31AB5C0FA000CF61A /* musuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE5E21AB5C0FA000CF61A /* musuTests.swift */; };
-		658BE5ED1AB5C1E2000CF61A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE5EC1AB5C1E2000CF61A /* LoginViewController.swift */; };
-		658BE6511AB5CA5B000CF61A /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE6501AB5CA5B000CF61A /* PlayListViewController.swift */; };
-		65FC08851AB85F350018F021 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC08811AB85F350018F021 /* libWeChatSDK.a */; };
-		65FC08891AB8610D0018F021 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC08881AB8610D0018F021 /* SystemConfiguration.framework */; };
-		65FC088B1AB8611E0018F021 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC088A1AB8611E0018F021 /* libz.dylib */; };
-		65FC088D1AB861300018F021 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC088C1AB861300018F021 /* libsqlite3.0.dylib */; };
-		65FC088F1AB8616F0018F021 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC088E1AB8616F0018F021 /* libc++.dylib */; };
-		65FC08921AB8625E0018F021 /* musu.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC08911AB8625E0018F021 /* musu.m */; };
-		65FC089A1AB892090018F021 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC08991AB892090018F021 /* PlayerViewController.swift */; };
+		65AA66711ABBD05F005B898B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA66701ABBD05F005B898B /* AppDelegate.swift */; };
+		65AA66741ABBD05F005B898B /* musu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65AA66721ABBD05F005B898B /* musu.xcdatamodeld */; };
+		65AA66761ABBD05F005B898B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA66751ABBD05F005B898B /* ViewController.swift */; };
+		65AA66791ABBD05F005B898B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AA66771ABBD05F005B898B /* Main.storyboard */; };
+		65AA667B1ABBD05F005B898B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65AA667A1ABBD05F005B898B /* Images.xcassets */; };
+		65AA667E1ABBD05F005B898B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65AA667C1ABBD05F005B898B /* LaunchScreen.xib */; };
+		65AA668A1ABBD05F005B898B /* musuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA66891ABBD05F005B898B /* musuTests.swift */; };
+		65AA66971ABBD08E005B898B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA66931ABBD08E005B898B /* LoginViewController.swift */; };
+		65AA66981ABBD08E005B898B /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA66941ABBD08E005B898B /* ChannelViewController.swift */; };
+		65AA66991ABBD08E005B898B /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA66951ABBD08E005B898B /* PlayListViewController.swift */; };
+		65AA669A1ABBD08E005B898B /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA66961ABBD08E005B898B /* PlayerViewController.swift */; };
+		65AA669F1ABBD198005B898B /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AA669C1ABBD198005B898B /* libWeChatSDK.a */; };
+		65AA66A41ABBD21D005B898B /* OC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AA66A31ABBD21D005B898B /* OC.m */; };
+		65AA66A61ABBD28C005B898B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AA66A51ABBD28C005B898B /* SystemConfiguration.framework */; };
+		65AA66A81ABBD295005B898B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AA66A71ABBD295005B898B /* libz.dylib */; };
+		65AA66AA1ABBD2A1005B898B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AA66A91ABBD2A1005B898B /* libsqlite3.0.dylib */; };
+		65AA66AC1ABBD2B2005B898B /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AA66AB1ABBD2B2005B898B /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		658BE5DD1AB5C0FA000CF61A /* PBXContainerItemProxy */ = {
+		65AA66841ABBD05F005B898B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 658BE5BD1AB5C0FA000CF61A /* Project object */;
+			containerPortal = 65AA66631ABBD05F005B898B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 658BE5C41AB5C0FA000CF61A;
+			remoteGlobalIDString = 65AA666A1ABBD05F005B898B;
 			remoteInfo = musu;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		658BE5C51AB5C0FA000CF61A /* musu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musu.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		658BE5C91AB5C0FA000CF61A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		658BE5CA1AB5C0FA000CF61A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		658BE5CE1AB5C0FA000CF61A /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
-		658BE5D11AB5C0FA000CF61A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		658BE5D31AB5C0FA000CF61A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		658BE5D61AB5C0FA000CF61A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		658BE5DC1AB5C0FA000CF61A /* musuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		658BE5E11AB5C0FA000CF61A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		658BE5E21AB5C0FA000CF61A /* musuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musuTests.swift; sourceTree = "<group>"; };
-		658BE5EC1AB5C1E2000CF61A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		658BE6501AB5CA5B000CF61A /* PlayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayListViewController.swift; sourceTree = "<group>"; };
-		65FC08811AB85F350018F021 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		65FC08831AB85F350018F021 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		65FC08841AB85F350018F021 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		65FC08881AB8610D0018F021 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		65FC088A1AB8611E0018F021 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		65FC088C1AB861300018F021 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		65FC088E1AB8616F0018F021 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		65FC08901AB8625D0018F021 /* musu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musu-Bridging-Header.h"; sourceTree = "<group>"; };
-		65FC08911AB8625E0018F021 /* musu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = musu.m; path = musu/musu.m; sourceTree = "<group>"; };
-		65FC08991AB892090018F021 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = musu/PlayerViewController.swift; sourceTree = "<group>"; };
+		65AA666B1ABBD05F005B898B /* musu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65AA666F1ABBD05F005B898B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65AA66701ABBD05F005B898B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65AA66731ABBD05F005B898B /* musu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = musu.xcdatamodel; sourceTree = "<group>"; };
+		65AA66751ABBD05F005B898B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65AA66781ABBD05F005B898B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65AA667A1ABBD05F005B898B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		65AA667D1ABBD05F005B898B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		65AA66831ABBD05F005B898B /* musuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65AA66881ABBD05F005B898B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65AA66891ABBD05F005B898B /* musuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musuTests.swift; sourceTree = "<group>"; };
+		65AA66931ABBD08E005B898B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		65AA66941ABBD08E005B898B /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		65AA66951ABBD08E005B898B /* PlayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayListViewController.swift; sourceTree = "<group>"; };
+		65AA66961ABBD08E005B898B /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		65AA669C1ABBD198005B898B /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		65AA669D1ABBD198005B898B /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		65AA669E1ABBD198005B898B /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		65AA66A21ABBD21D005B898B /* musu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musu-Bridging-Header.h"; sourceTree = "<group>"; };
+		65AA66A31ABBD21D005B898B /* OC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OC.m; path = musu/OC.m; sourceTree = "<group>"; };
+		65AA66A51ABBD28C005B898B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		65AA66A71ABBD295005B898B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		65AA66A91ABBD2A1005B898B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		65AA66AB1ABBD2B2005B898B /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		658BE5C21AB5C0FA000CF61A /* Frameworks */ = {
+		65AA66681ABBD05F005B898B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65FC088F1AB8616F0018F021 /* libc++.dylib in Frameworks */,
-				65FC088D1AB861300018F021 /* libsqlite3.0.dylib in Frameworks */,
-				65FC088B1AB8611E0018F021 /* libz.dylib in Frameworks */,
-				65FC08891AB8610D0018F021 /* SystemConfiguration.framework in Frameworks */,
-				65FC08851AB85F350018F021 /* libWeChatSDK.a in Frameworks */,
+				65AA66AC1ABBD2B2005B898B /* libc++.dylib in Frameworks */,
+				65AA66AA1ABBD2A1005B898B /* libsqlite3.0.dylib in Frameworks */,
+				65AA66A81ABBD295005B898B /* libz.dylib in Frameworks */,
+				65AA66A61ABBD28C005B898B /* SystemConfiguration.framework in Frameworks */,
+				65AA669F1ABBD198005B898B /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		658BE5D91AB5C0FA000CF61A /* Frameworks */ = {
+		65AA66801ABBD05F005B898B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,100 +86,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		658BE5BC1AB5C0FA000CF61A = {
+		65AA66621ABBD05F005B898B = {
 			isa = PBXGroup;
 			children = (
-				65FC08991AB892090018F021 /* PlayerViewController.swift */,
-				658BE5C71AB5C0FA000CF61A /* musu */,
-				658BE5DF1AB5C0FA000CF61A /* musuTests */,
-				658BE5C61AB5C0FA000CF61A /* Products */,
-				65FC08801AB85F350018F021 /* WeChatSDK_1.5 */,
-				65FC08871AB85FD40018F021 /* need */,
+				65AA66AB1ABBD2B2005B898B /* libc++.dylib */,
+				65AA66A91ABBD2A1005B898B /* libsqlite3.0.dylib */,
+				65AA66A71ABBD295005B898B /* libz.dylib */,
+				65AA66A51ABBD28C005B898B /* SystemConfiguration.framework */,
+				65AA66A31ABBD21D005B898B /* OC.m */,
+				65AA666D1ABBD05F005B898B /* musu */,
+				65AA66861ABBD05F005B898B /* musuTests */,
+				65AA666C1ABBD05F005B898B /* Products */,
+				65AA669B1ABBD198005B898B /* WeChatSDK_1.5 */,
+				65AA66A21ABBD21D005B898B /* musu-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
-		658BE5C61AB5C0FA000CF61A /* Products */ = {
+		65AA666C1ABBD05F005B898B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				658BE5C51AB5C0FA000CF61A /* musu.app */,
-				658BE5DC1AB5C0FA000CF61A /* musuTests.xctest */,
+				65AA666B1ABBD05F005B898B /* musu.app */,
+				65AA66831ABBD05F005B898B /* musuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		658BE5C71AB5C0FA000CF61A /* musu */ = {
+		65AA666D1ABBD05F005B898B /* musu */ = {
 			isa = PBXGroup;
 			children = (
-				658BE5CA1AB5C0FA000CF61A /* AppDelegate.swift */,
-				658BE5EC1AB5C1E2000CF61A /* LoginViewController.swift */,
-				658BE5CE1AB5C0FA000CF61A /* ChannelViewController.swift */,
-				658BE6501AB5CA5B000CF61A /* PlayListViewController.swift */,
-				658BE5D01AB5C0FA000CF61A /* Main.storyboard */,
-				658BE5D31AB5C0FA000CF61A /* Images.xcassets */,
-				658BE5D51AB5C0FA000CF61A /* LaunchScreen.xib */,
-				658BE5C81AB5C0FA000CF61A /* Supporting Files */,
+				65AA66931ABBD08E005B898B /* LoginViewController.swift */,
+				65AA66941ABBD08E005B898B /* ChannelViewController.swift */,
+				65AA66951ABBD08E005B898B /* PlayListViewController.swift */,
+				65AA66961ABBD08E005B898B /* PlayerViewController.swift */,
+				65AA66701ABBD05F005B898B /* AppDelegate.swift */,
+				65AA66751ABBD05F005B898B /* ViewController.swift */,
+				65AA66771ABBD05F005B898B /* Main.storyboard */,
+				65AA667A1ABBD05F005B898B /* Images.xcassets */,
+				65AA667C1ABBD05F005B898B /* LaunchScreen.xib */,
+				65AA66721ABBD05F005B898B /* musu.xcdatamodeld */,
+				65AA666E1ABBD05F005B898B /* Supporting Files */,
 			);
 			path = musu;
 			sourceTree = "<group>";
 		};
-		658BE5C81AB5C0FA000CF61A /* Supporting Files */ = {
+		65AA666E1ABBD05F005B898B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				658BE5C91AB5C0FA000CF61A /* Info.plist */,
+				65AA666F1ABBD05F005B898B /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		658BE5DF1AB5C0FA000CF61A /* musuTests */ = {
+		65AA66861ABBD05F005B898B /* musuTests */ = {
 			isa = PBXGroup;
 			children = (
-				658BE5E21AB5C0FA000CF61A /* musuTests.swift */,
-				658BE5E01AB5C0FA000CF61A /* Supporting Files */,
+				65AA66891ABBD05F005B898B /* musuTests.swift */,
+				65AA66871ABBD05F005B898B /* Supporting Files */,
 			);
 			path = musuTests;
 			sourceTree = "<group>";
 		};
-		658BE5E01AB5C0FA000CF61A /* Supporting Files */ = {
+		65AA66871ABBD05F005B898B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				658BE5E11AB5C0FA000CF61A /* Info.plist */,
+				65AA66881ABBD05F005B898B /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		65FC08801AB85F350018F021 /* WeChatSDK_1.5 */ = {
+		65AA669B1ABBD198005B898B /* WeChatSDK_1.5 */ = {
 			isa = PBXGroup;
 			children = (
-				65FC08811AB85F350018F021 /* libWeChatSDK.a */,
-				65FC08831AB85F350018F021 /* WXApi.h */,
-				65FC08841AB85F350018F021 /* WXApiObject.h */,
+				65AA669C1ABBD198005B898B /* libWeChatSDK.a */,
+				65AA669D1ABBD198005B898B /* WXApi.h */,
+				65AA669E1ABBD198005B898B /* WXApiObject.h */,
 			);
 			path = WeChatSDK_1.5;
-			sourceTree = "<group>";
-		};
-		65FC08871AB85FD40018F021 /* need */ = {
-			isa = PBXGroup;
-			children = (
-				65FC08881AB8610D0018F021 /* SystemConfiguration.framework */,
-				65FC088A1AB8611E0018F021 /* libz.dylib */,
-				65FC088C1AB861300018F021 /* libsqlite3.0.dylib */,
-				65FC088E1AB8616F0018F021 /* libc++.dylib */,
-				65FC08911AB8625E0018F021 /* musu.m */,
-				65FC08901AB8625D0018F021 /* musu-Bridging-Header.h */,
-			);
-			name = need;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		658BE5C41AB5C0FA000CF61A /* musu */ = {
+		65AA666A1ABBD05F005B898B /* musu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 658BE5E61AB5C0FA000CF61A /* Build configuration list for PBXNativeTarget "musu" */;
+			buildConfigurationList = 65AA668D1ABBD05F005B898B /* Build configuration list for PBXNativeTarget "musu" */;
 			buildPhases = (
-				658BE5C11AB5C0FA000CF61A /* Sources */,
-				658BE5C21AB5C0FA000CF61A /* Frameworks */,
-				658BE5C31AB5C0FA000CF61A /* Resources */,
+				65AA66671ABBD05F005B898B /* Sources */,
+				65AA66681ABBD05F005B898B /* Frameworks */,
+				65AA66691ABBD05F005B898B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -183,46 +181,46 @@
 			);
 			name = musu;
 			productName = musu;
-			productReference = 658BE5C51AB5C0FA000CF61A /* musu.app */;
+			productReference = 65AA666B1ABBD05F005B898B /* musu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		658BE5DB1AB5C0FA000CF61A /* musuTests */ = {
+		65AA66821ABBD05F005B898B /* musuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 658BE5E91AB5C0FA000CF61A /* Build configuration list for PBXNativeTarget "musuTests" */;
+			buildConfigurationList = 65AA66901ABBD05F005B898B /* Build configuration list for PBXNativeTarget "musuTests" */;
 			buildPhases = (
-				658BE5D81AB5C0FA000CF61A /* Sources */,
-				658BE5D91AB5C0FA000CF61A /* Frameworks */,
-				658BE5DA1AB5C0FA000CF61A /* Resources */,
+				65AA667F1ABBD05F005B898B /* Sources */,
+				65AA66801ABBD05F005B898B /* Frameworks */,
+				65AA66811ABBD05F005B898B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				658BE5DE1AB5C0FA000CF61A /* PBXTargetDependency */,
+				65AA66851ABBD05F005B898B /* PBXTargetDependency */,
 			);
 			name = musuTests;
 			productName = musuTests;
-			productReference = 658BE5DC1AB5C0FA000CF61A /* musuTests.xctest */;
+			productReference = 65AA66831ABBD05F005B898B /* musuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		658BE5BD1AB5C0FA000CF61A /* Project object */ = {
+		65AA66631ABBD05F005B898B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "丁松";
 				TargetAttributes = {
-					658BE5C41AB5C0FA000CF61A = {
+					65AA666A1ABBD05F005B898B = {
 						CreatedOnToolsVersion = 6.2;
 					};
-					658BE5DB1AB5C0FA000CF61A = {
+					65AA66821ABBD05F005B898B = {
 						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 658BE5C41AB5C0FA000CF61A;
+						TestTargetID = 65AA666A1ABBD05F005B898B;
 					};
 				};
 			};
-			buildConfigurationList = 658BE5C01AB5C0FA000CF61A /* Build configuration list for PBXProject "musu" */;
+			buildConfigurationList = 65AA66661ABBD05F005B898B /* Build configuration list for PBXProject "musu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -230,29 +228,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 658BE5BC1AB5C0FA000CF61A;
-			productRefGroup = 658BE5C61AB5C0FA000CF61A /* Products */;
+			mainGroup = 65AA66621ABBD05F005B898B;
+			productRefGroup = 65AA666C1ABBD05F005B898B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				658BE5C41AB5C0FA000CF61A /* musu */,
-				658BE5DB1AB5C0FA000CF61A /* musuTests */,
+				65AA666A1ABBD05F005B898B /* musu */,
+				65AA66821ABBD05F005B898B /* musuTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		658BE5C31AB5C0FA000CF61A /* Resources */ = {
+		65AA66691ABBD05F005B898B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658BE5D21AB5C0FA000CF61A /* Main.storyboard in Resources */,
-				658BE5D71AB5C0FA000CF61A /* LaunchScreen.xib in Resources */,
-				658BE5D41AB5C0FA000CF61A /* Images.xcassets in Resources */,
+				65AA66791ABBD05F005B898B /* Main.storyboard in Resources */,
+				65AA667E1ABBD05F005B898B /* LaunchScreen.xib in Resources */,
+				65AA667B1ABBD05F005B898B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		658BE5DA1AB5C0FA000CF61A /* Resources */ = {
+		65AA66811ABBD05F005B898B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,50 +260,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		658BE5C11AB5C0FA000CF61A /* Sources */ = {
+		65AA66671ABBD05F005B898B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658BE5ED1AB5C1E2000CF61A /* LoginViewController.swift in Sources */,
-				658BE5CF1AB5C0FA000CF61A /* ChannelViewController.swift in Sources */,
-				658BE6511AB5CA5B000CF61A /* PlayListViewController.swift in Sources */,
-				658BE5CB1AB5C0FA000CF61A /* AppDelegate.swift in Sources */,
-				65FC08921AB8625E0018F021 /* musu.m in Sources */,
-				65FC089A1AB892090018F021 /* PlayerViewController.swift in Sources */,
+				65AA66971ABBD08E005B898B /* LoginViewController.swift in Sources */,
+				65AA66A41ABBD21D005B898B /* OC.m in Sources */,
+				65AA66761ABBD05F005B898B /* ViewController.swift in Sources */,
+				65AA66991ABBD08E005B898B /* PlayListViewController.swift in Sources */,
+				65AA669A1ABBD08E005B898B /* PlayerViewController.swift in Sources */,
+				65AA66711ABBD05F005B898B /* AppDelegate.swift in Sources */,
+				65AA66741ABBD05F005B898B /* musu.xcdatamodeld in Sources */,
+				65AA66981ABBD08E005B898B /* ChannelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		658BE5D81AB5C0FA000CF61A /* Sources */ = {
+		65AA667F1ABBD05F005B898B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658BE5E31AB5C0FA000CF61A /* musuTests.swift in Sources */,
+				65AA668A1ABBD05F005B898B /* musuTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		658BE5DE1AB5C0FA000CF61A /* PBXTargetDependency */ = {
+		65AA66851ABBD05F005B898B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 658BE5C41AB5C0FA000CF61A /* musu */;
-			targetProxy = 658BE5DD1AB5C0FA000CF61A /* PBXContainerItemProxy */;
+			target = 65AA666A1ABBD05F005B898B /* musu */;
+			targetProxy = 65AA66841ABBD05F005B898B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		658BE5D01AB5C0FA000CF61A /* Main.storyboard */ = {
+		65AA66771ABBD05F005B898B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				658BE5D11AB5C0FA000CF61A /* Base */,
+				65AA66781ABBD05F005B898B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		658BE5D51AB5C0FA000CF61A /* LaunchScreen.xib */ = {
+		65AA667C1ABBD05F005B898B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				658BE5D61AB5C0FA000CF61A /* Base */,
+				65AA667D1ABBD05F005B898B /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -313,7 +313,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		658BE5E41AB5C0FA000CF61A /* Debug */ = {
+		65AA668B1ABBD05F005B898B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -356,7 +356,7 @@
 			};
 			name = Debug;
 		};
-		658BE5E51AB5C0FA000CF61A /* Release */ = {
+		65AA668C1ABBD05F005B898B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -392,13 +392,12 @@
 			};
 			name = Release;
 		};
-		658BE5E71AB5C0FA000CF61A /* Debug */ = {
+		65AA668E1ABBD05F005B898B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = musu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -410,13 +409,12 @@
 			};
 			name = Debug;
 		};
-		658BE5E81AB5C0FA000CF61A /* Release */ = {
+		65AA668F1ABBD05F005B898B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = musu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -427,7 +425,7 @@
 			};
 			name = Release;
 		};
-		658BE5EA1AB5C0FA000CF61A /* Debug */ = {
+		65AA66911ABBD05F005B898B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -446,7 +444,7 @@
 			};
 			name = Debug;
 		};
-		658BE5EB1AB5C0FA000CF61A /* Release */ = {
+		65AA66921ABBD05F005B898B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -464,34 +462,45 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		658BE5C01AB5C0FA000CF61A /* Build configuration list for PBXProject "musu" */ = {
+		65AA66661ABBD05F005B898B /* Build configuration list for PBXProject "musu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				658BE5E41AB5C0FA000CF61A /* Debug */,
-				658BE5E51AB5C0FA000CF61A /* Release */,
+				65AA668B1ABBD05F005B898B /* Debug */,
+				65AA668C1ABBD05F005B898B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		658BE5E61AB5C0FA000CF61A /* Build configuration list for PBXNativeTarget "musu" */ = {
+		65AA668D1ABBD05F005B898B /* Build configuration list for PBXNativeTarget "musu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				658BE5E71AB5C0FA000CF61A /* Debug */,
-				658BE5E81AB5C0FA000CF61A /* Release */,
+				65AA668E1ABBD05F005B898B /* Debug */,
+				65AA668F1ABBD05F005B898B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		658BE5E91AB5C0FA000CF61A /* Build configuration list for PBXNativeTarget "musuTests" */ = {
+		65AA66901ABBD05F005B898B /* Build configuration list for PBXNativeTarget "musuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				658BE5EA1AB5C0FA000CF61A /* Debug */,
-				658BE5EB1AB5C0FA000CF61A /* Release */,
+				65AA66911ABBD05F005B898B /* Debug */,
+				65AA66921ABBD05F005B898B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		65AA66721ABBD05F005B898B /* musu.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				65AA66731ABBD05F005B898B /* musu.xcdatamodel */,
+			);
+			currentVersion = 65AA66731ABBD05F005B898B /* musu.xcdatamodel */;
+			path = musu.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 658BE5BD1AB5C0FA000CF61A /* Project object */;
+	rootObject = 65AA66631ABBD05F005B898B /* Project object */;
 }
