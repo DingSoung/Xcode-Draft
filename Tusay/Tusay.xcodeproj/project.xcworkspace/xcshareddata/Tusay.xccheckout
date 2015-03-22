@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>49F4E6DC-0A7E-4916-9208-D719F0D656A8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Tusay</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F8B3B353C312D4F19E24423C6A1D1C848ECC9C40</key>
+		<string>github.com:DingSoung/tusay.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Tusay/Tusay.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F8B3B353C312D4F19E24423C6A1D1C848ECC9C40</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:DingSoung/tusay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F8B3B353C312D4F19E24423C6A1D1C848ECC9C40</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F8B3B353C312D4F19E24423C6A1D1C848ECC9C40</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tusay</string>
+		</dict>
+	</array>
+</dict>
+</plist>
