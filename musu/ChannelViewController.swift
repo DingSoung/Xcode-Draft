@@ -15,9 +15,11 @@ class ChannelViewController: UITableViewController {
     var Channels = NSArray()
     
     func downloadData(url: String, dataHandler:(NSData) -> Void){
+		
         var request = NSURLRequest(URL: NSURL(string: url)!)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
             (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+			
             var httpResponse = response as NSHTTPURLResponse
             if(httpResponse.statusCode == 200){
                 dataHandler(data)

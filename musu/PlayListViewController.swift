@@ -70,12 +70,16 @@ class PlayListViewController: UITableViewController {
                 //destViewController.TitleButton.setTitle(object["title"] as? String, forState: UIControlState.Normal)
                 destViewController.title = object["title"] as? String
                 destViewController.receiveData = object["url"] as? String
+				
                 downloadData(object["picture"] as String, dataHandler: {
                     (data:NSData) -> Void in
                     var BackGroundImageUrl = self.tmpPath + "BackGroundImageUrl.jpg"
                     data.writeToFile(BackGroundImageUrl, atomically: true)
                     destViewController.BackGroundImage.image = UIImage(named :BackGroundImageUrl)
                 })
+				
+				
+				
             }
         }
     }
