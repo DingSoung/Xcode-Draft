@@ -7,12 +7,6 @@ var view = UIView(frame: CGRectMake(0, 0, 200, 300))
 view.backgroundColor = UIColor.redColor()
 
 
-
-
-/**
-分析购房
-*/
-
 /**
 参考结论:
 https://www.v2ex.com/t/224104#;     结论是   能向银行借多少就借多少，能拖多少年就拖多少年。把自己的钱留下来投资，能赚钱，跑赢CPI就足够。
@@ -20,31 +14,45 @@ n年后的1W跟现在的1Q完全不同。另外楼市崩盘也是时间题，如
 大。
 */
 
+let beforePay = 50 * 10000.0 //当前房价
+let firstPay = 0 * 10000.0 //首付
+let periods = 30 * 12 //借贷时间
+let interest = 5.15 * 0.01 //借贷年利率 2.2750%
 
-
-let beforePay = 100 * 10000.0 //当前房价
-let firstPay = 20 * 10000.0 //首付
-let debitYears = 30.0 //借贷年数
-let debitInterestRate = 2.2750 * 0.01 //借贷利率 2.2750%
 
 /**
-一次性本息倍率 = (1 + 利率)^还贷年数
+月还款
+A=P×i×(1+i)n/[(1+i)n-1]
+A为每期还款金额
+P为本金(贷款数)
+i为利率(须折算成月利率)
+n为贷款期数(按月计算)
 */
-func principalWithInterestRate(interestRate:Double, debitYears:Double) -> Double {
-    return pow((1.0 + interestRate), debitYears)
+
+func monthPays(principal:Double, interest:Double, periods:Int) -> [Double] {
+    var array:[Double] = []
+    let i = interest / 12.0
+    for var n = 0; n < periods; n += 1 {
+        let monthPay = principal * i * (1+i)/((1+i)/Double(n) - 1)
+        array.append(monthPay)
+    }
+    return array
 }
-let _principalWithInterestRate = principalWithInterestRate(debitInterestRate,debitYears:debitYears)
+let _monthPays = monthPays(beforePay - firstPay, interest: interest, periods: periods)
+
 
 /**
-月供 = (房价 - 首付) * 本息倍率 / 30年 / 12个月
+总计还款
 */
-func monthPay(beforePay:Double, firstPay:Double, principalWithInterestRate:Double) -> Double {
-    return (beforePay - firstPay) * principalWithInterestRate / 30.0 / 12.0
+func totalPayBack(monthPays:[Double]) -> Double {
+    var sum = 0.0
+    for monthPay in monthPays {
+        sum += monthPay
+    }
+    return sum
 }
-let _monthPay = monthPay(beforePay, firstPay: firstPay, principalWithInterestRate:_principalWithInterestRate)
-/**
-假设在武汉买一套100万房子，首府20万，30年利息 2.2750%利率，月还款4364。
-*/
+let _totalPayBack = totalPayBack(_monthPays)
+
 
 
 
@@ -52,8 +60,8 @@ let _monthPay = monthPay(beforePay, firstPay: firstPay, principalWithInterestRat
 如果个人会投资，月入出去月供，生活支出后有结余，按年投资
 将当前投资成功保留以供购车，旅游，医疗，养老等，不作为月供
 */
-let wage = 10000.0  //2年后 预估在武汉的长期工作收入水平
-let livingExpenses = 3000.0 //生活总支出
+let wage = 23000.0  //3年后 预估在上海的长期工作收入水平
+let livingExpenses = 6000.0 //生活总支出
 let investmentGrowthRate = 8.000 * 0.01 //均衡投资增长率
 
 /**
@@ -65,14 +73,17 @@ let investmentGrowthRate = 8.000 * 0.01 //均衡投资增长率
 总计自由资产
 */
 
-func freeFund(wage:Double, livingExpenses:Double, monthPay:Double,debitYears:Int) -> Double {
+func savedFund(wage:Double, livingExpenses:Double, monthPays:[Double]) -> Double {
     var sum = 0.0
-    for var debitYear = 0; debitYear < debitYears; debitYear += 1 {
-        sum += (wage - livingExpenses - monthPay) * 12 * pow(1 + investmentGrowthRate, Double(debitYears - debitYear))
+    for var year = 1; year <= monthPays.count ; year += 1 {
+        sum += (wage - livingExpenses - monthPays[year]) * 12 * pow(1 + investmentGrowthRate, Double(monthPays.count / 12))
     }
     return sum
 }
-let _freeFund = freeFund(wage, livingExpenses: livingExpenses, monthPay: _monthPay,debitYears:Int(debitYears))
+
+let _savedFund = savedFund(wage, livingExpenses: livingExpenses, monthPays: _monthPays)
+
+
 
 
 
