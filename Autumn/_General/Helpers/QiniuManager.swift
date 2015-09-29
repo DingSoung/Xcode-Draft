@@ -6,55 +6,52 @@
 //  Copyright (c) 2015年 Alex D. All rights reserved.
 //
 
-import UIKit
 import Qiniu
-
 class QiniuManager {
     
     static let instance = QiniuManager()
-    private init() {}
-    var upManager = QNUploadManager()
+    var upManager:QNUploadManager?
+    private init() {
+        upManager = QNUploadManager()
+    }
     
     //MARK: 上传文件
-    func upload(token:String, data:NSData, key:String,process:((percent:Float)->Void)?,complete:((key:String)->Void)?) {
-        let opt = QNUploadOption(mime: nil, progressHandler: { (key, percent) -> Void in
+    func upload(token:String, data:NSData, key:String, process:((key:String, percent:Float)->Void)?, complete:((info:QNResponseInfo, key:String, resp:NSDictionary?)->Void)?, cancel:(()->Bool)?) {
+        let opt = QNUploadOption(mime: "text/plain", progressHandler: { (key, percent) -> Void in
             print(key)
-            if percent < 1.0 {
-                //进度
-                process?(percent: percent)
-            } else {
-                //完成
-                complete?(key: key)
-            }
+            process?(key: key, percent: percent)
             }, params: ["x:foo" : "fooval"], checkCrc: true) { () -> Bool in
                 //取消
-                return false
+                if let block = cancel?() {
+                    return block
+                }else {
+                    return false
+                }
         }
-        upManager?.putData(data, key: key, token: token, complete: { (info, key, respDic) -> Void in
-            print(info)
-            print(key)
-            print(respDic)
+        upManager?.putData(data, key: key, token: token, complete: { (info, key, resp) -> Void in
+            complete?(info: info, key: key, resp: resp)
             }, option: opt)
     }
+    
     //MARK: 断点续传
-    func upload(folder:String, token:String, data:NSData, key:String, process:((percent:Float)->Void)?,complete:((key:String)->Void)?) {
-        //写标记
+    func upload(folder:String, token:String, data:NSData, key:String, process:((key:String, percent:Float)->Void)?, complete:((info:QNResponseInfo, key:String, resp:NSDictionary?)->Void)?, cancel:(()->Bool)?) {
         do {
-            upManager = try QNUploadManager(recorder: QNFileRecorder(folder: folder))
-            self.upload(token, data: data, key: key, process: process) { (key) -> Void in
-                //还原
-                self.upManager = QNUploadManager() //还原
-                complete
-            }
+            //写标记
+            self.upManager = try QNUploadManager(recorder: QNFileRecorder(folder: folder))
         } catch {
-            print(error)
+            self.upManager = QNUploadManager()
+            print("启动断点续传失败\(error),自动切换到连续上传")
+        }
+        self.upload(token, data: data, key: key, process: process, complete: { (info, key, resp) -> Void in
+            self.upManager = QNUploadManager()
+            complete?(info: info, key: key, resp: resp)
+            }) { () -> Bool in
+                cancel?()
+                if cancel?() == true {
+                    self.upManager = QNUploadManager()
+                    return true
+                }
+                return false
         }
     }
-    
-    //MARK: 简易版
-    func upload(token:String, data:NSData, key:String) {
-        self.upload(token, data: data, key: key, process: nil, complete: nil)
-    }
-    
-    
 }
