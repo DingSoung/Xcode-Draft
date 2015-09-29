@@ -18,7 +18,8 @@ class ViewController: UIViewController {
         _ = GCDManager.delay(0.8, task: { () -> () in
             
             let vc = UIStoryboard(name: "Summer", bundle: nil).instantiateViewControllerWithIdentifier("My") as! MyViewController
-            self.presentViewController(vc, animated: true, completion: nil)
+            let navi = UINavigationController(rootViewController: vc)
+            self.presentViewController(navi, animated: true, completion: nil)
         })
         //GCDManager.cancel(task)
     }

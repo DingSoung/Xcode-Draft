@@ -14,13 +14,16 @@ import MobileCoreServices
 
 import AssetsLibrary
 
-class MyViewController: BaseViewController, UINavigationControllerDelegate,  UIImagePickerControllerDelegate, QRCodeReaderViewControllerDelegate {
+class MyViewController: NaviBaseiViewController, UINavigationControllerDelegate,  UIImagePickerControllerDelegate, QRCodeReaderViewControllerDelegate {
     
     private var showSectionBlock: ((view:UIView)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.title = "我的"
+        self.navigationController?.navigationBarHidden = true
+        
         
         //MARK: GCD异步延时
         _ = GCDManager.delay(0.8, task: { () -> () in
@@ -58,22 +61,20 @@ class MyViewController: BaseViewController, UINavigationControllerDelegate,  UII
     }
     
     @IBAction func loginBtnAction(sender: AnyObject) {
-        let vc = BaseNaviViewController()
+        let vc = BaseViewController()
         if let v = (NSBundle.mainBundle().loadNibNamed("LoginView", owner: self, options: nil) as NSArray).lastObject as? LoginView {
             v.frame = vc.view.frame
             vc.view.addSubview(v)
         }
-        let navi = UINavigationController(rootViewController: vc)
-        self.presentViewController(navi, animated: true, completion: nil)
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     @IBAction func httpDebugBtnAction(sender: AnyObject) {
-        let vc = BaseNaviViewController()
+        let vc = NaviBaseiViewController()
         if let v = (NSBundle.mainBundle().loadNibNamed("HTTPDebugView", owner: self, options: nil) as NSArray).lastObject as? HTTPDebugView {
             v.frame = vc.view.frame
             vc.view.addSubview(v)
         }
-        let navi = UINavigationController(rootViewController: vc)
-        self.presentViewController(navi, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func 摄像头录制视频(sender: UIButton) {
@@ -125,7 +126,13 @@ class MyViewController: BaseViewController, UINavigationControllerDelegate,  UII
         }
     }
     @IBAction func 测试七牛上传(sender: UIButton) {
-        QiniuManager.instance.upload("tolken form server", data: NSData(), key: "test key")
+        QiniuManager.instance.upload("token", data: NSData(), key: "key", process: { (key, percent) -> Void in
+            print(key, percent)
+            }, complete: { (info, key, resp) -> Void in
+                print(info, key, resp)
+            }) { () -> Bool in
+                return false
+        }
     }
     
     @IBAction func 测试JavaScriptManager(sender: UIButton) {

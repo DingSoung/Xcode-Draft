@@ -7,23 +7,31 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let tapGesture = UITapGestureRecognizer(target: self, action: "viewTapGesture:")
-        tapGesture.numberOfTapsRequired = 1
-        self.view.addGestureRecognizer(tapGesture)
-        self.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "viewPanGesture:"))
-        self.tabBarController?.tabBar.hidden = true
         
-        // Do any additional setup after loading the view.
+        self.title = "please config title"
+        
+        //MARK: 停止编辑
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.rac_gestureSignal().subscribeNext({ (obj) -> Void in
+            self.view.endEditing(true)
+        })
+        self.view.addGestureRecognizer(tapGesture)
+        let panGesture = UIPanGestureRecognizer()
+        panGesture.rac_gestureSignal().subscribeNext { (obj) -> Void in
+            self.view.endEditing(true)
+        }
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        //MARK: 页面统计
         if let pageName = self.title {
             MobClick.beginLogPageView(pageName)
         } else {
@@ -42,12 +50,5 @@ class BaseViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func viewTapGesture(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
-    }
-    func viewPanGesture(sender:UIPanGestureRecognizer) {
-        self.view.endEditing(true)
     }
 }

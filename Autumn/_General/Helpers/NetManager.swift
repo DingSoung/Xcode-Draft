@@ -36,6 +36,11 @@ class NetManager {
     func autoRequest(url:String, parameter:AnyObject?, type:ContentTypes?, success:(NSURLSessionDataTask, AnyObject) -> Void, fail:(NSURLSessionDataTask, NSError) -> Void){
         self.afnetworkConfig(type)
         
+        if AFNetworkReachabilityManager.sharedManager().reachable != true {
+            fail(NSURLSessionDataTask(), NSError(domain: "network not reachable", code: -1, userInfo: nil))
+            return
+        }
+        
         if let parameter: AnyObject = parameter {
             manager?.POST(url, parameters: parameter, success: { (task, obj) -> Void in
                 success(task, obj)
@@ -55,15 +60,7 @@ class NetManager {
 
 extension NetManager {
     
-    //MARK: 字典传入
-    /*
-    func POST(type:ContentTypes?,url:String,JSON:Dictionary<String, AnyObject>?,success:(data:AnyObject) -> (), fail:(error:NSError) -> Void) {
-        //TODO: 转换parameter 为JSON
-    }*/
-    //MARK: 简化的GET
-    /*
-    func GET(type:ContentTypes?,url:String, success:(data:AnyObject) -> Void, fail:(error:NSError) -> Void) {
-    }*/
+    //MARK: 字典传入转JSON
 }
 
 

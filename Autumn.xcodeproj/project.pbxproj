@@ -36,8 +36,6 @@
 		FA5A47621BAC23B900B9E2A2 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A46F71BAC23B900B9E2A2 /* ShareData.swift */; settings = {ASSET_TAGS = (); }; };
 		FA5A47631BAC23B900B9E2A2 /* ShareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A46F81BAC23B900B9E2A2 /* ShareModel.swift */; settings = {ASSET_TAGS = (); }; };
 		FA5A47641BAC23B900B9E2A2 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A46FB1BAC23B900B9E2A2 /* AlbumViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FA5A47651BAC23B900B9E2A2 /* BaseNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A46FC1BAC23B900B9E2A2 /* BaseNaviViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FA5A47661BAC23B900B9E2A2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A46FD1BAC23B900B9E2A2 /* BaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FA5A47691BAC23B900B9E2A2 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A47001BAC23B900B9E2A2 /* MyViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FA5A476A1BAC23B900B9E2A2 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A47021BAC23B900B9E2A2 /* QRCodeReader.swift */; settings = {ASSET_TAGS = (); }; };
 		FA5A476B1BAC23B900B9E2A2 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A47031BAC23B900B9E2A2 /* QRCodeViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -64,7 +62,7 @@
 		FA94725C1BB2AF95004EAEDF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94725B1BB2AF95004EAEDF /* libsqlite3.tbd */; };
 		FA94725E1BB2AFB7004EAEDF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94725D1BB2AFB7004EAEDF /* libc++.tbd */; };
 		FA9472621BB3D41F004EAEDF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9472611BB3D41F004EAEDF /* SystemConfiguration.framework */; };
-		FA9472641BB3D725004EAEDF /* Appdelegate+UMSocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9472631BB3D725004EAEDF /* Appdelegate+UMSocialManager.swift */; settings = {ASSET_TAGS = (); }; };
+		FA9472641BB3D725004EAEDF /* AppDelegate+UMSocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9472631BB3D725004EAEDF /* AppDelegate+UMSocialManager.swift */; settings = {ASSET_TAGS = (); }; };
 		FA9472A31BB3E5AD004EAEDF /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA9472661BB3E5AD004EAEDF /* UMSocialLocalizable.strings */; settings = {ASSET_TAGS = (); }; };
 		FA9472A41BB3E5AD004EAEDF /* libUMSocial_Sdk_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9472741BB3E5AD004EAEDF /* libUMSocial_Sdk_4.2.3.a */; settings = {ASSET_TAGS = (); }; };
 		FA9472A51BB3E5AD004EAEDF /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9472761BB3E5AD004EAEDF /* UMSCommentDetailController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -87,6 +85,9 @@
 		FA9472B61BB3E5AD004EAEDF /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94729B1BB3E5AD004EAEDF /* libSocialWechat.a */; settings = {ASSET_TAGS = (); }; };
 		FA9472B71BB3E5AD004EAEDF /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94729C1BB3E5AD004EAEDF /* libWeChatSDK.a */; settings = {ASSET_TAGS = (); }; };
 		FA9472B81BB3E5AD004EAEDF /* libSocialWhatsapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9472A11BB3E5AD004EAEDF /* libSocialWhatsapp.a */; settings = {ASSET_TAGS = (); }; };
+		FA96CBD91BBA74D2003E3BFF /* NSDictionary+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96CBD81BBA74D2003E3BFF /* NSDictionary+Tools.swift */; settings = {ASSET_TAGS = (); }; };
+		FA96CBE11BBA8505003E3BFF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96CBDF1BBA8505003E3BFF /* BaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FA96CBE21BBA8505003E3BFF /* NaviBaseiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96CBE01BBA8505003E3BFF /* NaviBaseiViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FAABB0D11BAFA78300D68F16 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FAABB0CF1BAC268D00D68F16 /* libz.tbd */; };
 		FAABB0D21BAFA78C00D68F16 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FAABB0CD1BAC268200D68F16 /* libxml2.2.tbd */; };
 /* End PBXBuildFile section */
@@ -147,8 +148,6 @@
 		FA5A46F71BAC23B900B9E2A2 /* ShareData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
 		FA5A46F81BAC23B900B9E2A2 /* ShareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareModel.swift; sourceTree = "<group>"; };
 		FA5A46FB1BAC23B900B9E2A2 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
-		FA5A46FC1BAC23B900B9E2A2 /* BaseNaviViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNaviViewController.swift; sourceTree = "<group>"; };
-		FA5A46FD1BAC23B900B9E2A2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FA5A47001BAC23B900B9E2A2 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		FA5A47021BAC23B900B9E2A2 /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
 		FA5A47031BAC23B900B9E2A2 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
@@ -184,7 +183,7 @@
 		FA94725B1BB2AF95004EAEDF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		FA94725D1BB2AFB7004EAEDF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		FA9472611BB3D41F004EAEDF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		FA9472631BB3D725004EAEDF /* Appdelegate+UMSocialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Appdelegate+UMSocialManager.swift"; sourceTree = "<group>"; };
+		FA9472631BB3D725004EAEDF /* AppDelegate+UMSocialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+UMSocialManager.swift"; sourceTree = "<group>"; };
 		FA9472671BB3E5AD004EAEDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		FA9472691BB3E5AD004EAEDF /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		FA94726A1BB3E5AD004EAEDF /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -236,6 +235,9 @@
 		FA94729F1BB3E5AD004EAEDF /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		FA9472A11BB3E5AD004EAEDF /* libSocialWhatsapp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWhatsapp.a; sourceTree = "<group>"; };
 		FA9472A21BB3E5AD004EAEDF /* UMSocialWhatsappHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWhatsappHandler.h; sourceTree = "<group>"; };
+		FA96CBD81BBA74D2003E3BFF /* NSDictionary+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Tools.swift"; sourceTree = "<group>"; };
+		FA96CBDF1BBA8505003E3BFF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FA96CBE01BBA8505003E3BFF /* NaviBaseiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviBaseiViewController.swift; sourceTree = "<group>"; };
 		FAABB0CC1BAC260D00D68F16 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		FAABB0CD1BAC268200D68F16 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		FAABB0CF1BAC268D00D68F16 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -382,6 +384,7 @@
 				FA5A46E51BAC23B900B9E2A2 /* NSMutableData+Tools.swift */,
 				FA5A46E61BAC23B900B9E2A2 /* NSObject+Tools.swift */,
 				FA5A46E71BAC23B900B9E2A2 /* String+Tools.swift */,
+				FA96CBD81BBA74D2003E3BFF /* NSDictionary+Tools.swift */,
 				FA5A46E81BAC23B900B9E2A2 /* UIColor+Tools.swift */,
 				FA5A46E91BAC23B900B9E2A2 /* UIImageView+Tools.swift */,
 				FA5A46EA1BAC23B900B9E2A2 /* UIVIew+Tools.swift */,
@@ -400,7 +403,7 @@
 				FA5A46F11BAC23B900B9E2A2 /* QiniuManager.swift */,
 				FA94724B1BB29F35004EAEDF /* UMAnalyticsManager.swift */,
 				FA9472591BB2AE63004EAEDF /* UMSocialManager.swift */,
-				FA9472631BB3D725004EAEDF /* Appdelegate+UMSocialManager.swift */,
+				FA9472631BB3D725004EAEDF /* AppDelegate+UMSocialManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -430,9 +433,8 @@
 		FA5A46FA1BAC23B900B9E2A2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA96CBDE1BBA8505003E3BFF /* Base */,
 				FA5A46FB1BAC23B900B9E2A2 /* AlbumViewController.swift */,
-				FA5A46FC1BAC23B900B9E2A2 /* BaseNaviViewController.swift */,
-				FA5A46FD1BAC23B900B9E2A2 /* BaseViewController.swift */,
 				FA5A47001BAC23B900B9E2A2 /* MyViewController.swift */,
 				FA5A47011BAC23B900B9E2A2 /* QRCodeReader */,
 			);
@@ -658,6 +660,15 @@
 			path = Whatsapp;
 			sourceTree = "<group>";
 		};
+		FA96CBDE1BBA8505003E3BFF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FA96CBDF1BBA8505003E3BFF /* BaseViewController.swift */,
+				FA96CBE01BBA8505003E3BFF /* NaviBaseiViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -874,6 +885,7 @@
 				FA5A476D1BAC23B900B9E2A2 /* SwitchCameraButton.swift in Sources */,
 				FA5A47691BAC23B900B9E2A2 /* MyViewController.swift in Sources */,
 				FA5A475D1BAC23B900B9E2A2 /* NotificationManager.swift in Sources */,
+				FA96CBE11BBA8505003E3BFF /* BaseViewController.swift in Sources */,
 				FA5A47561BAC23B900B9E2A2 /* UIColor+Tools.swift in Sources */,
 				FA5A47511BAC23B900B9E2A2 /* Int+Tools.swift in Sources */,
 				FA5A47721BAC23B900B9E2A2 /* HTTPDebugView.swift in Sources */,
@@ -884,15 +896,15 @@
 				FA5A47531BAC23B900B9E2A2 /* NSMutableData+Tools.swift in Sources */,
 				FA5A47601BAC23B900B9E2A2 /* CertificateModel.swift in Sources */,
 				FA5A47791BAC23B900B9E2A2 /* NSString+DDXML.m in Sources */,
-				FA5A47651BAC23B900B9E2A2 /* BaseNaviViewController.swift in Sources */,
 				FA5A47581BAC23B900B9E2A2 /* UIVIew+Tools.swift in Sources */,
 				FA5A47541BAC23B900B9E2A2 /* NSObject+Tools.swift in Sources */,
+				FA96CBE21BBA8505003E3BFF /* NaviBaseiViewController.swift in Sources */,
 				FA5A477B1BAC23B900B9E2A2 /* DDXMLElement.m in Sources */,
 				FA5A46B31BAC238000B9E2A2 /* ViewController.swift in Sources */,
 				FA5A47641BAC23B900B9E2A2 /* AlbumViewController.swift in Sources */,
-				FA5A47661BAC23B900B9E2A2 /* BaseViewController.swift in Sources */,
+				FA96CBD91BBA74D2003E3BFF /* NSDictionary+Tools.swift in Sources */,
 				FA5A476B1BAC23B900B9E2A2 /* QRCodeViewController.swift in Sources */,
-				FA9472641BB3D725004EAEDF /* Appdelegate+UMSocialManager.swift in Sources */,
+				FA9472641BB3D725004EAEDF /* AppDelegate+UMSocialManager.swift in Sources */,
 				FA5A46B11BAC238000B9E2A2 /* AppDelegate.swift in Sources */,
 				FA5A47741BAC23B900B9E2A2 /* LoginView.swift in Sources */,
 				FA5A475C1BAC23B900B9E2A2 /* NetManager.swift in Sources */,

@@ -46,8 +46,8 @@ class QiniuManager {
             self.upManager = QNUploadManager()
             complete?(info: info, key: key, resp: resp)
             }) { () -> Bool in
-                cancel?()
-                if cancel?() == true {
+                let isTrue = cancel?()
+                if isTrue == true {
                     self.upManager = QNUploadManager()
                     return true
                 }
