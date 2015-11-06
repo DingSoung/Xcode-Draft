@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nvh-4l-S9G">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+    </dependencies>
+    <scenes>
+        <!--StartScreen-->
+        <scene sceneID="rxM-aY-z0r">
+            <objects>
+                <viewController title="StartScreen" id="Nvh-4l-S9G" customClass="ViewController" customModule="PushKiller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vZ2-2T-RW1"/>
+                        <viewControllerLayoutGuide type="bottom" id="340-Dt-4X6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8rp-pK-FbT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8V7-fC-Pco">
+                                <rect key="frame" x="241" y="477" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8v3-ms-DiB" kind="modal" id="scJ-mr-st2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wellcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SN0-li-tJc">
+                                <rect key="frame" x="123" y="136" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="在这里显示预览状态比如时间，重要信息，缓存个数等等，或者欢迎等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZw-EI-DU6">
+                                <rect key="frame" x="22" y="242" width="527" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
+                        <size key="portraitSize" width="320" height="568"/>
+                        <size key="landscapeSize" width="568" height="320"/>
+                    </simulatedScreenMetrics>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sia-Mf-Drs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1144" y="-88"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xbP-B4-edL">
+            <objects>
+                <tabBarController id="8v3-ms-DiB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IlI-ea-WrP"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
+                        <size key="portraitSize" width="320" height="568"/>
+                        <size key="landscapeSize" width="568" height="320"/>
+                    </simulatedScreenMetrics>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="lXs-11-RKK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="V6h-bn-duy" kind="relationship" relationship="viewControllers" id="xH7-ar-k4m"/>
+                        <segue destination="ZAS-g8-VDW" kind="relationship" relationship="viewControllers" id="diH-CO-iff"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVX-B8-Fvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-673" y="-88"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="Cw9-o8-BtC">
+            <objects>
+                <viewController id="ZAS-g8-VDW" customClass="settingViewController" customModule="PushKiller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lML-S1-gVz"/>
+                        <viewControllerLayoutGuide type="bottom" id="9kT-mY-k9O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kgs-tX-chJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ed-CB-kie">
+                                <rect key="frame" x="6" y="384" width="305" height="55"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZL5-XM-zRi">
+                                        <rect key="frame" x="-2" y="25" width="221" height="31"/>
+                                        <connections>
+                                            <action selector="filterConfig:" destination="ZAS-g8-VDW" eventType="valueChanged" id="rg4-Tv-En9"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpa-67-Yna">
+                                        <rect key="frame" x="0.0" y="0.0" width="217" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6I-kq-fBI">
+                                        <rect key="frame" x="242" y="29" width="63" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Es8-Jr-Cif">
+                                <rect key="frame" x="6" y="150" width="305" height="162"/>
+                            </pickerView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-dU-bRN">
+                                <rect key="frame" x="6" y="48" width="305" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="On/Off Push Manager" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKt-Em-AcU">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9j5-Y3-Ta8">
+                                        <rect key="frame" x="248" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" image="gear_24.png" id="L5t-pR-7dY"/>
+                    <connections>
+                        <outlet property="filterDetail" destination="hpa-67-Yna" id="6qn-al-AlU"/>
+                        <outlet property="filterPersent" destination="c6I-kq-fBI" id="JNy-hL-bgE"/>
+                        <outlet property="filterSlider" destination="ZL5-XM-zRi" id="zCQ-I0-7Dm"/>
+                        <outlet property="timePicker" destination="Es8-Jr-Cif" id="z2Y-vz-IFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61D-BL-urA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="380"/>
+        </scene>
+        <!--Message Navigation-->
+        <scene sceneID="m7i-mA-NWy">
+            <objects>
+                <navigationController title="Message Navigation" id="V6h-bn-duy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Message" image="mail_24.png" id="ace-NV-DRC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KTh-tR-Z4E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="goY-D0-rnH" kind="relationship" relationship="rootViewController" id="UKb-wA-7FP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tR2-Ha-Ipe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="-323"/>
+        </scene>
+        <!--Message List-->
+        <scene sceneID="cjC-6k-GFi">
+            <objects>
+                <viewController title="Message List" id="goY-D0-rnH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XEH-LR-WYe"/>
+                        <viewControllerLayoutGuide type="bottom" id="pSv-Fg-L4G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EIp-MW-6o9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8d-s9-YuF">
+                                <rect key="frame" x="137" y="241" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Rcr-1D-wRX" kind="push" id="GdS-OZ-luh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JKp-66-jGv"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
+                        <size key="portraitSize" width="320" height="568"/>
+                        <size key="landscapeSize" width="568" height="320"/>
+                    </simulatedScreenMetrics>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8e-Ks-Sd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322" y="-318"/>
+        </scene>
+        <!--Message detail-->
+        <scene sceneID="Obj-zA-nhh">
+            <objects>
+                <viewController title="Message detail" id="Rcr-1D-wRX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mx6-of-dta"/>
+                        <viewControllerLayoutGuide type="bottom" id="XGM-qp-iJN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vTW-u5-M2F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="这里显示详细信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bh-d8-mJX">
+                                <rect key="frame" x="92" y="216" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="anK-fs-pcT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igI-KK-5eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="-318"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear_24.png" width="24" height="24"/>
+        <image name="mail_24.png" width="24" height="24"/>
+    </resources>
+</document>

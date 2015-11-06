@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="20t-vt-nLa">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="zdv-cY-BI7">
+            <objects>
+                <viewController storyboardIdentifier="imageFilters" hidesBottomBarWhenPushed="YES" id="20t-vt-nLa" customClass="imageFilters" customModule="photo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BUs-nI-ypA"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Ib-7h-Ayz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gEI-QJ-ATo" colorLabel="IBBuiltInLabel-Yellow">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sig-vG-19Y">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.9176186274" green="0.9382139706" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LME-Z1-FPg">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="uae-Jj-JsZ">
+                                <rect key="frame" x="0.0" y="572" width="600" height="29"/>
+                                <segments>
+                                    <segment title="BROWSE"/>
+                                    <segment title="MODE"/>
+                                    <segment title="RESERVE"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filterSegment:" destination="20t-vt-nLa" eventType="valueChanged" id="Hby-SA-UIw"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="LME-Z1-FPg" secondAttribute="centerY" id="6Sg-Uk-jJh"/>
+                            <constraint firstAttribute="trailing" secondItem="uae-Jj-JsZ" secondAttribute="trailing" id="9oe-Y1-tBw"/>
+                            <constraint firstItem="sig-vG-19Y" firstAttribute="top" secondItem="gEI-QJ-ATo" secondAttribute="top" constant="20" id="Ao6-eV-Rpo"/>
+                            <constraint firstAttribute="centerX" secondItem="LME-Z1-FPg" secondAttribute="centerX" id="EdP-mj-bq4"/>
+                            <constraint firstAttribute="bottom" secondItem="sig-vG-19Y" secondAttribute="bottom" id="arb-qm-LD8"/>
+                            <constraint firstAttribute="bottom" secondItem="uae-Jj-JsZ" secondAttribute="bottom" id="k4i-aA-IzK"/>
+                            <constraint firstItem="uae-Jj-JsZ" firstAttribute="leading" secondItem="gEI-QJ-ATo" secondAttribute="leading" id="nkb-ve-x02"/>
+                            <constraint firstAttribute="centerX" secondItem="sig-vG-19Y" secondAttribute="centerX" id="vJx-74-rkF"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hb2-Pl-feV" appends="YES" id="zSJ-FH-tCH"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="6z1-QH-8GW"/>
+                    <connections>
+                        <outlet property="filterPicker" destination="LME-Z1-FPg" id="qnN-EX-ZK0"/>
+                        <outlet property="filterSeg" destination="uae-Jj-JsZ" id="t0v-g1-xkZ"/>
+                        <outlet property="imageView" destination="sig-vG-19Y" id="w2P-Jg-2iU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVU-eD-vDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hb2-Pl-feV">
+                    <connections>
+                        <action selector="showerOperater:" destination="20t-vt-nLa" id="wkI-QQ-K1K"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="873" y="1160"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="default.jpg" width="600" height="800"/>
+    </resources>
+</document>
