@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "TestView.h"
+#import "TestModel.h"
+#import "Singletons.h"
+#import "TestXib.h"
 
 @interface ViewController ()
 
@@ -27,10 +30,32 @@
     [self.view addSubview:testView];
     
     [TestView testFunction1];
-    [TestView testFunction2:@"ubduysfub"];
-    NSLog(@"%@", [TestView testFunction3:@"shshshshs" times:3]);
+    NSLog(@"func2 %@",[TestView testFunction2:@"ubduysfub"]);
+    NSLog(@"func3 %@", [TestView testFunction3:@"shshshshs" times:3]);
+    
+    NSLog(@"%ld", testView.times);
+    NSLog(@"%d", testView.isFirstTime);
+    NSLog(@"%@", testView.str);
+    
+    NSLog(@"func 4 %@", [testView testFunc4:@"hahahahaha" times:4]);
+    NSLog(@"%ld", testView.times);
     
     // Do any additional setup after loading the view, typically from a nib.
+    
+    Singletons * singletons = [[Singletons alloc] init];  //能初始化 但不能访问内部函数
+    [[Singletons instance] func1:@"fefeefe" times:@"hhhhhhh"];
+    
+    [[Singletons instance] func2:@"www.baidu.com" parameter:@{@"key": @{@"subKey":@"subValue"}} success:^(id data) {
+        //....
+    } fail:^(NSError *error) {
+        NSLog(@"%@", error.domain);
+    }];
+    
+    
+    TestXib * xibView = [[NSBundle mainBundle] loadNibNamed:@"TestXib" owner:self options:nil].firstObject;
+    if (xibView) {
+        [self.view addSubview:xibView];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,8 +70,6 @@
  明天:
  
  写属性   属性的种类
- 
- 写对象的方法
  
  写单例
  

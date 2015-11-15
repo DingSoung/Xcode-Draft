@@ -11,8 +11,6 @@
 @implementation TestView
 
 
-
-
 - (instancetype)init
 {
     self = [super init];
@@ -31,7 +29,7 @@
 
 
 +(void) testFunction1 {
-    NSLog(@"func 1 called");
+    NSLog(@"func1 called");
 }
 
 +(NSString *) testFunction2: (NSString *)inputStr {
@@ -39,14 +37,29 @@
 }
 
 +(NSString *) testFunction3: (NSString *)inputStr times:(NSInteger) times {
+    NSString * string = @"";
     for (NSInteger time = 0; time < times; time++) {
-        NSLog(@"%ld", time);
-        NSString * str = [NSString stringWithFormat:@"%ld", time];
-        [inputStr stringByAppendingString: str];
+        NSString * str = [NSString stringWithFormat:@" %ld", time];
+        NSLog(@"%@", str);
+        
+        string = [string stringByAppendingString: inputStr];
+        string = [string stringByAppendingString: str];
     }
-    return inputStr;
+    return string;
 }
 
+
+-(NSString *) testFunc4: (NSString *) inputStr times:(NSInteger) times {
+    self.times = times;
+    self.str = @"";
+    
+    for (NSInteger time = 0; time < times; time++) {
+        NSLog(@"%ld", time);
+        NSString * str = [NSString stringWithFormat:@" %ld", time];
+        self.str = [self.str stringByAppendingString: str];
+    }
+    return self.str;
+}
 
 
 

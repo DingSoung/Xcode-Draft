@@ -10,8 +10,17 @@
 
 @interface TestView : UIView
 
+@property (nonatomic, assign) NSInteger times;
+@property (nonatomic, assign) BOOL isFirstTime;
+
+@property (nonatomic, copy) NSString * str;
+
+
+
 +(void) testFunction1 ;
 +(NSString *) testFunction2: (NSString *)inputStr ;
 +(NSString *) testFunction3: (NSString *)inputStr times:(NSInteger) times;
 
+
+-(NSString *) testFunc4: (NSString *) inputStr times:(NSInteger) times;
 @end
