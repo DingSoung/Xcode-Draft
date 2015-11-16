@@ -15,6 +15,7 @@
 		6502AA9D1AAF221A00ABD01E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6502AA9B1AAF221A00ABD01E /* LaunchScreen.xib */; };
 		6502AAA91AAF221A00ABD01E /* testOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6502AAA81AAF221A00ABD01E /* testOCTests.m */; };
 		FA495EAF1BF9AB1300102444 /* TestSpringView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA495EAE1BF9AB1300102444 /* TestSpringView.m */; };
+		FA495EB21BF9B9A700102444 /* PieChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA495EB11BF9B9A700102444 /* PieChatView.m */; };
 		FACBF4401BF9A6350000DC8B /* TestTeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACBF43F1BF9A6350000DC8B /* TestTeViewController.m */; };
 		FACBF4421BF9A6540000DC8B /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACBF4411BF9A6540000DC8B /* Test.storyboard */; };
 		FAD64F641BF8CDFD001FAB63 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD64F631BF8CDFD001FAB63 /* TestModel.m */; };
@@ -50,6 +51,8 @@
 		6502AAA81AAF221A00ABD01E /* testOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testOCTests.m; sourceTree = "<group>"; };
 		FA495EAD1BF9AB1300102444 /* TestSpringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSpringView.h; sourceTree = "<group>"; };
 		FA495EAE1BF9AB1300102444 /* TestSpringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSpringView.m; sourceTree = "<group>"; };
+		FA495EB01BF9B9A700102444 /* PieChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChatView.h; sourceTree = "<group>"; };
+		FA495EB11BF9B9A700102444 /* PieChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChatView.m; sourceTree = "<group>"; };
 		FACBF43E1BF9A6350000DC8B /* TestTeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTeViewController.h; sourceTree = "<group>"; };
 		FACBF43F1BF9A6350000DC8B /* TestTeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTeViewController.m; sourceTree = "<group>"; };
 		FACBF4411BF9A6540000DC8B /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				FAD64F6B1BF8DE56001FAB63 /* TestXib.xib */,
 				FA495EAD1BF9AB1300102444 /* TestSpringView.h */,
 				FA495EAE1BF9AB1300102444 /* TestSpringView.m */,
+				FA495EB01BF9B9A700102444 /* PieChatView.h */,
+				FA495EB11BF9B9A700102444 /* PieChatView.m */,
 				6502AA991AAF221A00ABD01E /* Images.xcassets */,
 				6502AA9B1AAF221A00ABD01E /* LaunchScreen.xib */,
 				6502AA8C1AAF221A00ABD01E /* Supporting Files */,
@@ -260,6 +265,7 @@
 				FAF7E59B1BF7932C006335BE /* TestView.m in Sources */,
 				FACBF4401BF9A6350000DC8B /* TestTeViewController.m in Sources */,
 				FAD64F671BF8D26F001FAB63 /* Singletons.m in Sources */,
+				FA495EB21BF9B9A700102444 /* PieChatView.m in Sources */,
 				FAD64F641BF8CDFD001FAB63 /* TestModel.m in Sources */,
 				6502AA951AAF221A00ABD01E /* ViewController.m in Sources */,
 				6502AA921AAF221A00ABD01E /* AppDelegate.m in Sources */,
