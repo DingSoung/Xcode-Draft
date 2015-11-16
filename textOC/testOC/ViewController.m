@@ -11,6 +11,7 @@
 #import "TestModel.h"
 #import "Singletons.h"
 #import "TestXib.h"
+#import "TestSpringView.h"
 
 @interface ViewController ()
 
@@ -56,6 +57,11 @@
     if (xibView) {
         [self.view addSubview:xibView];
     }
+    
+    
+    TestSpringView * percent = [[TestSpringView alloc] init:CGRectMake(0, 0, 50, 100) backColor:UIColor.grayColor frontColor:UIColor.yellowColor percent:10];
+    [self.view addSubview:percent];
+    percent.percent = 50;
 }
 
 - (void)didReceiveMemoryWarning {
