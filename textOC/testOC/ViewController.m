@@ -16,7 +16,15 @@
 
 @interface ViewController ()
 
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *section;
+
+
+
+
 @end
+
+
 
 @implementation ViewController
 

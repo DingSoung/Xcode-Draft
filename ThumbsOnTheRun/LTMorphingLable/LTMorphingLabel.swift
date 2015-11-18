@@ -120,6 +120,7 @@ public class LTMorphingLabel: UILabel {
     var _drawingClosures = Dictionary<String, LTMorphingDrawingClosure>()
     var _progressClosures = Dictionary<String, LTMorphingManipulateProgressClosure>()
     var _skipFramesClosures = Dictionary<String, LTMorphingSkipFramesClosure>()
+    
     var _diffResults = Array<LTCharacterDiffResult>()
     var _originText = ""
     var _currentFrame = 0

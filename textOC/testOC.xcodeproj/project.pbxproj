@@ -21,7 +21,7 @@
 		FAD64F641BF8CDFD001FAB63 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD64F631BF8CDFD001FAB63 /* TestModel.m */; };
 		FAD64F671BF8D26F001FAB63 /* Singletons.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD64F661BF8D26F001FAB63 /* Singletons.m */; };
 		FAD64F6A1BF8DE3E001FAB63 /* TestXib.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD64F691BF8DE3E001FAB63 /* TestXib.m */; };
-		FAD64F6C1BF8DE56001FAB63 /* TestXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD64F6B1BF8DE56001FAB63 /* TestXib.xib */; };
+		FAEEA01B1BFACAAE008DCC75 /* TestXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEEA01D1BFACAAE008DCC75 /* TestXib.xib */; };
 		FAF7E59B1BF7932C006335BE /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF7E59A1BF7932C006335BE /* TestView.m */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +62,11 @@
 		FAD64F661BF8D26F001FAB63 /* Singletons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singletons.m; sourceTree = "<group>"; };
 		FAD64F681BF8DE3E001FAB63 /* TestXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestXib.h; sourceTree = "<group>"; };
 		FAD64F691BF8DE3E001FAB63 /* TestXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestXib.m; sourceTree = "<group>"; };
-		FAD64F6B1BF8DE56001FAB63 /* TestXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestXib.xib; sourceTree = "<group>"; };
+		FAEEA0191BFACA69008DCC75 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		FAEEA01A1BFACA69008DCC75 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FAEEA01C1BFACAAE008DCC75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TestXib.xib; sourceTree = "<group>"; };
+		FAEEA01F1BFACAB7008DCC75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TestXib.strings; sourceTree = "<group>"; };
+		FAEEA0211BFACAB8008DCC75 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TestXib.strings"; sourceTree = "<group>"; };
 		FAF7E5991BF7932C006335BE /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		FAF7E59A1BF7932C006335BE /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,7 +126,7 @@
 				FAF7E59A1BF7932C006335BE /* TestView.m */,
 				FAD64F681BF8DE3E001FAB63 /* TestXib.h */,
 				FAD64F691BF8DE3E001FAB63 /* TestXib.m */,
-				FAD64F6B1BF8DE56001FAB63 /* TestXib.xib */,
+				FAEEA01D1BFACAAE008DCC75 /* TestXib.xib */,
 				FA495EAD1BF9AB1300102444 /* TestSpringView.h */,
 				FA495EAE1BF9AB1300102444 /* TestSpringView.m */,
 				FA495EB01BF9B9A700102444 /* PieChatView.h */,
@@ -223,6 +227,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 6502AA801AAF221A00ABD01E;
 			productRefGroup = 6502AA8A1AAF221A00ABD01E /* Products */;
@@ -243,7 +248,7 @@
 				6502AA981AAF221A00ABD01E /* Main.storyboard in Resources */,
 				6502AA9D1AAF221A00ABD01E /* LaunchScreen.xib in Resources */,
 				6502AA9A1AAF221A00ABD01E /* Images.xcassets in Resources */,
-				FAD64F6C1BF8DE56001FAB63 /* TestXib.xib in Resources */,
+				FAEEA01B1BFACAAE008DCC75 /* TestXib.xib in Resources */,
 				FACBF4421BF9A6540000DC8B /* Test.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +303,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6502AA971AAF221A00ABD01E /* Base */,
+				FAEEA0191BFACA69008DCC75 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -306,8 +312,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				6502AA9C1AAF221A00ABD01E /* Base */,
+				FAEEA01A1BFACA69008DCC75 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		FAEEA01D1BFACAAE008DCC75 /* TestXib.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAEEA01C1BFACAAE008DCC75 /* Base */,
+				FAEEA01F1BFACAB7008DCC75 /* en */,
+				FAEEA0211BFACAB8008DCC75 /* zh-Hans */,
+			);
+			name = TestXib.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -396,9 +413,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = testOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "DS.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DingSoung.testOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -407,9 +425,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = testOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "DS.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DingSoung.testOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

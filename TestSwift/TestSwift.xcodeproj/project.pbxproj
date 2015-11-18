@@ -49,6 +49,8 @@
 		FACBF46E1BF9A9300000DC8B /* TestSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACBF4721BF9A9300000DC8B /* TestSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwiftUITests.swift; sourceTree = "<group>"; };
 		FACBF4741BF9A9300000DC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEEA0171BFACA17008DCC75 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		FAEEA0181BFACA17008DCC75 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FACBF4541BF9A9300000DC8B /* Base */,
+				FAEEA0171BFACA17008DCC75 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FACBF45C1BF9A9300000DC8B /* Base */,
+				FAEEA0181BFACA17008DCC75 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -488,6 +492,7 @@
 				FACBF4791BF9A9300000DC8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FACBF47A1BF9A9300000DC8B /* Build configuration list for PBXNativeTarget "TestSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				FACBF47C1BF9A9300000DC8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FACBF47D1BF9A9300000DC8B /* Build configuration list for PBXNativeTarget "TestSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				FACBF47F1BF9A9300000DC8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
