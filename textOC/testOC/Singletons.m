@@ -8,8 +8,9 @@
 
 #import "Singletons.h"
 
-@implementation Singletons
-
+@implementation Singletons {
+    NSString * someString;
+}
 
 @synthesize someProperty;
 
@@ -29,6 +30,7 @@
 - (id)init {
     if (self = [super init]) {
         self.someProperty = @"Default Property Value";
+        self->someString = @"some string";
     }
     return self;
 }

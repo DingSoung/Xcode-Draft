@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Singletons : NSObject {
-    NSString * someProperty; //成员变量 这种属性在super init之前初始化
-}
+@interface Singletons : NSObject
 
 @property (nonatomic, retain) NSString *someProperty;
 

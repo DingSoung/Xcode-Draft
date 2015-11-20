@@ -17,6 +17,7 @@
 		FA29B7561BFEE4C1007AFB6E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA29B7531BFEE4C1007AFB6E /* Info.plist */; };
 		FA29B7571BFEE4C1007AFB6E /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29B7551BFEE4C1007AFB6E /* UICKeyChainStore.m */; };
 		FA29B7591BFEE4E2007AFB6E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA29B7581BFEE4E2007AFB6E /* Security.framework */; };
+		FA29B7601BFF26B2007AFB6E /* tetetetetet.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29B75F1BFF26B2007AFB6E /* tetetetetet.m */; };
 		FA495EAF1BF9AB1300102444 /* TestSpringView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA495EAE1BF9AB1300102444 /* TestSpringView.m */; };
 		FA495EB21BF9B9A700102444 /* PieChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA495EB11BF9B9A700102444 /* PieChatView.m */; };
 		FACBF4401BF9A6350000DC8B /* TestTeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACBF43F1BF9A6350000DC8B /* TestTeViewController.m */; };
@@ -56,6 +57,8 @@
 		FA29B7541BFEE4C1007AFB6E /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
 		FA29B7551BFEE4C1007AFB6E /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
 		FA29B7581BFEE4E2007AFB6E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FA29B75E1BFF26B2007AFB6E /* tetetetetet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetetetetet.h; sourceTree = "<group>"; };
+		FA29B75F1BFF26B2007AFB6E /* tetetetetet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tetetetetet.m; sourceTree = "<group>"; };
 		FA495EAD1BF9AB1300102444 /* TestSpringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSpringView.h; sourceTree = "<group>"; };
 		FA495EAE1BF9AB1300102444 /* TestSpringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSpringView.m; sourceTree = "<group>"; };
 		FA495EB01BF9B9A700102444 /* PieChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChatView.h; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				6502AA961AAF221A00ABD01E /* Main.storyboard */,
 				FACBF43E1BF9A6350000DC8B /* TestTeViewController.h */,
 				FACBF43F1BF9A6350000DC8B /* TestTeViewController.m */,
+				FA29B75E1BFF26B2007AFB6E /* tetetetetet.h */,
+				FA29B75F1BFF26B2007AFB6E /* tetetetetet.m */,
 				FACBF4411BF9A6540000DC8B /* Test.storyboard */,
 				FAF7E5991BF7932C006335BE /* TestView.h */,
 				FAF7E59A1BF7932C006335BE /* TestView.m */,
@@ -298,6 +303,7 @@
 				6502AA951AAF221A00ABD01E /* ViewController.m in Sources */,
 				6502AA921AAF221A00ABD01E /* AppDelegate.m in Sources */,
 				6502AA8F1AAF221A00ABD01E /* main.m in Sources */,
+				FA29B7601BFF26B2007AFB6E /* tetetetetet.m in Sources */,
 				FA495EAF1BF9AB1300102444 /* TestSpringView.m in Sources */,
 				FAD64F6A1BF8DE3E001FAB63 /* TestXib.m in Sources */,
 			);

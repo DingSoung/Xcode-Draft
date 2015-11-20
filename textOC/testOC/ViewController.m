@@ -17,14 +17,13 @@
 
 #import "UICKeyChainStore.h"
 
+#import "TestTeViewController.h"
+
 
 @interface ViewController ()
 
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *section;
-
-
-
 
 @end
 
@@ -35,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    // Do any additional setup after loading the view, typically from a nib.
     TestView * testView = [[TestView alloc] init];
     CGRect frame = testView.frame;  //真烂啊  swift里面一行搞定  在这里要三行
     frame.size = CGSizeMake(150, 250);
@@ -54,7 +53,10 @@
     NSLog(@"func 4 %@", [testView testFunc4:@"hahahahaha" times:4]);
     NSLog(@"%ld", testView.times);
     
-    // Do any additional setup after loading the view, typically from a nib.
+    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, testView.frame.origin.y + testView.frame.size.height + 10, 40, 30)];
+    button.backgroundColor = UIColor.greenColor;
+    [button addTarget:self action: @selector(testButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
     
     {
         Singletons * singletons = [[Singletons alloc] init];  //能初始化 但不能访问内部函数
@@ -119,11 +121,25 @@
 #endif
     }
     
+    
+    
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+- (void) testButtonAction:(UIButton *) sender {
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Test" bundle:nil];
+    TestTeViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TestTeViewController"];
+    UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:navi animated:true completion:^{
+    }];
 }
 
 @end
