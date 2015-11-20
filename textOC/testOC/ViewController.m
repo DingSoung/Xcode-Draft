@@ -14,6 +14,10 @@
 #import "TestSpringView.h"
 #import "PieChatView.h"
 
+
+#import "UICKeyChainStore.h"
+
+
 @interface ViewController ()
 
 
@@ -52,29 +56,69 @@
     
     // Do any additional setup after loading the view, typically from a nib.
     
-    Singletons * singletons = [[Singletons alloc] init];  //能初始化 但不能访问内部函数
-    [[Singletons instance] func1:@"fefeefe" times:@"hhhhhhh"];
+    {
+        Singletons * singletons = [[Singletons alloc] init];  //能初始化 但不能访问内部函数
+        [[Singletons instance] func1:@"fefeefe" times:@"hhhhhhh"];
+        
+        [[Singletons instance] func2:@"www.baidu.com" parameter:@{@"key": @{@"subKey":@"subValue"}} success:^(id data) {
+            //....
+        } fail:^(NSError *error) {
+            NSLog(@"%@", error.domain);
+        }];
+    }
     
-    [[Singletons instance] func2:@"www.baidu.com" parameter:@{@"key": @{@"subKey":@"subValue"}} success:^(id data) {
-        //....
-    } fail:^(NSError *error) {
-        NSLog(@"%@", error.domain);
-    }];
+    {
+        TestXib * xibView = [[NSBundle mainBundle] loadNibNamed:@"TestXib" owner:self options:nil].firstObject;
+        if (xibView) {
+            [self.view addSubview:xibView];
+        }
+    }
     
+    {
+        TestSpringView * percent = [[TestSpringView alloc] init:CGRectMake(0, 0, 50, 100) backColor:UIColor.grayColor frontColor:UIColor.yellowColor percent:10];
+        [self.view addSubview:percent];
+        percent.percent = 50;
+    }
     
-    TestXib * xibView = [[NSBundle mainBundle] loadNibNamed:@"TestXib" owner:self options:nil].firstObject;
-    if (xibView) {
-        [self.view addSubview:xibView];
+    {
+        NSArray *array = @[@1, @2, @3, @4, @5, @6];
+        PieChatView * chart = [[PieChatView alloc] init:CGRectMake(self.view.frame.size.width - 200, 0, 200, 180) sizeArray:array];
+        [self.view addSubview:chart];
     }
     
     
-    TestSpringView * percent = [[TestSpringView alloc] init:CGRectMake(0, 0, 50, 100) backColor:UIColor.grayColor frontColor:UIColor.yellowColor percent:10];
-    [self.view addSubview:percent];
-    percent.percent = 50;
+    {
+        UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithServer:[NSURL URLWithString:@"https://github.com"]
+                                                                  protocolType:UICKeyChainStoreProtocolTypeHTTPS
+                                                            authenticationType:UICKeyChainStoreAuthenticationTypeHTMLForm];
+#if true
+        keychain[@"kishikawakatsumi"] = @"01234567-89ab-cdef-0123-456789abcdef";
+        NSString *token = [keychain stringForKey:@"kishikawakatsumi"];
+        NSLog(@"token = %@",token);
+        keychain[@"kishikawakatsumi"] = nil;
+        token = [keychain stringForKey:@"kishikawakatsumi"];
+        NSLog(@"token = %@",token);
+#else
+        NSError *error;
+        
+        [keychain setString:@"01234567-89ab-cdef-0123-456789abcdef" forKey:@"kishikawakatsumi" error:&error];
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+        }
+        
+        NSString *token = [keychain stringForKey:@"" error:&error];
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+        }
+        NSLog(@"%@",token);
+        
+        [keychain removeItemForKey:@"kishikawakatsumi" error:&error];
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+        }
+#endif
+    }
     
-    NSArray *array = @[@1, @2, @3, @4, @5, @6];
-    PieChatView * chart = [[PieChatView alloc] init:CGRectMake(self.view.frame.size.width - 200, 0, 200, 180) sizeArray:array];
-    [self.view addSubview:chart];
 }
 
 - (void)didReceiveMemoryWarning {
