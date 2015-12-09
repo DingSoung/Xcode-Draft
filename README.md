@@ -1,18 +1,72 @@
-####Manager
-* [NetManager](/_Helpers/NetManager.swift)
-* [JavaScriptManager](/_Helpers/JavaScriptManager.swift)
-* [GCDManager](/_Helpers/GCDManager.swift)，GCD delay task 
-* [QiniuManager](/_Helper/QiniuManager.swift) Qiniu Cloud
-* [UMengSocial](/_Helper/UMSocialManager.swift)
-* [UMAnalytics](/_Helper/UMAnalyticsManager.swift)
-* [NotificationManager](/_Helper/NotificationManager.swift) local push message
-* [DSPDFImage](/_Helper/DSPDFImage.h) convert PDF to Image, Thread Safety
+####Bases
+* [BaseModel](/Bases/BaseModel.m) json to object 
+* [ShareData](/Bases/ShareData.swift)
+* [ShareModel](/Bases/ShareModel.swift)
+####Extension
+* Int+Tools
+  * hexString
 
-####Models
-* ShareData instance
-* ShareModel simpliest instance
-* BaseModel json to dict and model
+* NSData+Tools   
+  * json data to dictionary
+  * MD5
+  * SHA1
+  * hexString
+  * checksum
+  * arrayOfBytes
+  * toHexString
+  * withBytes
 
+* NSDictionary+Tools
+  * dictionary to string
+
+* NSMutableData+Tools
+  * Convenient way to append bytes
+
+* NSObject+Tools
+ * Json String to model
+ * Json Dict to model
+ * run code cblock, mutithread, seprate var
+ * swep
+
+* String+Tools
+  * floatValue
+  * md5
+  * hexString
+  * MD5
+  * SHA1
+  * isMobileNumber check is monile number
+  * isIDCard check is ID
+
+* UIColor+Tools
+  * hexInt
+
+* UIImageView+Tools
+  * imageScale  scale Image
+  * setImageScaled scale Image to target size
+
+* UIWebView+Tools 
+  * JS Extension
+
+* UIVIew+Tools
+  * setShadow
+  * addFullScreemView
+
+####Helpers
+* [NetworkManager](/Helpers/NetworkManager.m)
+* [DSPDFImage](/Helper/DSPDFImage.h) convert PDF to Image, Thread Safety
+* [JavaScriptManager](/Helpers/JavaScriptManager.swift)
+* [GCDManager](/Helpers/GCDManager.swift)，GCD delay task 
+* [NotificationManager](/Helper/NotificationManager.swift) local push message
+
+<!--
+* [QiniuManager](/Helper/QiniuManager.swift) Qiniu Cloud
+* [UMengSocial](/Helper/UMSocialManager.swift)
+* [UMAnalytics](/Helper/UMAnalyticsManager.swift)
+-->
+
+####[Views](/Views)
+
+<!--
 ####Controllers
 * ReactiveCocoa signal，spirit，filter，combine，MVVM Mode
 
@@ -24,49 +78,8 @@
 
 ####Extersion
 
-* NSObject+Tool
- * run code cblock, mutithread, seprate var
- * swep
-* UIWebView+Tools JS Extension
-* UIVIew+Tools
-  * setShadow
-  * addFullScreemView
-
-* Int+Tools
-  * hexString
-
-* NSData+Tools
-  * MD5
-  * SHA1
-  * hexString
-  * checksum
-  * arrayOfBytes
-  * toHexString
-  * withBytes
-
-* UIColor+Tools
-  * hexInt
-
-* NSMutableData+Tools
-  * appendBytes
-
-* String+Tools
-  * floatValue
-  * md5
-  * hexString
-  * MD5
-  * SHA1
-  * isMobileNumber check is monile number
-  * isIDCard check is ID
-
-* UIImageView+Tools
-  * imageScale  scale Image
-  * setImageScaled scale Image to target size
-
-* UIVIew+Tools
-  * setShadow set shadow
-  * viewInFullScreen
 
 ####TODO
-* 字典 JSON 字符串之间的互转
 * conversion super init
+* -->
+
