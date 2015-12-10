@@ -74,6 +74,12 @@
     button3.backgroundColor = UIColor.greenColor;
     [button3 addTarget:self action: @selector(testButtonAction3:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button3];
+    UIButton * button4 = [[UIButton alloc] initWithFrame:CGRectMake(button3.frame.origin.x + button3.frame.size.width + 10, xibView.frame.origin.y + xibView.frame.size.height + 10, 40, 30)];
+    button4.backgroundColor = UIColor.greenColor;
+    [button4 addTarget:self action: @selector(testButtonAction4:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button4];
+    
+    
     
     TestSpringView * percent = [[TestSpringView alloc] init:CGRectMake(0, button.frame.origin.y + button.frame.size.height, 50, 100) backColor:UIColor.grayColor frontColor:UIColor.yellowColor percent:10];
     [self.view addSubview:percent];
@@ -177,6 +183,42 @@
     UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:navi animated:true completion:^{
     }];
+}
+
+- (void) testButtonAction4:(UIButton *) sender {
+    
+    NSString *path =  [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
+    if (path != nil) {
+        NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        UIWebView *web = [[UIWebView alloc] initWithFrame:self.view.frame];
+        [self.view addSubview:web];
+        
+        [web addJsTarget:@"notify" block:^(NSString * str) {
+            NSLog(@"%@",str);
+            
+            
+            NSString *json = @"{key:value}";
+            id reseut = [web runJsFunction:@"test" parameter:@[json]];
+            NSLog(@"%@", reseut);
+            
+            
+            NSString *path2 = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
+            if (path2 != nil) {
+                NSString *js = [NSString stringWithContentsOfFile:path2 encoding:NSUTF8StringEncoding error:nil];
+                id result2 = [[JavaScriptManager instance] runJS:js function:@"factorial" parameter:@[@10]];
+                NSLog(@"%@",result2);
+            }
+            
+            
+            
+            
+            
+        }];
+        
+        [web loadHTMLString:html baseURL:[NSURL fileURLWithPath:path]];
+    }
+    
+    
 }
 
 

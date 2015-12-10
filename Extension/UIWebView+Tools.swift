@@ -10,9 +10,18 @@ import JavaScriptCore
 import UIKit
 extension UIWebView {
     
-    func setJS(forkey:String, block : @convention(block) (NSString!) -> Void) {
+    func addJsTarget(function:String, block : @convention(block) (NSString!) -> Void) {
         if let context = self.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as? JSContext {
-            context.setObject(unsafeBitCast(block, AnyObject.self), forKeyedSubscript: forkey)
+            context.setObject(unsafeBitCast(block, AnyObject.self), forKeyedSubscript: function)
+        }
+    }
+    
+    func runJsFunction(function:String, parameter:[AnyObject]) -> AnyObject? {
+        if let context = self.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as? JSContext {
+            let factorial = context.objectForKeyedSubscript(function)
+            return factorial.callWithArguments(parameter)
+        } else {
+            return nil
         }
     }
     

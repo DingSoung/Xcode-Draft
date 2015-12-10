@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class ShareData {
+class ShareData: NSObject {
 	class var instance: ShareData {
 		dispatch_once(&Inner.token){
 			Inner.instance = ShareData() //只初始化一次
@@ -21,7 +21,8 @@ class ShareData {
     
     var index:Int = 0
     // 私有化构造方法，阻止其他对象使用这个类的默认的'()'构造方法
-	private init() {
+	private override init() {
+        super.init()
         index = 1
 	}
     func demoFunc(){

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationManager {
+class NotificationManager: NSObject {
 	
 	class var instance: NotificationManager {
 		dispatch_once(&Inner.token){
@@ -20,7 +20,9 @@ class NotificationManager {
 		static var instance:NotificationManager? = nil
 		static var token: dispatch_once_t = 0
 	}
-    private init() {}
+    private override init() {
+        super.init()
+    }
     
 	//MARK: 定时发送通知消息
 	func scheduleNotification(itemID:Int = 0,delaySeconds:NSTimeInterval? = 2,timeZone:NSTimeZone? = NSTimeZone.defaultTimeZone(),message:String? = "default meaasge form Notification Manager"){

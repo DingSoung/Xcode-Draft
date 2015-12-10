@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA016AEE1C195D7800A1B7DB /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = FA016AED1C195D7800A1B7DB /* test.js */; };
+		FA016AF01C195D8D00A1B7DB /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = FA016AEF1C195D8D00A1B7DB /* test.html */; };
 		FA1BDBFC1C0976820041C2AC /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1BDBFB1C0976820041C2AC /* NetworkManager.m */; };
 		FA206A4F1C05C30200D87237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA206A4E1C05C30200D87237 /* main.m */; };
 		FA206A581C05C30200D87237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA206A561C05C30200D87237 /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA016AED1C195D7800A1B7DB /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
+		FA016AEF1C195D8D00A1B7DB /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		FA1BDBFA1C0976820041C2AC /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		FA1BDBFB1C0976820041C2AC /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		FA206A4A1C05C30200D87237 /* DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +264,7 @@
 				FA206A921C05C33600D87237 /* UIImageView+Tools.swift */,
 				FA206A931C05C33600D87237 /* UIVIew+Tools.swift */,
 				FA206A941C05C33600D87237 /* UIWebView+Tools.swift */,
+				FA016AEF1C195D8D00A1B7DB /* test.html */,
 			);
 			name = Extension;
 			path = ../Extension;
@@ -272,6 +277,7 @@
 				FA206A971C05C33600D87237 /* DSPDFImage.m */,
 				FA206A981C05C33600D87237 /* GCDManager.swift */,
 				FA206A991C05C33600D87237 /* JavaScriptManager.swift */,
+				FA016AED1C195D7800A1B7DB /* test.js */,
 				FA1BDBFA1C0976820041C2AC /* NetworkManager.h */,
 				FA1BDBFB1C0976820041C2AC /* NetworkManager.m */,
 				FA206A9B1C05C33600D87237 /* NotificationManager.swift */,
@@ -460,11 +466,13 @@
 			files = (
 				FA206A601C05C30200D87237 /* LaunchScreen.storyboard in Resources */,
 				FA206A5D1C05C30200D87237 /* Assets.xcassets in Resources */,
+				FA016AEE1C195D7800A1B7DB /* test.js in Resources */,
 				FA206A581C05C30200D87237 /* Main.storyboard in Resources */,
 				FA206B301C05CCC000D87237 /* Info.plist in Resources */,
 				FA206ACB1C05CBCA00D87237 /* TestView.xib in Resources */,
 				FA206B541C05CEE500D87237 /* Test.storyboard in Resources */,
 				FA206B511C05CD8E00D87237 /* Test.xib in Resources */,
+				FA016AF01C195D8D00A1B7DB /* test.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

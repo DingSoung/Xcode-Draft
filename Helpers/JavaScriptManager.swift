@@ -8,15 +8,16 @@
 
 import JavaScriptCore
 
-class JavaScriptManager {
+class JavaScriptManager: NSObject {
     
     static let instance = JavaScriptManager()
-    private init() {
+    private override init() {
+        super.init()
     }
     
     var context = JSContext()
     
-    func runJS(jsSource:String,function:String,parameter:[AnyObject]) -> AnyObject {
+    func runJS(jsSource:String, function:String, parameter:[AnyObject]) -> AnyObject {
         //出错处理
         context.exceptionHandler = { context, exception in
             print("JS Error: \(exception)")
