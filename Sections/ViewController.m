@@ -191,35 +191,55 @@
     if (path != nil) {
         NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         UIWebView *web = [[UIWebView alloc] initWithFrame:self.view.frame];
+        web.delegate = self;
         [self.view addSubview:web];
         
-        [web addJsTarget:@"notify" block:^(NSString * str) {
-            NSLog(@"%@",str);
-            
-            
-            NSString *json = @"{key:value}";
-            id reseut = [web runJsFunction:@"test" parameter:@[json]];
-            NSLog(@"%@", reseut);
-            
-            
-            NSString *path2 = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
-            if (path2 != nil) {
-                NSString *js = [NSString stringWithContentsOfFile:path2 encoding:NSUTF8StringEncoding error:nil];
-                id result2 = [[JavaScriptManager instance] runJS:js function:@"factorial" parameter:@[@10]];
-                NSLog(@"%@",result2);
-            }
-            
-            
-            
-            
-            
+        [web addJsTarget:@"buttonFunc" block:^(id data) {
+            NSLog(@"buttonFunc--> %@",data);
+        }];
+        [web addJsTarget:@"callNative" block:^(id data) {
+            sleep(1);
+            NSLog(@"callNative--> %@",data);
         }];
         
         [web loadHTMLString:html baseURL:[NSURL fileURLWithPath:path]];
+        
+        NSString *json = @"{key:value}";
+        id reseut = [web runJsFunction:@"callBack1" parameter:@[json]];
+        NSLog(@"callBack1--> %@", reseut);
     }
     
-    
+    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
+    if (path2 != nil) {
+        NSString *js = [NSString stringWithContentsOfFile:path2 encoding:NSUTF8StringEncoding error:nil];
+        id result2 = [[JavaScriptManager instance] runJS:js function:@"factorial" parameter:@[@10]];
+        NSLog(@"%@",result2);
+    }
 }
+
+#pragma mark - UIWebViewDelegate
+- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    NSURL * url = [request URL];
+    if ([[url scheme] isEqualToString:@"firstclick"]) {
+        NSArray *params =[url.query componentsSeparatedByString:@"&"];
+        
+        NSMutableDictionary *tempDic = [NSMutableDictionary dictionary];
+        for (NSString *paramStr in params) {
+            NSArray *dicArray = [paramStr componentsSeparatedByString:@"="];
+            if (dicArray.count > 1) {
+                NSString *decodeValue = [dicArray[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                [tempDic setObject:decodeValue forKey:dicArray[0]];
+            }
+        }
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"方式一" message:@"这是OC原生的弹出窗" delegate:self cancelButtonTitle:@"收到" otherButtonTitles:nil];
+        [alertView show];
+        NSLog(@"tempDic:%@",tempDic);
+        return NO;
+    }
+    
+    return YES;
+}
+
 
 
 

@@ -8,11 +8,13 @@
 
 import JavaScriptCore
 import UIKit
-extension UIWebView {
+extension UIWebView: UIWebViewDelegate {
     
-    func addJsTarget(function:String, block : @convention(block) (NSString!) -> Void) {
+    func addJsTarget(function:String, block : @convention(block) (AnyObject) -> Void) {
         if let context = self.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as? JSContext {
             context.setObject(unsafeBitCast(block, AnyObject.self), forKeyedSubscript: function)
+            
+            
         }
     }
     
@@ -24,7 +26,6 @@ extension UIWebView {
             return nil
         }
     }
-    
 }
 
 

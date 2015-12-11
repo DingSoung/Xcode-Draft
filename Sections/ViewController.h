@@ -10,7 +10,7 @@
 
 @class TestModel;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong) TestModel * model;
 
