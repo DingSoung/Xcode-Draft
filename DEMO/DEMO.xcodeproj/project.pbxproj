@@ -53,6 +53,7 @@
 		FAB8F4101C1736B500513A54 /* WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F40C1C1736B500513A54 /* WebView.m */; };
 		FAB8F4111C1736B500513A54 /* WrodCloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F40E1C1736B500513A54 /* WrodCloudView.m */; };
 		FAB8F4141C17374200513A54 /* WrodCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F4131C17374200513A54 /* WrodCloudModel.m */; };
+		FAFCC0181C1FFE03003BA8EE /* NSString+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFCC0171C1FFE03003BA8EE /* NSString+Tools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 		FAB8F40E1C1736B500513A54 /* WrodCloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrodCloudView.m; sourceTree = "<group>"; };
 		FAB8F4121C17374200513A54 /* WrodCloudModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrodCloudModel.h; sourceTree = "<group>"; };
 		FAB8F4131C17374200513A54 /* WrodCloudModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrodCloudModel.m; sourceTree = "<group>"; };
+		FAFCC0171C1FFE03003BA8EE /* NSString+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Tools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,9 +255,10 @@
 			isa = PBXGroup;
 			children = (
 				FA206A891C05C33600D87237 /* Int+Tools.swift */,
+				FA206A8E1C05C33600D87237 /* String+Tools.swift */,
 				FA206A8A1C05C33600D87237 /* NSData+Tools.swift */,
 				FA206A8B1C05C33600D87237 /* NSDictionary+Tools.swift */,
-				FA206A8E1C05C33600D87237 /* String+Tools.swift */,
+				FAFCC0171C1FFE03003BA8EE /* NSString+Tools.swift */,
 				FA206A8D1C05C33600D87237 /* NSObject+Tools.swift */,
 				FA206A8C1C05C33600D87237 /* NSMutableData+Tools.swift */,
 				FA206A8F1C05C33600D87237 /* UIColor+Tools.swift */,
@@ -532,6 +535,7 @@
 				FA206AA01C05C33600D87237 /* ShareData.swift in Sources */,
 				FA206B311C05CCC000D87237 /* UICKeyChainStore.m in Sources */,
 				FA206AB11C05C33600D87237 /* NotificationManager.swift in Sources */,
+				FAFCC0181C1FFE03003BA8EE /* NSString+Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
