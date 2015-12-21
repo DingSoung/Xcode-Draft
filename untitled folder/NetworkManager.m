@@ -7,6 +7,7 @@
 //
 
 #import "NetworkManager.h"
+#import "DEMO-swift.h"
 
 @implementation NetworkRequest
 
@@ -15,7 +16,7 @@
     self = [super initWithURL:URL cachePolicy:cachePolicy timeoutInterval:timeoutInterval];
     if (self) {
         _startTime = startTime;
-        _requestTimes = 0;
+        _retryTimes = 0;
     }
     return self;
 }
@@ -46,6 +47,19 @@
     // Should never be called, but just here for clarity really.
 }
 
+
+- (NetworkRequest *) request:(NSString *)httpMethod url:(NSString *)url parameter:(NSData *)parameter success: (void (^)(NSData * data))success fail: (void (^)(NSError * error))fail {
+    
+    NetworkRequest * request =  [[NetworkRequest alloc] initWithURL:[[NSURL alloc] initWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20 startTime:[[NSDate date] timeIntervalSince1970]];
+    if ([httpMethod isEqualToString:@"POST"]) {
+        request.HTTPMethod = httpMethod;
+        request.HTTPBody = parameter;
+        [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    }
+    
+    return request;
+}
+
 /**
  网络请求fail逻辑:
  1. 或者网络不可用
@@ -53,13 +67,18 @@
  3. 或者网络连接错误5次以上
  */
 - (void) processRequest:(NetworkRequest *)request success: (void (^)(NSData * data))success fail: (void (^)(NSError * error))fail {
+    
+    /*if ([AFNetworkReachabilityManager sharedManager].reachable != YES) {
+     NSError * error = [[NSError alloc] initWithDomain:@"当前网络不可用" code:-1 userInfo:nil];
+     fail(error);
+     return;
+     }*/
+    
     NSURLSessionDataTask * task = [_session dataTaskWithRequest:request completionHandler:^(NSData * data, NSURLResponse * response, NSError * error) {
         if (error == nil) {
             success(data);
         } else {
-            if (request.requestTimes++ >= 5) {
-                fail(error);
-            } else if ([[NSDate date] timeIntervalSince1970] >= request.startTime + 60) {
+            if (request.retryTimes++ >= 5 || [[NSDate date] timeIntervalSince1970] >= request.startTime + 60) {
                 fail(error);
             } else {
                 [self processRequest:request success:success fail:fail]; //request self
@@ -69,37 +88,7 @@
     [task resume];
 }
 
-- (void) request:(NSString *)httpMethod url:(NSString *)url parameter:(NSData *)parameter success: (void (^)(NSData * data))success fail: (void (^)(NSError * error))fail {
-    /*if ([AFNetworkReachabilityManager sharedManager].reachable != YES) {
-     NSError * error = [[NSError alloc] initWithDomain:@"当前网络不可用" code:-1 userInfo:nil];
-     fail(error);
-     return;
-     }*/
-    
-    if ([httpMethod isEqualToString:@"GET"]) {
-        //string series parameter and append to url
-    }
-    
-    NSURL * URL = [[NSURL alloc] initWithString:url];
-    if (URL == nil) {
-        NSError * error = [[NSError alloc] initWithDomain:@"error url" code:-1 userInfo:@{}];
-        fail(error);
-        return;
-    }
-    
-    NetworkRequest * request =  [[NetworkRequest alloc] initWithURL:URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20 startTime:[[NSDate date] timeIntervalSince1970]];
-    if ([httpMethod isEqualToString:@"POST"]) {
-        request.HTTPMethod = httpMethod;
-        request.HTTPBody = parameter;
-        [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    }
-    
-    [self processRequest:request success:success fail:fail];
-}
 
-- (void) POST:(NSString *)url parameter:(NSData *)parameter success: (void (^)(NSData * data))success fail: (void (^)(NSError * error))fail {
-    [self request: @"POST" url:url parameter:parameter success:success fail:fail];
-}
 
 @end
 

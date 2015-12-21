@@ -20,8 +20,6 @@
 #import "TestStorBoardViewController.h"
 #import "TestXibViewController.h"
 
-#import "NetworkManager.h"
-
 #import "DEMO-swift.h"
 
 @interface ViewController ()
@@ -133,25 +131,21 @@
         NSLog(@"");
     }];
     
-    
-    NSString * url = @"http://dingsoung.tk/TestCode/httpclient-1.3/demo.php";
-    NSData * parameter = [NSKeyedArchiver archivedDataWithRootObject:@{
-                                                                       @"version" : @"0.0.1",
-                                                                       @"client" : @"iOS",
-                                                                       @"data" : @{
-                                                                               @"operateType" : @"select",
-                                                                               @"operateArea" : @"member"
-                                                                               }
-                                                                       }];
-    [[NetworkManager instance] POST:url parameter:parameter success:^(NSData * data) {
-        NSError* error;
-        NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-        if (error == nil) {
+    NSString *url = @"http://dingsoung.tk/TestCode/httpclient-1.3/demo.php";
+    NSDictionary *parameter = @{
+                                @"version" : @"0.0.1",
+                                @"client" : @"iOS",
+                                @"data" : @{
+                                        @"operateType" : @"select",
+                                        @"operateArea" : @"member"
+                                        }
+                                };
+    [NetworkManager POST:url parameter:parameter success:^(NSData * data) {
+        NSDictionary* jsonDict = data.jsonDict;
+        if (jsonDict != nil) {
             NSLog(@"%@", jsonDict);
-        } else {
-            NSLog(@"%@", error.domain);
         }
-    } fail:^(NSError *error) {
+    } fail:^(NSError * error) {
         NSLog(@"%@", error.domain);
     }];
 }
@@ -194,19 +188,16 @@
         web.delegate = self;
         [self.view addSubview:web];
         
-        [web addJsTarget:@"buttonFunc" block:^(id data) {
-            NSLog(@"buttonFunc--> %@",data);
-        }];
-        [web addJsTarget:@"callNative" block:^(id data) {
+        [web addJsTarget:@"nativeFunction" block:^(id data) {
             sleep(1);
-            NSLog(@"callNative--> %@",data);
+            NSLog(@"nativeFunction--> %@",data);
         }];
         
         [web loadHTMLString:html baseURL:[NSURL fileURLWithPath:path]];
         
         NSString *json = @"{key:value}";
-        id reseut = [web runJsFunction:@"callBack1" parameter:@[json]];
-        NSLog(@"callBack1--> %@", reseut);
+        id reseut = [web runJsFunction:@"nativeCallBack" parameter:@[json]];
+        NSLog(@"nativeCallBack--> %@", reseut);
     }
     
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
@@ -220,30 +211,13 @@
 #pragma mark - UIWebViewDelegate
 - (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL * url = [request URL];
-    if ([[url scheme] isEqualToString:@"firstclick"]) {
-        NSArray *params =[url.query componentsSeparatedByString:@"&"];
-        
-        NSMutableDictionary *tempDic = [NSMutableDictionary dictionary];
-        for (NSString *paramStr in params) {
-            NSArray *dicArray = [paramStr componentsSeparatedByString:@"="];
-            if (dicArray.count > 1) {
-                NSString *decodeValue = [dicArray[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-                [tempDic setObject:decodeValue forKey:dicArray[0]];
-            }
-        }
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"方式一" message:@"这是OC原生的弹出窗" delegate:self cancelButtonTitle:@"收到" otherButtonTitles:nil];
-        [alertView show];
-        NSLog(@"tempDic:%@",tempDic);
+    if ([[url scheme] isEqualToString:@"nativefunction"]) {
+        NSDictionary *dict = url.query.urlToDict;
+        NSLog(@"tempDic:%@",dict);
         return NO;
     }
-    
     return YES;
 }
-
-
-
-
-
 
 
 @end

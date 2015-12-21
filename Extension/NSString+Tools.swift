@@ -12,26 +12,28 @@ extension NSString {
     /**
      string to dictionary
      */
-    var jsonDict: NSDictionary? {
-        let JSONData = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+    var jsonDict: NSDictionary {
+        guard let JsonData = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) else {
+            return [String: String]()
+        }
         do {
-            if let JSONDictionary = try NSJSONSerialization.JSONObjectWithData(JSONData!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+            if let JSONDictionary = try NSJSONSerialization.JSONObjectWithData(JsonData, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
                 return JSONDictionary
             } else {
-                return nil
+                return [String: String]()
             }
         } catch {
-            return nil
+            return [String: String]()
         }
     }
     
     var urlToDict: NSDictionary {
-        let dict:NSDictionary = ["" : ""]
+        let dict = NSMutableDictionary()
         let params = self.componentsSeparatedByString("&")
         for param in params {
             let strs = param.componentsSeparatedByString("=")
             if strs.count >= 2 {
-                if let value = strs[1].stringByRemovingPercentEncoding {
+                if let value = strs[1].stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding) {
                     dict.setValue(value, forKey: strs[0])
                 } else {
                     print("un-resolve key:\(strs[0]) value:\(strs[1])")

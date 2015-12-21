@@ -10,7 +10,7 @@
 
 @interface NetworkRequest : NSMutableURLRequest
 @property (nonatomic, assign) NSTimeInterval startTime;
-@property (nonatomic, assign) NSInteger requestTimes;
+@property (nonatomic, assign) NSInteger retryTimes;
 @end
 
 @interface NetworkManager : NSObject
@@ -18,7 +18,6 @@
 + (id)instance;
 
 - (void) processRequest:(NetworkRequest *)request success: (void (^)(NSData * data))success fail: (void (^)(NSError * error))fail;
-- (void) request:(NSString *)httpMethod url:(NSString *)url parameter:(NSData *)parameter success: (void (^)(NSData * data))success fail: (void (^)(NSError * error))fail;
-- (void) POST:(NSString *)url parameter:(NSData *)parameter success: (void (^)(NSData * data))success fail: (void (^)(NSError * error))fail;
+- (NetworkRequest *) request:(NSString *)httpMethod url:(NSString *)url parameter:(NSData *)parameter success: (void (^)(NSData * data))success fail: (void (^)(NSError * error))fail;
 
 @end

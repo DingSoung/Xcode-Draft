@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <title></title>
+        <style>
+        html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -khtml-user-select: none;
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+        }
+        </style>
+</head>
+
+<body>
+        <canvas id="testJS"></canvas>
+
+        <br/>
+        <br/>
+        <button id="hallo" onclick="callNative()"> 调navite方法</button>
+        <br/>
+        <br/>
+        <button type="button" onclick="requestUrl()"> 发起URL请求</button>
+
+        <script type="text/javascript">
+        window.onload = function() {
+                alert('on load');
+                return 'onload';
+        }
+
+        //控件action
+        function callNative() {
+                //调navite方法
+                nativeFunction(["parameter1", "parameter2"])
+        }
+        function requestUrl() {
+                //"json: {action: '', params: {},callback: '',}"
+                //loadURL("bdp://hybrid?data=urlencode(base64(json))")
+                loadURL("nativeFunction://shareClick?title=分享的标题&content=分享的内容&url=链接地址&imagePath=图片地址");
+        }
+
+        //暴露方法给native
+        function nativeCallBack(data) {
+                alert(JSON.stringify(data));
+                return "json: {status: '1', message: 'success', data: {'key': 'value'},}"
+        }
+
+        function loadURL(url) {
+                var iFrame;
+                iFrame = document.createElement("iframe");
+                iFrame.setAttribute("src", url);
+                iFrame.setAttribute("style", "display:none;");
+                iFrame.setAttribute("height", "0px");
+                iFrame.setAttribute("width", "0px");
+                iFrame.setAttribute("frameborder", "0");
+                document.body.appendChild(iFrame);
+                // 发起请求后这个 iFrame 就没用了，所以把它从 dom 上移除掉
+                iFrame.parentNode.removeChild(iFrame);
+                iFrame = null;
+        }
+        </script>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script defer src="js/webview_bridge.js"></script>
+        <script defer src="js/wordcloud2.js"></script>
+        <script defer src="js/main.js"></script>
+
+</body>
+</html>

@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA016AEE1C195D7800A1B7DB /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = FA016AED1C195D7800A1B7DB /* test.js */; };
-		FA016AF01C195D8D00A1B7DB /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = FA016AEF1C195D8D00A1B7DB /* test.html */; };
-		FA1BDBFC1C0976820041C2AC /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1BDBFB1C0976820041C2AC /* NetworkManager.m */; };
 		FA206A4F1C05C30200D87237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA206A4E1C05C30200D87237 /* main.m */; };
 		FA206A581C05C30200D87237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA206A561C05C30200D87237 /* Main.storyboard */; };
 		FA206A5B1C05C30200D87237 /* DEMO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA206A591C05C30200D87237 /* DEMO.xcdatamodeld */; };
@@ -49,6 +46,9 @@
 		FA206B521C05CD8E00D87237 /* TestXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA206B501C05CD8E00D87237 /* TestXibViewController.m */; };
 		FA206B541C05CEE500D87237 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA206B531C05CEE500D87237 /* Test.storyboard */; };
 		FA2892AA1C102AF3007203C9 /* TestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2892A91C102AF3007203C9 /* TestWebViewController.m */; };
+		FAB5E58C1C27A18A002C8736 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = FAB5E58A1C27A18A002C8736 /* test.html */; };
+		FAB5E58D1C27A18A002C8736 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = FAB5E58B1C27A18A002C8736 /* test.js */; };
+		FAB5E5911C27B1DF002C8736 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5E5901C27B1DF002C8736 /* NetworkManager.swift */; };
 		FAB8F40F1C1736B500513A54 /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F40A1C1736B500513A54 /* PieChartView.m */; };
 		FAB8F4101C1736B500513A54 /* WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F40C1C1736B500513A54 /* WebView.m */; };
 		FAB8F4111C1736B500513A54 /* WrodCloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F40E1C1736B500513A54 /* WrodCloudView.m */; };
@@ -74,10 +74,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA016AED1C195D7800A1B7DB /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
-		FA016AEF1C195D8D00A1B7DB /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		FA1BDBFA1C0976820041C2AC /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		FA1BDBFB1C0976820041C2AC /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		FA206A4A1C05C30200D87237 /* DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA206A4E1C05C30200D87237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA206A571C05C30200D87237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +134,9 @@
 		FA206B531C05CEE500D87237 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		FA2892A81C102AF3007203C9 /* TestWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWebViewController.h; sourceTree = "<group>"; };
 		FA2892A91C102AF3007203C9 /* TestWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWebViewController.m; sourceTree = "<group>"; };
+		FAB5E58A1C27A18A002C8736 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		FAB5E58B1C27A18A002C8736 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
+		FAB5E5901C27B1DF002C8736 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FAB8F4091C1736B500513A54 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartView.h; sourceTree = "<group>"; };
 		FAB8F40A1C1736B500513A54 /* PieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartView.m; sourceTree = "<group>"; };
 		FAB8F40B1C1736B500513A54 /* WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView.h; sourceTree = "<group>"; };
@@ -267,7 +266,6 @@
 				FA206A921C05C33600D87237 /* UIImageView+Tools.swift */,
 				FA206A931C05C33600D87237 /* UIVIew+Tools.swift */,
 				FA206A941C05C33600D87237 /* UIWebView+Tools.swift */,
-				FA016AEF1C195D8D00A1B7DB /* test.html */,
 			);
 			name = Extension;
 			path = ../Extension;
@@ -280,9 +278,7 @@
 				FA206A971C05C33600D87237 /* DSPDFImage.m */,
 				FA206A981C05C33600D87237 /* GCDManager.swift */,
 				FA206A991C05C33600D87237 /* JavaScriptManager.swift */,
-				FA016AED1C195D7800A1B7DB /* test.js */,
-				FA1BDBFA1C0976820041C2AC /* NetworkManager.h */,
-				FA1BDBFB1C0976820041C2AC /* NetworkManager.m */,
+				FAB5E5901C27B1DF002C8736 /* NetworkManager.swift */,
 				FA206A9B1C05C33600D87237 /* NotificationManager.swift */,
 			);
 			name = Helpers;
@@ -292,6 +288,8 @@
 		FA206A9C1C05C33600D87237 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				FAB5E58A1C27A18A002C8736 /* test.html */,
+				FAB5E58B1C27A18A002C8736 /* test.js */,
 				FA206AB41C05C94500D87237 /* AppDelegate.h */,
 				FA206AB51C05C94500D87237 /* AppDelegate.m */,
 				FA206A9D1C05C33600D87237 /* Bridging-Header.h */,
@@ -314,17 +312,9 @@
 				FA206B4E1C05CD8E00D87237 /* Test.xib */,
 				FA2892A81C102AF3007203C9 /* TestWebViewController.h */,
 				FA2892A91C102AF3007203C9 /* TestWebViewController.m */,
-				FA206A9E1C05C33600D87237 /* Test */,
 			);
 			name = Sections;
 			path = ../Sections;
-			sourceTree = "<group>";
-		};
-		FA206A9E1C05C33600D87237 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Test;
 			sourceTree = "<group>";
 		};
 		FA206AD31C05CCC000D87237 /* Vendors */ = {
@@ -467,15 +457,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB5E58D1C27A18A002C8736 /* test.js in Resources */,
 				FA206A601C05C30200D87237 /* LaunchScreen.storyboard in Resources */,
 				FA206A5D1C05C30200D87237 /* Assets.xcassets in Resources */,
-				FA016AEE1C195D7800A1B7DB /* test.js in Resources */,
 				FA206A581C05C30200D87237 /* Main.storyboard in Resources */,
+				FAB5E58C1C27A18A002C8736 /* test.html in Resources */,
 				FA206B301C05CCC000D87237 /* Info.plist in Resources */,
 				FA206ACB1C05CBCA00D87237 /* TestView.xib in Resources */,
 				FA206B541C05CEE500D87237 /* Test.storyboard in Resources */,
 				FA206B511C05CD8E00D87237 /* Test.xib in Resources */,
-				FA016AF01C195D8D00A1B7DB /* test.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB5E5911C27B1DF002C8736 /* NetworkManager.swift in Sources */,
 				FA206AB61C05C94500D87237 /* AppDelegate.m in Sources */,
 				FA206AA41C05C33600D87237 /* NSDictionary+Tools.swift in Sources */,
 				FA206AA81C05C33600D87237 /* UIColor+Tools.swift in Sources */,
@@ -516,7 +507,6 @@
 				FAB8F4111C1736B500513A54 /* WrodCloudView.m in Sources */,
 				FA206B4C1C05CD6500D87237 /* TestStorBoardViewController.m in Sources */,
 				FA206AA71C05C33600D87237 /* String+Tools.swift in Sources */,
-				FA1BDBFC1C0976820041C2AC /* NetworkManager.m in Sources */,
 				FA206AAF1C05C33600D87237 /* JavaScriptManager.swift in Sources */,
 				FA206AC61C05CBBB00D87237 /* Singletons.m in Sources */,
 				FA206AAA1C05C33600D87237 /* UIImageView+Tools.swift in Sources */,
