@@ -10,20 +10,50 @@ import JavaScriptCore
 import UIKit
 extension UIWebView {
     
-    func addJsTarget(function:String, block : @convention(block) (AnyObject) -> Void) {
-        if let context = self.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as? JSContext {
-            context.setObject(unsafeBitCast(block, AnyObject.self), forKeyedSubscript: function)
-        } else {
-            print("web js load fail")
+    var context:JSContext? {
+        get {
+            return self.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as? JSContext
+        }
+        set {
+            if let newValue = newValue {
+                self.context = newValue
+            }
         }
     }
     
-    func runJsFunction(function:String, parameter:[AnyObject]) -> AnyObject? {
-        if let context = self.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as? JSContext {
-            let factorial = context.objectForKeyedSubscript(function)
-            return factorial.callWithArguments(parameter)
-        } else {
-            return nil
+    func addJsTarget(function:String, block: @convention(block)(AnyObject)->Void) {
+        guard let context = self.context else {
+            #if DEBUG
+                print("web js load fail")
+            #endif
+            return
+        }
+        context.setObject(unsafeBitCast(block, AnyObject.self), forKeyedSubscript: function)
+    }
+    
+    func runJsFunction(function:String, parameter:[AnyObject]) {
+        guard let context = self.context else {
+            #if DEBUG
+                print("web js load fail")
+            #endif
+            return
+        }
+        let jsValue = context.objectForKeyedSubscript(function)
+        jsValue.callWithArguments(parameter)
+    }
+    
+    func syncRunJsFunction(function:String, parameter:[AnyObject], complete:((value:JSValue)->Void)?) {
+        let queue = dispatch_queue_create("JavaScriptCore.queue", nil);
+        dispatch_sync(queue) { () -> Void in
+            guard let context = self.context else {
+                #if DEBUG
+                    print("web js load fail")
+                #endif
+                return
+            }
+            let jsValue = context.objectForKeyedSubscript(function)
+            let value = jsValue.callWithArguments(parameter)
+            complete?(value: value)
         }
     }
 }

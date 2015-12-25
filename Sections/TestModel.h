@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface TestModel : NSObject
+@interface TestModel: BaseModel
 
 @property (nonatomic, copy) NSString * name;
 @property (nonatomic, copy) NSString * mobile;

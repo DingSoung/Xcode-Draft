@@ -148,6 +148,9 @@
     } fail:^(NSError * error) {
         NSLog(@"%@", error.domain);
     }];
+    
+    
+    [[TestCircularReferences alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -196,8 +199,7 @@
         [web loadHTMLString:html baseURL:[NSURL fileURLWithPath:path]];
         
         NSString *json = @"{key:value}";
-        id reseut = [web runJsFunction:@"nativeCallBack" parameter:@[json]];
-        NSLog(@"nativeCallBack--> %@", reseut);
+        [web runJsFunction:@"nativeCallBack" parameter:@[json]];
     }
     
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
