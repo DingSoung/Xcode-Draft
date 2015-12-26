@@ -76,6 +76,10 @@
     button4.backgroundColor = UIColor.greenColor;
     [button4 addTarget:self action: @selector(testButtonAction4:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button4];
+    UIButton * button5 = [[UIButton alloc] initWithFrame:CGRectMake(button4.frame.origin.x + button4.frame.size.width + 10, xibView.frame.origin.y + xibView.frame.size.height + 10, 40, 30)];
+    button5.backgroundColor = UIColor.greenColor;
+    [button5 addTarget:self action: @selector(testButtonAction5:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button5];
     
     
     
@@ -102,7 +106,7 @@
     UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithServer:[NSURL URLWithString:@"https://github.com"]
                                                               protocolType:UICKeyChainStoreProtocolTypeHTTPS
                                                         authenticationType:UICKeyChainStoreAuthenticationTypeHTMLForm];
-#if true
+#if DEBUG == 1
     keychain[@"kishikawakatsumi"] = @"01234567-89ab-cdef-0123-456789abcdef";
     NSString *token = [keychain stringForKey:@"kishikawakatsumi"];
     NSLog(@"token = %@",token);
@@ -209,6 +213,16 @@
         NSLog(@"%@",result2);
     }
 }
+
+- (void) testButtonAction5:(UIButton *) sender {
+    UIWebView *web = [[UIWebView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:web];
+    
+    NSURL *websiteUrl = [NSURL URLWithString:@"https://toxicfork.github.io/react-three-renderer-example/"];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:websiteUrl];
+    [web loadRequest:urlRequest];
+}
+
 
 #pragma mark - UIWebViewDelegate
 - (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

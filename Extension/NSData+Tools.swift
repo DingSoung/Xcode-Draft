@@ -13,7 +13,7 @@ extension NSData {
     /**
      json data to dictionary
      */
-    var jsonDict: NSDictionary? {
+    public var jsonDict: NSDictionary? {
         //return NSKeyedUnarchiver.unarchiveObjectWithData(self) as? NSDictionary
         do {
             let data = try NSJSONSerialization.JSONObjectWithData(self, options: NSJSONReadingOptions.MutableContainers)
@@ -26,23 +26,23 @@ extension NSData {
         }
     }
         
-    var MD5: NSData {
+    public var MD5: NSData {
         let result = NSMutableData(length: Int(CC_MD5_DIGEST_LENGTH))!
         CC_MD5(bytes, CC_LONG(length), UnsafeMutablePointer<UInt8>(result.mutableBytes))
         return NSData(data: result)
     }
     
-    var SHA1: NSData {
+    public var SHA1: NSData {
         let result = NSMutableData(length: Int(CC_SHA1_DIGEST_LENGTH))!
         CC_SHA1(bytes, CC_LONG(length), UnsafeMutablePointer<UInt8>(result.mutableBytes))
         return NSData(data: result)
     }
     
-    var hexString: String {
+    public var hexString: String {
         return self.toHexString()
     }
     
-    var checksum: UInt16 {
+    public var checksum: UInt16 {
         var s:UInt32 = 0;
         
         var bytesArray = self.arrayOfBytes
@@ -55,14 +55,14 @@ extension NSData {
         return UInt16(s);
     }
     
-    var arrayOfBytes: [UInt8] {
+    public var arrayOfBytes: [UInt8] {
         let count = self.length / sizeof(UInt8)
         var bytesArray = [UInt8](count: count, repeatedValue: 0)
         self.getBytes(&bytesArray, length:count * sizeof(UInt8))
         return bytesArray
     }
     
-    func toHexString() -> String {
+    public func toHexString() -> String {
         let count = self.length / sizeof(UInt8)
         var bytesArray = [UInt8](count: count, repeatedValue: 0)
         self.getBytes(&bytesArray, length:count * sizeof(UInt8))

@@ -25,7 +25,7 @@ class NotificationManager: NSObject {
     }
     
 	//MARK: 定时发送通知消息
-	func scheduleNotification(itemID:Int = 0,delaySeconds:NSTimeInterval? = 2,timeZone:NSTimeZone? = NSTimeZone.defaultTimeZone(),message:String? = "default meaasge form Notification Manager"){
+	internal func scheduleNotification(itemID:Int = 0,delaySeconds:NSTimeInterval? = 2,timeZone:NSTimeZone? = NSTimeZone.defaultTimeZone(),message:String? = "default meaasge form Notification Manager"){
 		self.cancelNotification(itemID) //如果已存在该通知消息，则先取消
 		let localNotification = UILocalNotification() //创建UILocalNotification来进行本地消息通知
 		localNotification.fireDate =  NSDate(timeIntervalSinceNow: delaySeconds!) //推送时间（设置为x秒）
@@ -40,14 +40,14 @@ class NotificationManager: NSObject {
 	}
 	
 	//MARK: 取消通知消息
-	func cancelNotification(itemID:Int){
+	internal func cancelNotification(itemID:Int){
 		//通过itemID获取已有的消息推送，然后删除掉，以便重新判断
 		if let existingNotification = self.notificationForItem(itemID) as UILocalNotification? {
 			UIApplication.sharedApplication().cancelLocalNotification(existingNotification)
 		}
 	}
 	//MARK: 通过遍历所有消息推送，通过itemid的对比，返回UIlocalNotification
-	func notificationForItem(itemID:Int) -> UILocalNotification? {
+	internal func notificationForItem(itemID:Int) -> UILocalNotification? {
         if let allNotifications = UIApplication.sharedApplication().scheduledLocalNotifications {
             for notification in allNotifications {
                 var info = notification.userInfo as? Dictionary<String,Int>

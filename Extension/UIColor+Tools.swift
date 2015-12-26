@@ -10,7 +10,7 @@ import UIKit
 extension UIColor {
     
     //MARK: easy to get RGB alpha
-    var coreImageColor: CoreImage.CIColor {
+    public var coreImageColor: CoreImage.CIColor {
         return CoreImage.CIColor(color: self)  // The resulting Core Image color, or nil
     }
     

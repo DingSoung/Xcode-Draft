@@ -12,7 +12,7 @@ extension NSString {
     /**
      string to dictionary
      */
-    var jsonDict: NSDictionary {
+    public var jsonDict: NSDictionary {
         guard let JsonData = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) else {
             return [String: String]()
         }
@@ -27,7 +27,7 @@ extension NSString {
         }
     }
     
-    var urlToDict: NSDictionary {
+    public var urlToDict: NSDictionary {
         let dict = NSMutableDictionary()
         let params = self.componentsSeparatedByString("&")
         for param in params {

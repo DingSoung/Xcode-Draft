@@ -10,7 +10,7 @@ import JavaScriptCore
 import UIKit
 extension UIWebView {
     
-    var context:JSContext? {
+    internal var context:JSContext? {
         get {
             return self.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as? JSContext
         }
@@ -21,7 +21,7 @@ extension UIWebView {
         }
     }
     
-    func addJsTarget(function:String, block: @convention(block)(AnyObject)->Void) {
+    public func addJsTarget(function:String, block: @convention(block)(AnyObject)->Void) {
         guard let context = self.context else {
             #if DEBUG
                 print("web js load fail")
@@ -31,7 +31,7 @@ extension UIWebView {
         context.setObject(unsafeBitCast(block, AnyObject.self), forKeyedSubscript: function)
     }
     
-    func runJsFunction(function:String, parameter:[AnyObject]) {
+    public func runJsFunction(function:String, parameter:[AnyObject]) {
         guard let context = self.context else {
             #if DEBUG
                 print("web js load fail")
@@ -42,7 +42,7 @@ extension UIWebView {
         jsValue.callWithArguments(parameter)
     }
     
-    func syncRunJsFunction(function:String, parameter:[AnyObject], complete:((value:JSValue)->Void)?) {
+    public func syncRunJsFunction(function:String, parameter:[AnyObject], complete:((value:JSValue)->Void)?) {
         let queue = dispatch_queue_create("JavaScriptCore.queue", nil);
         dispatch_sync(queue) { () -> Void in
             guard let context = self.context else {

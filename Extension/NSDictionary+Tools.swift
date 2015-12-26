@@ -13,7 +13,7 @@ extension NSDictionary {
     /**
     dictionary to string
     */
-    var jsonStr: NSString {
+    public var jsonStr: NSString {
         var json:NSString = "{}"
         do {
             let data = try NSJSONSerialization.dataWithJSONObject(self, options: NSJSONWritingOptions.PrettyPrinted)

@@ -93,7 +93,7 @@
             
             //2 * M_PI * radius = perimeter
             //radian = unitLenght/radius = unitLenght / (latitude * unitLenght) = 1/latitude
-            for (CGFloat radian = 0.0; drawed == NO && radian <= 2 * M_PI; radian = radian + 1 / latitude) {
+            for (CGFloat radian = 0.0; drawed == NO && radian <= 2 * M_PI; radian = radian + 1.0 / latitude) {
                 
                 // preset 45
                 for (CGFloat angle = 0.0; drawed == NO && angle <= M_PI; angle = angle + 0.25 * M_PI) {

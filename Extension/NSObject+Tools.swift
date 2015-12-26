@@ -12,7 +12,7 @@ extension NSObject {
     /**
      闭包实现 C中的代码块功能
      */
-    func closure(
+    public func closure(
         mark:String? = "",
         run:Bool? = true,
         block:()->Void,
@@ -23,14 +23,14 @@ extension NSObject {
             block()
             complete?()
     }
-    func closure(block:()->Void) {
+    public func closure(block:()->Void) {
         self.closure(block: block, complete: nil)
     }
     
     /**
      交换两个值
      */
-    func swep<T>(inout a:T, inout b:T) {
+    public func swep<T>(inout a:T, inout b:T) {
         let temp = a
         a = b
         b = temp

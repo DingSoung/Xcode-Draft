@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
     
     //MARK: View所属Controller
-    var superViewController: UIViewController? {
+    public var superViewController: UIViewController? {
         #if true
             for var next = self.superview; ; next = next?.superview {
                 let nR = next?.nextResponder()

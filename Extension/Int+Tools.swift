@@ -7,7 +7,7 @@
 //
 
 extension Int {
-    var hexString: String {
+    public var hexString: String {
 		return String(format:"%02x", self)
 	}
 }
