@@ -131,9 +131,10 @@
     }
 #endif
     
-    [GCDManager delay:0.1 task:^{
+    [GCDManager delay:1 block:^{
         NSLog(@"");
     }];
+    
     
     NSString *url = @"http://dingsoung.tk/TestCode/httpclient-1.3/demo.php";
     NSDictionary *parameter = @{
@@ -155,6 +156,13 @@
     
     
     [[TestCircularReferences alloc] init];
+    
+    
+    dispatch_queue_t globleQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_queue_t myQueue = dispatch_queue_create("tk.dingsoung.queue", nil);
+    
 }
 
 - (void)didReceiveMemoryWarning {

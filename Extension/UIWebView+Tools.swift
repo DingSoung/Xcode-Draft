@@ -8,6 +8,7 @@
 
 import JavaScriptCore
 import UIKit
+
 extension UIWebView {
     
     internal var context:JSContext? {
@@ -15,40 +16,47 @@ extension UIWebView {
             return self.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as? JSContext
         }
         set {
-            if let newValue = newValue {
-                self.context = newValue
-            }
+            self.context = newValue
         }
     }
-    
+    /**
+     add native target for js function
+     
+     - parameter function: js func name
+     - parameter block:    native block target
+     */
     public func addJsTarget(function:String, block: @convention(block)(AnyObject)->Void) {
         guard let context = self.context else {
-            #if DEBUG
-                print("web js load fail")
-            #endif
             return
         }
         context.setObject(unsafeBitCast(block, AnyObject.self), forKeyedSubscript: function)
     }
     
+    /**
+     call js function
+     
+     - parameter function:  js func name
+     - parameter parameter: parameter array for function, optional
+     */
     public func runJsFunction(function:String, parameter:[AnyObject]) {
         guard let context = self.context else {
-            #if DEBUG
-                print("web js load fail")
-            #endif
             return
         }
         let jsValue = context.objectForKeyedSubscript(function)
         jsValue.callWithArguments(parameter)
     }
     
+    internal var syncRunJSQueue:dispatch_queue_t {
+        get {
+            return dispatch_queue_create("JavaScriptCore.queue", nil)
+        }
+        set {
+            self.syncRunJSQueue = newValue
+        }
+    }
     public func syncRunJsFunction(function:String, parameter:[AnyObject], complete:((value:JSValue)->Void)?) {
-        let queue = dispatch_queue_create("JavaScriptCore.queue", nil);
-        dispatch_sync(queue) { () -> Void in
+        dispatch_sync(self.syncRunJSQueue) { () -> Void in
             guard let context = self.context else {
-                #if DEBUG
-                    print("web js load fail")
-                #endif
                 return
             }
             let jsValue = context.objectForKeyedSubscript(function)
@@ -57,5 +65,3 @@ extension UIWebView {
         }
     }
 }
-
-
