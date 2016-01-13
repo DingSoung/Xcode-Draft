@@ -15,34 +15,35 @@ class BaseViewController: UIViewController {
         
         self.title = "please config title"
     }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        //MARK: 页面统计
+        //页面统计
         if let pageName = self.title {
             MobClick.beginLogPageView(pageName)
         } else {
             MobClick.beginLogPageView(NSStringFromClass(object_getClass(self)))
         }
     }
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        //MARK: 页面统计
+        //页面统计
         if let pageName = self.title {
             MobClick.endLogPageView(pageName)
         } else {
             MobClick.endLogPageView(NSStringFromClass(object_getClass(self)))
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     @IBAction func weChatAction(sender: UIButton) {
-        
         UMSocialData.defaultData().extConfig.wechatSessionData.url = "http://baidu.com"
         UMSocialData.defaultData().extConfig.wechatSessionData.title = "微信好友title"
         UMSocialData.defaultData().extConfig.wxMessageType = UMSocialWXMessageTypeImage;
@@ -55,6 +56,7 @@ class BaseViewController: UIViewController {
                 print(error.domain)
         }
     }
+    
     @IBAction func weiboAction(sender: UIButton) {
         let model = UMSocialShareModel()
         model.snstype = UMSocialSnsTypeSina
@@ -64,8 +66,8 @@ class BaseViewController: UIViewController {
                 print(error.domain)
         }
     }
+    
     @IBAction func qqAction(sender: UIButton) {
-        
         UMSocialData.defaultData().extConfig.qqData.url = "http://baidu.com";
         UMSocialData.defaultData().extConfig.qzoneData.url = "http://baidu.com";
         UMSocialData.defaultData().extConfig.qqData.title = "QQ分享title";

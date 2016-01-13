@@ -180,6 +180,8 @@
 }
 
 - (void) testButtonAction2:(UIButton *) sender {
+    
+    //http://blog.csdn.net/devday/article/details/6736458
     TestXibViewController * vc = [[TestXibViewController alloc] initWithNibName:@"Test" bundle:nil];
     
     UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:vc];
