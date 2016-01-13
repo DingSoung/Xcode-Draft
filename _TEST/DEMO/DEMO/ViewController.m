@@ -86,10 +86,11 @@
     TestSpringView * percent = [[TestSpringView alloc] init:CGRectMake(0, button.frame.origin.y + button.frame.size.height, 50, 100) backColor:UIColor.grayColor frontColor:UIColor.yellowColor percent:10];
     [self.view addSubview:percent];
     percent.percent = 50;
-    
+/*
     NSArray *array = @[@1, @2, @3, @4, @5, @6];
     PieChartView *chart = [[PieChartView alloc] init:CGRectMake(0, percent.frame.origin.y + percent.frame.size.height, 200, 180) sizeArray:array];
     [self.view addSubview:chart];
+ */
 }
 
 - (void)viewWillAppear:(BOOL)animated {

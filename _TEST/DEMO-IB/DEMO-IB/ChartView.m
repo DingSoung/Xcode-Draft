@@ -7,15 +7,56 @@
 //
 
 #import "ChartView.h"
+#import "PublicHeader.h"
+#import "DEMO_IB-swift.h"
 
-@implementation ChartView
+@interface ChartView()
+@end
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+@implementation ChartView {
+    UILabel *_noData;
+    UIView *_chartView;
 }
-*/
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.backgroundColor = UIColor.clearColor;
+        
+        _noData = [[UILabel alloc] init];
+        _noData.text = @"no Data";
+        _noData.textColor = [[UIColor alloc] initWithWhite:0.3 alpha:1];
+        _noData.font = [UIFont systemFontOfSize:15];
+        [self addSubview:_noData];
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    [_noData sizeToFit];
+    _noData.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+}
+
+- (void)setModel:(ChartModel *)model {
+    if (_model != model) {
+        _model = model;
+    }
+}
 
 @end
+
+
+@implementation ChartView (Factory)
++ (UIView *)chartViewWithType:(NSString *)chartType {
+    if ([chartType isEqualToString:ChartTypeDefault]) {
+        return [[PieChartView alloc] init];
+    } else {
+        return [[PieChartView alloc] init];
+    }
+}
+@end
+
+
+

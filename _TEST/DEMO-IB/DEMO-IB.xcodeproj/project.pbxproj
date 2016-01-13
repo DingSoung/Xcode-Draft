@@ -16,11 +16,31 @@
 		FA7785611C45F77100F3AAC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA77855F1C45F77100F3AAC2 /* LaunchScreen.storyboard */; };
 		FA77856C1C45F77100F3AAC2 /* DEMO_IBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77856B1C45F77100F3AAC2 /* DEMO_IBTests.m */; };
 		FA7785771C45F77100F3AAC2 /* DEMO_IBUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785761C45F77100F3AAC2 /* DEMO_IBUITests.m */; };
-		FA7785871C45F93600F3AAC2 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785851C45F93600F3AAC2 /* ChartViewController.m */; };
-		FA7785881C45F93600F3AAC2 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7785861C45F93600F3AAC2 /* ChartViewController.xib */; };
+		FA7785871C45F93600F3AAC2 /* ChartDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785851C45F93600F3AAC2 /* ChartDetailViewController.m */; };
+		FA7785881C45F93600F3AAC2 /* ChartDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7785861C45F93600F3AAC2 /* ChartDetailViewController.xib */; };
 		FA77858E1C45FDED00F3AAC2 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77858D1C45FDED00F3AAC2 /* ChartView.m */; };
 		FA7785911C45FE0D00F3AAC2 /* ChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785901C45FE0D00F3AAC2 /* ChartModel.m */; };
-		FA7785931C45FE6000F3AAC2 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7785921C45FE6000F3AAC2 /* ChartView.xib */; };
+		FA77860B1C46268000F3AAC2 /* WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7786051C46268000F3AAC2 /* WebView.m */; };
+		FA77860C1C46268000F3AAC2 /* WrodCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7786071C46268000F3AAC2 /* WrodCloudModel.m */; };
+		FA77860D1C46268000F3AAC2 /* WrodCloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7786091C46268000F3AAC2 /* WrodCloudView.m */; };
+		FA77861D1C462A9D00F3AAC2 /* Int+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786101C462A9D00F3AAC2 /* Int+Tools.swift */; };
+		FA77861E1C462A9D00F3AAC2 /* NSData+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786111C462A9D00F3AAC2 /* NSData+Tools.swift */; };
+		FA77861F1C462A9D00F3AAC2 /* NSDictionary+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786121C462A9D00F3AAC2 /* NSDictionary+Tools.swift */; };
+		FA7786201C462A9D00F3AAC2 /* NSMutableData+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786131C462A9D00F3AAC2 /* NSMutableData+Tools.swift */; };
+		FA7786211C462A9D00F3AAC2 /* NSObject+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786141C462A9D00F3AAC2 /* NSObject+Tools.swift */; };
+		FA7786221C462A9D00F3AAC2 /* NSString+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786151C462A9D00F3AAC2 /* NSString+Tools.swift */; };
+		FA7786231C462A9D00F3AAC2 /* String+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786161C462A9D00F3AAC2 /* String+Tools.swift */; };
+		FA7786241C462A9D00F3AAC2 /* UIColor+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786171C462A9D00F3AAC2 /* UIColor+Tools.swift */; };
+		FA7786251C462A9D00F3AAC2 /* UIImageView+PDF.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7786191C462A9D00F3AAC2 /* UIImageView+PDF.m */; };
+		FA7786261C462A9D00F3AAC2 /* UIImageView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77861A1C462A9D00F3AAC2 /* UIImageView+Tools.swift */; };
+		FA7786271C462A9D00F3AAC2 /* UIVIew+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77861B1C462A9D00F3AAC2 /* UIVIew+Tools.swift */; };
+		FA7786281C462A9D00F3AAC2 /* UIWebView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77861C1C462A9D00F3AAC2 /* UIWebView+Tools.swift */; };
+		FA7786351C462B7300F3AAC2 /* DSPDFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77862C1C462B7300F3AAC2 /* DSPDFImage.m */; };
+		FA7786361C462B7300F3AAC2 /* GCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77862D1C462B7300F3AAC2 /* GCDManager.swift */; };
+		FA7786371C462B7300F3AAC2 /* JavaScriptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77862E1C462B7300F3AAC2 /* JavaScriptManager.swift */; };
+		FA7786381C462B7300F3AAC2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77862F1C462B7300F3AAC2 /* NetworkManager.swift */; };
+		FA7786391C462B7300F3AAC2 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786301C462B7300F3AAC2 /* NotificationManager.swift */; };
+		FA7786431C46451000F3AAC2 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786421C46451000F3AAC2 /* PieChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +78,43 @@
 		FA7785721C45F77100F3AAC2 /* DEMO-IBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DEMO-IBUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7785761C45F77100F3AAC2 /* DEMO_IBUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMO_IBUITests.m; sourceTree = "<group>"; };
 		FA7785781C45F77100F3AAC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA7785841C45F93600F3AAC2 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
-		FA7785851C45F93600F3AAC2 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
-		FA7785861C45F93600F3AAC2 /* ChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartViewController.xib; sourceTree = "<group>"; };
+		FA7785841C45F93600F3AAC2 /* ChartDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartDetailViewController.h; sourceTree = "<group>"; };
+		FA7785851C45F93600F3AAC2 /* ChartDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartDetailViewController.m; sourceTree = "<group>"; };
+		FA7785861C45F93600F3AAC2 /* ChartDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartDetailViewController.xib; sourceTree = "<group>"; };
 		FA77858C1C45FDED00F3AAC2 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
 		FA77858D1C45FDED00F3AAC2 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
 		FA77858F1C45FE0D00F3AAC2 /* ChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartModel.h; sourceTree = "<group>"; };
 		FA7785901C45FE0D00F3AAC2 /* ChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartModel.m; sourceTree = "<group>"; };
-		FA7785921C45FE6000F3AAC2 /* ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
+		FA7786041C46268000F3AAC2 /* WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView.h; sourceTree = "<group>"; };
+		FA7786051C46268000F3AAC2 /* WebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebView.m; sourceTree = "<group>"; };
+		FA7786061C46268000F3AAC2 /* WrodCloudModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrodCloudModel.h; sourceTree = "<group>"; };
+		FA7786071C46268000F3AAC2 /* WrodCloudModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrodCloudModel.m; sourceTree = "<group>"; };
+		FA7786081C46268000F3AAC2 /* WrodCloudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrodCloudView.h; sourceTree = "<group>"; };
+		FA7786091C46268000F3AAC2 /* WrodCloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrodCloudView.m; sourceTree = "<group>"; };
+		FA77860F1C462A9D00F3AAC2 /* Extension-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Extension-Header.h"; sourceTree = "<group>"; };
+		FA7786101C462A9D00F3AAC2 /* Int+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Tools.swift"; sourceTree = "<group>"; };
+		FA7786111C462A9D00F3AAC2 /* NSData+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Tools.swift"; sourceTree = "<group>"; };
+		FA7786121C462A9D00F3AAC2 /* NSDictionary+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Tools.swift"; sourceTree = "<group>"; };
+		FA7786131C462A9D00F3AAC2 /* NSMutableData+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableData+Tools.swift"; sourceTree = "<group>"; };
+		FA7786141C462A9D00F3AAC2 /* NSObject+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Tools.swift"; sourceTree = "<group>"; };
+		FA7786151C462A9D00F3AAC2 /* NSString+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Tools.swift"; sourceTree = "<group>"; };
+		FA7786161C462A9D00F3AAC2 /* String+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Tools.swift"; sourceTree = "<group>"; };
+		FA7786171C462A9D00F3AAC2 /* UIColor+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Tools.swift"; sourceTree = "<group>"; };
+		FA7786181C462A9D00F3AAC2 /* UIImageView+PDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+PDF.h"; sourceTree = "<group>"; };
+		FA7786191C462A9D00F3AAC2 /* UIImageView+PDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+PDF.m"; sourceTree = "<group>"; };
+		FA77861A1C462A9D00F3AAC2 /* UIImageView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tools.swift"; sourceTree = "<group>"; };
+		FA77861B1C462A9D00F3AAC2 /* UIVIew+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+Tools.swift"; sourceTree = "<group>"; };
+		FA77861C1C462A9D00F3AAC2 /* UIWebView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Tools.swift"; sourceTree = "<group>"; };
+		FA7786291C462AE700F3AAC2 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		FA77862B1C462B7300F3AAC2 /* DSPDFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPDFImage.h; sourceTree = "<group>"; };
+		FA77862C1C462B7300F3AAC2 /* DSPDFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPDFImage.m; sourceTree = "<group>"; };
+		FA77862D1C462B7300F3AAC2 /* GCDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDManager.swift; sourceTree = "<group>"; };
+		FA77862E1C462B7300F3AAC2 /* JavaScriptManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaScriptManager.swift; sourceTree = "<group>"; };
+		FA77862F1C462B7300F3AAC2 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FA7786301C462B7300F3AAC2 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		FA7786341C462B7300F3AAC2 /* Vendors-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vendors-Header.h"; sourceTree = "<group>"; };
+		FA7786421C46451000F3AAC2 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		FA7786441C46488B00F3AAC2 /* PublicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +145,15 @@
 		FA7785421C45F77100F3AAC2 = {
 			isa = PBXGroup;
 			children = (
+				FA7786291C462AE700F3AAC2 /* Bridging-Header.h */,
+				FA77862A1C462B7300F3AAC2 /* Helpers */,
+				FA7786331C462B7300F3AAC2 /* Vendors */,
+				FA77860E1C462A9D00F3AAC2 /* Extension */,
 				FA77854D1C45F77100F3AAC2 /* DEMO-IB */,
 				FA77856A1C45F77100F3AAC2 /* DEMO-IBTests */,
 				FA7785751C45F77100F3AAC2 /* DEMO-IBUITests */,
 				FA77854C1C45F77100F3AAC2 /* Products */,
+				FA7786011C46268000F3AAC2 /* Views */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,12 +180,12 @@
 				FA7785621C45F77100F3AAC2 /* Info.plist */,
 				FA77855A1C45F77100F3AAC2 /* DEMO_IB.xcdatamodeld */,
 				FA77854E1C45F77100F3AAC2 /* Supporting Files */,
-				FA7785841C45F93600F3AAC2 /* ChartViewController.h */,
-				FA7785851C45F93600F3AAC2 /* ChartViewController.m */,
-				FA7785861C45F93600F3AAC2 /* ChartViewController.xib */,
+				FA7786441C46488B00F3AAC2 /* PublicHeader.h */,
+				FA7785841C45F93600F3AAC2 /* ChartDetailViewController.h */,
+				FA7785851C45F93600F3AAC2 /* ChartDetailViewController.m */,
+				FA7785861C45F93600F3AAC2 /* ChartDetailViewController.xib */,
 				FA77858C1C45FDED00F3AAC2 /* ChartView.h */,
 				FA77858D1C45FDED00F3AAC2 /* ChartView.m */,
-				FA7785921C45FE6000F3AAC2 /* ChartView.xib */,
 				FA77858F1C45FE0D00F3AAC2 /* ChartModel.h */,
 				FA7785901C45FE0D00F3AAC2 /* ChartModel.m */,
 			);
@@ -162,6 +216,66 @@
 				FA7785781C45F77100F3AAC2 /* Info.plist */,
 			);
 			path = "DEMO-IBUITests";
+			sourceTree = "<group>";
+		};
+		FA7786011C46268000F3AAC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA7786421C46451000F3AAC2 /* PieChartView.swift */,
+				FA7786041C46268000F3AAC2 /* WebView.h */,
+				FA7786051C46268000F3AAC2 /* WebView.m */,
+				FA7786061C46268000F3AAC2 /* WrodCloudModel.h */,
+				FA7786071C46268000F3AAC2 /* WrodCloudModel.m */,
+				FA7786081C46268000F3AAC2 /* WrodCloudView.h */,
+				FA7786091C46268000F3AAC2 /* WrodCloudView.m */,
+			);
+			name = Views;
+			path = ../../Views;
+			sourceTree = "<group>";
+		};
+		FA77860E1C462A9D00F3AAC2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA77860F1C462A9D00F3AAC2 /* Extension-Header.h */,
+				FA7786101C462A9D00F3AAC2 /* Int+Tools.swift */,
+				FA7786111C462A9D00F3AAC2 /* NSData+Tools.swift */,
+				FA7786121C462A9D00F3AAC2 /* NSDictionary+Tools.swift */,
+				FA7786131C462A9D00F3AAC2 /* NSMutableData+Tools.swift */,
+				FA7786141C462A9D00F3AAC2 /* NSObject+Tools.swift */,
+				FA7786151C462A9D00F3AAC2 /* NSString+Tools.swift */,
+				FA7786161C462A9D00F3AAC2 /* String+Tools.swift */,
+				FA7786171C462A9D00F3AAC2 /* UIColor+Tools.swift */,
+				FA7786181C462A9D00F3AAC2 /* UIImageView+PDF.h */,
+				FA7786191C462A9D00F3AAC2 /* UIImageView+PDF.m */,
+				FA77861A1C462A9D00F3AAC2 /* UIImageView+Tools.swift */,
+				FA77861B1C462A9D00F3AAC2 /* UIVIew+Tools.swift */,
+				FA77861C1C462A9D00F3AAC2 /* UIWebView+Tools.swift */,
+			);
+			name = Extension;
+			path = ../../Extension;
+			sourceTree = "<group>";
+		};
+		FA77862A1C462B7300F3AAC2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA77862B1C462B7300F3AAC2 /* DSPDFImage.h */,
+				FA77862C1C462B7300F3AAC2 /* DSPDFImage.m */,
+				FA77862D1C462B7300F3AAC2 /* GCDManager.swift */,
+				FA77862E1C462B7300F3AAC2 /* JavaScriptManager.swift */,
+				FA77862F1C462B7300F3AAC2 /* NetworkManager.swift */,
+				FA7786301C462B7300F3AAC2 /* NotificationManager.swift */,
+			);
+			name = Helpers;
+			path = ../../Helpers;
+			sourceTree = "<group>";
+		};
+		FA7786331C462B7300F3AAC2 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				FA7786341C462B7300F3AAC2 /* Vendors-Header.h */,
+			);
+			name = Vendors;
+			path = ../../Vendors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +382,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7785611C45F77100F3AAC2 /* LaunchScreen.storyboard in Resources */,
-				FA7785881C45F93600F3AAC2 /* ChartViewController.xib in Resources */,
+				FA7785881C45F93600F3AAC2 /* ChartDetailViewController.xib in Resources */,
 				FA77855E1C45F77100F3AAC2 /* Assets.xcassets in Resources */,
-				FA7785931C45FE6000F3AAC2 /* ChartView.xib in Resources */,
 				FA7785591C45F77100F3AAC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,13 +409,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA7785871C45F93600F3AAC2 /* ChartViewController.m in Sources */,
+				FA7786381C462B7300F3AAC2 /* NetworkManager.swift in Sources */,
+				FA7786241C462A9D00F3AAC2 /* UIColor+Tools.swift in Sources */,
+				FA77860B1C46268000F3AAC2 /* WebView.m in Sources */,
+				FA7786261C462A9D00F3AAC2 /* UIImageView+Tools.swift in Sources */,
+				FA7786351C462B7300F3AAC2 /* DSPDFImage.m in Sources */,
+				FA7786371C462B7300F3AAC2 /* JavaScriptManager.swift in Sources */,
+				FA7786431C46451000F3AAC2 /* PieChartView.swift in Sources */,
+				FA77860D1C46268000F3AAC2 /* WrodCloudView.m in Sources */,
+				FA77861E1C462A9D00F3AAC2 /* NSData+Tools.swift in Sources */,
+				FA7786211C462A9D00F3AAC2 /* NSObject+Tools.swift in Sources */,
+				FA7786251C462A9D00F3AAC2 /* UIImageView+PDF.m in Sources */,
+				FA7786231C462A9D00F3AAC2 /* String+Tools.swift in Sources */,
+				FA7786281C462A9D00F3AAC2 /* UIWebView+Tools.swift in Sources */,
+				FA7786201C462A9D00F3AAC2 /* NSMutableData+Tools.swift in Sources */,
+				FA7785871C45F93600F3AAC2 /* ChartDetailViewController.m in Sources */,
 				FA7785561C45F77100F3AAC2 /* ViewController.m in Sources */,
+				FA7786221C462A9D00F3AAC2 /* NSString+Tools.swift in Sources */,
 				FA7785531C45F77100F3AAC2 /* AppDelegate.m in Sources */,
+				FA77861F1C462A9D00F3AAC2 /* NSDictionary+Tools.swift in Sources */,
+				FA7786391C462B7300F3AAC2 /* NotificationManager.swift in Sources */,
+				FA77861D1C462A9D00F3AAC2 /* Int+Tools.swift in Sources */,
 				FA7785501C45F77100F3AAC2 /* main.m in Sources */,
 				FA77855C1C45F77100F3AAC2 /* DEMO_IB.xcdatamodeld in Sources */,
+				FA7786271C462A9D00F3AAC2 /* UIVIew+Tools.swift in Sources */,
 				FA77858E1C45FDED00F3AAC2 /* ChartView.m in Sources */,
 				FA7785911C45FE0D00F3AAC2 /* ChartModel.m in Sources */,
+				FA77860C1C46268000F3AAC2 /* WrodCloudModel.m in Sources */,
+				FA7786361C462B7300F3AAC2 /* GCDManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +581,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DingSoung.DEMO-IB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -458,6 +593,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DingSoung.DEMO-IB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -528,6 +664,7 @@
 				FA77857D1C45F77100F3AAC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA77857E1C45F77100F3AAC2 /* Build configuration list for PBXNativeTarget "DEMO-IBTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +673,7 @@
 				FA7785801C45F77100F3AAC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA7785811C45F77100F3AAC2 /* Build configuration list for PBXNativeTarget "DEMO-IBUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +682,7 @@
 				FA7785831C45F77100F3AAC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

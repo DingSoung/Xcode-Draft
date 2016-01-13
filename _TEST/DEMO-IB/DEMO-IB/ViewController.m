@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ChartViewController.h"
+#import "ChartDetailViewController.h"
 
 @interface ViewController ()
 
@@ -26,7 +26,7 @@
 }
 - (IBAction)showChart:(UIButton *)sender {
     
-    ChartViewController * vc = [[ChartViewController alloc] initWithNibName:@"ChartViewController" bundle:nil];
+    ChartDetailViewController * vc = [[ChartDetailViewController alloc] initWithNibName:@"ChartDetailViewController" bundle:nil];
     if (vc != nil) {
         self.modalPresentationStyle = UIModalPresentationCurrentContext;
         [self presentViewController:vc animated:true completion:^{}];

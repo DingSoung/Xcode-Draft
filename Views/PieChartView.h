@@ -7,15 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChartView.h"
+#import "PieChartModel.h"
 
-IB_DESIGNABLE
-@interface PieChartView : UIView
-
-@property (nonatomic, copy) NSArray *pieArray;
-@property (nonatomic, copy) IBInspectable UIColor *fillColor;
-@property (nonatomic, copy) IBInspectable UIColor *lineColor;
-@property (nonatomic, assign) IBInspectable CGFloat lineWidth;
-
-- (instancetype)init:(CGRect)frame sizeArray:(NSArray *)sizeArray;
-
+@interface PieChartView : ChartView
+@property (nonatomic, copy) NSArray *pieChartModels;  //PieChartModel
 @end

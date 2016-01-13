@@ -11,8 +11,10 @@
 
 IB_DESIGNABLE
 @interface ChartView : UIView
-@property (weak, nonatomic) IBOutlet UILabel *noData;
 @property (nonatomic, copy) ChartModel *model;
 //IBInspectable
 @end
 
+@interface ChartView (Factory)
++ (UIView *)chartViewWithType:(NSString *)chartType;
+@end

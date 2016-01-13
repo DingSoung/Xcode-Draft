@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ChartModel : NSObject
-
+@property (nonatomic, copy) NSString *chartType;
 @end

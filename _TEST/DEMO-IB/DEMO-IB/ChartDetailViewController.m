@@ -1,18 +1,22 @@
 //
-//  ChartViewController.m
+//  ChartDetailViewController.m
 //  DEMO-IB
 //
 //  Created by Alex D. on 1/13/16.
 //  Copyright © 2016 Alex. All rights reserved.
 //
 
-#import "ChartViewController.h"
+#import "ChartDetailViewController.h"
 
-@interface ChartViewController ()
+@interface ChartDetailViewController ()
 
 @end
 
-@implementation ChartViewController
+@implementation ChartDetailViewController
+
+- (void)loadView {
+    [super loadView];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

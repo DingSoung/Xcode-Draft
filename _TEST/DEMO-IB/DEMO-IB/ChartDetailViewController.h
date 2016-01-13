@@ -1,5 +1,5 @@
 //
-//  ChartViewController.h
+//  ChartDetailViewController.h
 //  DEMO-IB
 //
 //  Created by Alex D. on 1/13/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChartViewController : UIViewController
+@interface ChartDetailViewController : UIViewController
 
 @end

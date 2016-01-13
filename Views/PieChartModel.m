@@ -1,21 +1,22 @@
 //
-//  ChartModel.m
-//  DEMO-IB
+//  PieChartModel.m
+//  DEMO
 //
 //  Created by Alex D. on 1/13/16.
 //  Copyright © 2016 Alex. All rights reserved.
 //
 
-#import "ChartModel.h"
-#import "PublicHeader.h"
+#import "PieChartModel.h"
 
-@implementation ChartModel
+@implementation PieChartModel
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _chartType = ChartTypeDefault;
+        self.text = @"hello";
+        self.weight = 1;
+        self.colorHex8 = @"#88AA00EE";
     }
     return self;
 }
