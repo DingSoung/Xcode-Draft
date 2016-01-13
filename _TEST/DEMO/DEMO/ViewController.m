@@ -14,9 +14,9 @@
 #import "PieChartView.h"
 #import "WrodCloudView.h"
 #import "TestWebViewController.h"
-
+#if 0
 #import "UICKeyChainStore.h"
-
+#endif
 #import "TestStorBoardViewController.h"
 #import "TestXibViewController.h"
 
@@ -103,10 +103,11 @@
         NSLog(@"%@", error.domain);
     }];
     
+#if 0
     UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithServer:[NSURL URLWithString:@"https://github.com"]
                                                               protocolType:UICKeyChainStoreProtocolTypeHTTPS
                                                         authenticationType:UICKeyChainStoreAuthenticationTypeHTMLForm];
-#if DEBUG == 1
+#if 0
     keychain[@"kishikawakatsumi"] = @"01234567-89ab-cdef-0123-456789abcdef";
     NSString *token = [keychain stringForKey:@"kishikawakatsumi"];
     NSLog(@"token = %@",token);
@@ -129,6 +130,7 @@
     if (error) {
         NSLog(@"%@", error.localizedDescription);
     }
+#endif
 #endif
     
     [GCDManager delay:1 block:^{

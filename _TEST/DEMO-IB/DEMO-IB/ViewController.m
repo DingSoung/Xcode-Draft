@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ChartViewController.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)showChart:(UIButton *)sender {
+    
+    ChartViewController * vc = [[ChartViewController alloc] initWithNibName:@"ChartViewController" bundle:nil];
+    if (vc != nil) {
+        self.modalPresentationStyle = UIModalPresentationCurrentContext;
+        [self presentViewController:vc animated:true completion:^{}];
+    }
 }
 
 @end

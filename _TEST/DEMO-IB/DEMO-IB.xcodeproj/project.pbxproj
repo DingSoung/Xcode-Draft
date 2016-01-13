@@ -18,6 +18,9 @@
 		FA7785771C45F77100F3AAC2 /* DEMO_IBUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785761C45F77100F3AAC2 /* DEMO_IBUITests.m */; };
 		FA7785871C45F93600F3AAC2 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785851C45F93600F3AAC2 /* ChartViewController.m */; };
 		FA7785881C45F93600F3AAC2 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7785861C45F93600F3AAC2 /* ChartViewController.xib */; };
+		FA77858E1C45FDED00F3AAC2 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77858D1C45FDED00F3AAC2 /* ChartView.m */; };
+		FA7785911C45FE0D00F3AAC2 /* ChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785901C45FE0D00F3AAC2 /* ChartModel.m */; };
+		FA7785931C45FE6000F3AAC2 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7785921C45FE6000F3AAC2 /* ChartView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,11 @@
 		FA7785841C45F93600F3AAC2 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
 		FA7785851C45F93600F3AAC2 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
 		FA7785861C45F93600F3AAC2 /* ChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartViewController.xib; sourceTree = "<group>"; };
+		FA77858C1C45FDED00F3AAC2 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
+		FA77858D1C45FDED00F3AAC2 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
+		FA77858F1C45FE0D00F3AAC2 /* ChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartModel.h; sourceTree = "<group>"; };
+		FA7785901C45FE0D00F3AAC2 /* ChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartModel.m; sourceTree = "<group>"; };
+		FA7785921C45FE6000F3AAC2 /* ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +129,11 @@
 				FA7785841C45F93600F3AAC2 /* ChartViewController.h */,
 				FA7785851C45F93600F3AAC2 /* ChartViewController.m */,
 				FA7785861C45F93600F3AAC2 /* ChartViewController.xib */,
+				FA77858C1C45FDED00F3AAC2 /* ChartView.h */,
+				FA77858D1C45FDED00F3AAC2 /* ChartView.m */,
+				FA7785921C45FE6000F3AAC2 /* ChartView.xib */,
+				FA77858F1C45FE0D00F3AAC2 /* ChartModel.h */,
+				FA7785901C45FE0D00F3AAC2 /* ChartModel.m */,
 			);
 			path = "DEMO-IB";
 			sourceTree = "<group>";
@@ -257,6 +270,7 @@
 				FA7785611C45F77100F3AAC2 /* LaunchScreen.storyboard in Resources */,
 				FA7785881C45F93600F3AAC2 /* ChartViewController.xib in Resources */,
 				FA77855E1C45F77100F3AAC2 /* Assets.xcassets in Resources */,
+				FA7785931C45FE6000F3AAC2 /* ChartView.xib in Resources */,
 				FA7785591C45F77100F3AAC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +301,8 @@
 				FA7785531C45F77100F3AAC2 /* AppDelegate.m in Sources */,
 				FA7785501C45F77100F3AAC2 /* main.m in Sources */,
 				FA77855C1C45F77100F3AAC2 /* DEMO_IB.xcdatamodeld in Sources */,
+				FA77858E1C45FDED00F3AAC2 /* ChartView.m in Sources */,
+				FA7785911C45FE0D00F3AAC2 /* ChartModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

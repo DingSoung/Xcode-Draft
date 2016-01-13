@@ -28,7 +28,7 @@
             <connections>
                 <outlet property="testText" destination="U0F-sm-62P" id="ziJ-1k-NHr"/>
             </connections>
-            <point key="canvasLocation" x="294.5" y="251"/>
+            <point key="canvasLocation" x="364.5" y="243"/>
         </view>
     </objects>
 </document>
