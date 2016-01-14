@@ -47,13 +47,11 @@
 		FA7785F11C4603FD00F3AAC2 /* JavaScriptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7785D01C4603FD00F3AAC2 /* JavaScriptManager.swift */; };
 		FA7785F21C4603FD00F3AAC2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7785D11C4603FD00F3AAC2 /* NetworkManager.swift */; };
 		FA7785F31C4603FD00F3AAC2 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7785D21C4603FD00F3AAC2 /* NotificationManager.swift */; };
-		FA7785F61C4603FD00F3AAC2 /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785D91C4603FD00F3AAC2 /* PieChartView.m */; };
 		FA7785F71C4603FD00F3AAC2 /* WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785DB1C4603FD00F3AAC2 /* WebView.m */; };
 		FA7785F81C4603FD00F3AAC2 /* WrodCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785DD1C4603FD00F3AAC2 /* WrodCloudModel.m */; };
 		FA7785F91C4603FD00F3AAC2 /* WrodCloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785DF1C4603FD00F3AAC2 /* WrodCloudView.m */; };
 		FA7785FF1C46208B00F3AAC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785FC1C46208B00F3AAC2 /* AppDelegate.m */; };
 		FA7786001C46208B00F3AAC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785FE1C46208B00F3AAC2 /* ViewController.m */; };
-		FA77863E1C462F6D00F3AAC2 /* PieChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77863D1C462F6D00F3AAC2 /* PieChartModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,8 +130,6 @@
 		FA7785D11C4603FD00F3AAC2 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FA7785D21C4603FD00F3AAC2 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		FA7785D61C4603FD00F3AAC2 /* Vendors-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vendors-Header.h"; sourceTree = "<group>"; };
-		FA7785D81C4603FD00F3AAC2 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartView.h; sourceTree = "<group>"; };
-		FA7785D91C4603FD00F3AAC2 /* PieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartView.m; sourceTree = "<group>"; };
 		FA7785DA1C4603FD00F3AAC2 /* WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView.h; sourceTree = "<group>"; };
 		FA7785DB1C4603FD00F3AAC2 /* WebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebView.m; sourceTree = "<group>"; };
 		FA7785DC1C4603FD00F3AAC2 /* WrodCloudModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrodCloudModel.h; sourceTree = "<group>"; };
@@ -145,8 +141,6 @@
 		FA7785FC1C46208B00F3AAC2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FA7785FD1C46208B00F3AAC2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FA7785FE1C46208B00F3AAC2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FA77863C1C462F6D00F3AAC2 /* PieChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartModel.h; sourceTree = "<group>"; };
-		FA77863D1C462F6D00F3AAC2 /* PieChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,10 +317,6 @@
 		FA7785D71C4603FD00F3AAC2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FA7785D81C4603FD00F3AAC2 /* PieChartView.h */,
-				FA7785D91C4603FD00F3AAC2 /* PieChartView.m */,
-				FA77863C1C462F6D00F3AAC2 /* PieChartModel.h */,
-				FA77863D1C462F6D00F3AAC2 /* PieChartModel.m */,
 				FA7785DA1C4603FD00F3AAC2 /* WebView.h */,
 				FA7785DB1C4603FD00F3AAC2 /* WebView.m */,
 				FA7785DC1C4603FD00F3AAC2 /* WrodCloudModel.h */,
@@ -492,7 +482,6 @@
 				FA7785EE1C4603FD00F3AAC2 /* UIWebView+Tools.swift in Sources */,
 				FA7785E01C4603FD00F3AAC2 /* BaseModel.m in Sources */,
 				FA7786001C46208B00F3AAC2 /* ViewController.m in Sources */,
-				FA7785F61C4603FD00F3AAC2 /* PieChartView.m in Sources */,
 				FA7785E11C4603FD00F3AAC2 /* ShareData.swift in Sources */,
 				FA7785FF1C46208B00F3AAC2 /* AppDelegate.m in Sources */,
 				FA7785B71C4603C700F3AAC2 /* TestXibViewController.m in Sources */,
@@ -502,7 +491,6 @@
 				FA7785EF1C4603FD00F3AAC2 /* DSPDFImage.m in Sources */,
 				FA7785F31C4603FD00F3AAC2 /* NotificationManager.swift in Sources */,
 				FA7785B41C4603C700F3AAC2 /* TestView.m in Sources */,
-				FA77863E1C462F6D00F3AAC2 /* PieChartModel.m in Sources */,
 				FA7785F81C4603FD00F3AAC2 /* WrodCloudModel.m in Sources */,
 				FA7785E21C4603FD00F3AAC2 /* ShareModel.swift in Sources */,
 				FA7785E81C4603FD00F3AAC2 /* NSString+Tools.swift in Sources */,

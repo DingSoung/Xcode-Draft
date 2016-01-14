@@ -8,28 +8,65 @@
 
 import UIKit
 
+class PieChartModel: NSObject {
+    var text = ""
+    var value:Double = 0.0
+    var color = UIColor.whiteColor().CGColor
+    
+    convenience init(text:String, value: Double, color: UIColor) {
+        self.init()
+        self.text = text
+        self.value = value
+        self.color = color.CGColor
+    }
+}
+
 class PieChartView: UIView {
+    var models:[PieChartModel] = []
     
     var lineWidth:CGFloat = 1.0
     var fillColor:UIColor = UIColor(white: 0.5, alpha: 1)
     
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        
-    }
-    
-    
-    
-    
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-    // Drawing code
+        super.drawRect(rect)
+        
+        let radius = min(self.frame.size.width, self.frame.size.height)
+        let origin = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5)
+        let clockwise = true
+        
+        var startPercent:Double = 0
+        var capacityPercent:Double = 0
+        var total:Double = 0
+        
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetLineWidth(context, self.lineWidth)
+        
+        for model in self.models {
+            total = total + model.value
+        }
+        if total <= 0 {
+            return
+        }
+        for model in self.models {
+            // Different Color.
+            let strokeRGB = CGColorGetComponents(model.color) // <---
+            CGContextSetRGBStrokeColor(context, strokeRGB[0], strokeRGB[1], strokeRGB[2], strokeRGB[3])
+            let fillRGB = CGColorGetComponents(self.fillColor.CGColor)
+            CGContextSetRGBFillColor(context, fillRGB[0], fillRGB[1], fillRGB[2], fillRGB[3])
+            
+            // Different Size.
+            capacityPercent = model.value / total;
+            
+            // Draw arc.
+            CGContextMoveToPoint(context, origin.x, origin.y);
+            CGContextAddArc(context, origin.x, origin.y, radius, CGFloat(startPercent * 2 * M_PI), CGFloat((startPercent + capacityPercent) * 2 * M_PI), clockwise ? 1 : 0); //绘制
+            CGContextClosePath(context); //关闭起点和终点
+            CGContextDrawPath(context, CGPathDrawingMode.FillStroke); //渲染
+            
+            // net step
+            startPercent = startPercent + capacityPercent;
+        }
     }
-    */
     
 }
 

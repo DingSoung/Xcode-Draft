@@ -7,10 +7,9 @@
 //
 
 #import "TestXibViewController.h"
-#import "PieChartView.h"
 
 @interface TestXibViewController () {
-    __weak IBOutlet PieChartView *_pieChartView;
+    
 }
 
 @end
@@ -20,8 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _pieChartView.pieArray = @[@2, @3, @4];
-    _pieChartView.pieArray = @[@2, @3, @4, @1, @7, @5];
 }
 
 - (void)didReceiveMemoryWarning {

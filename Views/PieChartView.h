@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ChartView.h"
-#import "PieChartModel.h"
 
 @interface PieChartView : ChartView
 @property (nonatomic, copy) NSArray *pieChartModels;  //PieChartModel
