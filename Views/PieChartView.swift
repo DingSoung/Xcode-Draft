@@ -11,13 +11,13 @@ import UIKit
 class PieChartModel: NSObject {
     var text = ""
     var value:Double = 0.0
-    var color = UIColor.whiteColor().CGColor
+    var color = UIColor.whiteColor()
     
     convenience init(text:String, value: Double, color: UIColor) {
         self.init()
         self.text = text
         self.value = value
-        self.color = color.CGColor
+        self.color = color
     }
 }
 
@@ -25,12 +25,27 @@ class PieChartView: UIView {
     var models:[PieChartModel] = []
     
     var lineWidth:CGFloat = 1.0
-    var fillColor:UIColor = UIColor(white: 0.5, alpha: 1)
+    var fillColor:UIColor = UIColor.brownColor()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.backgroundColor = UIColor.clearColor()
+        
+        self.models = [PieChartModel(text: "1111", value: 121, color: UIColor.redColor()),
+            PieChartModel(text: "222", value: 222, color: UIColor.greenColor()),
+            PieChartModel(text: "333", value: 333, color: UIColor.blueColor()),
+        ]
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         
-        let radius = min(self.frame.size.width, self.frame.size.height)
+        let radius = min(self.frame.size.width, self.frame.size.height) * 0.5
         let origin = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5)
         let clockwise = true
         
@@ -48,18 +63,20 @@ class PieChartView: UIView {
             return
         }
         for model in self.models {
+            
             // Different Color.
-            let strokeRGB = CGColorGetComponents(model.color) // <---
-            CGContextSetRGBStrokeColor(context, strokeRGB[0], strokeRGB[1], strokeRGB[2], strokeRGB[3])
-            let fillRGB = CGColorGetComponents(self.fillColor.CGColor)
-            CGContextSetRGBFillColor(context, fillRGB[0], fillRGB[1], fillRGB[2], fillRGB[3])
+            var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+            self.fillColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+            CGContextSetRGBStrokeColor(context, r, g, b, a)
+            model.color.getRed(&r, green: &g, blue: &b, alpha: &a)
+            CGContextSetRGBFillColor(context, r, g, b, a)
             
             // Different Size.
             capacityPercent = model.value / total;
             
             // Draw arc.
             CGContextMoveToPoint(context, origin.x, origin.y);
-            CGContextAddArc(context, origin.x, origin.y, radius, CGFloat(startPercent * 2 * M_PI), CGFloat((startPercent + capacityPercent) * 2 * M_PI), clockwise ? 1 : 0); //绘制
+            CGContextAddArc(context, origin.x, origin.y, radius, CGFloat(startPercent * 2 * M_PI), CGFloat((startPercent + capacityPercent) * 2 * M_PI), clockwise ? 0 : 1); //绘制
             CGContextClosePath(context); //关闭起点和终点
             CGContextDrawPath(context, CGPathDrawingMode.FillStroke); //渲染
             
@@ -67,8 +84,9 @@ class PieChartView: UIView {
             startPercent = startPercent + capacityPercent;
         }
     }
-    
 }
+
+
 
 /*
 

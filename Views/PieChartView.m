@@ -21,7 +21,6 @@
         
         _lineWidth = 1;
         _fillColor = UIColor.redColor;
-        
     }
     return self;
 }
