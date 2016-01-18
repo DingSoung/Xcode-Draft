@@ -15,7 +15,8 @@
 //  setLayoutSubviews -> layoutSubViews
 //  setNeedsLayout -> layoutIfNeeded -> 设置标记 -> layoutSubViews
 //  layoutIfNeeded -> 判断标记 可能 -> layoutSubViews
-//  sizeToFit -> sizeThatFits -> layoutSubViews -> drawect
+//  sizeToFit -> sizeThatFits -> layoutSubViews
+//  layoutSubViews  ->   可能    -> drawect
 //  setNeedsDisplay ->  drawrect
 
 

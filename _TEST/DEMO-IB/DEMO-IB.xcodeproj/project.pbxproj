@@ -41,6 +41,7 @@
 		FA7786381C462B7300F3AAC2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77862F1C462B7300F3AAC2 /* NetworkManager.swift */; };
 		FA7786391C462B7300F3AAC2 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786301C462B7300F3AAC2 /* NotificationManager.swift */; };
 		FA7786431C46451000F3AAC2 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786421C46451000F3AAC2 /* PieChartView.swift */; };
+		FAF5448D1C48F0F6008E818C /* WordCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5448C1C48F0F6008E818C /* WordCloudView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		FA7786341C462B7300F3AAC2 /* Vendors-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vendors-Header.h"; sourceTree = "<group>"; };
 		FA7786421C46451000F3AAC2 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		FA7786441C46488B00F3AAC2 /* PublicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicHeader.h; sourceTree = "<group>"; };
+		FAF5448C1C48F0F6008E818C /* WordCloudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCloudView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7786421C46451000F3AAC2 /* PieChartView.swift */,
+				FAF5448C1C48F0F6008E818C /* WordCloudView.swift */,
 				FA7786041C46268000F3AAC2 /* WebView.h */,
 				FA7786051C46268000F3AAC2 /* WebView.m */,
 				FA7786061C46268000F3AAC2 /* WrodCloudModel.h */,
@@ -435,6 +438,7 @@
 				FA7786271C462A9D00F3AAC2 /* UIVIew+Tools.swift in Sources */,
 				FA77858E1C45FDED00F3AAC2 /* ChartView.m in Sources */,
 				FA7785911C45FE0D00F3AAC2 /* ChartModel.m in Sources */,
+				FAF5448D1C48F0F6008E818C /* WordCloudView.swift in Sources */,
 				FA77860C1C46268000F3AAC2 /* WrodCloudModel.m in Sources */,
 				FA7786361C462B7300F3AAC2 /* GCDManager.swift in Sources */,
 			);
