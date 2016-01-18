@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PublicHeader.h"
+
+#define ChartTypeDefault    @"C200"
+#define ChartTypePie        @"C201"
+#define ChartTypeWordle     @"C202"
 
 @interface ChartModel : NSObject
 @property (nonatomic, copy) NSString *chartType;

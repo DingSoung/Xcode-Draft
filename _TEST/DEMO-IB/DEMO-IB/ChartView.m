@@ -77,8 +77,10 @@
 
 @implementation ChartView (Factory)
 + (UIView *)chartViewWithType:(NSString *)chartType {
-    if ([chartType isEqualToString:ChartTypeDefault]) {
+    if ([chartType isEqualToString:ChartTypePie]) {
         return [[PieChartView alloc] init];
+    } else if ([chartType isEqualToString:ChartTypeWordle]) {
+        return [[WordCloudView alloc] init];
     } else {
         return [[PieChartView alloc] init];
     }

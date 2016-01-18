@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA2-2h-enf">
-                                <rect key="frame" x="31" y="59" width="69" height="30"/>
+                                <rect key="frame" x="32" y="59" width="69" height="30"/>
                                 <state key="normal" title="显示Chart"/>
                                 <connections>
                                     <action selector="showChart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h4P-jd-KF6"/>

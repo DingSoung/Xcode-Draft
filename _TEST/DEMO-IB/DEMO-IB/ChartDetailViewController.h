@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChartDetailViewController : UIViewController
+#import "ChartModel.h"
 
+@interface VCModel : NSObject
+@property (nonatomic, copy) ChartModel *chartModel;
+//...
+@end
+
+@interface ChartDetailViewController : UIViewController
+- (void)pushChartWithModel:(VCModel *)model;
+- (void)popCharts:(NSInteger)count;
 @end

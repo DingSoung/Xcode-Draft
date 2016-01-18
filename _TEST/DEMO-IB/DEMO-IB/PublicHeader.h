@@ -10,8 +10,6 @@
 #define PublicHeader_h
 
 
-#define ChartTypeDefault @"C200"
-
 
 #endif /* PublicHeader_h */
 
