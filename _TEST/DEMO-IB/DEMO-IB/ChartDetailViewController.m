@@ -8,6 +8,7 @@
 
 #import "ChartDetailViewController.h"
 #import "ChartView.h"
+#import "DetailTableView.h"
 
 @implementation VCModel
 - (instancetype)init
@@ -26,6 +27,7 @@
 @implementation ChartDetailViewController {
     NSMutableArray *_models;
     __weak IBOutlet ChartView *_chartView;
+    __weak IBOutlet DetailTableView *_detailTableView;
 }
 
 - (void)loadView {
@@ -41,12 +43,11 @@
     [super viewWillAppear:animated];
     
     
-     //_chartView.model = _model.chartModel;
+    [self updateViewController];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)pushChartWithModel:(VCModel *)model {
@@ -57,29 +58,42 @@
         [_models addObject:model];
     }
     
-    [self configChart];
-    
-    _chartView.model = model.chartModel;
+    [self updateViewController];
 }
 
-- (void)popCharts:(NSInteger)count {
+- (void)popChartsWithCount:(NSInteger)count {
     
     for (NSInteger cnt = count; cnt >= 1; cnt--) {
         if (_models.count >= 1) {
             [_models removeObjectAtIndex:_models.count - 1];
-        } else {
-            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
     
-    [self configChart];
+    if (_models.count >= 1) {
+        [self updateViewController];
+    } else {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
-- (void)configChart {
+- (void)updateViewController {
     if (_models.count >= 1) {
         VCModel *model = _models[_models.count -1];
         _chartView.model = model.chartModel;
     }
+    
+    //...
+    NSMutableArray *models = [NSMutableArray arrayWithArray:@[]];
+    for (NSInteger index = 0; index <= 5; index++) {
+        DetailModel *model = [[DetailModel alloc] init];
+        model.title = @"test title";
+        [models addObject:model];
+    }
+    _detailTableView.models = models;
+}
+
+- (IBAction)popAndClouse:(UIButton *)sender {
+    [self popChartsWithCount:1];
 }
 
 - (IBAction)filter:(UIButton *)sender {

@@ -30,11 +30,12 @@
     ChartDetailViewController * vc = [[ChartDetailViewController alloc]
                                       initWithNibName:@"ChartDetailViewController" bundle:nil];
     if (vc != nil) {
-        VCModel *model = [[VCModel alloc] init];
-        model.chartModel.chartType = ChartTypeDefault;
-        [vc pushChartWithModel:model];
         self.modalPresentationStyle = UIModalPresentationCurrentContext;
-        [self presentViewController:vc animated:true completion:^{}];
+        [self presentViewController:vc animated:true completion:^{
+            VCModel *model = [[VCModel alloc] init];
+            model.chartModel.chartType = ChartTypeDefault;
+            [vc pushChartWithModel:model];
+        }];
     }
 }
 

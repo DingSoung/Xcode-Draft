@@ -17,5 +17,5 @@
 
 @interface ChartDetailViewController : UIViewController
 - (void)pushChartWithModel:(VCModel *)model;
-- (void)popCharts:(NSInteger)count;
+- (void)popChartsWithCount:(NSInteger)count;
 @end

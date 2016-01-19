@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA053AEA1C4DD41200F4C5EC /* DetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA053AE91C4DD41200F4C5EC /* DetailTableView.m */; };
+		FA053AED1C4DD88E00F4C5EC /* DetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA053AEC1C4DD88E00F4C5EC /* DetailModel.m */; };
+		FA053AF11C4DDAB900F4C5EC /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA053AEF1C4DDAB900F4C5EC /* DetailTableViewCell.m */; };
+		FA053AF21C4DDAB900F4C5EC /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA053AF01C4DDAB900F4C5EC /* DetailTableViewCell.xib */; };
 		FA7785501C45F77100F3AAC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77854F1C45F77100F3AAC2 /* main.m */; };
 		FA7785531C45F77100F3AAC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785521C45F77100F3AAC2 /* AppDelegate.m */; };
 		FA7785561C45F77100F3AAC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785551C45F77100F3AAC2 /* ViewController.m */; };
@@ -60,6 +64,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA053AE81C4DD41200F4C5EC /* DetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableView.h; sourceTree = "<group>"; };
+		FA053AE91C4DD41200F4C5EC /* DetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableView.m; sourceTree = "<group>"; };
+		FA053AEB1C4DD88E00F4C5EC /* DetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailModel.h; sourceTree = "<group>"; };
+		FA053AEC1C4DD88E00F4C5EC /* DetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailModel.m; sourceTree = "<group>"; };
+		FA053AEE1C4DDAB900F4C5EC /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		FA053AEF1C4DDAB900F4C5EC /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		FA053AF01C4DDAB900F4C5EC /* DetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 		FA77854B1C45F77100F3AAC2 /* DEMO-IB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMO-IB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA77854F1C45F77100F3AAC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA7785511C45F77100F3AAC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -184,6 +195,13 @@
 				FA77858D1C45FDED00F3AAC2 /* ChartView.m */,
 				FA77858F1C45FE0D00F3AAC2 /* ChartModel.h */,
 				FA7785901C45FE0D00F3AAC2 /* ChartModel.m */,
+				FA053AE81C4DD41200F4C5EC /* DetailTableView.h */,
+				FA053AE91C4DD41200F4C5EC /* DetailTableView.m */,
+				FA053AEE1C4DDAB900F4C5EC /* DetailTableViewCell.h */,
+				FA053AEF1C4DDAB900F4C5EC /* DetailTableViewCell.m */,
+				FA053AF01C4DDAB900F4C5EC /* DetailTableViewCell.xib */,
+				FA053AEB1C4DD88E00F4C5EC /* DetailModel.h */,
+				FA053AEC1C4DD88E00F4C5EC /* DetailModel.m */,
 			);
 			path = "DEMO-IB";
 			sourceTree = "<group>";
@@ -375,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7785611C45F77100F3AAC2 /* LaunchScreen.storyboard in Resources */,
+				FA053AF21C4DDAB900F4C5EC /* DetailTableViewCell.xib in Resources */,
 				FA7785881C45F93600F3AAC2 /* ChartDetailViewController.xib in Resources */,
 				FA77855E1C45F77100F3AAC2 /* Assets.xcassets in Resources */,
 				FA7785591C45F77100F3AAC2 /* Main.storyboard in Resources */,
@@ -407,6 +426,8 @@
 				FA77860B1C46268000F3AAC2 /* WebView.m in Sources */,
 				FA7786261C462A9D00F3AAC2 /* UIImageView+Tools.swift in Sources */,
 				FA7786351C462B7300F3AAC2 /* DSPDFImage.m in Sources */,
+				FA053AEA1C4DD41200F4C5EC /* DetailTableView.m in Sources */,
+				FA053AF11C4DDAB900F4C5EC /* DetailTableViewCell.m in Sources */,
 				FA7786371C462B7300F3AAC2 /* JavaScriptManager.swift in Sources */,
 				FA7786431C46451000F3AAC2 /* PieChartView.swift in Sources */,
 				FA77861E1C462A9D00F3AAC2 /* NSData+Tools.swift in Sources */,
@@ -427,6 +448,7 @@
 				FA7786271C462A9D00F3AAC2 /* UIVIew+Tools.swift in Sources */,
 				FA77858E1C45FDED00F3AAC2 /* ChartView.m in Sources */,
 				FA7785911C45FE0D00F3AAC2 /* ChartModel.m in Sources */,
+				FA053AED1C4DD88E00F4C5EC /* DetailModel.m in Sources */,
 				FAF5448D1C48F0F6008E818C /* WordCloudView.swift in Sources */,
 				FA7786361C462B7300F3AAC2 /* GCDManager.swift in Sources */,
 			);
