@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyG-DM-EKc">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyG-DM-EKc">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1Y-rh-Rdp">
@@ -28,7 +28,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="327-MT-Bdy">
-                            <rect key="frame" x="334.5" y="16" width="32" height="30"/>
+                            <rect key="frame" x="334" y="16" width="32" height="30"/>
                             <state key="normal" title="filter"/>
                             <connections>
                                 <action selector="filter:" destination="-1" eventType="touchUpInside" id="YYo-X7-imK"/>
@@ -42,10 +42,13 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="T1Y-rh-Rdp" firstAttribute="centerY" secondItem="vyG-DM-EKc" secondAttribute="centerY" id="0eu-BG-plw"/>
+                        <constraint firstItem="T1Y-rh-Rdp" firstAttribute="height" relation="lessThanOrEqual" secondItem="vyG-DM-EKc" secondAttribute="height" id="1b0-sp-nFP"/>
+                        <constraint firstItem="G9e-sz-0nM" firstAttribute="height" relation="lessThanOrEqual" secondItem="vyG-DM-EKc" secondAttribute="height" id="3jq-Eo-jdy"/>
                         <constraint firstItem="G9e-sz-0nM" firstAttribute="centerY" secondItem="T1Y-rh-Rdp" secondAttribute="centerY" id="7gM-JR-k6r"/>
+                        <constraint firstItem="327-MT-Bdy" firstAttribute="height" relation="lessThanOrEqual" secondItem="vyG-DM-EKc" secondAttribute="height" id="7wL-Es-9Nr"/>
                         <constraint firstItem="T1Y-rh-Rdp" firstAttribute="centerX" secondItem="vyG-DM-EKc" secondAttribute="centerX" id="CTl-tV-ybP"/>
                         <constraint firstAttribute="height" priority="750" constant="64" id="HDc-hb-PYh"/>
                         <constraint firstItem="327-MT-Bdy" firstAttribute="leading" secondItem="T1Y-rh-Rdp" secondAttribute="trailing" constant="20" id="Zrm-QP-ldU"/>
@@ -66,11 +69,7 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Je-Kh-d4d" customClass="ChartView">
-                    <rect key="frame" x="0.0" y="74" width="600" height="336"/>
-                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RW6-i5-ofI" customClass="DetailTableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RW6-i5-ofI" customClass="DetailTableView">
                     <rect key="frame" x="0.0" y="420" width="600" height="180"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -89,6 +88,10 @@
                         </mask>
                     </variation>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Je-Kh-d4d" customClass="ChartView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="356"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -97,9 +100,9 @@
                 <constraint firstAttribute="bottom" secondItem="RW6-i5-ofI" secondAttribute="bottom" id="68D-Af-pSg"/>
                 <constraint firstItem="vyG-DM-EKc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Hna-zD-cTL"/>
                 <constraint firstItem="8Je-Kh-d4d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jy9-ah-K4N"/>
-                <constraint firstItem="RW6-i5-ofI" firstAttribute="top" secondItem="8Je-Kh-d4d" secondAttribute="bottom" constant="10" id="QHA-N1-TWh"/>
+                <constraint firstItem="RW6-i5-ofI" firstAttribute="top" secondItem="8Je-Kh-d4d" secondAttribute="bottom" id="QHA-N1-TWh"/>
                 <constraint firstAttribute="trailing" secondItem="8Je-Kh-d4d" secondAttribute="trailing" id="TpL-2h-gq8"/>
-                <constraint firstItem="8Je-Kh-d4d" firstAttribute="top" secondItem="vyG-DM-EKc" secondAttribute="bottom" constant="10" id="Z9y-WZ-07i"/>
+                <constraint firstItem="8Je-Kh-d4d" firstAttribute="top" secondItem="vyG-DM-EKc" secondAttribute="bottom" id="Z9y-WZ-07i"/>
                 <constraint firstItem="vyG-DM-EKc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aNz-T9-qjK"/>
                 <constraint firstItem="RW6-i5-ofI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yUP-oP-zzq"/>
                 <constraint firstAttribute="trailing" secondItem="RW6-i5-ofI" secondAttribute="trailing" id="yw4-Vf-FO1"/>
