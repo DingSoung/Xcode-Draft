@@ -14,5 +14,5 @@
 #define ChartTypeWordle     @"C202"
 
 @interface ChartModel : NSObject
-@property (nonatomic, copy) NSString *chartType;
+@property (nonatomic, copy) NSString  *chartType;
 @end

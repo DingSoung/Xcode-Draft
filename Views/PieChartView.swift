@@ -10,7 +10,7 @@ import UIKit
 
 class PieChartModel: NSObject {
     var value:Double = 0.0
-    var color = UIColor.whiteColor()
+    var color        = UIColor.whiteColor()
     
     convenience init(value: Double, color: UIColor) {
         self.init()
@@ -19,11 +19,16 @@ class PieChartModel: NSObject {
     }
 }
 
+protocol PieChartViewDelegate {
+    func demoFunc()
+}
 class PieChartView: UIView {
     var models:[PieChartModel] = []
     
     var lineWidth:CGFloat = 1.0
     var fillColor:UIColor = UIColor.brownColor()
+    
+    var delegate:PieChartViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,6 +54,8 @@ class PieChartView: UIView {
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
+        
+         self.delegate?.demoFunc()
         
         let radius = min(self.frame.size.width, self.frame.size.height) * 0.5
         let origin = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5)

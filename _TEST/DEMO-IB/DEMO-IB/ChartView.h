@@ -11,7 +11,7 @@
 
 IB_DESIGNABLE
 @interface ChartView : UIView
-@property (nonatomic, copy) ChartModel *model;
+@property (nonatomic, copy) ChartModel  *model;
 //IBInspectable
 @end
 
