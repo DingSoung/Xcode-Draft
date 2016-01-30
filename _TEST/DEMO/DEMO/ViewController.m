@@ -11,7 +11,6 @@
 #import "TestModel.h"
 #import "Singletons.h"
 #import "TestSpringView.h"
-#import "WrodCloudView.h"
 #import "TestWebViewController.h"
 #if 0
 #import "UICKeyChainStore.h"
@@ -33,14 +32,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *teststring = @"中文A";
+    
+    teststring = [teststring stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSLog(@"%u", teststring.length);
+    NSLog(@"%u", teststring.lenghtOfZhEn);
+    
     // Do any additional setup after loading the view, typically from a nib.
+    /*
     WrodCloudView *wordle = [[WrodCloudView alloc] initWithFrame:CGRectMake(20, 20 , self.view.frame.size.width - 40, 200) WrodCloudModels:@[]];
     [self.view addSubview:wordle];
+    */
     
     TestView * testView = [[TestView alloc] init];
     CGRect frame = testView.frame;  //真烂啊  swift里面一行搞定  在这里要三行
     frame.size = CGSizeMake(self.view.frame.size.width * 0.5, 20);
-    frame.origin = CGPointMake(0, wordle.frame.origin.y + wordle.frame.size.height + 10);
+    frame.origin = CGPointMake(0, 10);
     testView.frame = frame;
     //testView.center = self.view.center;   //每次都要打分号  晕
     [self.view addSubview:testView];

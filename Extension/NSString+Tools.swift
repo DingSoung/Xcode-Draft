@@ -44,5 +44,13 @@ extension NSString {
         }
         return dict
     }
+    
+    public var lenghtOfZhEn: Int {
+        let enc = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(CFStringEncodings.GB_18030_2000.rawValue))
+        guard let da = self.dataUsingEncoding(enc) else {
+            return 0
+        }
+        return da.length
+    }
 
 }
