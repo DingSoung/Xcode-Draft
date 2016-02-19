@@ -21,7 +21,6 @@ class NetworkRequest: NSMutableURLRequest {
     convenience init(URL: NSURL, cachePolicy: NSURLRequestCachePolicy, timeoutInterval: NSTimeInterval, startTime:NSTimeInterval) {
         self.init(URL: URL, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
         self.startTime = startTime
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
