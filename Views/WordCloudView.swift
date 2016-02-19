@@ -76,7 +76,6 @@ class WordCloudView: UIView {
             }
         }
         
-        
         let context = UIGraphicsGetCurrentContext()
         CGContextSetTextMatrix(context, CGAffineTransformIdentity)
         
@@ -122,11 +121,6 @@ class WordCloudView: UIView {
             // Restore.
             CGContextRestoreGState(context);
         }
-
-        
-    
-        
-    
     }
     
     private func checkSpace() -> Bool {

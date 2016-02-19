@@ -57,8 +57,8 @@ class PieChartView: UIView {
         
          self.delegate?.demoFunc()
         
-        let radius = min(self.frame.size.width, self.frame.size.height) * 0.5
-        let origin = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5)
+        let radius = min(self.bounds.size.width, self.bounds.size.height) * 0.5
+        let origin = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5)
         let clockwise = true
         
         var startPercent:Double = 0
