@@ -12,6 +12,6 @@
 
 - (instancetype)init;
 - (instancetype)initWithJsonStr: (NSString *)JsonStr ;
-- (instancetype)initWithJsonDict: (NSDictionary *)JsonDict;
+- (instancetype)initWithDict: (NSDictionary *)JsonDict;
 
 @end

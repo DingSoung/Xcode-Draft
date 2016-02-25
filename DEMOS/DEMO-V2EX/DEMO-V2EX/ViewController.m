@@ -2,12 +2,12 @@
 //  ViewController.m
 //  DEMO-V2EX
 //
-//  Created by Alex D. on 2/25/16.
+//  Created by CuiCui2 on 2/25/16.
 //  Copyright © 2016 Cui. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "NodeTableViewController.h"
+#import "NodeViewController.h"
 
 @interface ViewController ()
 
@@ -32,7 +32,7 @@
 }
 
 - (IBAction)guest:(UIButton *)sender {
-    NodeTableViewController * vc = [[NodeTableViewController alloc] initWithNibName:@"NodeTableViewController" bundle:nil];
+    NodeViewController * vc = [[NodeViewController alloc] initWithNibName:@"NodeViewController" bundle:nil];
     UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:navi animated:true completion:^{
     }];

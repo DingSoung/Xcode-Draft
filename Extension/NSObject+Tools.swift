@@ -9,9 +9,7 @@
 import Foundation
 extension NSObject {
     
-    /**
-     闭包实现 C中的代码块功能
-     */
+    /// codeBlock闭包实现 C中的代码块功能
     public func closure(
         mark:String? = "",
         run:Bool? = true,
@@ -27,15 +25,18 @@ extension NSObject {
         self.closure(block: block, complete: nil)
     }
     
-    /**
-     交换两个值
-     */
+    ///switch two same type value
     public func swep<T>(inout a:T, inout b:T) {
         let temp = a
         a = b
         b = temp
     }
     
+    ///dict to model
+    convenience init(dict : [String : AnyObject]) {
+        self.init()
+        self.setValuesForKeysWithDictionary(dict)
+    }
     
     /**
      Json String to model
@@ -58,13 +59,7 @@ extension NSObject {
         }
     }
     
-    /**
-     Json Dict to model
-     */
-    convenience init(jsonDict : [String : AnyObject]) {
-        self.init()
-        self.setValuesForKeysWithDictionary(jsonDict)
-    }
+
     
     //MARK: 字典转model array
     /*

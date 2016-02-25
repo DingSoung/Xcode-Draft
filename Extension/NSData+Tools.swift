@@ -10,31 +10,13 @@ import Foundation
 //MARK: need add bridge header #import <CommonCrypto/CommonCrypto.h> 
 extension NSData {
     
-    /**
-     json data to dictionary
-     */
-    public var jsonDictionary: NSDictionary? {
+    
+    ///json data to jsonObject (Array or Dictionary)
+    public var jsonObject: AnyObject? {
         do {
-            if let dictionary = try NSJSONSerialization.JSONObjectWithData(self, options: NSJSONReadingOptions.AllowFragments) as? NSDictionary {
-                return dictionary
-            } else {
-                return nil
-            }
+            return try NSJSONSerialization.JSONObjectWithData(self, options: NSJSONReadingOptions.AllowFragments)
         } catch {
              return nil
-        }
-    }
-    
-    public var jsonDict: NSDictionary? {
-        //return NSKeyedUnarchiver.unarchiveObjectWithData(self) as? NSDictionary
-        do {
-            let data = try NSJSONSerialization.JSONObjectWithData(self, options: NSJSONReadingOptions.MutableContainers)
-            guard let dictionary = data as? NSDictionary else {
-                return nil
-            }
-            return dictionary
-        } catch {
-            return nil
         }
     }
         

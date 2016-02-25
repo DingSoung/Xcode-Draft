@@ -155,7 +155,7 @@
                                         }
                                 };
     [NetworkManager POST:url parameter:parameter success:^(NSData * data) {
-        NSDictionary* jsonDict = data.jsonDict;
+        NSDictionary* jsonDict = data.jsonObject;
         if (jsonDict != nil) {
             NSLog(@"%@", jsonDict);
         }

@@ -33,7 +33,7 @@
     return self;
 }
 
-- (instancetype)initWithJsonDict: (NSDictionary *)JsonDict {
+- (instancetype)initWithDict: (NSDictionary *)JsonDict {
     self = [super init];
     if (self) {
         [self setValuesForKeysWithDictionary:JsonDict];
