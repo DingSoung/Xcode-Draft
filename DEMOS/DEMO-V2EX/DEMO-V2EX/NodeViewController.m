@@ -9,6 +9,7 @@
 #import "NodeViewController.h"
 #import "NodeTableCell.h"
 #import "DEMO_V2EX-swift.h"
+#import "NodeDetailViewController.h"
 
 @interface NodeViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,14 +22,9 @@
     [super viewDidLoad];
     
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     self.tableView.estimatedRowHeight = 50;
     [self.tableView registerNib:[UINib nibWithNibName:@"NodeTableCell" bundle:nil] forCellReuseIdentifier:@"NodeTableCell"];
-    
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
     __weak __typeof(self) weakSelf = self;
     [NetworkManager GET:@"http://www.v2ex.com/api/nodes/all.json" parameter:@{} success:^(NSData * data) {
@@ -40,6 +36,7 @@
             [models addObject:model];
         }
         weakSelf.models = models;
+        [weakSelf.tableView reloadData];
     } fail:^(NSError * error) {
         NSLog(@"%@", error.domain);
     }];
@@ -54,8 +51,8 @@
 - (void)setModels:(NSArray<__kindof NodeModel *> *)models {
     if (_models != models) {
         _models = models;
-        [self.tableView reloadData];
     }
+    [self.tableView reloadData];
 }
 
 #pragma mark - tableView datasource
@@ -75,7 +72,10 @@
 
 #pragma mark - tableView delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // 跳转
+    NodeDetailViewController * vc = [[NodeDetailViewController alloc] initWithNibName:@"NodeDetailViewController" bundle:nil];
+    NodeModel *model = self.models[indexPath.row];
+    vc.name = model.name;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

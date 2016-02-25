@@ -41,6 +41,10 @@
 		FAA4068A1C7F430B0014182F /* NodeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA406891C7F430B0014182F /* NodeTableCell.xib */; };
 		FAA406901C7F49FE0014182F /* NodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4068E1C7F49FE0014182F /* NodeViewController.m */; };
 		FAA406911C7F49FE0014182F /* NodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA4068F1C7F49FE0014182F /* NodeViewController.xib */; };
+		FAA406951C7F62200014182F /* NodeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA406931C7F62200014182F /* NodeDetailViewController.m */; };
+		FAA406961C7F62200014182F /* NodeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA406941C7F62200014182F /* NodeDetailViewController.xib */; };
+		FAA406991C7F62560014182F /* NodeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA406981C7F62560014182F /* NodeDetailModel.m */; };
+		FAA4069C1C7F6C640014182F /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4069B1C7F6C640014182F /* FunctionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,13 @@
 		FAA4068D1C7F49FE0014182F /* NodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeViewController.h; sourceTree = "<group>"; };
 		FAA4068E1C7F49FE0014182F /* NodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeViewController.m; sourceTree = "<group>"; };
 		FAA4068F1C7F49FE0014182F /* NodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodeViewController.xib; sourceTree = "<group>"; };
+		FAA406921C7F62200014182F /* NodeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeDetailViewController.h; sourceTree = "<group>"; };
+		FAA406931C7F62200014182F /* NodeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeDetailViewController.m; sourceTree = "<group>"; };
+		FAA406941C7F62200014182F /* NodeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodeDetailViewController.xib; sourceTree = "<group>"; };
+		FAA406971C7F62560014182F /* NodeDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeDetailModel.h; sourceTree = "<group>"; };
+		FAA406981C7F62560014182F /* NodeDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeDetailModel.m; sourceTree = "<group>"; };
+		FAA4069A1C7F6C640014182F /* FunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionViewController.h; sourceTree = "<group>"; };
+		FAA4069B1C7F6C640014182F /* FunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +181,8 @@
 				FA4B4DF51C7EAEB000DFB46B /* ViewController.h */,
 				FA4B4DF61C7EAEB000DFB46B /* ViewController.m */,
 				FA4B4DF81C7EAEB000DFB46B /* Main.storyboard */,
+				FAA4069A1C7F6C640014182F /* FunctionViewController.h */,
+				FAA4069B1C7F6C640014182F /* FunctionViewController.m */,
 				FAA4068D1C7F49FE0014182F /* NodeViewController.h */,
 				FAA4068E1C7F49FE0014182F /* NodeViewController.m */,
 				FAA4068F1C7F49FE0014182F /* NodeViewController.xib */,
@@ -178,6 +191,11 @@
 				FAA406891C7F430B0014182F /* NodeTableCell.xib */,
 				FAA406831C7F41360014182F /* NodeModel.h */,
 				FAA406841C7F41360014182F /* NodeModel.m */,
+				FAA406921C7F62200014182F /* NodeDetailViewController.h */,
+				FAA406931C7F62200014182F /* NodeDetailViewController.m */,
+				FAA406941C7F62200014182F /* NodeDetailViewController.xib */,
+				FAA406971C7F62560014182F /* NodeDetailModel.h */,
+				FAA406981C7F62560014182F /* NodeDetailModel.m */,
 				FA4B4DFE1C7EAEB000DFB46B /* Assets.xcassets */,
 				FA4B4E001C7EAEB000DFB46B /* LaunchScreen.storyboard */,
 				FA4B4E031C7EAEB000DFB46B /* Info.plist */,
@@ -366,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA4068A1C7F430B0014182F /* NodeTableCell.xib in Resources */,
+				FAA406961C7F62200014182F /* NodeDetailViewController.xib in Resources */,
 				FA4B4E021C7EAEB000DFB46B /* LaunchScreen.storyboard in Resources */,
 				FA4B4DFF1C7EAEB000DFB46B /* Assets.xcassets in Resources */,
 				FAA406911C7F49FE0014182F /* NodeViewController.xib in Resources */,
@@ -396,6 +415,7 @@
 			files = (
 				FA4B4E581C7ED54100DFB46B /* JavaScriptManager.swift in Sources */,
 				FA4B4E2F1C7ED52000DFB46B /* BaseModel.m in Sources */,
+				FAA406991C7F62560014182F /* NodeDetailModel.m in Sources */,
 				FA4B4E471C7ED52900DFB46B /* String+Tools.swift in Sources */,
 				FA4B4E431C7ED52900DFB46B /* NSDictionary+Tools.swift in Sources */,
 				FAA406901C7F49FE0014182F /* NodeViewController.m in Sources */,
@@ -411,6 +431,8 @@
 				FA4B4DF41C7EAEB000DFB46B /* AppDelegate.m in Sources */,
 				FA4B4E561C7ED54100DFB46B /* DSPDFImage.m in Sources */,
 				FA4B4E301C7ED52000DFB46B /* ShareData.swift in Sources */,
+				FAA4069C1C7F6C640014182F /* FunctionViewController.m in Sources */,
+				FAA406951C7F62200014182F /* NodeDetailViewController.m in Sources */,
 				FA4B4E4B1C7ED52900DFB46B /* UIVIew+Tools.swift in Sources */,
 				FAA406851C7F41360014182F /* NodeModel.m in Sources */,
 				FA4B4E421C7ED52900DFB46B /* NSData+Tools.swift in Sources */,

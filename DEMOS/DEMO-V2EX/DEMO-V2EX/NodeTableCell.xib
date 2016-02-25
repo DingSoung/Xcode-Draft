@@ -16,27 +16,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTV-Ns-2u5">
-                        <rect key="frame" x="8" y="37.5" width="31" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTV-Ns-2u5">
+                        <rect key="frame" x="8" y="35.5" width="31" height="13"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kR-aI-7Pq">
-                        <rect key="frame" x="8" y="4" width="42" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kR-aI-7Pq">
+                        <rect key="frame" x="8" y="13" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="7kR-aI-7Pq" firstAttribute="top" secondItem="SI4-sH-uvA" secondAttribute="topMargin" constant="5" id="DvI-tW-zHK"/>
                     <constraint firstItem="bTV-Ns-2u5" firstAttribute="leading" secondItem="7kR-aI-7Pq" secondAttribute="leading" id="HTy-kW-fb5"/>
                     <constraint firstItem="7kR-aI-7Pq" firstAttribute="centerY" secondItem="SI4-sH-uvA" secondAttribute="centerY" multiplier="1:2" id="L42-77-eKn"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="bTV-Ns-2u5" secondAttribute="bottom" constant="3" id="RQZ-Kz-oq3"/>
+                    <constraint firstItem="bTV-Ns-2u5" firstAttribute="top" secondItem="7kR-aI-7Pq" secondAttribute="bottom" constant="2" id="Rj5-97-mWH"/>
                     <constraint firstItem="7kR-aI-7Pq" firstAttribute="leading" secondItem="SI4-sH-uvA" secondAttribute="leadingMargin" id="ccP-J2-9TI"/>
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="bTV-Ns-2u5" secondAttribute="trailing" id="lnP-wq-QYQ"/>
                     <constraint firstItem="bTV-Ns-2u5" firstAttribute="centerY" secondItem="SI4-sH-uvA" secondAttribute="centerY" multiplier="3:2" id="oIy-QO-BqR"/>
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="7kR-aI-7Pq" secondAttribute="trailing" id="vGg-c2-Cp8"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="L42-77-eKn"/>
+                        <exclude reference="oIy-QO-BqR"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="headerLabel" destination="bTV-Ns-2u5" id="mKW-NH-La9"/>

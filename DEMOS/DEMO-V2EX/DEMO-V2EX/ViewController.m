@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "NodeViewController.h"
+#import "FunctionViewController.h"
 
 @interface ViewController ()
 
@@ -30,9 +30,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)guest:(UIButton *)sender {
-    NodeViewController * vc = [[NodeViewController alloc] initWithNibName:@"NodeViewController" bundle:nil];
+- (IBAction)guest:(id)sender {
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    FunctionViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"FunctionViewController"];
     UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:navi animated:true completion:^{
     }];
