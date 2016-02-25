@@ -95,7 +95,6 @@ class WordCloudView: UIView {
             // Backup.
             CGContextSaveGState(context)
             
-            
             // 配置坐标
             CGContextTranslateCTM(context, 0 * rect.size.width, -1 * rect.size.height)
             

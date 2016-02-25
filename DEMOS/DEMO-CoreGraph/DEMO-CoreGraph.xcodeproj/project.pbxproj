@@ -17,6 +17,7 @@
 		FA4B4D871C770E7B00DFB46B /* DEMO_CoreGraphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B4D861C770E7B00DFB46B /* DEMO_CoreGraphUITests.swift */; };
 		FA4B4D9F1C770F1200DFB46B /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B4D991C770F1200DFB46B /* PieChartView.swift */; };
 		FA4B4DA11C770F1200DFB46B /* WordCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B4D9C1C770F1200DFB46B /* WordCloudView.swift */; };
+		FA4B4DE21C7AEBE300DFB46B /* GaugeChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B4DE11C7AEBE300DFB46B /* GaugeChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FA4B4D881C770E7B00DFB46B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA4B4D991C770F1200DFB46B /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		FA4B4D9C1C770F1200DFB46B /* WordCloudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCloudView.swift; sourceTree = "<group>"; };
+		FA4B4DE11C7AEBE300DFB46B /* GaugeChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				FA4B4D991C770F1200DFB46B /* PieChartView.swift */,
 				FA4B4D9C1C770F1200DFB46B /* WordCloudView.swift */,
+				FA4B4DE11C7AEBE300DFB46B /* GaugeChartView.swift */,
 			);
 			name = Views;
 			path = ../../Views;
@@ -279,6 +282,7 @@
 				FA4B4D661C770E7B00DFB46B /* ViewController.swift in Sources */,
 				FA4B4DA11C770F1200DFB46B /* WordCloudView.swift in Sources */,
 				FA4B4D641C770E7B00DFB46B /* AppDelegate.swift in Sources */,
+				FA4B4DE21C7AEBE300DFB46B /* GaugeChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
