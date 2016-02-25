@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +18,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID/email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wxC-Kc-kjy">
+                                <rect key="frame" x="60" y="133" width="480" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rW1-Ri-E8C">
+                                <rect key="frame" x="60" y="179" width="480" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhr-wi-CIh">
+                                <rect key="frame" x="60" y="235" width="30" height="30"/>
+                                <state key="normal" title="游客"/>
+                                <connections>
+                                    <action selector="guest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFh-1U-3LX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H8-Ye-126">
+                                <rect key="frame" x="510" y="235" width="30" height="30"/>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BQY-jN-rr4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V2EX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOW-tj-wdu">
+                                <rect key="frame" x="217" y="41" width="165.5" height="82.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7H8-Ye-126" firstAttribute="trailing" secondItem="rW1-Ri-E8C" secondAttribute="trailing" id="2Qg-uH-ryL"/>
+                            <constraint firstItem="wxC-Kc-kjy" firstAttribute="leading" secondItem="gOW-tj-wdu" secondAttribute="trailing" constant="64.5" id="3eJ-XI-lFt"/>
+                            <constraint firstItem="Xhr-wi-CIh" firstAttribute="leading" secondItem="rW1-Ri-E8C" secondAttribute="leading" id="5Kf-Yo-PDE"/>
+                            <constraint firstItem="gOW-tj-wdu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="6bA-ax-Ric"/>
+                            <constraint firstItem="7H8-Ye-126" firstAttribute="centerY" secondItem="Xhr-wi-CIh" secondAttribute="centerY" id="81J-9U-Zh5"/>
+                            <constraint firstItem="wxC-Kc-kjy" firstAttribute="top" secondItem="gOW-tj-wdu" secondAttribute="bottom" constant="10" id="9pl-US-R9E"/>
+                            <constraint firstItem="wxC-Kc-kjy" firstAttribute="top" secondItem="gOW-tj-wdu" secondAttribute="top" id="Gfp-WH-6do"/>
+                            <constraint firstItem="rW1-Ri-E8C" firstAttribute="top" secondItem="wxC-Kc-kjy" secondAttribute="bottom" constant="16" id="e9o-hl-Ngz"/>
+                            <constraint firstItem="Xhr-wi-CIh" firstAttribute="top" secondItem="rW1-Ri-E8C" secondAttribute="bottom" constant="26" id="fSb-lg-Rre"/>
+                            <constraint firstItem="rW1-Ri-E8C" firstAttribute="centerX" secondItem="wxC-Kc-kjy" secondAttribute="centerX" id="j1t-Ss-nD0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wxC-Kc-kjy" secondAttribute="trailing" constant="40" id="m6O-St-QWH"/>
+                            <constraint firstItem="wxC-Kc-kjy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="oce-wo-O9K"/>
+                            <constraint firstItem="wxC-Kc-kjy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oxa-tB-Lom"/>
+                            <constraint firstItem="gOW-tj-wdu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pM2-LW-Hoe"/>
+                            <constraint firstItem="wxC-Kc-kjy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="qeD-LE-67G"/>
+                            <constraint firstItem="gOW-tj-wdu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vKq-iK-niF"/>
+                            <constraint firstItem="rW1-Ri-E8C" firstAttribute="width" secondItem="wxC-Kc-kjy" secondAttribute="width" id="xUG-P3-mah"/>
+                            <constraint firstItem="gOW-tj-wdu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="zaB-4I-GSJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3eJ-XI-lFt"/>
+                                <exclude reference="Gfp-WH-6do"/>
+                                <exclude reference="m6O-St-QWH"/>
+                                <exclude reference="oce-wo-O9K"/>
+                                <exclude reference="vKq-iK-niF"/>
+                                <exclude reference="zaB-4I-GSJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="3eJ-XI-lFt"/>
+                                <exclude reference="9pl-US-R9E"/>
+                                <include reference="Gfp-WH-6do"/>
+                                <include reference="m6O-St-QWH"/>
+                                <exclude reference="oxa-tB-Lom"/>
+                                <exclude reference="qeD-LE-67G"/>
+                                <exclude reference="6bA-ax-Ric"/>
+                                <exclude reference="pM2-LW-Hoe"/>
+                                <include reference="vKq-iK-niF"/>
+                                <include reference="zaB-4I-GSJ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="88" y="220.5"/>
         </scene>
     </scenes>
 </document>

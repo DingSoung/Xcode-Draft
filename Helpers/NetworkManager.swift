@@ -36,6 +36,17 @@ class NetworkManager: NSObject {
     private override init() {
         session = NSURLSession.sharedSession()
         
+        //http://www.raywenderlich.com/51127/nsurlsession-tutorial
+        
+        //configuration
+        //session.configuration.allowsCellularAccess = true //移动网络
+        
+        //session.configuration.HTTPAdditionalHeaders = ["Accept": "application/json"] //test/html
+        
+        //session.configuration.timeoutIntervalForRequest = 30.0;
+        //session.configuration.timeoutIntervalForResource = 60.0;
+        //session.configuration.HTTPMaximumConnectionsPerHost = 10;
+        
         super.init()
         
     }

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NodeTableViewController.h"
 
 @interface ViewController ()
 
@@ -19,9 +20,25 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)guest:(UIButton *)sender {
+    NodeTableViewController * vc = [[NodeTableViewController alloc] initWithNibName:@"NodeTableViewController" bundle:nil];
+    UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:navi animated:true completion:^{
+    }];
+}
+
+- (IBAction)login:(UIButton *)sender {
 }
 
 @end

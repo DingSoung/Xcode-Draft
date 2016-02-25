@@ -13,6 +13,18 @@ extension NSData {
     /**
      json data to dictionary
      */
+    public var jsonDictionary: NSDictionary? {
+        do {
+            if let dictionary = try NSJSONSerialization.JSONObjectWithData(self, options: NSJSONReadingOptions.AllowFragments) as? NSDictionary {
+                return dictionary
+            } else {
+                return nil
+            }
+        } catch {
+             return nil
+        }
+    }
+    
     public var jsonDict: NSDictionary? {
         //return NSKeyedUnarchiver.unarchiveObjectWithData(self) as? NSDictionary
         do {
