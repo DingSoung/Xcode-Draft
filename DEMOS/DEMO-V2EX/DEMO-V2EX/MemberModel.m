@@ -9,7 +9,6 @@
 #import "MemberModel.h"
 
 @implementation MemberModel
-
 - (void) setValue:(id)value forUndefinedKey:(NSString *)key {
     if ([key isEqualToString:@"id"]) {
         self.uid = value;
@@ -17,5 +16,4 @@
         NSLog(@"undefined key%@:value%@",key,value);
     }
 }
-
 @end

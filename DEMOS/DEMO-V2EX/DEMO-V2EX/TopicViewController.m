@@ -8,6 +8,7 @@
 
 #import "TopicViewController.h"
 #import "TopicTableCell.h"
+#import "TopicDetailViewController.h"
 #import "DEMO_V2EX-swift.h"
 
 @interface TopicViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -39,6 +40,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView reloadData];
         });
+        
     } fail:^(NSError * error) {
         NSLog(@"%@", error.domain);
     }];
@@ -66,10 +68,10 @@
 
 #pragma mark - tableView delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NodeDetailViewController * vc = [[NodeDetailViewController alloc] initWithNibName:@"NodeDetailViewController" bundle:nil];
-//    NodeModel *model = self.models[indexPath.row];
-//    vc.name = model.name;
-//    [self.navigationController pushViewController:vc animated:YES];
+    TopicDetailViewController * vc = [[TopicDetailViewController alloc] initWithNibName:@"TopicDetailViewController" bundle:nil];
+    TopicModel *model = self.models[indexPath.row];
+    vc.topicID = model.uid;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

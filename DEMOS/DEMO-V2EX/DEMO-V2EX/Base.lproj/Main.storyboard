@@ -115,7 +115,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fla-7O-VCh">
                                 <rect key="frame" x="49" y="103" width="30" height="30"/>
-                                <state key="normal" title="最热"/>
+                                <state key="normal" title="最新"/>
                                 <connections>
                                     <action selector="hotActiob:" destination="kcP-Eg-hcN" eventType="touchUpInside" id="tXv-Bm-YJE"/>
                                 </connections>

@@ -1,5 +1,5 @@
 //
-//  TopicModel.h
+//  ReplyModel.h
 //  DEMO-V2EX
 //
 //  Created by Alex D. on 2/26/16.
@@ -8,18 +8,13 @@
 
 #import "BaseModel.h"
 #import "MemberModel.h"
-#import "NodeDetailModel.h"
 
-@interface TopicModel : BaseModel
+@interface ReplyModel : BaseModel
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *content_rendered;
 @property (nonatomic, copy) NSString *created;
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *last_modified;
-@property (nonatomic, copy) NSString *last_touched;
 @property (nonatomic, copy) MemberModel *memberModel;
-@property (nonatomic, copy) NodeDetailModel *nodeDetailModel;
-@property (nonatomic, copy) NSString *replies;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *thanks;
 @end
