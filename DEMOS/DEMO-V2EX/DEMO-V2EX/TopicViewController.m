@@ -37,18 +37,30 @@
             [models addObject:model];
         }
         weakSelf.models = models;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.tableView reloadData];
-        });
+
         
     } fail:^(NSError * error) {
         NSLog(@"%@", error.domain);
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.models = _models;
+}
+
+- (void)setModels:(NSArray<__kindof TopicModel *> *)models {
+    _models = models;
+    
+     __weak __typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [weakSelf.tableView reloadData];
+    });
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - tableView datasource

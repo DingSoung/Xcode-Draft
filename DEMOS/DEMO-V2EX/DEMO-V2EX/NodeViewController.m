@@ -36,14 +36,26 @@
             [models addObject:model];
         }
         weakSelf.models = models;
-        // should reload at main queue,
-        // ref http://stackoverflow.com/questions/25958282/uitableview-reloaddata-does-not-refresh-displayed-cells
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.tableView reloadData];
-        });
     } fail:^(NSError * error) {
         NSLog(@"%@", error.domain);
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.models = _models;
+}
+
+- (void)setModels:(NSArray<__kindof NodeModel *> *)models {
+    _models = models;
+    
+    __weak __typeof(self) weakSelf = self;
+    // should reload at main queue,
+    // ref http://stackoverflow.com/questions/25958282/uitableview-reloaddata-does-not-refresh-displayed-cells
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [weakSelf.tableView reloadData];
+    });
 }
 
 - (void)didReceiveMemoryWarning {
