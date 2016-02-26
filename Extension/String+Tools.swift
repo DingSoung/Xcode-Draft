@@ -7,7 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
 extension String {
+    
+    ///约束宽度 字号, 计算高度
+    func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: CGFloat.max)
+        
+        let boundingBox = self.boundingRectWithSize(constraintRect, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        
+        return boundingBox.height
+    }
     
 	//MARK: 转浮点数
 	public var floatValue: Float {
@@ -71,4 +82,24 @@ extension String {
 	提取信息中的双字节字符串 (汉字)：[^\x00-\xff]*
 	*/
 	
+}
+
+extension NSAttributedString {
+    
+    ///约束宽度 字号, 计算高度
+    func heightWithConstrainedWidth(width: CGFloat) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: CGFloat.max)
+        let boundingBox = self.boundingRectWithSize(constraintRect, options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
+        
+        return ceil(boundingBox.height)
+    }
+    
+    ///约束高度 字号, 计算宽度
+    func widthWithConstrainedHeight(height: CGFloat) -> CGFloat {
+        let constraintRect = CGSize(width: CGFloat.max, height: height)
+        
+        let boundingBox = self.boundingRectWithSize(constraintRect, options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
+        
+        return ceil(boundingBox.width)
+    }
 }
