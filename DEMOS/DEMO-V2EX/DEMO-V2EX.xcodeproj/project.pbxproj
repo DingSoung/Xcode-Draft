@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1020D11C80290900D01023 /* v2ex_api.md in Sources */ = {isa = PBXBuildFile; fileRef = FA1020D01C80290900D01023 /* v2ex_api.md */; };
+		FA1020D51C802A3500D01023 /* TopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1020D31C802A3500D01023 /* TopicViewController.m */; };
+		FA1020D61C802A3500D01023 /* TopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1020D41C802A3500D01023 /* TopicViewController.xib */; };
+		FA1020D91C802B9D00D01023 /* TopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1020D81C802B9D00D01023 /* TopicModel.m */; };
+		FA1020DC1C802C6900D01023 /* MemberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1020DB1C802C6900D01023 /* MemberModel.m */; };
+		FA1020E01C802F1C00D01023 /* TopicTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1020DE1C802F1C00D01023 /* TopicTableCell.m */; };
+		FA1020E11C802F1C00D01023 /* TopicTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1020DF1C802F1C00D01023 /* TopicTableCell.xib */; };
 		FA4B4DF11C7EAEB000DFB46B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4B4DF01C7EAEB000DFB46B /* main.m */; };
 		FA4B4DF41C7EAEB000DFB46B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4B4DF31C7EAEB000DFB46B /* AppDelegate.m */; };
 		FA4B4DF71C7EAEB000DFB46B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4B4DF61C7EAEB000DFB46B /* ViewController.m */; };
@@ -65,6 +72,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA1020D01C80290900D01023 /* v2ex_api.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = v2ex_api.md; sourceTree = "<group>"; };
+		FA1020D21C802A3500D01023 /* TopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicViewController.h; sourceTree = "<group>"; };
+		FA1020D31C802A3500D01023 /* TopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicViewController.m; sourceTree = "<group>"; };
+		FA1020D41C802A3500D01023 /* TopicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicViewController.xib; sourceTree = "<group>"; };
+		FA1020D71C802B9D00D01023 /* TopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicModel.h; sourceTree = "<group>"; };
+		FA1020D81C802B9D00D01023 /* TopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicModel.m; sourceTree = "<group>"; };
+		FA1020DA1C802C6900D01023 /* MemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberModel.h; sourceTree = "<group>"; };
+		FA1020DB1C802C6900D01023 /* MemberModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberModel.m; sourceTree = "<group>"; };
+		FA1020DD1C802F1C00D01023 /* TopicTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicTableCell.h; sourceTree = "<group>"; };
+		FA1020DE1C802F1C00D01023 /* TopicTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicTableCell.m; sourceTree = "<group>"; };
+		FA1020DF1C802F1C00D01023 /* TopicTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicTableCell.xib; sourceTree = "<group>"; };
 		FA4B4DEC1C7EAEB000DFB46B /* DEMO-V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMO-V2EX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4B4DF01C7EAEB000DFB46B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA4B4DF21C7EAEB000DFB46B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +170,7 @@
 		FA4B4DE31C7EAEB000DFB46B = {
 			isa = PBXGroup;
 			children = (
+				FA1020D01C80290900D01023 /* v2ex_api.md */,
 				FA4B4E5D1C7EE52200DFB46B /* Bridging-Header.h */,
 				FA4B4DEE1C7EAEB000DFB46B /* DEMO-V2EX */,
 				FA4B4E0B1C7EAEB000DFB46B /* DEMO-V2EXTests */,
@@ -189,13 +208,23 @@
 				FAA406861C7F42F10014182F /* NodeTableCell.h */,
 				FAA406871C7F42F10014182F /* NodeTableCell.m */,
 				FAA406891C7F430B0014182F /* NodeTableCell.xib */,
-				FAA406831C7F41360014182F /* NodeModel.h */,
-				FAA406841C7F41360014182F /* NodeModel.m */,
 				FAA406921C7F62200014182F /* NodeDetailViewController.h */,
 				FAA406931C7F62200014182F /* NodeDetailViewController.m */,
 				FAA406941C7F62200014182F /* NodeDetailViewController.xib */,
+				FA1020D21C802A3500D01023 /* TopicViewController.h */,
+				FA1020D31C802A3500D01023 /* TopicViewController.m */,
+				FA1020D41C802A3500D01023 /* TopicViewController.xib */,
+				FA1020DD1C802F1C00D01023 /* TopicTableCell.h */,
+				FA1020DE1C802F1C00D01023 /* TopicTableCell.m */,
+				FA1020DF1C802F1C00D01023 /* TopicTableCell.xib */,
+				FAA406831C7F41360014182F /* NodeModel.h */,
+				FAA406841C7F41360014182F /* NodeModel.m */,
 				FAA406971C7F62560014182F /* NodeDetailModel.h */,
 				FAA406981C7F62560014182F /* NodeDetailModel.m */,
+				FA1020D71C802B9D00D01023 /* TopicModel.h */,
+				FA1020D81C802B9D00D01023 /* TopicModel.m */,
+				FA1020DA1C802C6900D01023 /* MemberModel.h */,
+				FA1020DB1C802C6900D01023 /* MemberModel.m */,
 				FA4B4DFE1C7EAEB000DFB46B /* Assets.xcassets */,
 				FA4B4E001C7EAEB000DFB46B /* LaunchScreen.storyboard */,
 				FA4B4E031C7EAEB000DFB46B /* Info.plist */,
@@ -385,9 +414,11 @@
 			files = (
 				FAA4068A1C7F430B0014182F /* NodeTableCell.xib in Resources */,
 				FAA406961C7F62200014182F /* NodeDetailViewController.xib in Resources */,
+				FA1020E11C802F1C00D01023 /* TopicTableCell.xib in Resources */,
 				FA4B4E021C7EAEB000DFB46B /* LaunchScreen.storyboard in Resources */,
 				FA4B4DFF1C7EAEB000DFB46B /* Assets.xcassets in Resources */,
 				FAA406911C7F49FE0014182F /* NodeViewController.xib in Resources */,
+				FA1020D61C802A3500D01023 /* TopicViewController.xib in Resources */,
 				FA4B4DFA1C7EAEB000DFB46B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,15 +448,18 @@
 				FA4B4E2F1C7ED52000DFB46B /* BaseModel.m in Sources */,
 				FAA406991C7F62560014182F /* NodeDetailModel.m in Sources */,
 				FA4B4E471C7ED52900DFB46B /* String+Tools.swift in Sources */,
+				FA1020D11C80290900D01023 /* v2ex_api.md in Sources */,
 				FA4B4E431C7ED52900DFB46B /* NSDictionary+Tools.swift in Sources */,
 				FAA406901C7F49FE0014182F /* NodeViewController.m in Sources */,
 				FA4B4E411C7ED52900DFB46B /* Int+Tools.swift in Sources */,
 				FA4B4DF71C7EAEB000DFB46B /* ViewController.m in Sources */,
+				FA1020E01C802F1C00D01023 /* TopicTableCell.m in Sources */,
 				FAA406881C7F42F10014182F /* NodeTableCell.m in Sources */,
 				FA4B4E461C7ED52900DFB46B /* NSString+Tools.swift in Sources */,
 				FA4B4E4C1C7ED52900DFB46B /* UIWebView+Tools.swift in Sources */,
 				FA4B4E481C7ED52900DFB46B /* UIColor+Tools.swift in Sources */,
 				FA4B4E4A1C7ED52900DFB46B /* UIImageView+Tools.swift in Sources */,
+				FA1020D51C802A3500D01023 /* TopicViewController.m in Sources */,
 				FA4B4E491C7ED52900DFB46B /* UIImageView+PDF.m in Sources */,
 				FA4B4E591C7ED54100DFB46B /* NetworkManager.swift in Sources */,
 				FA4B4DF41C7EAEB000DFB46B /* AppDelegate.m in Sources */,
@@ -438,8 +472,10 @@
 				FA4B4E421C7ED52900DFB46B /* NSData+Tools.swift in Sources */,
 				FA4B4DF11C7EAEB000DFB46B /* main.m in Sources */,
 				FA4B4E441C7ED52900DFB46B /* NSMutableData+Tools.swift in Sources */,
+				FA1020DC1C802C6900D01023 /* MemberModel.m in Sources */,
 				FA4B4E571C7ED54100DFB46B /* GCDManager.swift in Sources */,
 				FA4B4E451C7ED52900DFB46B /* NSObject+Tools.swift in Sources */,
+				FA1020D91C802B9D00D01023 /* TopicModel.m in Sources */,
 				FA4B4E5A1C7ED54100DFB46B /* NotificationManager.swift in Sources */,
 				FA4B4DFD1C7EAEB000DFB46B /* DEMO_V2EX.xcdatamodeld in Sources */,
 				FA4B4E311C7ED52000DFB46B /* ShareModel.swift in Sources */,

@@ -12,14 +12,20 @@
 @property (nonatomic, copy) NSString *avatar_large;
 @property (nonatomic, copy) NSString *avatar_mini;
 @property (nonatomic, copy) NSString *avatar_normal;
+/// tipic model 下的NodeDetail 没有
 @property (nonatomic, copy) NSString *created;
+/// tipic model 下的NodeDetail 没有
 @property (nonatomic, copy) NSString *footer;
+/// tipic model 下的NodeDetail 没有
 @property (nonatomic, copy) NSString *header;
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *name;
+/// tipic model 下的NodeDetail 没有
 @property (nonatomic, copy) NSString *stars;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *title_alternative;
 @property (nonatomic, copy) NSString *topics;
 @property (nonatomic, copy) NSString *url;
+
+/// 带
 @end

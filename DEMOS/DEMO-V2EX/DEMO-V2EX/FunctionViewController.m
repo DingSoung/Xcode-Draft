@@ -8,6 +8,7 @@
 
 #import "FunctionViewController.h"
 #import "NodeViewController.h"
+#import "TopicViewController.h"
 
 @interface FunctionViewController ()
 
@@ -31,7 +32,8 @@
 }
 
 - (IBAction)hotActiob:(UIButton *)sender {
-    
+    TopicViewController * vc = [[TopicViewController alloc] initWithNibName:@"TopicViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*

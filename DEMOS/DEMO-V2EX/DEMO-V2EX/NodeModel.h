@@ -18,5 +18,4 @@
 @property (nonatomic, copy) NSString *title_alternative;
 @property (nonatomic, copy) NSString *topics;
 @property (nonatomic, copy) NSString *url;
-
 @end

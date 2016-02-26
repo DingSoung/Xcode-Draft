@@ -10,7 +10,7 @@
 
 @implementation NodeModel
 
-- (void) setValue:(id)value forUndefinedKey:(NSString *)key {
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     if ([key isEqualToString:@"id"]) {
         self.uid = value;
     } else {

@@ -1,43 +1,41 @@
 //
-//  NodeViewController.m
+//  TopicViewController.m
 //  DEMO-V2EX
 //
-//  Created by CuiCui2 on 16/2/25.
-//  Copyright © 2016年 Cui. All rights reserved.
+//  Created by Alex D. on 2/26/16.
+//  Copyright © 2016 Cui. All rights reserved.
 //
 
-#import "NodeViewController.h"
-#import "NodeTableCell.h"
+#import "TopicViewController.h"
+#import "TopicTableCell.h"
 #import "DEMO_V2EX-swift.h"
-#import "NodeDetailViewController.h"
 
-@interface NodeViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface TopicViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, copy) NSArray<__kindof NodeModel *> *models;
+@property (nonatomic, copy) NSArray<__kindof TopicModel *> *models;
 @end
 
-@implementation NodeViewController
+@implementation TopicViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.estimatedRowHeight = 50;
-    [self.tableView registerNib:[UINib nibWithNibName:@"NodeTableCell" bundle:nil] forCellReuseIdentifier:@"NodeTableCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TopicTableCell" bundle:nil] forCellReuseIdentifier:@"TopicTableCell"];
     
     __weak __typeof(self) weakSelf = self;
-    [NetworkManager GET:@"http://www.v2ex.com/api/nodes/all.json" parameter:@{} success:^(NSData * data) {
+    [NetworkManager GET:@"http://www.v2ex.com/api/topics/latest.json" parameter:@{} success:^(NSData * data) {
         NSArray *dicts = data.jsonObject;
-        NSMutableArray<__kindof NodeModel *> *models =  [[NSMutableArray alloc] init];
+        NSMutableArray<__kindof TopicModel *> *models =  [[NSMutableArray alloc] init];
         for (NSInteger index = 0; index < dicts.count; index++) {
             NSDictionary *dict = dicts[index];
-            NodeModel *model = [[NodeModel alloc] initWithDict:dict];
+            TopicModel *model = [[TopicModel alloc] initWithDict:dict];
             [models addObject:model];
         }
         weakSelf.models = models;
-        // should reload at main queue,
-        // ref http://stackoverflow.com/questions/25958282/uitableview-reloaddata-does-not-refresh-displayed-cells
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView reloadData];
         });
@@ -61,17 +59,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NodeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NodeTableCell" forIndexPath:indexPath];
+    TopicTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TopicTableCell" forIndexPath:indexPath];
     cell.model = self.models[indexPath.row];
     return cell;
 }
 
 #pragma mark - tableView delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NodeDetailViewController * vc = [[NodeDetailViewController alloc] initWithNibName:@"NodeDetailViewController" bundle:nil];
-    NodeModel *model = self.models[indexPath.row];
-    vc.name = model.name;
-    [self.navigationController pushViewController:vc animated:YES];
+//    NodeDetailViewController * vc = [[NodeDetailViewController alloc] initWithNibName:@"NodeDetailViewController" bundle:nil];
+//    NodeModel *model = self.models[indexPath.row];
+//    vc.name = model.name;
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
