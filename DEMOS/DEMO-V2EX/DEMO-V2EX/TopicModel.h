@@ -13,10 +13,10 @@
 @interface TopicModel : BaseModel
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *content_rendered;
-@property (nonatomic, copy) NSString *created;
-@property (nonatomic, copy) NSString *uid;
-@property (nonatomic, copy) NSString *last_modified;
-@property (nonatomic, copy) NSString *last_touched;
+@property (nonatomic, copy) NSNumber *created;
+@property (nonatomic, copy) NSNumber *uid;
+@property (nonatomic, copy) NSNumber *last_modified;
+@property (nonatomic, copy) NSNumber *last_touched;
 @property (nonatomic, copy) MemberModel *memberModel;
 @property (nonatomic, copy) NodeDetailModel *nodeDetailModel;
 @property (nonatomic, copy) NSString *replies;

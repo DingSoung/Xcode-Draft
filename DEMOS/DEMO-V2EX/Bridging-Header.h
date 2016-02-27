@@ -10,10 +10,12 @@
 #ifndef Beidging_Header_h
 #define Beidging_Header_h
 
+#define USE_SDWEBIMAGE
+
 #endif
 
 #import "Extension-Header.h"
-
+#import "Vendors-Header.h"
 
 
 

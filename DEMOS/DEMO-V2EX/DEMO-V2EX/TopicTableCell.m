@@ -7,22 +7,31 @@
 //
 
 #import "TopicTableCell.h"
+#import "Bridging-Header.h"
 
-@implementation TopicTableCell
+@implementation TopicTableCell {
+    __weak IBOutlet UILabel *titleLabel;
+    
+    __weak IBOutlet UILabel *creatLabel;
+    
+    __weak IBOutlet UIImageView *avatarImage;
+    __weak IBOutlet UILabel *infoLabel;
+}
 
 - (void)awakeFromNib {
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 - (void)setModel:(TopicModel *)model {
-    self.textLabel.text = model.title;
-    self.detailTextLabel.text = model.memberModel.username;
+    _model = model;
+    
+    self->titleLabel.text = self.model.title;
+    self->creatLabel.text = [NSString stringWithFormat:@"%@",self.model.created];
+    [self->avatarImage sd_setImageWithURL:[NSURL URLWithString:model.memberModel.avatar_normal]];
+    self->infoLabel.text = self.model.memberModel.username;
 }
 
 @end

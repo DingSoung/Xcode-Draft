@@ -18,7 +18,7 @@
 @property (nonatomic, copy) NSString *footer;
 /// tipic model 下的NodeDetail 没有
 @property (nonatomic, copy) NSString *header;
-@property (nonatomic, copy) NSString *uid;
+@property (nonatomic, copy) NSNumber *uid;
 @property (nonatomic, copy) NSString *name;
 /// tipic model 下的NodeDetail 没有
 @property (nonatomic, copy) NSString *stars;

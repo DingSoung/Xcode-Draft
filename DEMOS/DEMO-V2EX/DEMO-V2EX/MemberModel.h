@@ -12,7 +12,7 @@
 @property (nonatomic, copy) NSString *avatar_large;
 @property (nonatomic, copy) NSString *avatar_mini;
 @property (nonatomic, copy) NSString *avatar_normal;
-@property (nonatomic, copy) NSString *uid;
+@property (nonatomic, copy) NSNumber *uid;
 @property (nonatomic, copy) NSString *tagline;
 @property (nonatomic, copy) NSString *username;
 @end

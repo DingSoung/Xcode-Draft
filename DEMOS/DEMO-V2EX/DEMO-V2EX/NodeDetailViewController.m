@@ -9,6 +9,7 @@
 #import "NodeDetailViewController.h"
 #import "NodeDetailModel.h"
 #import "DEMO_V2EX-swift.h"
+#import "Bridging-Header.h"
 
 @interface NodeDetailViewController ()
 @property (nonatomic, copy) NodeDetailModel *model;
@@ -47,8 +48,11 @@
 
 - (void)setModel:(NodeDetailModel *)model {
     _model = model;
-    
     self.nameLabel.text = self.model.name;
+    __weak __typeof(self) weakSelf = self;
+    [self.avatarImage sd_setImageWithURL:[NSURL URLWithString:self.model.avatar_normal] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [weakSelf.avatarImage sizeToFit];
+    }];
     self.headerLabel.text = self.model.header;
 }
 
