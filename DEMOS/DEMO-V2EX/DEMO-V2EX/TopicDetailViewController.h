@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TopicModel.h"
 
 @interface TopicDetailViewController : UIViewController
-@property (nonatomic, copy) NSString *topicID;
+@property (nonatomic, copy) TopicModel *model;
 @end

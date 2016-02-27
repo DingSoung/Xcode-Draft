@@ -10,7 +10,7 @@ import UIKit
 
 class GaugeChartView: UIView {
     
-    var maxAngular = 120.0;
+    var maxAngular:CGFloat = 120.0;
     var circleWidth:CGFloat = 20;
     
     
@@ -25,14 +25,6 @@ class GaugeChartView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-    
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         
@@ -40,25 +32,28 @@ class GaugeChartView: UIView {
         // R * cos(90 - maxAngular * 0.5) * 2 < totalWidth - circleWidth
         let minR1 = (self.frame.size.height - self.circleWidth) / (1 - cos(CGFloat(maxAngular) * 0.5))
         let minR2 = (self.frame.size.width - self.circleWidth) / (2 * (1 - sin(CGFloat(maxAngular) * 0.5)))
-        let radius = min(minR1, minR2)
+        var radius = min(minR1, minR2)
         
-        
-        let origin = CGPointMake(self.center.x, self.circleWidth * 0.5 + radius)
+        var origin = CGPointMake(self.center.x, self.circleWidth * 0.5 + radius)
         
         let clockwise = true
         
         
         
+        radius = min(rect.size.width, rect.size.height) * 0.5;
+        origin = CGPointMake(rect.size.width * 0.5, rect.size.height * 0.5)
         
         
+        //// Oval Drawing
+        let ovalPath = UIBezierPath(ovalInRect: rect) //   [UIBezierPath bezierPath];
         
+        ovalPath.addArcWithCenter(origin, radius: radius, startAngle: CGFloat(M_PI), endAngle: 0, clockwise: clockwise)
         
+        UIColor.redColor().setStroke()
         
-        
-        
-        
-        
-        
+        ovalPath.lineWidth = 30;
+        ovalPath.stroke()
+
     }
 
 }

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TopicViewController : UIViewController
-
+@property (nonatomic, copy) NSString *topic;
 @end

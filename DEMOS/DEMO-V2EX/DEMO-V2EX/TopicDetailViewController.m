@@ -39,42 +39,52 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    //self.tableHeaderView.model = self.tableHeaderView.model;
     self.replyModels = _replyModels;
+}
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    // subview will layout
+    self.tableHeaderView.model = self.model;
+    
+//    [self.tableHeaderView setNeedsLayout];
+//    [self.tableHeaderView layoutIfNeeded];
+//    
+//    CGFloat height = [self.tableHeaderView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+//    CGRect frame = self.tableHeaderView.frame;
+//    frame.size.height = height;
+//    self.tableHeaderView.frame = frame;
+    
+    self.tableView.tableHeaderView = self.tableHeaderView;
 }
 
 - (BOOL)shouldAutorotate {
     return NO;
 }
 
-- (void)setTopicID:(NSString *)topicID {
-    __weak __typeof(self) weakSelf = self;
+- (void)setModel:(TopicModel *)model {
+    _model = model;
     
-    [NetworkManager GET:[NSString stringWithFormat:@"http://www.v2ex.com/api/topics/show.json?id=%@",topicID] parameter:@{} success:^(NSData * data) {
-        NSArray *dicts = data.jsonObject;
-        for (NSInteger index = 0; index < dicts.count;  ) {
-            NSDictionary *dict = dicts[index];
-            TopicModel *model = [[TopicModel alloc] initWithDict:dict];
-            //weakSelf.tableHeaderView.model = model;
-            break;
-        }
-    } fail:^(NSError * error) {
-        NSLog(@"%@", error.domain);
-    }];
+    self.tableHeaderView.model = self.model;
     
-    [NetworkManager GET:[NSString stringWithFormat:@"http://www.v2ex.com/api/replies/show.json?topic_id=%@",topicID] parameter:@{} success:^(NSData * data) {
-        NSArray *dicts = data.jsonObject;
-        
-        NSMutableArray<__kindof ReplyModel *> *models =  [[NSMutableArray alloc] init];
-        for (NSInteger index = 0; index < dicts.count; index++) {
-            NSDictionary *dict = dicts[index];
-            ReplyModel *model = [[ReplyModel alloc] initWithDict:dict];
-            [models addObject:model];
-        }
-        weakSelf.replyModels = models;
-    } fail:^(NSError * error) {
-        NSLog(@"%@", error.domain);
-    }];
+    if (self.model.uid == nil) {
+        return;
+    } else {
+        __weak __typeof(self) weakSelf = self;
+        [NetworkManager GET:[NSString stringWithFormat:@"http://www.v2ex.com/api/replies/show.json?topic_id=%@",self.model.uid] parameter:@{} success:^(NSData * data) {
+            NSArray *dicts = data.jsonObject;
+            
+            NSMutableArray<__kindof ReplyModel *> *models =  [[NSMutableArray alloc] init];
+            for (NSInteger index = 0; index < dicts.count; index++) {
+                NSDictionary *dict = dicts[index];
+                ReplyModel *model = [[ReplyModel alloc] initWithDict:dict];
+                [models addObject:model];
+            }
+            weakSelf.replyModels = models;
+        } fail:^(NSError * error) {
+            NSLog(@"%@", error.domain);
+        }];
+    }
 }
 
 - (void)setReplyModels:(NSArray<__kindof ReplyModel *> *)replyModels {
@@ -104,10 +114,10 @@
 
 #pragma mark - tableView delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NodeDetailViewController * vc = [[NodeDetailViewController alloc] initWithNibName:@"NodeDetailViewController" bundle:nil];
-//    NodeModel *model = self.models[indexPath.row];
-//    vc.name = model.name;
-//    [self.navigationController pushViewController:vc animated:YES];
+    //    NodeDetailViewController * vc = [[NodeDetailViewController alloc] initWithNibName:@"NodeDetailViewController" bundle:nil];
+    //    NodeModel *model = self.models[indexPath.row];
+    //    vc.name = model.name;
+    //    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

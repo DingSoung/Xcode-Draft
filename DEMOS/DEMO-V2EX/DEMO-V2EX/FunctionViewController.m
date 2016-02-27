@@ -31,9 +31,14 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)hotActiob:(UIButton *)sender {
+- (IBAction)newAction:(id)sender {
     TopicViewController * vc = [[TopicViewController alloc] initWithNibName:@"TopicViewController" bundle:nil];
+    vc.topic = @"recent";
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)hotAction:(UIButton *)sender {
+    
 }
 
 /*

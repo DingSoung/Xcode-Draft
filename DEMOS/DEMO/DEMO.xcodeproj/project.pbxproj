@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA0E6F131C7436BC002D3E90 /* wwddw.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E6F121C7436BC002D3E90 /* wwddw.swift */; };
+		FA10210A1C816B9D00D01023 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1021091C816B9D00D01023 /* libxml2.tbd */; };
 		FA206A4F1C05C30200D87237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA206A4E1C05C30200D87237 /* main.m */; };
 		FA206A581C05C30200D87237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA206A561C05C30200D87237 /* Main.storyboard */; };
 		FA206A5B1C05C30200D87237 /* DEMO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA206A591C05C30200D87237 /* DEMO.xcdatamodeld */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		FA0E6F121C7436BC002D3E90 /* wwddw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wwddw.swift; sourceTree = SOURCE_ROOT; };
+		FA1021091C816B9D00D01023 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		FA206A4A1C05C30200D87237 /* DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA206A4E1C05C30200D87237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA206A571C05C30200D87237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA10210A1C816B9D00D01023 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +170,7 @@
 		FA206A411C05C30200D87237 = {
 			isa = PBXGroup;
 			children = (
+				FA1021091C816B9D00D01023 /* libxml2.tbd */,
 				FA7785FA1C46098400F3AAC2 /* Bridging-Header.h */,
 				FA206A4C1C05C30200D87237 /* DEMO */,
 				FA206A691C05C30200D87237 /* DEMOTests */,
@@ -635,6 +639,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DEMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -642,6 +647,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -652,6 +658,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DEMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -659,6 +666,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

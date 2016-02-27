@@ -18,33 +18,26 @@ class ViewController: UIViewController {
         
         self.view.addSubview(self.pieChartView)
         self.view.addSubview(self.wordCloudView)
+        self.view.addSubview(self.gaugeChartView)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        let rect = self.view.bounds;
+        
         if (UIInterfaceOrientationIsPortrait(UIApplication.sharedApplication().statusBarOrientation)) {
-            self.pieChartView.frame = self.view.bounds
-            self.pieChartView.frame.size.height = self.view.bounds.size.height * 0.25
+            self.pieChartView.frame = CGRectMake(0, 0, rect.size.width * 0.5, rect.size.height * 0.5)
             
-            self.wordCloudView.frame = self.view.bounds
-            self.wordCloudView.frame.origin.y = self.view.bounds.height * 0.25
-            self.wordCloudView.frame.size.height = self.view.bounds.size.height * 0.25
+            self.wordCloudView.frame = CGRectMake(rect.size.width * 0.5, 0, rect.size.width * 0.5, rect.size.height * 0.5)
             
-            self.gaugeChartView.frame = self.view.bounds
-            self.gaugeChartView.frame.origin.y = self.view.bounds.height * 0.5
-            self.gaugeChartView.frame.size.height = self.view.bounds.size.height * 0.25
+            self.gaugeChartView.frame = CGRectMake(0, rect.size.height * 0.5, rect.size.width, rect.size.height * 0.5)
         } else {
-            self.pieChartView.frame = self.view.bounds
-            self.pieChartView.frame.size.width = self.view.bounds.size.width * 0.25
+            self.pieChartView.frame = CGRectMake(0, 0, rect.size.width * 0.5, rect.size.height * 0.5)
             
-            self.wordCloudView.frame = self.view.bounds
-            self.wordCloudView.frame.origin.x = self.view.bounds.width * 0.25
-            self.wordCloudView.frame.size.width = self.view.bounds.size.width * 0.25
+            self.wordCloudView.frame = CGRectMake(0, rect.size.height * 0.5, rect.size.width * 0.5, rect.size.height * 0.5)
             
-            self.gaugeChartView.frame = self.view.bounds
-            self.gaugeChartView.frame.origin.x = self.view.bounds.width * 0.5
-            self.gaugeChartView.frame.size.width = self.view.bounds.size.width * 0.25
+            self.gaugeChartView.frame = CGRectMake(rect.size.width * 0.5, 0, rect.size.width * 0.5, rect.size.height)
         }
     }
 
