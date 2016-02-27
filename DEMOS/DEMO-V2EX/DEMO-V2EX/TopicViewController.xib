@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-gT-eOO">
-                    <rect key="frame" x="0.0" y="70" width="600" height="510"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -25,8 +25,8 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="HyC-gT-eOO" secondAttribute="trailing" id="Ejf-tw-jzb"/>
                 <constraint firstItem="HyC-gT-eOO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a05-f1-bK8"/>
-                <constraint firstAttribute="bottom" secondItem="HyC-gT-eOO" secondAttribute="bottom" constant="20" id="f4A-qM-RNX"/>
-                <constraint firstItem="HyC-gT-eOO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="ySV-NE-20p"/>
+                <constraint firstAttribute="bottom" secondItem="HyC-gT-eOO" secondAttribute="bottom" id="f4A-qM-RNX"/>
+                <constraint firstItem="HyC-gT-eOO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ySV-NE-20p"/>
             </constraints>
         </view>
     </objects>

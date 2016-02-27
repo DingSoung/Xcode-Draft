@@ -38,8 +38,6 @@
     CGRect frame = self.frame;
     frame.size.height = self->contentTextView.frame.origin.y + self->contentTextView.frame.size.height + 5;
     self.frame = frame;
-    
-//    [self systemLayoutSizeFittingSize:self.bounds.size];
 }
 
 @end

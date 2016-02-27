@@ -44,18 +44,11 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    // subview will layout
+    // ref http://www.cnblogs.com/ihojin/p/tableHeaderView-resizeheight.html
     self.tableHeaderView.model = self.model;
-    
-//    [self.tableHeaderView setNeedsLayout];
-//    [self.tableHeaderView layoutIfNeeded];
-//    
-//    CGFloat height = [self.tableHeaderView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-//    CGRect frame = self.tableHeaderView.frame;
-//    frame.size.height = height;
-//    self.tableHeaderView.frame = frame;
-    
-    self.tableView.tableHeaderView = self.tableHeaderView;
+    [self.tableView beginUpdates];
+    [self.tableView setTableHeaderView:self.tableHeaderView];
+    [self.tableView endUpdates];
 }
 
 - (BOOL)shouldAutorotate {
