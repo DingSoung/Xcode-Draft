@@ -11,6 +11,7 @@
 import UIKit
 
 class GaugeChart: NSObject {
+    var title = "1000000000%";
     var maxAngular:CGFloat = 240.0;
     var progress:CGFloat = 0.56;
     
@@ -177,6 +178,23 @@ class GaugeChartView: UIView {
         progressSet.lineWidth = 5
         progressSet.stroke()
         
+        //TestSet
+        let context = UIGraphicsGetCurrentContext()
+        //let textRect = CGRectMake(21, 17, 135, 45)
+        //var textTextContent = NSString(string: "Hello, World!")
+        let kFontSize = self.model.pointerRadius / CGFloat(max(self.model.title.characters.count, 1)) * 2.5
+        let kTextSize = (self.model.title as NSString).sizeWithAttributes([NSFontAttributeName: UIFont.systemFontOfSize(kFontSize)])
+        let textRect = CGRectMake(origin.x - kTextSize.width * 0.5, origin.y - kTextSize.height * 0.5, kTextSize.width, kTextSize.height)
+        let textTextContent = NSString(string: self.model.title)
+        
+        let textStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
+        textStyle.alignment = NSTextAlignment.Center
+        let textFontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(kFontSize), NSForegroundColorAttributeName: UIColor.whiteColor(), NSParagraphStyleAttributeName: textStyle]
+        let textTextHeight: CGFloat = textTextContent.boundingRectWithSize(CGSizeMake(textRect.width, CGFloat.infinity), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: textFontAttributes, context: nil).size.height
+        CGContextSaveGState(context)
+        CGContextClipToRect(context, textRect);
+        textTextContent.drawInRect(CGRectMake(textRect.minX, textRect.minY + (textRect.height - textTextHeight) / 2, textRect.width, textTextHeight), withAttributes: textFontAttributes)
+        CGContextRestoreGState(context)
         
         if self.drawedPercent < self.model.progress {
             self.drawedPercent = self.drawedPercent + 0.015
