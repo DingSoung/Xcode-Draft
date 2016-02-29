@@ -10,16 +10,40 @@
 
 import UIKit
 
+class GaugeChart: NSObject {
+    var maxAngular:CGFloat = 240.0;
+    var progress:CGFloat = 0.56;
+    
+    var progressSetValue:CGFloat = 0.2
+    var progressSetColor = UIColor.darkGrayColor()
+    
+    var progressBackColor = UIColor.grayColor()
+    var progressColors = [UIColor.greenColor(), UIColor.yellowColor(), UIColor.orangeColor()]
+    
+    var circleWidth:CGFloat = 50;
+    var pointerRadius:CGFloat = 60;
+    
+    override init() {
+        super.init()
+        
+        self.maxAngular = min(self.maxAngular, 360)
+        self.progress = min(self.progress, 1)
+        
+        self.maxAngular = max(self.maxAngular, 0)
+        self.progress = max(self.progress, 0)
+        
+        if self.progressColors.count < 0 {
+            self.progressColors = [UIColor.greenColor()]
+        }
+        
+        self.progressSetValue = min(progressSetValue, 1)
+        self.progressSetValue = max(progressSetValue, 0)
+    }
+}
+
 class GaugeChartView: UIView {
     
-    var maxAngular:CGFloat = 90.0;
-    var circleWidth:CGFloat = 50;
-    
-    var process:CGFloat = 0.40;
-    var processBackColor = UIColor.grayColor()
-    var processColors = [UIColor.greenColor(), UIColor.yellowColor(), UIColor.orangeColor()]
-    
-    var pointerRadius:CGFloat = 60;
+    var model = GaugeChart()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,70 +58,101 @@ class GaugeChartView: UIView {
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         
-        // Old code
-        // R - sign(90 - maxAngular * 0.5) * R < totalHeight - circleWidth
-        // R * cos(90 - maxAngular * 0.5) * 2 < totalWidth - circleWidth
-        //let minR1 = (self.frame.size.height - self.circleWidth) / (1 - cos(CGFloat(maxAngular) * 0.5))
-        //let minR2 = (self.frame.size.width - self.circleWidth) / (2 * (1 - sin(CGFloat(maxAngular) * 0.5)))
-        
-
-        
         let origin = CGPointMake(rect.size.width * 0.5, rect.size.height * 0.5)
-        let radius = min(rect.size.width, rect.size.height) * 0.5 - self.circleWidth * 0.5;
-        let endAngle = 90.0 - self.maxAngular * 0.5;
-        let startAngle = 180.0 - endAngle;
-        let clockwise = true
+        let radius = min(rect.size.width, rect.size.height) * 0.5 - self.model.circleWidth * 0.5;
         
-        // process background
-        let processBack = UIBezierPath() //UIBezierPath(ovalInRect: rect) //   [UIBezierPath bezierPath];
-        processBack.lineCapStyle = CGLineCap.Round
-        processBack.addArcWithCenter(origin, radius: radius, startAngle: startAngle / 180.0 * CGFloat(M_PI), endAngle: endAngle / 180.0 * CGFloat(M_PI), clockwise: clockwise)
-        self.processBackColor.setStroke()
-        processBack.lineWidth = self.circleWidth;
-        processBack.stroke()
+        let clockwise = true
+        let startAngle:CGFloat = (clockwise ? -1 : 1) * ((180.0 - self.model.maxAngular) * 0.5 + self.model.maxAngular);
+        
+        // progress background
+        let progressBack = UIBezierPath()
+        progressBack.lineCapStyle = CGLineCap.Round
+        progressBack.addArcWithCenter(origin, radius: radius,
+            startAngle: startAngle / 180.0 * CGFloat(M_PI),
+            endAngle: (startAngle + (clockwise ? 1 : -1) * self.model.maxAngular * 1.0000000) / 180.0 * CGFloat(M_PI),
+            clockwise: clockwise)
+        self.model.progressBackColor.setStroke()
+        progressBack.lineWidth = self.model.circleWidth;
+        progressBack.stroke()
         
         // pointer background
-        let pointerBackground = UIBezierPath(ovalInRect: CGRectMake(rect.size.width * 0.5 - self.pointerRadius, rect.size.height * 0.5 - self.pointerRadius, self.pointerRadius * 2, self.pointerRadius * 2))
-        self.processBackColor.setFill()
+        let pointerBackground = UIBezierPath(ovalInRect: CGRectMake(rect.size.width * 0.5 - self.model.pointerRadius, rect.size.height * 0.5 - self.model.pointerRadius, self.model.pointerRadius * 2, self.model.pointerRadius * 2))
+        self.model.progressBackColor.setFill()
         pointerBackground.fill()
         
         
-        // process
-        let process = UIBezierPath()
-        process.lineCapStyle = CGLineCap.Round
-        process.addArcWithCenter(origin, radius: radius, startAngle: startAngle / 180.0 * CGFloat(M_PI), endAngle: (startAngle + self.maxAngular) / 180.0 * CGFloat(M_PI), clockwise: clockwise)
-        self.processColors[0].setStroke()
-        process.lineWidth = self.circleWidth * 0.75;
-        process.stroke()
+        // progress
+        let progress = UIBezierPath()
+        progress.lineCapStyle = CGLineCap.Round
+        progress.addArcWithCenter(origin, radius: radius,
+            startAngle:startAngle / 180.0 * CGFloat(M_PI),
+            endAngle: (startAngle + (clockwise ? 1 : -1) * self.model.maxAngular * self.model.progress) / 180.0 * CGFloat(M_PI),
+            clockwise: clockwise)
+        self.model.progressColors[0].setStroke()
+        progress.lineWidth = self.model.circleWidth * 0.75;
+        progress.stroke()
         
-        // pointeRound
-        let pointeRound = UIBezierPath(ovalInRect: CGRectMake(rect.size.width * 0.5 - self.pointerRadius * 0.75, rect.size.height * 0.5 - self.pointerRadius * 0.75, self.pointerRadius * 2 * 0.75, self.pointerRadius * 2 * 0.75))
-        self.processColors[0].setFill()
+        
+        let endAngular:CGFloat = startAngle + (clockwise ? 1 : -1) * self.model.maxAngular * self.model.progress
+        // progress End
+        let progressEndRadius = self.model.circleWidth * 0.5 * 0.5
+        let progressEnd = UIBezierPath(ovalInRect: CGRectMake(
+            origin.x + radius * cos(endAngular / 180.0 * CGFloat(M_PI)) - progressEndRadius,
+            origin.y + radius * sin(endAngular / 180.0 * CGFloat(M_PI)) - progressEndRadius,
+            progressEndRadius * 2, progressEndRadius * 2))
+        self.model.progressBackColor.setFill()
+        progressEnd.fill()
+        
+        // progress Set
+        let progressSet = UIBezierPath()
+        let progressSetAngular = (startAngle + (clockwise ? 1 : -1) * self.model.maxAngular * self.model.progressSetValue) / 180.0 * CGFloat(M_PI)
+        progressSet.moveToPoint(CGPointMake(
+            origin.x + (radius + self.model.circleWidth * 0.5) * cos(progressSetAngular),
+            origin.y + (radius + self.model.circleWidth * 0.5) * sin(progressSetAngular)))
+        progressSet.addLineToPoint(CGPointMake(
+            origin.x + (radius - self.model.circleWidth * 0.5) * cos(progressSetAngular),
+            origin.y + (radius - self.model.circleWidth * 0.5) * sin(progressSetAngular)))
+        progressSet.closePath()
+        self.model.progressSetColor.setFill()
+        progressSet.fill()
+        self.model.progressSetColor.setStroke()
+        progressSet.lineWidth = 5
+        progressSet.stroke()
+        
+        let pointerIndicaterRadius = self.model.pointerRadius * 0.8;
+        // pointerPad
+        let pointeRound = UIBezierPath(ovalInRect: CGRectMake(rect.size.width * 0.5 - pointerIndicaterRadius, rect.size.height * 0.5 - pointerIndicaterRadius, pointerIndicaterRadius * 2, pointerIndicaterRadius * 2))
+        self.model.progressColors[0].setFill()
         pointeRound.fill()
         // pointerTriangle
         let pointerTriangle = UIBezierPath()
-        let pointerTriangleAngular = startAngle - self.maxAngular * self.process
         pointerTriangle.moveToPoint(CGPointMake(
-            origin.x + self.pointerRadius * sin(pointerTriangleAngular / 180.0 * CGFloat(M_PI)),
-            origin.y + self.pointerRadius * cos(pointerTriangleAngular / 180.0 * CGFloat(M_PI))))
+            origin.x + self.model.pointerRadius * cos(endAngular / 180.0 * CGFloat(M_PI)),
+            origin.y + self.model.pointerRadius * sin(endAngular / 180.0 * CGFloat(M_PI))))
         pointerTriangle.addLineToPoint(CGPointMake(
-            origin.x + self.pointerRadius * 0.75 * sin((pointerTriangleAngular + 90) / 180.0 * CGFloat(M_PI)),
-            origin.y + self.pointerRadius * 0.75 * cos((pointerTriangleAngular + 90) / 180.0 * CGFloat(M_PI))))
+            origin.x + pointerIndicaterRadius * cos((endAngular + 90) / 180.0 * CGFloat(M_PI)),
+            origin.y + pointerIndicaterRadius * sin((endAngular + 90) / 180.0 * CGFloat(M_PI))))
         pointerTriangle.addLineToPoint(CGPointMake(
-            origin.x + self.pointerRadius * 0.75 * sin((pointerTriangleAngular - 90) / 180.0 * CGFloat(M_PI)),
-            origin.y + self.pointerRadius * 0.75 * cos((pointerTriangleAngular - 90) / 180.0 * CGFloat(M_PI))))
+            origin.x + pointerIndicaterRadius * cos((endAngular - 90) / 180.0 * CGFloat(M_PI)),
+            origin.y + pointerIndicaterRadius * sin((endAngular - 90) / 180.0 * CGFloat(M_PI))))
         pointerTriangle.addLineToPoint(CGPointMake(
-            origin.x + self.pointerRadius * sin(pointerTriangleAngular / 180.0 * CGFloat(M_PI)),
-            origin.y + self.pointerRadius * cos(pointerTriangleAngular / 180.0 * CGFloat(M_PI))))
+            origin.x + self.model.pointerRadius * cos(endAngular / 180.0 * CGFloat(M_PI)),
+            origin.y + self.model.pointerRadius * sin(endAngular / 180.0 * CGFloat(M_PI))))
         pointerTriangle.closePath()
-        self.processColors[0].setFill()
+        self.model.progressColors[0].setFill()
         pointerTriangle.fill()
+        self.model.progressColors[0].setStroke()
+        pointerTriangle.lineWidth = 0
         pointerTriangle.stroke()
         
         
         
+        
+        
+        
+        
     }
-
+    
 }
 
 
