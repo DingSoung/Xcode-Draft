@@ -15,9 +15,9 @@ class GaugeChart: NSObject {
     var progress:CGFloat = 0.56;
     
     var progressSetValue:CGFloat = 0.2
-    var progressSetColor = UIColor.darkGrayColor()
+    var progressSetColor = UIColor.grayColor()
     
-    var progressBackColor = UIColor.grayColor()
+    var progressBackColor = UIColor.lightGrayColor()
     var progressColors = [UIColor.greenColor(), UIColor.yellowColor(), UIColor.orangeColor()]
     
     var circleWidth:CGFloat = 50;
@@ -45,6 +45,27 @@ class GaugeChartView: UIView {
     
     var model = GaugeChart()
     
+    internal var displayLink:CADisplayLink?
+    internal var drawedPercent:CGFloat = 0
+    
+    func startAnimation() {
+        self.drawedPercent = 0
+        
+        self.displayLink = CADisplayLink(target: self, selector: "tickAnimation")
+        self.displayLink?.frameInterval = 1
+        self.displayLink?.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+    }
+    func completeAnimation() {
+        self.displayLink?.invalidate()
+        self.displayLink = nil
+    }
+    func tickAnimation() {
+        self.setNeedsDisplay()
+    }
+    
+    
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -53,6 +74,16 @@ class GaugeChartView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.startAnimation()
+    }
+    
+    deinit {
+        self.completeAnimation()
     }
     
     override func drawRect(rect: CGRect) {
@@ -80,20 +111,19 @@ class GaugeChartView: UIView {
         self.model.progressBackColor.setFill()
         pointerBackground.fill()
         
+        let endAngular:CGFloat = startAngle + (clockwise ? 1 : -1) * self.model.maxAngular * self.drawedPercent
         
         // progress
         let progress = UIBezierPath()
         progress.lineCapStyle = CGLineCap.Round
         progress.addArcWithCenter(origin, radius: radius,
-            startAngle:startAngle / 180.0 * CGFloat(M_PI),
-            endAngle: (startAngle + (clockwise ? 1 : -1) * self.model.maxAngular * self.model.progress) / 180.0 * CGFloat(M_PI),
+            startAngle: startAngle / 180.0 * CGFloat(M_PI),
+            endAngle: endAngular / 180.0 * CGFloat(M_PI),
             clockwise: clockwise)
         self.model.progressColors[0].setStroke()
         progress.lineWidth = self.model.circleWidth * 0.75;
         progress.stroke()
         
-        
-        let endAngular:CGFloat = startAngle + (clockwise ? 1 : -1) * self.model.maxAngular * self.model.progress
         // progress End
         let progressEndRadius = self.model.circleWidth * 0.5 * 0.5
         let progressEnd = UIBezierPath(ovalInRect: CGRectMake(
@@ -103,21 +133,6 @@ class GaugeChartView: UIView {
         self.model.progressBackColor.setFill()
         progressEnd.fill()
         
-        // progress Set
-        let progressSet = UIBezierPath()
-        let progressSetAngular = (startAngle + (clockwise ? 1 : -1) * self.model.maxAngular * self.model.progressSetValue) / 180.0 * CGFloat(M_PI)
-        progressSet.moveToPoint(CGPointMake(
-            origin.x + (radius + self.model.circleWidth * 0.5) * cos(progressSetAngular),
-            origin.y + (radius + self.model.circleWidth * 0.5) * sin(progressSetAngular)))
-        progressSet.addLineToPoint(CGPointMake(
-            origin.x + (radius - self.model.circleWidth * 0.5) * cos(progressSetAngular),
-            origin.y + (radius - self.model.circleWidth * 0.5) * sin(progressSetAngular)))
-        progressSet.closePath()
-        self.model.progressSetColor.setFill()
-        progressSet.fill()
-        self.model.progressSetColor.setStroke()
-        progressSet.lineWidth = 5
-        progressSet.stroke()
         
         let pointerIndicaterRadius = self.model.pointerRadius * 0.8;
         // pointerPad
@@ -146,11 +161,28 @@ class GaugeChartView: UIView {
         pointerTriangle.stroke()
         
         
+        // progress Set
+        let progressSet = UIBezierPath()
+        let progressSetAngular = (startAngle + (clockwise ? 1 : -1) * self.model.maxAngular * self.model.progressSetValue) / 180.0 * CGFloat(M_PI)
+        progressSet.moveToPoint(CGPointMake(
+            origin.x + (radius + self.model.circleWidth * 0.5) * cos(progressSetAngular),
+            origin.y + (radius + self.model.circleWidth * 0.5) * sin(progressSetAngular)))
+        progressSet.addLineToPoint(CGPointMake(
+            origin.x + (radius - self.model.circleWidth * 0.5) * cos(progressSetAngular),
+            origin.y + (radius - self.model.circleWidth * 0.5) * sin(progressSetAngular)))
+        progressSet.closePath()
+        self.model.progressSetColor.setFill()
+        progressSet.fill()
+        self.model.progressSetColor.setStroke()
+        progressSet.lineWidth = 5
+        progressSet.stroke()
         
         
-        
-        
-        
+        if self.drawedPercent < self.model.progress {
+            self.drawedPercent = self.drawedPercent + 0.015
+        } else {
+            self.completeAnimation()
+        }
     }
     
 }
