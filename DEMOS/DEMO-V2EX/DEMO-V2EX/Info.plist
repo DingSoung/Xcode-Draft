@@ -26,6 +26,15 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>cdn.v2ex.co</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<string>YES</string>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+			</dict>
 			<key>www.v2ex.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>

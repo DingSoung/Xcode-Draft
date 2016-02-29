@@ -44,6 +44,8 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
+    self.title = self.model.nodeDetailModel.name;
+    
     // ref http://www.cnblogs.com/ihojin/p/tableHeaderView-resizeheight.html
     self.tableHeaderView.model = self.model;
     [self.tableView beginUpdates];

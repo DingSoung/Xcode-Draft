@@ -30,7 +30,9 @@
     
     self->titleLabel.text = self.model.title;
     self->creatLabel.text = [NSString stringWithFormat:@"%@",self.model.created];
-    [self->avatarImage sd_setImageWithURL:[NSURL URLWithString:model.memberModel.avatar_normal]];
+    [self->avatarImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http:%@",self.model.memberModel.avatar_normal]] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        //NSLog(@"%@, %@, %@", image, error.domain, imageURL);
+    }];
     self->infoLabel.text = self.model.memberModel.username;
 }
 
