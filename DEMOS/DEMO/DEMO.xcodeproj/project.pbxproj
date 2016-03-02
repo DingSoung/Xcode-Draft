@@ -16,6 +16,8 @@
 		FA206A601C05C30200D87237 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA206A5E1C05C30200D87237 /* LaunchScreen.storyboard */; };
 		FA206A6B1C05C30200D87237 /* DEMOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA206A6A1C05C30200D87237 /* DEMOTests.m */; };
 		FA206A761C05C30200D87237 /* DEMOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA206A751C05C30200D87237 /* DEMOUITests.m */; };
+		FA432D981C857C4E005927ED /* GaugeChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA432D961C857C4E005927ED /* GaugeChartView.swift */; };
+		FA432D991C857C4E005927ED /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA432D971C857C4E005927ED /* PieChartView.swift */; };
 		FA7785AB1C4603C700F3AAC2 /* Singletons.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785971C4603C700F3AAC2 /* Singletons.m */; };
 		FA7785AC1C4603C700F3AAC2 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = FA7785981C4603C700F3AAC2 /* test.html */; };
 		FA7785AD1C4603C700F3AAC2 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = FA7785991C4603C700F3AAC2 /* test.js */; };
@@ -87,6 +89,8 @@
 		FA206A711C05C30200D87237 /* DEMOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DEMOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA206A751C05C30200D87237 /* DEMOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMOUITests.m; sourceTree = "<group>"; };
 		FA206A771C05C30200D87237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA432D961C857C4E005927ED /* GaugeChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeChartView.swift; sourceTree = "<group>"; };
+		FA432D971C857C4E005927ED /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		FA7785961C4603C700F3AAC2 /* Singletons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singletons.h; sourceTree = "<group>"; };
 		FA7785971C4603C700F3AAC2 /* Singletons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singletons.m; sourceTree = "<group>"; };
 		FA7785981C4603C700F3AAC2 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 		FA7785D71C4603FD00F3AAC2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA432D961C857C4E005927ED /* GaugeChartView.swift */,
+				FA432D971C857C4E005927ED /* PieChartView.swift */,
 				FA7785DA1C4603FD00F3AAC2 /* WebView.h */,
 				FA7785DB1C4603FD00F3AAC2 /* WebView.m */,
 			);
@@ -462,11 +468,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA432D991C857C4E005927ED /* PieChartView.swift in Sources */,
 				FA7785F01C4603FD00F3AAC2 /* GCDManager.swift in Sources */,
 				FA0E6F131C7436BC002D3E90 /* wwddw.swift in Sources */,
 				FA7785B21C4603C700F3AAC2 /* TestSpringView.m in Sources */,
 				FA7785ED1C4603FD00F3AAC2 /* UIVIew+Tools.swift in Sources */,
 				FA7785EA1C4603FD00F3AAC2 /* UIColor+Tools.swift in Sources */,
+				FA432D981C857C4E005927ED /* GaugeChartView.swift in Sources */,
 				FA7785EC1C4603FD00F3AAC2 /* UIImageView+Tools.swift in Sources */,
 				FA7785B01C4603C700F3AAC2 /* TestCircularReferences.swift in Sources */,
 				FA7785F71C4603FD00F3AAC2 /* WebView.m in Sources */,

@@ -97,6 +97,8 @@
     PieChartView *chart = [[PieChartView alloc] init:CGRectMake(0, percent.frame.origin.y + percent.frame.size.height, 200, 180) sizeArray:array];
     [self.view addSubview:chart];
  */
+    //GaugeChartView *chart = [[GaugeChartView alloc] init];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
