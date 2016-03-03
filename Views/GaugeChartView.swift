@@ -10,26 +10,26 @@ import UIKit
 
 public class GaugeChartView: UIView {
     
-    public var title = "";
-    public var detail = "";
+    public var title = "hahahah";
+    public var detail = "9829";
     
     public var animationDuration:CGFloat = 0.8
-    public var maxAngular:CGFloat = 180.0;
+    public var maxAngular:CGFloat = 200.0;
     
     public var progressValve:CGFloat = 0.2;
-    public var progressColor = UIColor.yellowColor()
+    public var progressColor = UIColor.orangeColor()
     public var progressBackEndColor = UIColor.grayColor()
-    public var progressWidth:CGFloat = 35;
+    public var progressWidth:CGFloat = 20;
     
     public var progressBackColor = UIColor.lightGrayColor()
-    public var progressBackWidth:CGFloat = 50;
+    public var progressBackWidth:CGFloat = 25;
     
     public var progressSetValues:[CGFloat] = []
     public var progressSetColors:[UIColor] = []
     
     
     
-    public var pointerRadius:CGFloat = 60;
+    public var pointerRadius:CGFloat = 35;
     
     
     private var displayLink:CADisplayLink?

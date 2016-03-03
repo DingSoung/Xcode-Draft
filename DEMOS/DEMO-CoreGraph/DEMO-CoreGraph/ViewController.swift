@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     let pieChartView = PieChartView()
     let wordCloudView = WordCloudView()
     let gaugeChartView = GaugeChartView()
+    let descartesView = DescartesView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
         self.view.addSubview(self.pieChartView)
         self.view.addSubview(self.wordCloudView)
         self.view.addSubview(self.gaugeChartView)
+        self.view.addSubview(self.descartesView)
     }
     
     override func viewDidLayoutSubviews() {
@@ -26,28 +28,22 @@ class ViewController: UIViewController {
         
         let rect = self.view.bounds;
         
-        if (UIInterfaceOrientationIsPortrait(UIApplication.sharedApplication().statusBarOrientation)) {
-            self.pieChartView.frame = CGRectMake(0, 0, rect.size.width * 0.5, rect.size.height * 0.5)
-            
-            self.wordCloudView.frame = CGRectMake(rect.size.width * 0.5, 0, rect.size.width * 0.5, rect.size.height * 0.5)
-            
-            self.gaugeChartView.frame = CGRectMake(0, rect.size.height * 0.5, rect.size.width, rect.size.height * 0.5)
-        } else {
-            self.pieChartView.frame = CGRectMake(0, 0, rect.size.width * 0.5, rect.size.height * 0.5)
-            
-            self.wordCloudView.frame = CGRectMake(0, rect.size.height * 0.5, rect.size.width * 0.5, rect.size.height * 0.5)
-            
-            self.gaugeChartView.frame = CGRectMake(rect.size.width * 0.5, 0, rect.size.width * 0.5, rect.size.height)
-        }
+        self.pieChartView.frame = CGRectMake(0, 0, rect.size.width * 0.5, rect.size.height * 0.5)
+        
+        self.wordCloudView.frame = CGRectMake(rect.size.width * 0.5, 0, rect.size.width * 0.5, rect.size.height * 0.5)
+        
+        self.gaugeChartView.frame = CGRectMake(0, rect.size.height * 0.5, rect.size.width * 0.5, rect.size.height * 0.5)
+        
+        self.descartesView.frame = CGRectMake(rect.size.width * 0.5, rect.size.height * 0.5, rect.size.width * 0.5, rect.size.height * 0.5)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     
-
+    
+    
 }
 
