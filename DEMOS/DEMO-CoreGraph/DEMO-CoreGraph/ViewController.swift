@@ -17,9 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addSubview(self.pieChartView)
-        self.view.addSubview(self.wordCloudView)
-        self.view.addSubview(self.gaugeChartView)
+        //self.view.addSubview(self.pieChartView)
+        //self.view.addSubview(self.wordCloudView)
+        //self.view.addSubview(self.gaugeChartView)
         self.view.addSubview(self.descartesView)
     }
     
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         self.gaugeChartView.frame = CGRectMake(0, rect.size.height * 0.5, rect.size.width * 0.5, rect.size.height * 0.5)
         
-        self.descartesView.frame = CGRectMake(rect.size.width * 0.5, rect.size.height * 0.5, rect.size.width * 0.5, rect.size.height * 0.5)
+        self.descartesView.frame = self.view.bounds// CGRectMake(rect.size.width * 0.5, rect.size.height * 0.5, rect.size.width * 0.5, rect.size.height * 0.5)
     }
     
     override func didReceiveMemoryWarning() {
