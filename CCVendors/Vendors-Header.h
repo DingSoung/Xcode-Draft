@@ -2,8 +2,8 @@
 //  Vendors-Header.h
 //  Test
 //
-//  Created by D.Alex on 11/25/15.
-//  Copyright © 2015 Alex. All rights reserved.
+//  Created by Alex D. on 11/25/15.
+//  Copyright © 2015 ifnil. All rights reserved.
 //
 
 #ifndef Vendors_Header_h
