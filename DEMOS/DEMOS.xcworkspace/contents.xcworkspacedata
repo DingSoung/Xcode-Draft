@@ -2,15 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DEMO-CoreGraph/DEMO-CoreGraph.xcodeproj">
+      location = "group:DEMO-WKWebView/DEMO-WKWebView.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:DEMO-IB/DEMO-IB.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:DEMO/DEMO.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "container:DEMO-V2EX/DEMO-V2EX.xcodeproj">
    </FileRef>
 </Workspace>
