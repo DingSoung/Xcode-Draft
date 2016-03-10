@@ -1,8 +1,8 @@
 //
 //  main.m
-//  DEMO-WKWebView
+//  DEMO-WebJS
 //
-//  Created by Alex D. on 3/8/16.
+//  Created by Alex D. on 3/10/16.
 //  Copyright © 2016 ifnil. All rights reserved.
 //
 

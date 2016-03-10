@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DEMO-WKWebView/DEMO-WKWebView.xcodeproj">
+      location = "group:DEMO-WebJS/DEMO-WebJS.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:DEMO-IB/DEMO-IB.xcodeproj">

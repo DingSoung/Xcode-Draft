@@ -25,18 +25,6 @@
 		FA77858E1C45FDED00F3AAC2 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77858D1C45FDED00F3AAC2 /* ChartView.m */; };
 		FA7785911C45FE0D00F3AAC2 /* ChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785901C45FE0D00F3AAC2 /* ChartModel.m */; };
 		FA77860B1C46268000F3AAC2 /* WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7786051C46268000F3AAC2 /* WebView.m */; };
-		FA77861D1C462A9D00F3AAC2 /* Int+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786101C462A9D00F3AAC2 /* Int+Tools.swift */; };
-		FA77861E1C462A9D00F3AAC2 /* NSData+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786111C462A9D00F3AAC2 /* NSData+Tools.swift */; };
-		FA77861F1C462A9D00F3AAC2 /* NSDictionary+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786121C462A9D00F3AAC2 /* NSDictionary+Tools.swift */; };
-		FA7786201C462A9D00F3AAC2 /* NSMutableData+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786131C462A9D00F3AAC2 /* NSMutableData+Tools.swift */; };
-		FA7786211C462A9D00F3AAC2 /* NSObject+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786141C462A9D00F3AAC2 /* NSObject+Tools.swift */; };
-		FA7786221C462A9D00F3AAC2 /* NSString+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786151C462A9D00F3AAC2 /* NSString+Tools.swift */; };
-		FA7786231C462A9D00F3AAC2 /* String+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786161C462A9D00F3AAC2 /* String+Tools.swift */; };
-		FA7786241C462A9D00F3AAC2 /* UIColor+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786171C462A9D00F3AAC2 /* UIColor+Tools.swift */; };
-		FA7786251C462A9D00F3AAC2 /* UIImageView+PDF.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7786191C462A9D00F3AAC2 /* UIImageView+PDF.m */; };
-		FA7786261C462A9D00F3AAC2 /* UIImageView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77861A1C462A9D00F3AAC2 /* UIImageView+Tools.swift */; };
-		FA7786271C462A9D00F3AAC2 /* UIVIew+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77861B1C462A9D00F3AAC2 /* UIVIew+Tools.swift */; };
-		FA7786281C462A9D00F3AAC2 /* UIWebView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77861C1C462A9D00F3AAC2 /* UIWebView+Tools.swift */; };
 		FA7786351C462B7300F3AAC2 /* DSPDFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77862C1C462B7300F3AAC2 /* DSPDFImage.m */; };
 		FA7786361C462B7300F3AAC2 /* GCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77862D1C462B7300F3AAC2 /* GCDManager.swift */; };
 		FA7786371C462B7300F3AAC2 /* JavaScriptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77862E1C462B7300F3AAC2 /* JavaScriptManager.swift */; };
@@ -97,20 +85,6 @@
 		FA7785901C45FE0D00F3AAC2 /* ChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartModel.m; sourceTree = "<group>"; };
 		FA7786041C46268000F3AAC2 /* WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView.h; sourceTree = "<group>"; };
 		FA7786051C46268000F3AAC2 /* WebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebView.m; sourceTree = "<group>"; };
-		FA77860F1C462A9D00F3AAC2 /* Extension-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Extension-Header.h"; sourceTree = "<group>"; };
-		FA7786101C462A9D00F3AAC2 /* Int+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Tools.swift"; sourceTree = "<group>"; };
-		FA7786111C462A9D00F3AAC2 /* NSData+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Tools.swift"; sourceTree = "<group>"; };
-		FA7786121C462A9D00F3AAC2 /* NSDictionary+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Tools.swift"; sourceTree = "<group>"; };
-		FA7786131C462A9D00F3AAC2 /* NSMutableData+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableData+Tools.swift"; sourceTree = "<group>"; };
-		FA7786141C462A9D00F3AAC2 /* NSObject+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Tools.swift"; sourceTree = "<group>"; };
-		FA7786151C462A9D00F3AAC2 /* NSString+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Tools.swift"; sourceTree = "<group>"; };
-		FA7786161C462A9D00F3AAC2 /* String+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Tools.swift"; sourceTree = "<group>"; };
-		FA7786171C462A9D00F3AAC2 /* UIColor+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Tools.swift"; sourceTree = "<group>"; };
-		FA7786181C462A9D00F3AAC2 /* UIImageView+PDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+PDF.h"; sourceTree = "<group>"; };
-		FA7786191C462A9D00F3AAC2 /* UIImageView+PDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+PDF.m"; sourceTree = "<group>"; };
-		FA77861A1C462A9D00F3AAC2 /* UIImageView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tools.swift"; sourceTree = "<group>"; };
-		FA77861B1C462A9D00F3AAC2 /* UIVIew+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+Tools.swift"; sourceTree = "<group>"; };
-		FA77861C1C462A9D00F3AAC2 /* UIWebView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Tools.swift"; sourceTree = "<group>"; };
 		FA7786291C462AE700F3AAC2 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		FA77862B1C462B7300F3AAC2 /* DSPDFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPDFImage.h; sourceTree = "<group>"; };
 		FA77862C1C462B7300F3AAC2 /* DSPDFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPDFImage.m; sourceTree = "<group>"; };
@@ -155,7 +129,6 @@
 				FA7786291C462AE700F3AAC2 /* Bridging-Header.h */,
 				FA77862A1C462B7300F3AAC2 /* Helpers */,
 				FA7786331C462B7300F3AAC2 /* Vendors */,
-				FA77860E1C462A9D00F3AAC2 /* Extension */,
 				FA77854D1C45F77100F3AAC2 /* DEMO-IB */,
 				FA77856A1C45F77100F3AAC2 /* DEMO-IBTests */,
 				FA7785751C45F77100F3AAC2 /* DEMO-IBUITests */,
@@ -242,28 +215,6 @@
 			);
 			name = Views;
 			path = ../../Views;
-			sourceTree = "<group>";
-		};
-		FA77860E1C462A9D00F3AAC2 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				FA77860F1C462A9D00F3AAC2 /* Extension-Header.h */,
-				FA7786101C462A9D00F3AAC2 /* Int+Tools.swift */,
-				FA7786111C462A9D00F3AAC2 /* NSData+Tools.swift */,
-				FA7786121C462A9D00F3AAC2 /* NSDictionary+Tools.swift */,
-				FA7786131C462A9D00F3AAC2 /* NSMutableData+Tools.swift */,
-				FA7786141C462A9D00F3AAC2 /* NSObject+Tools.swift */,
-				FA7786151C462A9D00F3AAC2 /* NSString+Tools.swift */,
-				FA7786161C462A9D00F3AAC2 /* String+Tools.swift */,
-				FA7786171C462A9D00F3AAC2 /* UIColor+Tools.swift */,
-				FA7786181C462A9D00F3AAC2 /* UIImageView+PDF.h */,
-				FA7786191C462A9D00F3AAC2 /* UIImageView+PDF.m */,
-				FA77861A1C462A9D00F3AAC2 /* UIImageView+Tools.swift */,
-				FA77861B1C462A9D00F3AAC2 /* UIVIew+Tools.swift */,
-				FA77861C1C462A9D00F3AAC2 /* UIWebView+Tools.swift */,
-			);
-			name = Extension;
-			path = ../../Extension;
 			sourceTree = "<group>";
 		};
 		FA77862A1C462B7300F3AAC2 /* Helpers */ = {
@@ -422,30 +373,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7786381C462B7300F3AAC2 /* NetworkManager.swift in Sources */,
-				FA7786241C462A9D00F3AAC2 /* UIColor+Tools.swift in Sources */,
 				FA77860B1C46268000F3AAC2 /* WebView.m in Sources */,
-				FA7786261C462A9D00F3AAC2 /* UIImageView+Tools.swift in Sources */,
 				FA7786351C462B7300F3AAC2 /* DSPDFImage.m in Sources */,
 				FA053AEA1C4DD41200F4C5EC /* DetailTableView.m in Sources */,
 				FA053AF11C4DDAB900F4C5EC /* DetailTableViewCell.m in Sources */,
 				FA7786371C462B7300F3AAC2 /* JavaScriptManager.swift in Sources */,
 				FA7786431C46451000F3AAC2 /* PieChartView.swift in Sources */,
-				FA77861E1C462A9D00F3AAC2 /* NSData+Tools.swift in Sources */,
-				FA7786211C462A9D00F3AAC2 /* NSObject+Tools.swift in Sources */,
-				FA7786251C462A9D00F3AAC2 /* UIImageView+PDF.m in Sources */,
-				FA7786231C462A9D00F3AAC2 /* String+Tools.swift in Sources */,
-				FA7786281C462A9D00F3AAC2 /* UIWebView+Tools.swift in Sources */,
-				FA7786201C462A9D00F3AAC2 /* NSMutableData+Tools.swift in Sources */,
 				FA7785871C45F93600F3AAC2 /* ChartDetailViewController.m in Sources */,
 				FA7785561C45F77100F3AAC2 /* ViewController.m in Sources */,
-				FA7786221C462A9D00F3AAC2 /* NSString+Tools.swift in Sources */,
 				FA7785531C45F77100F3AAC2 /* AppDelegate.m in Sources */,
-				FA77861F1C462A9D00F3AAC2 /* NSDictionary+Tools.swift in Sources */,
 				FA7786391C462B7300F3AAC2 /* NotificationManager.swift in Sources */,
-				FA77861D1C462A9D00F3AAC2 /* Int+Tools.swift in Sources */,
 				FA7785501C45F77100F3AAC2 /* main.m in Sources */,
 				FA77855C1C45F77100F3AAC2 /* DEMO_IB.xcdatamodeld in Sources */,
-				FA7786271C462A9D00F3AAC2 /* UIVIew+Tools.swift in Sources */,
 				FA77858E1C45FDED00F3AAC2 /* ChartView.m in Sources */,
 				FA7785911C45FE0D00F3AAC2 /* ChartModel.m in Sources */,
 				FA053AED1C4DD88E00F4C5EC /* DetailModel.m in Sources */,

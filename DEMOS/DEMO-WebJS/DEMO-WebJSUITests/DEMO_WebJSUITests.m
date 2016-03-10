@@ -1,18 +1,18 @@
 //
-//  DEMO_WKWebViewUITests.m
-//  DEMO-WKWebViewUITests
+//  DEMO_WebJSUITests.m
+//  DEMO-WebJSUITests
 //
-//  Created by Alex D. on 3/8/16.
+//  Created by Alex D. on 3/10/16.
 //  Copyright © 2016 ifnil. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface DEMO_WKWebViewUITests : XCTestCase
+@interface DEMO_WebJSUITests : XCTestCase
 
 @end
 
-@implementation DEMO_WKWebViewUITests
+@implementation DEMO_WebJSUITests
 
 - (void)setUp {
     [super setUp];

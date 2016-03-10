@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E76609702840095B28F7A22ECAA6F602CB1A1EFA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E76609702840095B28F7A22ECAA6F602CB1A1EFA" : 0,
+    "FA3EF39F28282E2DB2CC9E7031501BA7AC2A2D3C" : 0,
+    "D6148FC1C31A76D08092E4328FC9E7C0E6F2BE62" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "04DF6E72-A497-4468-A7F1-91F15F2EF1F0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E76609702840095B28F7A22ECAA6F602CB1A1EFA" : "Brick\/",
+    "FA3EF39F28282E2DB2CC9E7031501BA7AC2A2D3C" : "CCExtension\/",
+    "D6148FC1C31A76D08092E4328FC9E7C0E6F2BE62" : "bdp-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DEMO-WebJS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DEMOS\/DEMO-WebJS\/DEMO-WebJS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/haizhi.me\/dingsongwen\/bdp-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D6148FC1C31A76D08092E4328FC9E7C0E6F2BE62"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ifnil\/Brick.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E76609702840095B28F7A22ECAA6F602CB1A1EFA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ifnil\/CCExtension.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FA3EF39F28282E2DB2CC9E7031501BA7AC2A2D3C"
+    }
+  ]
+}

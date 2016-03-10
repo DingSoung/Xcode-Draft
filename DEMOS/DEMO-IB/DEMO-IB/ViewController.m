@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "ChartDetailViewController.h"
 
 
 @interface ViewController ()
