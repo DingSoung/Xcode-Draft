@@ -29,9 +29,10 @@
 		FAB722DC1C91228A00EFC855 /* UIVIew+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB722D11C91228A00EFC855 /* UIVIew+Tools.swift */; };
 		FAB722DD1C91228A00EFC855 /* UIWebView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB722D21C91228A00EFC855 /* UIWebView+Tools.swift */; };
 		FAB722E61C912C8800EFC855 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB722E51C912C8800EFC855 /* WKWebViewController.m */; };
-		FAB723151C913B2000EFC855 /* font in Resources */ = {isa = PBXBuildFile; fileRef = FAB723111C913B2000EFC855 /* font */; };
-		FAB723171C913B2000EFC855 /* js in Resources */ = {isa = PBXBuildFile; fileRef = FAB723131C913B2000EFC855 /* js */; };
-		FAB7231D1C91758000EFC855 /* wordcloud.html in Resources */ = {isa = PBXBuildFile; fileRef = FAB7231C1C91758000EFC855 /* wordcloud.html */; };
+		FAB7233B1C92A2FF00EFC855 /* base.css in Resources */ = {isa = PBXBuildFile; fileRef = FAB723371C92A2FF00EFC855 /* base.css */; };
+		FAB7233C1C92A2FF00EFC855 /* common.js in Resources */ = {isa = PBXBuildFile; fileRef = FAB723381C92A2FF00EFC855 /* common.js */; };
+		FAB7233D1C92A2FF00EFC855 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = FAB723391C92A2FF00EFC855 /* index.html */; };
+		FAB7233E1C92A2FF00EFC855 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = FAB7233A1C92A2FF00EFC855 /* jquery.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,9 +87,10 @@
 		FAB722D21C91228A00EFC855 /* UIWebView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Tools.swift"; sourceTree = "<group>"; };
 		FAB722E41C912C8800EFC855 /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		FAB722E51C912C8800EFC855 /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
-		FAB723111C913B2000EFC855 /* font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = font; sourceTree = "<group>"; };
-		FAB723131C913B2000EFC855 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
-		FAB7231C1C91758000EFC855 /* wordcloud.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wordcloud.html; sourceTree = "<group>"; };
+		FAB723371C92A2FF00EFC855 /* base.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = base.css; sourceTree = "<group>"; };
+		FAB723381C92A2FF00EFC855 /* common.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = common.js; sourceTree = "<group>"; };
+		FAB723391C92A2FF00EFC855 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		FAB7233A1C92A2FF00EFC855 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,9 +211,10 @@
 		FAB722F11C913B0B00EFC855 /* webviews */ = {
 			isa = PBXGroup;
 			children = (
-				FAB7231C1C91758000EFC855 /* wordcloud.html */,
-				FAB723111C913B2000EFC855 /* font */,
-				FAB723131C913B2000EFC855 /* js */,
+				FAB723371C92A2FF00EFC855 /* base.css */,
+				FAB723381C92A2FF00EFC855 /* common.js */,
+				FAB723391C92A2FF00EFC855 /* index.html */,
+				FAB7233A1C92A2FF00EFC855 /* jquery.js */,
 			);
 			path = webviews;
 			sourceTree = "<group>";
@@ -320,11 +323,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB7227B1C911C4200EFC855 /* LaunchScreen.storyboard in Resources */,
-				FAB723171C913B2000EFC855 /* js in Resources */,
 				FAB722781C911C4200EFC855 /* Assets.xcassets in Resources */,
+				FAB7233B1C92A2FF00EFC855 /* base.css in Resources */,
+				FAB7233D1C92A2FF00EFC855 /* index.html in Resources */,
 				FAB722731C911C4200EFC855 /* Main.storyboard in Resources */,
-				FAB7231D1C91758000EFC855 /* wordcloud.html in Resources */,
-				FAB723151C913B2000EFC855 /* font in Resources */,
+				FAB7233E1C92A2FF00EFC855 /* jquery.js in Resources */,
+				FAB7233C1C92A2FF00EFC855 /* common.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

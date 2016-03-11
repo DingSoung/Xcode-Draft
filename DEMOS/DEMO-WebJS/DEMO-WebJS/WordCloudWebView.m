@@ -37,7 +37,7 @@
         self.scrollView.showsVerticalScrollIndicator = NO;
         self.scrollView.minimumZoomScale = 1;
         self.scrollView.maximumZoomScale = 20;
-        NSString *path =  [[NSBundle mainBundle] pathForResource:@"wordcloud" ofType:@"html"];
+        NSString *path =  [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
         if (path != nil) {
             NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
             [self loadHTMLString:html baseURL:[NSURL fileURLWithPath:path]];
@@ -150,10 +150,6 @@
         return;
     }
     _isRendering = YES;
-    
-    [self evaluateJavaScript:@"__BDP_CALL_JS__" completionHandler:^(id data, NSError *error) {
-        NSLog(@"%@, %@", data, error.domain);
-    }];
     //[self syncRunJsFunction:@"__BDP_CALL_JS__" parameter:params complete:^(JSValue * value) {}];
 }
 
@@ -170,6 +166,14 @@
 @end
 
 @implementation WordCloudWebView (WKNavigationDelegate)
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    NSLog(@"finish load %@", navigation);
+    
+    [self evaluateJavaScript:@"testFunc()" completionHandler:^(id data, NSError *error) {
+        NSLog(@"data:%@  error:%@",data, error.domain);
+    }];
+}
+
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     if ([navigationAction.request.URL.scheme isEqualToString:@"bdp"]) {
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
