@@ -4,7 +4,7 @@
 //
 //  Created by Alex D. on 3/8/16.
 //  Copyright © 2016 ifnil. All rights reserved.
-//
+//  http://www.thejuniordev.com/run-javascript-button-press-using-wkwebview/
 
 #import "WordCloudWebView.h"
 #import "DEMO_WebJS-swift.h"
