@@ -1,18 +1,15 @@
 //
 //  ViewController.h
-//  testOC
+//  DEMO
 //
-//  Created by 丁松 on 15/3/10.
-//  Copyright (c) 2015年 丁松. All rights reserved.
+//  Created by Alex D. on 3/12/16.
+//  Copyright © 2016 ifnil. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class TestModel;
+@interface ViewController : UIViewController
 
-@interface ViewController : UIViewController <UIWebViewDelegate>
-
-@property (nonatomic, strong) TestModel * model;
 
 @end
 

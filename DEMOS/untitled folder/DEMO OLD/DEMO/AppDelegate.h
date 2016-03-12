@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  DEMO
 //
-//  Created by Alex D. on 3/12/16.
-//  Copyright © 2016 ifnil. All rights reserved.
+//  Created by D.Alex on 11/25/15.
+//  Copyright © 2015 Alex. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

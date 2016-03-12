@@ -7,8 +7,8 @@
 
 
 
-#ifndef Bridging_Header_h
-#define Bridging_Header_h
+#ifndef Beidging_Header_h
+#define Beidging_Header_h
 
 #endif
 

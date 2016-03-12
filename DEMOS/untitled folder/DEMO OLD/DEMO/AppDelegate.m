@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  DEMO
 //
-//  Created by Alex D. on 3/12/16.
-//  Copyright © 2016 ifnil. All rights reserved.
+//  Created by D.Alex on 11/25/15.
+//  Copyright © 2015 Alex. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -51,7 +51,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.dingsoung.DEMO" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.DingSoung.DEMO" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 

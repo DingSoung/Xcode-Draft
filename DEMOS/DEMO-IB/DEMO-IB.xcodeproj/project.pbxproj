@@ -25,10 +25,8 @@
 		FA77858E1C45FDED00F3AAC2 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77858D1C45FDED00F3AAC2 /* ChartView.m */; };
 		FA7785911C45FE0D00F3AAC2 /* ChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7785901C45FE0D00F3AAC2 /* ChartModel.m */; };
 		FA77860B1C46268000F3AAC2 /* WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7786051C46268000F3AAC2 /* WebView.m */; };
-		FA7786351C462B7300F3AAC2 /* DSPDFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77862C1C462B7300F3AAC2 /* DSPDFImage.m */; };
 		FA7786361C462B7300F3AAC2 /* GCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77862D1C462B7300F3AAC2 /* GCDManager.swift */; };
 		FA7786371C462B7300F3AAC2 /* JavaScriptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77862E1C462B7300F3AAC2 /* JavaScriptManager.swift */; };
-		FA7786381C462B7300F3AAC2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77862F1C462B7300F3AAC2 /* NetworkManager.swift */; };
 		FA7786391C462B7300F3AAC2 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786301C462B7300F3AAC2 /* NotificationManager.swift */; };
 		FA7786431C46451000F3AAC2 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7786421C46451000F3AAC2 /* PieChartView.swift */; };
 		FAF5448D1C48F0F6008E818C /* WordCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5448C1C48F0F6008E818C /* WordCloudView.swift */; };
@@ -86,13 +84,9 @@
 		FA7786041C46268000F3AAC2 /* WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView.h; sourceTree = "<group>"; };
 		FA7786051C46268000F3AAC2 /* WebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebView.m; sourceTree = "<group>"; };
 		FA7786291C462AE700F3AAC2 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		FA77862B1C462B7300F3AAC2 /* DSPDFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPDFImage.h; sourceTree = "<group>"; };
-		FA77862C1C462B7300F3AAC2 /* DSPDFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPDFImage.m; sourceTree = "<group>"; };
 		FA77862D1C462B7300F3AAC2 /* GCDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDManager.swift; sourceTree = "<group>"; };
 		FA77862E1C462B7300F3AAC2 /* JavaScriptManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaScriptManager.swift; sourceTree = "<group>"; };
-		FA77862F1C462B7300F3AAC2 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FA7786301C462B7300F3AAC2 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		FA7786341C462B7300F3AAC2 /* Vendors-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vendors-Header.h"; sourceTree = "<group>"; };
 		FA7786421C46451000F3AAC2 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		FA7786441C46488B00F3AAC2 /* PublicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicHeader.h; sourceTree = "<group>"; };
 		FAF5448C1C48F0F6008E818C /* WordCloudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCloudView.swift; sourceTree = "<group>"; };
@@ -128,7 +122,6 @@
 			children = (
 				FA7786291C462AE700F3AAC2 /* Bridging-Header.h */,
 				FA77862A1C462B7300F3AAC2 /* Helpers */,
-				FA7786331C462B7300F3AAC2 /* Vendors */,
 				FA77854D1C45F77100F3AAC2 /* DEMO-IB */,
 				FA77856A1C45F77100F3AAC2 /* DEMO-IBTests */,
 				FA7785751C45F77100F3AAC2 /* DEMO-IBUITests */,
@@ -220,24 +213,12 @@
 		FA77862A1C462B7300F3AAC2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				FA77862B1C462B7300F3AAC2 /* DSPDFImage.h */,
-				FA77862C1C462B7300F3AAC2 /* DSPDFImage.m */,
 				FA77862D1C462B7300F3AAC2 /* GCDManager.swift */,
 				FA77862E1C462B7300F3AAC2 /* JavaScriptManager.swift */,
-				FA77862F1C462B7300F3AAC2 /* NetworkManager.swift */,
 				FA7786301C462B7300F3AAC2 /* NotificationManager.swift */,
 			);
 			name = Helpers;
 			path = ../../Helpers;
-			sourceTree = "<group>";
-		};
-		FA7786331C462B7300F3AAC2 /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-				FA7786341C462B7300F3AAC2 /* Vendors-Header.h */,
-			);
-			name = Vendors;
-			path = ../../Vendors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,9 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA7786381C462B7300F3AAC2 /* NetworkManager.swift in Sources */,
 				FA77860B1C46268000F3AAC2 /* WebView.m in Sources */,
-				FA7786351C462B7300F3AAC2 /* DSPDFImage.m in Sources */,
 				FA053AEA1C4DD41200F4C5EC /* DetailTableView.m in Sources */,
 				FA053AF11C4DDAB900F4C5EC /* DetailTableViewCell.m in Sources */,
 				FA7786371C462B7300F3AAC2 /* JavaScriptManager.swift in Sources */,
