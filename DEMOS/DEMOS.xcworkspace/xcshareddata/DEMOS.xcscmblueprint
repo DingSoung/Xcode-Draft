@@ -5,14 +5,16 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "E76609702840095B28F7A22ECAA6F602CB1A1EFA" : 0,
+    "D6148FC1C31A76D08092E4328FC9E7C0E6F2BE62" : 0,
     "FA3EF39F28282E2DB2CC9E7031501BA7AC2A2D3C" : 0,
-    "D6148FC1C31A76D08092E4328FC9E7C0E6F2BE62" : 0
+    "E20176E8D80B8912B0148939EB75A8B447AF8B76" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8FEF0AF9-949D-414D-B04D-0566D900CCA9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "E76609702840095B28F7A22ECAA6F602CB1A1EFA" : "Brick\/",
+    "D6148FC1C31A76D08092E4328FC9E7C0E6F2BE62" : "bdp-ios\/",
     "FA3EF39F28282E2DB2CC9E7031501BA7AC2A2D3C" : "CCExtension\/",
-    "D6148FC1C31A76D08092E4328FC9E7C0E6F2BE62" : "bdp-ios\/"
+    "E20176E8D80B8912B0148939EB75A8B447AF8B76" : "CCGraph\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "DEMOS",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -22,6 +24,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/haizhi.me\/dingsongwen\/bdp-ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D6148FC1C31A76D08092E4328FC9E7C0E6F2BE62"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ifnil\/CCGraph.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E20176E8D80B8912B0148939EB75A8B447AF8B76"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ifnil\/Brick.git",
