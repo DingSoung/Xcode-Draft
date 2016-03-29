@@ -7,16 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "DEMO-swift.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet CCTabbar *tabbar;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.tabbar.tabs = @[@"3333", @"77355", @"12", @"35677772"];
 }
 
 - (void)didReceiveMemoryWarning {
