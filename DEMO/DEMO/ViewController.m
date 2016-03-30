@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "DEMO-swift.h"
 
-@interface ViewController ()
+@interface ViewController () <CCTabbarDelegate>
 @property (weak, nonatomic) IBOutlet CCTabbar *tabbar;
 @end
 
@@ -18,12 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tabbar.tabs = @[@"3333", @"77355", @"12", @"35677772"];
+    UIButton *bt1 = [[UIButton alloc] init];
+    [bt1 setTitle:@"节点" forState:UIControlStateNormal];
+    [bt1 setTitleColor:UIColor.redColor forState:UIControlStateNormal];
+    UIButton *bt2 = [[UIButton alloc] init];
+    [bt2 setTitle:@"最新" forState:UIControlStateNormal];
+    [bt2 setTitleColor:UIColor.blueColor forState:UIControlStateNormal];
+    self.tabbar.models = @[bt1, bt2];
+    self.tabbar.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - CCTabbarDelegate
+- (void)tabbar:(CCTabbar *)tabbar didSelectAtIndex:(NSInteger)index {
+    NSLog(@"selected at %ld", (long)index);
 }
 
 @end
