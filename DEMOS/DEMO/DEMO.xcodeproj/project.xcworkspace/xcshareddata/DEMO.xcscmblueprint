@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E76609702840095B28F7A22ECAA6F602CB1A1EFA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E76609702840095B28F7A22ECAA6F602CB1A1EFA" : 0,
+    "E20176E8D80B8912B0148939EB75A8B447AF8B76" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "07118DFD-2F6C-4B9C-ABE6-7CA93A9366E3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E76609702840095B28F7A22ECAA6F602CB1A1EFA" : "Brick\/",
+    "E20176E8D80B8912B0148939EB75A8B447AF8B76" : "CCGraph\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DEMO",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DEMOS\/DEMO\/DEMO.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ifnil\/CCGraph.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E20176E8D80B8912B0148939EB75A8B447AF8B76"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ifnil\/Brick.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E76609702840095B28F7A22ECAA6F602CB1A1EFA"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Test Te View Controller-->
+        <scene sceneID="0AH-Ka-gxZ">
+            <objects>
+                <viewController storyboardIdentifier="TestTeViewController" id="jMy-Pc-7M5" customClass="TestTeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PFT-JF-zK8"/>
+                        <viewControllerLayoutGuide type="bottom" id="wga-Eh-04c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HVJ-Nf-gpS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HZz-jS-YzD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HZz-jS-YzD" firstAttribute="height" secondItem="HVJ-Nf-gpS" secondAttribute="height" id="hXE-4U-sKk"/>
+                            <constraint firstItem="HZz-jS-YzD" firstAttribute="width" secondItem="HVJ-Nf-gpS" secondAttribute="width" id="pmU-Mo-8SM"/>
+                            <constraint firstItem="HZz-jS-YzD" firstAttribute="centerX" secondItem="HVJ-Nf-gpS" secondAttribute="centerX" id="xvm-I6-aVb"/>
+                            <constraint firstItem="HZz-jS-YzD" firstAttribute="centerY" secondItem="HVJ-Nf-gpS" secondAttribute="centerY" id="zur-wo-0hX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="HZz-jS-YzD" id="Cze-9p-Caf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z40-vw-4W1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458" y="-549"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="vQ5-Nl-6bq">
+            <objects>
+                <viewController storyboardIdentifier="TestViewController" id="Ev2-FM-eTI" customClass="TestViewController" customModule="niuniu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z78-Te-IYz"/>
+                        <viewControllerLayoutGuide type="bottom" id="kez-w6-6wq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V94-hY-UPg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mT-Cr-WLz">
+                                <rect key="frame" x="18" y="56" width="90" height="30"/>
+                                <state key="normal" title="HTTPDebug">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="httpDebugBtnAction:" destination="Ev2-FM-eTI" eventType="touchUpInside" id="nnX-Yz-kNV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAI-Hw-sb8">
+                                <rect key="frame" x="18" y="28" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnAction:" destination="Ev2-FM-eTI" eventType="touchUpInside" id="pvU-da-C8V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGv-9j-raQ">
+                                <rect key="frame" x="16" y="94" width="105" height="30"/>
+                                <state key="normal" title="摄像头录制视频">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="摄像头录制视频:" destination="Ev2-FM-eTI" eventType="touchUpInside" id="KWV-yb-Chm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g06-2Y-B6u">
+                                <rect key="frame" x="18" y="132" width="75" height="30"/>
+                                <state key="normal" title="摄像头拍照">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="摄像头拍照:" destination="Ev2-FM-eTI" eventType="touchUpInside" id="QoG-O8-zQa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oda-hR-kfx">
+                                <rect key="frame" x="18" y="170" width="112" height="30"/>
+                                <state key="normal" title="Library 读取视频">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Library读取视频:" destination="Ev2-FM-eTI" eventType="touchUpInside" id="7Sm-RW-PnN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDI-Ju-vXK">
+                                <rect key="frame" x="18" y="208" width="90" height="30"/>
+                                <state key="normal" title="测试七牛上传">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="测试七牛上传:" destination="Ev2-FM-eTI" eventType="touchUpInside" id="8dh-ij-YdB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buP-HX-7Oc">
+                                <rect key="frame" x="18" y="246" width="163" height="30"/>
+                                <state key="normal" title="测试JavaScriptManager">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="测试JavaScriptManager:" destination="Ev2-FM-eTI" eventType="touchUpInside" id="ZqI-QE-jDj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7L-c1-Xub">
+                                <rect key="frame" x="18" y="284" width="186" height="30"/>
+                                <state key="normal" title="测试WebView+ToolsJS扩展">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="测试WebViewToolsJS扩展:" destination="Ev2-FM-eTI" eventType="touchUpInside" id="mOp-oq-Kkd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXN-fz-jgA">
+                                <rect key="frame" x="18" y="322" width="75" height="30"/>
+                                <state key="normal" title="测试二维码">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="测试二维码:" destination="Ev2-FM-eTI" eventType="touchUpInside" id="Gs5-ql-jAS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imo-qO-t6h" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

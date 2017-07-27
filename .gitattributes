@@ -1,3 +1,7 @@
+.gitattributes
+hosts
+*.txt
+*.MD
 # Auto detect text files and perform LF normalization
 * text=auto
 

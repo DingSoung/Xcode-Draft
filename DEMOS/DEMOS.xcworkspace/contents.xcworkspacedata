@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DEMO-WebJS/DEMO-WebJS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DEMO-IB/DEMO-IB.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DEMO/DEMO.xcodeproj">
+   </FileRef>
+</Workspace>
