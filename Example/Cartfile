@@ -1,1 +1,2 @@
-git "../DocsDetail" "master"
+git "../../DocsDetail" "master"
+github "DingSoung/Extension"
