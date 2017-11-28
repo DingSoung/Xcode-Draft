@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func action(_ sender: Any) {
-        guard let url = URL(string: "two://") else {
+        guard let url = URL(string: "two://authorized/?token=i7B$FJhBDv$!7d!r*!Wg!hwmVa$8a3Mi") else {
             print("one call two:// fail")
             return
         }

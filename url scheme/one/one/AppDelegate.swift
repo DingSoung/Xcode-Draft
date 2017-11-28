@@ -47,7 +47,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        print(url, options)
+        
+        var dict = Dictionary<String, Any>()
+        guard let params = (url.query as NSString?)?.components(separatedBy: "&") else { return true}
+        params.forEach { (param) in
+            let strs = (param as NSString).components(separatedBy: "=")
+            if let key = strs.first, let value = strs.last {
+                dict[key] = value
+            }
+        }
+        guard let client = dict["client"], let secret = dict["secret"] else { return true }
+        print(client, secret, options)
         return true
     }
 }
