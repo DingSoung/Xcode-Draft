@@ -18,15 +18,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.view.addSubview(self.webView)
-        
+        self.webView.
         let menucontroller = UIMenuController.shared
         let heiheiheiItem = UIMenuItem(title: "嘿嘿嘿", action: #selector(ViewController.heiheiheiAction(sender:)))
-        if var items = menucontroller.menuItems {
-            items.append(heiheiheiItem)
-            menucontroller.menuItems = items
-        } else {
-            menucontroller.menuItems = [heiheiheiItem]
-        }
+        print(menucontroller.menuItems ?? "")
+        //menucontroller.menuItems = [heiheiheiItem]
+        menucontroller.menuItems?.append(heiheiheiItem)
     }
 
     override func viewDidAppear(_ animated: Bool) {
