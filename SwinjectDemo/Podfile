@@ -1,0 +1,3 @@
+target 'SwinjectDemo' do
+    pod 'Swinject'
+  end
